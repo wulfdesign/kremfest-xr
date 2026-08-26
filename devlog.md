@@ -4,6 +4,18 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-26 15:45] - v0.1.2: 5th XR Edition Hero Labels & 2017 Genesis Lineage Restored 🚀🏛️🥽✨**
+
+📝 **Summary**
+1. **Edition Label & Hero Banner Synchronization:**
+   - Calibrated hero badges and portal copy across the site to explicitly denote: `5TH KREMFEST XR EDITION • 9TH ANNUAL MUSIC FESTIVAL • SEPT 25–27, 2026` (highlighting 5 editions of XR and 4th curated by VRMakerDome & UpLiftVR Studios).
+2. **2017 Genesis Archive Restored (`/2017/`):**
+   - Added `2017/index.html` documenting the inaugural 2017 VR pilot operated by *Kinetoscope VR*, featuring Troma's *Heart of Fartness* (Toxic Avenger VR) and historical reviews from Tanya So and Pakapol Rajchawong.
+3. **Multi-Year Navigation & Recompilation:**
+   - Integrated `2017 Genesis` across responsive navbars, footer links, and printable program brochures. 🚀 🏛️ 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-26 15:35] - v0.1.1: 1-Click Server Launchers & In-Headset Balloon Nuance Refinement 🚀🥽⚡✨**
 
 📝 **Summary**
