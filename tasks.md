@@ -15,19 +15,21 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ---
 
-### 🛠️ Currently Working (🛠️)
+### 🛠️ Active Roadmap & Tasks (🛠️)
 
-* [ ] 🛠️ 🔥🔥🔥 **Initial Project Spool-Up & Hermetic Baseline:** Initialize public and private git repositories, commit baseline Grimoires, and establish strict `.gitignore` isolation between public and private spaces. 🐈
-* [ ] 🛠️ 🔥🔥🔥 **Public Multi-Year Web Portal:** Construct responsive cyber-themed static website for KremFest XR featuring Master Landing (`/index.html`), 2026 Live Portal (`/2026/`), 2025 Archive (`/2025/`), 2019 Guide (`/2019/`), and 2018 Retrospective (`/2018/`). 🐈
-* [ ] 🛠️ 🔥🔥 **Attendee Voting & Feedback Ballots:** Deploy interactive client-side Viewer's Choice voting pages for 2026 (`/2026/vote/`) and 2025 (`/2025/vote/`) with QR code connectivity. 🐈
-* [ ] 🛠️ 🔥🔥 **Private Ingestion & Print Pipeline Tools:** Build Python CLI/GUI tools in `private/submission_pipeline/` for FilmFreeway submission text parsing, print brochure HTML generation, QR code generation, and 1-click publishing. 🐈
-* [ ] 🛠️ 🔥🔥 **Private Dev HUD Server:** Deploy zero-dependency local Python HTTP server on port 3040 in `private/dev_dashboard/` with interactive management UI and `🚀 Publish to Public` trigger. 🐈
+* [ ] 🛠️ 🔥🔥 **Lineup Aesthetic Polish (Google Docs & Legacy Archive Match):** Refine and style the lineup cards and schedule layouts across 2018, 2019, 2025, and 2026 to match the exact visual presentation, headings, and formatting from the original Google Docs program guides and legacy .html archive styling. 🐈
+* [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage the 2 initial promo photos provided by DJ Julia for KremFest promo banners and historical retrospective galleries. 🐈
 
 ---
 
 ### 🧪 Waiting for QA (🧪)
 
-* [ ] 🧪 🏗️ 🔥 **Public Repository Scaffolding:** `README.md`, `tasks.md`, `devlog.md`, `chatHandOff.md`, `.gitignore` in `projects/kremfest-xr`. 🐈
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Initial Dual-Repository Architecture & Hermetic Isolation:** Initialized independent public (`projects/kremfest-xr`) and private (`projects/kremfest-xr/private`) Git repositories with strict `.gitignore` wards. 🧪 🐈
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Public Multi-Year Showcase Portals (v0.1.2):** Built and compiled static portals for Home (`/index.html`), 2026 Live Submissions (`/2026/`), 2025 Retrospective (`/2025/`), 2019 Guide (`/2019/`), 2018 Retrospective (`/2018/`), and 2017 Genesis Archive (`/2017/`). 🧪 🐈
+* [ ] 🧪 🏗️ 🔥🔥 **Audience Choice Voting Ballots:** Deployed client-side interactive voting ballots for 2026 (`/2026/vote/`) and 2025 (`/2025/vote/`) with local storage persistence and QR placards. 🧪 🐈
+* [ ] 🧪 🏗️ 🔥🔥 **1-Click Preview Webserver (`serve.bat` on Port 3039):** Deployed zero-dependency public static preview server in `projects/kremfest-xr/` on Port 3039 with automatic browser launch. 🧪 🐈
+* [ ] 🧪 🏗️ 🔥 **Public Repository Grimoires:** `README.md`, `tasks.md`, `devlog.md`, `chatHandOff.md`, `.gitignore`. 🧪 🐈
+
 
 ---
 
