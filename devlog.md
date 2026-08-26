@@ -4,6 +4,15 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-26 15:35] - v0.1.1: 1-Click Server Launchers & In-Headset Balloon Nuance Refinement 🚀🥽⚡✨**
+
+📝 **Summary**
+1. **1-Click Preview Webserver Deployed (`server.py` & `serve.bat`):**
+   - Added zero-dependency static preview server on Port 3039 (`serve.bat`), allowing 1-click offline testing of the exact GitHub Pages static web app.
+2. **Archival Nuance Alignment (Maiden Flight):**
+   - Clarified that the physical wooden balloon basket buildout was engineered for the Seattle International Film Festival (SIFF) VR-Zone and Seattle Maker Faire, while KremFest showcased the virtual balloon flight in-headset (where attendees danced in the virtual clouds).
+3. **Recompiled Static Portals:** Regenerated all public static HTML pages and printable brochures via `publish_to_public.py`. 🚀 🥽 ⚡ 🧙‍♂️ 🐈 ✨
+
 ---
 
 ### **[2026-08-26 15:15] - v0.1.0: Project Spool-Up & Alchemical Grimoire Inception 🚀🌌🥽✨**
