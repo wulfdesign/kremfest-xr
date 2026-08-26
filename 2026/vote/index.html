@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KremFest XR 2026 — Audience Choice Voting Ballot</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="brand-link">
+        <span class="brand-badge">XR</span>
+        <span>KREMFEST <span class="glow-pink">VIRTUAL REALITY</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../../index.html">🎪 Home</a></li><li class="nav-item"><a href="../../2026/index.html" class="active">⚡ 2026 (Live)</a></li><li class="nav-item"><a href="../../2025/index.html">✨ 2025 Archive</a></li><li class="nav-item"><a href="../../2019/index.html">📻 2019 Archive</a></li><li class="nav-item"><a href="../../2018/index.html">📜 2018 Inaugural</a></li><li class="nav-item"><a href="https://filmfreeway.com/KremFest" target="_blank" class="nav-cta">🚀 Submit on FilmFreeway</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding:50px 20px 40px;">
+    <div class="hero-content">
+      <div class="hero-pill">🗳️ ON-PREMISE AUDIENCE BALLOT • 2026</div>
+      <h1 class="hero-title">Viewer's Choice <span class="text-gradient-pink glow-pink">Awards</span></h1>
+      <p class="hero-subtitle">
+        Cast your vote for the most mind-bending, transcendent virtual reality experience at KremFest 2026.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="voting-container">
+      <div id="vote-success-box" style="display:none; text-align:center; padding:30px 20px;">
+        <div style="font-size:3rem; margin-bottom:12px;">🎉</div>
+        <h2 class="text-gradient-cyan" style="margin-bottom:10px;">Ballot Confirmed!</h2>
+        <p style="color:var(--text-muted); margin-bottom:16px;">
+          Thank you for voting for <strong id="voted-choice-title" style="color:#fff;"></strong> in the KremFest XR 2026 Audience Choice Awards.
+        </p>
+        <button onclick="resetVote('2026')" class="btn btn-secondary" style="font-size:0.85rem;">Change My Vote</button>
+      </div>
+
+      <form id="kremfest-vote-form" data-vote-year="2026">
+        <h3 style="margin-bottom:8px; font-size:1.3rem;">1. Select Your Favorite Experience:</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">
+          Choose the project that moved you most or provided the best pairing with the festival atmosphere:
+        </p>
+
+        <label class="ballot-item">
+          <input type="radio" name="choice" value="UpLiftVR: Maiden Flight Balloon Ride" class="ballot-radio">
+          <div>
+            <strong>UpLiftVR: Maiden Flight Balloon Ride</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted);">By Larry James & Julia Jackson (USA)</div>
+          </div>
+        </label>
+
+        <label class="ballot-item">
+          <input type="radio" name="choice" value="High Desert Eclipse" class="ballot-radio">
+          <div>
+            <strong>High Desert Eclipse (4K 360°)</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted);">By Larry James & Julia Jackson (USA)</div>
+          </div>
+        </label>
+
+        <label class="ballot-item">
+          <input type="radio" name="choice" value="Official Selection 1 (To be revealed upon festival jury)" class="ballot-radio">
+          <div>
+            <strong>Official Selection 1</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted);">Adjudicated via FilmFreeway</div>
+          </div>
+        </label>
+
+        <label class="ballot-item">
+          <input type="radio" name="choice" value="Official Selection 2 (To be revealed upon festival jury)" class="ballot-radio">
+          <div>
+            <strong>Official Selection 2</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted);">Adjudicated via FilmFreeway</div>
+          </div>
+        </label>
+
+        <h3 style="margin-top:28px; margin-bottom:6px; font-size:1.1rem;">2. Festival Feedback & Comments (Optional):</h3>
+        <textarea name="feedback" rows="4" class="feedback-textarea" placeholder="What was your experience like in the headset? What music set did it pair best with?"></textarea>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;">🚀 Submit My Vote</button>
+      </form>
+    </div>
+  </main>
+
+  
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>KremFest XR Showcase</h4>
+        <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5;">
+          Where forward-thinking electronic music meets boundary-pushing virtual reality and immersive cinema at the Kremwerk Complex.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Historical Archives</h4>
+        <ul>
+          <li><a href="../../2026/index.html">2026 Active Showcase</a></li>
+          <li><a href="../../2025/index.html">2025 Retrospective</a></li>
+          <li><a href="../../2019/index.html">2019 Program Guide</a></li>
+          <li><a href="../../2018/index.html">2018 Inaugural Launch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Festival Links</h4>
+        <ul>
+          <li><a href="https://filmfreeway.com/KremFest" target="_blank">FilmFreeway Submissions</a></li>
+          <li><a href="https://www.kremwerk.com" target="_blank">Kremwerk Official Website</a></li>
+          <li><a href="https://wulfdesign.github.io" target="_blank">Wulf Design / Larry James</a></li>
+          <li><a href="https://upliftvr.itch.io" target="_blank">UpLiftVR Studios</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Venue & Location</h4>
+        <p style="color:var(--text-muted); font-size:0.85rem;">
+          <strong>Kremwerk / Timbre Room / Cherry</strong><br>
+          1809 Minor Ave, Seattle, WA 98101<br>
+          <em>A Vortex of Creativity and Possibilities</em>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2018–2026 KremFest XR • Curated by VRMakerDome & UpLiftVR Studios</div>
+      <div>Designed with Cybernetic Precision • <a href="../../index.html">wulfdesign.github.io/kremfest-xr</a></div>
+    </div>
+  </footer>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
