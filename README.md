@@ -73,7 +73,8 @@ Immersive creators, 360° filmmakers, and WebXR artists can submit works to the 
 
 ## 📜 Authors & Acknowledgments
 
-* **Showcase Director & Technical Lead:** Larry James ([Wulf Design](https://wulfdesign.github.io) / [VRMakerDome](https://facebook.com/vrmakerdome))
-* **Co-Director & Media Producer:** Julia Jackson ([UpLiftVR Studios](https://upliftvr.itch.io))
+* **Showcase Director & Technical Lead:** Larry James ([VRMakerDome](https://facebook.com/vrmakerdome) / [Wulf Design Studios](https://wulfdesign.github.io) / [UpLiftVR Studios](https://upliftvr.itch.io))
+* **Co-Director & Media Producer:** Julia Jackson ([UpLiftVR Studios](https://upliftvr.itch.io) / [VRMakerDome](https://facebook.com/vrmakerdome))
 * **Festival Consultant & Organizer:** Julia Camp ([Kremwerk](https://www.kremwerk.com))
+
 
