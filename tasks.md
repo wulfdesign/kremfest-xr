@@ -17,18 +17,19 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
-* [ ] 🛠️ 🔥🔥 **Lineup Aesthetic Polish (Google Docs & Legacy Archive Match):** Refine and style the lineup cards and schedule layouts across 2018, 2019, 2025, and 2026 to match the exact visual presentation, headings, and formatting from the original Google Docs program guides and legacy .html archive styling. 🐈
-* [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage the 2 initial promo photos provided by DJ Julia for KremFest promo banners and historical retrospective galleries. 🐈
+* [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage any additional historical promo photos provided by DJ Julia or past curators into the retrospective galleries. 🐈
 
 ---
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Program Guide Editorial Layout Overhaul (PDF & Google Docs Match - v0.1.3):** Transmuted all static portals (`index.html`, `2026/`, `2025/`, `2019/`, `2018/`, `2017/`) into full rich editorial festival program guides matching the Google Docs/PDF formatting in dark mode with responsive mobile/desktop layouts, high-res posters, trailer buttons, creator links, quotes, and 'Lineup at a Glance' summaries. 🧪 🥽 🎪 📱 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Initial Dual-Repository Architecture & Hermetic Isolation:** Initialized independent public (`projects/kremfest-xr`) and private (`projects/kremfest-xr/private`) Git repositories with strict `.gitignore` wards. 🧪 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Public Multi-Year Showcase Portals (v0.1.2):** Built and compiled static portals for Home (`/index.html`), 2026 Live Submissions (`/2026/`), 2025 Retrospective (`/2025/`), 2019 Guide (`/2019/`), 2018 Retrospective (`/2018/`), and 2017 Genesis Archive (`/2017/`). 🧪 🐈
 * [ ] 🧪 🏗️ 🔥🔥 **Audience Choice Voting Ballots:** Deployed client-side interactive voting ballots for 2026 (`/2026/vote/`) and 2025 (`/2025/vote/`) with local storage persistence and QR placards. 🧪 🐈
 * [ ] 🧪 🏗️ 🔥🔥 **1-Click Preview Webserver (`serve.bat` on Port 3039):** Deployed zero-dependency public static preview server in `projects/kremfest-xr/` on Port 3039 with automatic browser launch. 🧪 🐈
 * [ ] 🧪 🏗️ 🔥 **Public Repository Grimoires:** `README.md`, `tasks.md`, `devlog.md`, `chatHandOff.md`, `.gitignore`. 🧪 🐈
+
 
 
 ---

@@ -4,6 +4,24 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 00:05] - v0.1.3: Program Guide Editorial Overhaul (PDF & Google Docs Match) 🚀📑🥽✨**
+
+📝 **Summary**
+1. **Editorial Festival Program Guide Layout Transmutation:**
+   - Redesigned all public portals (`index.html`, `2026/`, `2025/`, `2019/`, `2018/`, `2017/`) to match the rich editorial layout of the original Google Docs and PDF program guides in cyberpunk dark mode.
+   - Replaced generic mini-cards with rich full-width project sections featuring high-res key art, director bylines, evocative loglines, styled press quotes (*The Seattle Times* / Meta Quest Reviewer), director statements/biographies, 4-column tech spec pills (Genre, Runtime, Format, VR Comfort), and direct trailer/website action buttons.
+2. **Asset Ingestion & Semantic Organization:**
+   - Unpacked and structured all original image archives from imported Google Docs exports into `assets/images/2025/`, `2019/`, `2018/`, `headliners/`, and `gallery/`.
+   - Staged historical photo gallery of past festival floor atmosphere.
+3. **Lineup at a Glance & Presenter Feature Blocks:**
+   - Added quick-reference 'Lineup at a Glance' summary boxes to all editions.
+   - Built dedicated presenter feature blocks for VRMakerDome, Kremfest, and UpLiftVR Studios.
+4. **Static Compiler & Dev HUD Calibration:**
+   - Updated `publish_to_public.py` to deterministically compile the new layout.
+   - Updated private dev server (`server.py`) to handle all image and document MIME types. 🚀 📑 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-26 15:45] - v0.1.2: 5th XR Edition Hero Labels & 2017 Genesis Lineage Restored 🚀🏛️🥽✨**
 
 📝 **Summary**
