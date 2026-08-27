@@ -2,7 +2,7 @@
 
 **⚠️ CRITICAL INSTRUCTION FOR AI AGENTS ⚠️**
 
-DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wulf) has explicitly verified the output and given permission to check it off. If you finish a coding or writing task, change its status to 🧪 and move it to the "Waiting for QA" section. Use your Attribution Mark (🐈/🦞) when signing off.
+DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wulf) has explicitly verified the output and given permission to check it off. If you finish a coding or writing task, change its status to 🧪 and move it to the "Waiting for QA" section. Use your Attribution Mark (🧙‍♂️/🐈/🦞) when signing off.
 
 ---
 
@@ -11,7 +11,8 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 * **Priority:** 🔥🔥🔥 (Inferno/Critical) | 🔥🔥 (High Activity) | 🔥 (Medium/Warm) | 🕯️ (Candle/Active) | 🧊 (Cold/Chilled) | ❄️ (Frozen/Frost)
 * **Model Routing:** 🏗️ (Architect/Gemini Pro) | ⚡ (Runner/Gemini Flash) | 🎭 (Local/Ollama - Offline)
 * **Status:** 🛠️ (In Progress) | 🧪 (Ready for QA) | 🧠 (HITL Action Needed) | 🐛 (Bug) | 🩹 (Tech Debt) | 🏆 (Verified/Done)
-* **Attribution:** 🐈 (Hermes - Architect/Orchestrator) | 🦞 (MugWort - Worker/Terminal)
+* **Attribution:** 🧙‍♂️ (Magus Wulf - Grand Alchemist / HITL) | 🐈 (Hermes - Architect/Orchestrator) | 🦞 (MugWort - Worker/Terminal)
+
 
 ---
 
