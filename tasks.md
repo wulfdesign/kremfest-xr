@@ -24,7 +24,9 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Wulf Design Studios Hallmark Banner & Creative Direction Growth Strategy (v0.1.13):** Designed and deployed a cyber-luxe glassmorphic hallmark banner across all 8 multi-year static pages and ballots driving visitors to wulfdesign.github.io for spatial XR, experiential design, and festival curation services, and authored an extensive festival curation & client acquisition strategy blueprint in private sanctuary. 🧪 🎨 🌐 💼 🚀 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Global Geographic Venue Formatting (Seattle, WA • USA - v0.1.12):** Updated all venue address callouts, schedule badges, and footers across static portals and documentation to explicitly state "Kremwerk Complex (1809 Minor Ave, Seattle, WA • USA)" for clear international and global audience readability. 🧪 📍 🗺️ 🌐 🧙‍♂️ 🐈
+
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Festival Doors Open & Submissions Close Live Countdowns (v0.1.11):** Integrated dual live digital countdown engines across home and 2026 active portal — featuring a Doors Open countdown in the hero section ticking down to Friday Sept 25 opening, and a dual-phase submissions deadline countdown inside the FilmFreeway callout block ticking down to Sept 21 deadline before automatically pivoting to the Friday 10:00 PM showcase premiere countdown. 🧪 ⏳ 🎪 📡 🎬 🥽 🧙‍♂️ 🐈
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Verified Ticket Links, UTM Attribution & Conversion Strategy (v0.1.10):** Synchronized working Friday (/kremfest-2026-friday), Saturday (/kremfest-2026-saturday), and Weekend (/kremfest-2026-weekend-pass) ticket routes on kremwerk.com with standardized UTM referral tracking parameters (utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026) across static portals and generated a comprehensive analytics & conversion strategy grimoire in private sanctuary. 🧪 🎟️ 📈 📊 🧙‍♂️ 🐈
