@@ -176,8 +176,9 @@ function initDoorsCountdown() {
       doorsBox.classList.add("state-cyan");
       if (badgeEl) badgeEl.innerHTML = "🎪 KREMFEST 2026 DOORS OPEN IN";
       if (subtextEl) {
-        subtextEl.innerHTML = "Doors open <strong>Friday, Sept 25, 2026 at 10:00 PM PDT</strong> at the Kremwerk Complex. XR Showcase open <strong>10:00 PM – 1:00 AM nightly</strong>.";
+        subtextEl.innerHTML = "Doors open <strong>Friday, Sept 25, 2026 at 10:00 PM PDT</strong> at the Kremwerk Complex.<br>XR Showcase open <strong>10:00 PM – 1:00 AM nightly</strong>.";
       }
+
       setDigits(doorsTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
     } else if (effectiveNow >= doorsTime && effectiveNow <= endTime) {
       doorsBox.classList.add("state-open");

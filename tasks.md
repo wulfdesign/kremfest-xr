@@ -24,14 +24,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
-* [ ] 🧪 🏗️ 🔥🔥🔥 **Very Bottom Studio Curation Strip Placement (v0.1.17):** Relocated the Wulf Design Studios creative direction & spatial XR strip to the absolute bottom of the footer below the copyright line across all 8 multi-year static pages and ballots, providing an ultra-clean, elegant full-width base anchor. 🧪 💎 🌐 🎨 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Official Kremwerk Festival Doors Open Timing Calibration (10:00 PM PDT - v0.1.16):** Scraped and verified the live Kremwerk website event calendar and JSON-LD schema (confirming Friday & Saturday official doors open at 10:00 PM PDT / 22:00 through 4:00 AM) and updated all countdown engines, timestamps, and hero copy across index.html, 2026/index.html, and main.js to accurately reflect 10:00 PM doors. 🧪 ⏰ 🎪 ⚡ 🌐 🧙‍♂️ 🐈
-
-* [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Neon Square QR Code & Refined Studio Curation Strip (v0.1.15):** Streamlined the mobile QR code in footer column 1 to a vibrant, textless cyberpunk square vector badge (kremfest_xr_mobile_qr_color.svg) and relocated a refined, full-width Wulf Design Studios creative direction & spatial XR credit strip directly between the 4-column footer grid and the copyright baseline across all 8 multi-year static pages and ballots. 🧪 📱 🎨 💎 🌐 🧙‍♂️ 🐈
-
-* [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Interactive Mobile Vector QR Code Card (v0.1.14):** Designed and deployed a standalone vector SVG QR code widget into the footer under the KremFest XR Showcase description across all 8 multi-year static pages and ballots, enabling attendees and laptop viewers to scan the screen with their phones to instantly open and share wulfdesign.github.io/kremfest-xr with 100% offline, pin-sharp rendering. 🧪 📱 🔲 ⚡ 🌐 🧙‍♂️ 🐈
-
-* [ ] 🧪 🏗️ 🔥🔥🔥 **Wulf Design Studios Hallmark Banner & Creative Direction Growth Strategy (v0.1.13):** Designed and deployed a cyber-luxe glassmorphic hallmark banner across all 8 multi-year static pages and ballots driving visitors to wulfdesign.github.io for spatial XR, experiential design, and festival curation services, and authored an extensive festival curation & client acquisition strategy blueprint in private sanctuary. 🧪 🎨 🌐 💼 🚀 🧙‍♂️ 🐈
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Global Geographic Venue Formatting (Seattle, WA • USA - v0.1.12):** Updated all venue address callouts, schedule badges, and footers across static portals and documentation to explicitly state "Kremwerk Complex (1809 Minor Ave, Seattle, WA • USA)" for clear international and global audience readability. 🧪 📍 🗺️ 🌐 🧙‍♂️ 🐈
 
@@ -41,6 +34,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Live Audience Choice Countdown & Time-Gated Ballot Engine (v0.1.9):** Deployed live digital countdown header with tri-phase chromatic state engine (🟡 Yellow Pre-Voting with countdown till Friday Sept 25 -> 🟢 Green Live Open with countdown till Sunday Sept 27 Midnight -> 🔴 Red Closed 00:00:00), locked ballot submission prior to festival opening, integrated QA preview clock controls, and showcased official XR hours (Friday & Saturday 10:00 PM – 1:00 AM nightly) across 2026 portal and voting ballots. 🧪 ⏳ 🗳️ 🟢 🔴 🥽 🧙‍♂️ 🐈
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Direct Media & Ticket Link Alignment (Maiden Flight, High Desert Eclipse & 2-Row Hero Buttons - v0.1.8):** Calibrated live YouTube 360 trailers for Maiden Flight (https://youtu.be/FHIc24WiViY) and High Desert Eclipse (https://youtu.be/fzcFw_33iC8), updated Meta Quest Store link, integrated the High Desert Eclipse webportal/story link (https://wulfdesign.github.io/high-desert-eclipse/) across all years, and split hero action buttons into 2 clean rows (Submit/Ballot on row 1; Friday/Saturday/Weekend passes on row 2). 🧪 🥽 🎟️ 🎬 🧙‍♂️ 🐈
+
 
 
 
