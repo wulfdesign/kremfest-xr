@@ -1064,7 +1064,7 @@ footer {
    -------------------------------------------------------------------------- */
 .footer-studio-strip {
   max-width: 1080px;
-  margin: 0 auto 28px;
+  margin: 20px auto 0;
   padding: 14px 20px;
   background: rgba(10, 14, 26, 0.7);
   border: 1px solid rgba(0, 240, 255, 0.2);
@@ -1075,6 +1075,7 @@ footer {
   gap: 16px;
   flex-wrap: wrap;
 }
+
 
 .footer-studio-badge {
   font-size: 0.72rem;

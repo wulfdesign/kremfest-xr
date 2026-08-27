@@ -4,6 +4,16 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 15:17] - v0.1.17: Very Bottom Studio Curation Strip Placement 🚀💎🌐✨**
+
+📝 **Summary**
+1. **Very Bottom Studio Strip Placement:**
+   - Relocated the Wulf Design Studios creative direction & spatial XR credit strip (`.footer-studio-strip`) to the absolute bottom of the footer below the copyright line across all 8 multi-year static pages and voting ballots.
+2. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 💎 🌐 🎨 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 15:14] - v0.1.16: Official Kremwerk Festival Doors Open Timing Calibration (10:00 PM PDT) 🚀⏰🎪✨**
 
 📝 **Summary**

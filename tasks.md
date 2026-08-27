@@ -24,7 +24,9 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Very Bottom Studio Curation Strip Placement (v0.1.17):** Relocated the Wulf Design Studios creative direction & spatial XR strip to the absolute bottom of the footer below the copyright line across all 8 multi-year static pages and ballots, providing an ultra-clean, elegant full-width base anchor. 🧪 💎 🌐 🎨 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Official Kremwerk Festival Doors Open Timing Calibration (10:00 PM PDT - v0.1.16):** Scraped and verified the live Kremwerk website event calendar and JSON-LD schema (confirming Friday & Saturday official doors open at 10:00 PM PDT / 22:00 through 4:00 AM) and updated all countdown engines, timestamps, and hero copy across index.html, 2026/index.html, and main.js to accurately reflect 10:00 PM doors. 🧪 ⏰ 🎪 ⚡ 🌐 🧙‍♂️ 🐈
+
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Neon Square QR Code & Refined Studio Curation Strip (v0.1.15):** Streamlined the mobile QR code in footer column 1 to a vibrant, textless cyberpunk square vector badge (kremfest_xr_mobile_qr_color.svg) and relocated a refined, full-width Wulf Design Studios creative direction & spatial XR credit strip directly between the 4-column footer grid and the copyright baseline across all 8 multi-year static pages and ballots. 🧪 📱 🎨 💎 🌐 🧙‍♂️ 🐈
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Interactive Mobile Vector QR Code Card (v0.1.14):** Designed and deployed a standalone vector SVG QR code widget into the footer under the KremFest XR Showcase description across all 8 multi-year static pages and ballots, enabling attendees and laptop viewers to scan the screen with their phones to instantly open and share wulfdesign.github.io/kremfest-xr with 100% offline, pin-sharp rendering. 🧪 📱 🔲 ⚡ 🌐 🧙‍♂️ 🐈
