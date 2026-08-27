@@ -145,7 +145,7 @@ function initDoorsCountdown() {
   const doorsBox = document.getElementById("doors-countdown-box");
   if (!doorsBox) return;
 
-  const doorsIso = doorsBox.getAttribute("data-doors-time") || "2026-09-25T18:00:00-07:00";
+  const doorsIso = doorsBox.getAttribute("data-doors-time") || "2026-09-25T22:00:00-07:00";
   const endIso = doorsBox.getAttribute("data-end-time") || "2026-09-27T23:59:59-07:00";
 
   const doorsTime = new Date(doorsIso).getTime();
@@ -176,7 +176,7 @@ function initDoorsCountdown() {
       doorsBox.classList.add("state-cyan");
       if (badgeEl) badgeEl.innerHTML = "🎪 KREMFEST 2026 DOORS OPEN IN";
       if (subtextEl) {
-        subtextEl.innerHTML = "Festival begins <strong>Friday, Sept 25, 2026</strong> at the Kremwerk Complex. XR Showcase open <strong>10:00 PM – 1:00 AM nightly</strong>.";
+        subtextEl.innerHTML = "Doors open <strong>Friday, Sept 25, 2026 at 10:00 PM PDT</strong> at the Kremwerk Complex. XR Showcase open <strong>10:00 PM – 1:00 AM nightly</strong>.";
       }
       setDigits(doorsTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
     } else if (effectiveNow >= doorsTime && effectiveNow <= endTime) {
@@ -185,6 +185,7 @@ function initDoorsCountdown() {
       if (subtextEl) {
         subtextEl.innerHTML = "Kremfest 2026 is LIVE! Experience electronic music & virtual reality across all rooms tonight!";
       }
+
       setDigits(endTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
     } else {
       doorsBox.classList.add("state-closed");
