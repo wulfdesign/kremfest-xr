@@ -4,6 +4,19 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 15:28] - v0.1.19: High Desert Eclipse & Maiden Flight Link Refinements 🚀🔗🎬✨**
+
+📝 **Summary**
+1. **Accurate FilmFreeway Profile URL:**
+   - Updated High Desert Eclipse FilmFreeway URL to `https://filmfreeway.com/HighDesertEclipse` across `enrich_lineups.py`, `lineups.json`, and static HTML pages.
+2. **Concise Link Labels:**
+   - Streamlined link label from "FilmFreeway Profile" to "FilmFreeway" across both Maiden Flight and High Desert Eclipse.
+   - Renamed "Webportal & Eclipse Story" to "Eclipse Story Portal" across all multi-year retrospective and active showcase archives.
+3. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 🔗 🎬 🥽 🌐 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 15:21] - v0.1.18: 2-Line Countdown Subtext & QA Verification Milestone 🚀🏆🎪✨**
 
 📝 **Summary**

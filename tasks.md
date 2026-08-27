@@ -24,7 +24,9 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **High Desert Eclipse & Maiden Flight FilmFreeway & Portal Link Refinement (v0.1.19):** Corrected High Desert Eclipse FilmFreeway URL to https://filmfreeway.com/HighDesertEclipse, streamlined profile link text to concise "FilmFreeway" across both headliners, and renamed all "Webportal & Eclipse Story" links to "Eclipse Story Portal" across all multi-year retrospective and active showcase archives. 🧪 🔗 🎬 🥽 🌐 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Official Kremwerk Festival Doors Open Timing Calibration (10:00 PM PDT - v0.1.16):** Scraped and verified the live Kremwerk website event calendar and JSON-LD schema (confirming Friday & Saturday official doors open at 10:00 PM PDT / 22:00 through 4:00 AM) and updated all countdown engines, timestamps, and hero copy across index.html, 2026/index.html, and main.js to accurately reflect 10:00 PM doors. 🧪 ⏰ 🎪 ⚡ 🌐 🧙‍♂️ 🐈
+
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Global Geographic Venue Formatting (Seattle, WA • USA - v0.1.12):** Updated all venue address callouts, schedule badges, and footers across static portals and documentation to explicitly state "Kremwerk Complex (1809 Minor Ave, Seattle, WA • USA)" for clear international and global audience readability. 🧪 📍 🗺️ 🌐 🧙‍♂️ 🐈
 
