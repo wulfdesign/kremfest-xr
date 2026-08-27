@@ -17,7 +17,12 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
+* [ ] 🛠️ 🔥🔥 **Fetch & Replace Official 2026 Kremfest Flyer Image:** Retrieve the official 2026 Kremfest flyer image from the Kremwerk website (`kremwerk.com`) and replace the temporary 2025 graphic on `2026/index.html` and the master landing page (`index.html`). 🐈
+* [ ] 🛠️ 🔥🔥 **Add "More Submission Selections Coming Soon" Block (2026):** Position a dedicated callout block directly after the headliners in `2026/index.html` featuring a direct FilmFreeway submission link, fee tiers ($5 Earlybird / $10 Regular), and key deadlines (Aug 31 earlybird, Sept 21 regular, Sept 25–27 festival). 🐈
+* [ ] 🛠️ 🔥🔥 **Uncropped Image Scaling Fix (All Pages):** Remove `object-fit: cover` and fixed pixel height caps across `style.css` so all flyer banners, posters, and key art scale naturally (`width: 100%; height: auto; object-fit: contain;`) without vertical or horizontal cropping on desktop and mobile. 🐈
+* [ ] 🛠️ 🔥🔥 **Calibrate Editorial Layout to PDF Screenshots:** Refine layout against the 16 screenshots in `private/import/screenshots_of_2025/` (bold centered section titles, italic centered bylines, indented bold loglines, italic press quote blocks, bulleted tech spec lists, centered inline action links with middle dots `•`, and subtle divider lines). 🐈
 * [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage any additional historical promo photos provided by DJ Julia or past curators into the retrospective galleries. 🐈
+
 
 ---
 
