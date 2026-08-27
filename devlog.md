@@ -4,6 +4,20 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 13:05] - v0.1.4: Official 2026 Poster, Submissions Callout & PDF Screenshot Calibration 🚀📸🥽✨**
+
+📝 **Summary**
+1. **Official 2026 Kremfest Poster Ingestion:**
+   - Retrieved the official 2026 Kremfest flyer artwork directly from Kremwerk's server (`kremfest_09-25_26-26_lineup_kremwerk.jpg`) and integrated it into `assets/images/2026/kremfest_2026_poster.jpg`, `index.html`, and `2026/index.html`.
+2. **"More Submissions Coming Soon" Block (2026 Portal):**
+   - Built and positioned a dedicated submissions callout block directly after the UpLiftVR headliners on `2026/index.html` and `index.html` featuring key deadlines ($5 Earlybird Aug 31 / $10 Regular Sept 21 / Sept 25–27 Festival) and direct FilmFreeway submission buttons.
+3. **Uncropped Image Scaling Across All Pages:**
+   - Removed `object-fit: cover` and fixed pixel height caps in `style.css`, enforcing natural aspect ratio scaling (`width: 100%; height: auto; object-fit: contain;`) so posters and banners are never sliced.
+4. **PDF Screenshot Layout Calibration:**
+   - Calibrated typography, centered titles, italic bylines, indented bold loglines, italic press quote blocks, bulleted tech specs lists, and centered inline action links with middle dots (`•`) matching the 16 screenshots from `private/import/screenshots_of_2025/`. 🚀 📸 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 00:05] - v0.1.3: Program Guide Editorial Overhaul (PDF & Google Docs Match) 🚀📑🥽✨**
 
 📝 **Summary**

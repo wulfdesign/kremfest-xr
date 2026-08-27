@@ -17,23 +17,23 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
-* [ ] 🛠️ 🔥🔥 **Fetch & Replace Official 2026 Kremfest Flyer Image:** Retrieve the official 2026 Kremfest flyer image from the Kremwerk website (`kremwerk.com`) and replace the temporary 2025 graphic on `2026/index.html` and the master landing page (`index.html`). 🐈
-* [ ] 🛠️ 🔥🔥 **Add "More Submission Selections Coming Soon" Block (2026):** Position a dedicated callout block directly after the headliners in `2026/index.html` featuring a direct FilmFreeway submission link, fee tiers ($5 Earlybird / $10 Regular), and key deadlines (Aug 31 earlybird, Sept 21 regular, Sept 25–27 festival). 🐈
-* [ ] 🛠️ 🔥🔥 **Uncropped Image Scaling Fix (All Pages):** Remove `object-fit: cover` and fixed pixel height caps across `style.css` so all flyer banners, posters, and key art scale naturally (`width: 100%; height: auto; object-fit: contain;`) without vertical or horizontal cropping on desktop and mobile. 🐈
-* [ ] 🛠️ 🔥🔥 **Calibrate Editorial Layout to PDF Screenshots:** Refine layout against the 16 screenshots in `private/import/screenshots_of_2025/` (bold centered section titles, italic centered bylines, indented bold loglines, italic press quote blocks, bulleted tech spec lists, centered inline action links with middle dots `•`, and subtle divider lines). 🐈
 * [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage any additional historical promo photos provided by DJ Julia or past curators into the retrospective galleries. 🐈
-
 
 ---
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Official 2026 Kremfest Poster Integration (v0.1.4):** Fetched official 2026 Kremfest flyer asset directly from Kremwerk's server (`kremfest_09-25_26-26_lineup_kremwerk.jpg`) and integrated into `assets/images/2026/kremfest_2026_poster.jpg`, `lineups.json`, `index.html`, and `2026/index.html`. 🧪 🥽 🖼️ 🐈
+* [ ] 🧪 🏗️ 🔥🔥🔥 **2026 "More Submissions Coming Soon" Callout Block (v0.1.4):** Positioned dedicated callout block directly after headliners on `2026/index.html` and master `index.html` with FilmFreeway direct link, fee tiers ($5 Earlybird / $10 Regular), and key deadlines (Aug 31 Earlybird, Sept 21 Regular, Sept 25–27 Festival). 🧪 📡 🎟️ 🐈
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Uncropped Image Scaling Fix (v0.1.4):** Eliminated `object-fit: cover` and fixed pixel height caps across `style.css`, ensuring all banners, posters, and key art scale with natural aspect ratios across desktop and mobile. 🧪 📱 💻 🐈
+* [ ] 🧪 🏗️ 🔥🔥🔥 **PDF Screenshot Layout Calibration (v0.1.4):** Calibrated all static pages to match the 16 screenshots from `private/import/screenshots_of_2025/` (bold centered section titles, italic centered bylines, indented bold loglines, italic press quotes with attribution, bulleted tech specs, and centered inline action links with middle dots `•`). 🧪 📑 🥽 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Program Guide Editorial Layout Overhaul (PDF & Google Docs Match - v0.1.3):** Transmuted all static portals (`index.html`, `2026/`, `2025/`, `2019/`, `2018/`, `2017/`) into full rich editorial festival program guides matching the Google Docs/PDF formatting in dark mode with responsive mobile/desktop layouts, high-res posters, trailer buttons, creator links, quotes, and 'Lineup at a Glance' summaries. 🧪 🥽 🎪 📱 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Initial Dual-Repository Architecture & Hermetic Isolation:** Initialized independent public (`projects/kremfest-xr`) and private (`projects/kremfest-xr/private`) Git repositories with strict `.gitignore` wards. 🧪 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Public Multi-Year Showcase Portals (v0.1.2):** Built and compiled static portals for Home (`/index.html`), 2026 Live Submissions (`/2026/`), 2025 Retrospective (`/2025/`), 2019 Guide (`/2019/`), 2018 Retrospective (`/2018/`), and 2017 Genesis Archive (`/2017/`). 🧪 🐈
 * [ ] 🧪 🏗️ 🔥🔥 **Audience Choice Voting Ballots:** Deployed client-side interactive voting ballots for 2026 (`/2026/vote/`) and 2025 (`/2025/vote/`) with local storage persistence and QR placards. 🧪 🐈
 * [ ] 🧪 🏗️ 🔥🔥 **1-Click Preview Webserver (`serve.bat` on Port 3039):** Deployed zero-dependency public static preview server in `projects/kremfest-xr/` on Port 3039 with automatic browser launch. 🧪 🐈
 * [ ] 🧪 🏗️ 🔥 **Public Repository Grimoires:** `README.md`, `tasks.md`, `devlog.md`, `chatHandOff.md`, `.gitignore`. 🧪 🐈
+
 
 
 
