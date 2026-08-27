@@ -1037,7 +1037,75 @@ footer {
   color: var(--neon-cyan);
 }
 
+/* --------------------------------------------------------------------------
+   Footer Interactive Mobile QR Code Widget
+   -------------------------------------------------------------------------- */
+.footer-qr-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  margin-top: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+  max-width: 280px;
+}
+
+.footer-qr-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.footer-qr-img-wrap {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-qr-img {
+  width: 68px;
+  height: 68px;
+  display: block;
+}
+
+.footer-qr-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-qr-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-qr-label {
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.footer-qr-url {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  word-break: break-all;
+  line-height: 1.2;
+}
+
 .footer-bottom {
+
   max-width: 1080px;
   margin: 0 auto;
   padding: 20px;
