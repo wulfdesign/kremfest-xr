@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initVoting();
   initVotingCountdown();
+  initDoorsCountdown();
+  initSubmissionsCountdown();
   initSearch();
 });
 
@@ -137,6 +139,133 @@ function initSearch() {
 }
 
 /* --------------------------------------------------------------------------
+   Festival Doors Open Live Countdown Engine
+   -------------------------------------------------------------------------- */
+function initDoorsCountdown() {
+  const doorsBox = document.getElementById("doors-countdown-box");
+  if (!doorsBox) return;
+
+  const doorsIso = doorsBox.getAttribute("data-doors-time") || "2026-09-25T18:00:00-07:00";
+  const endIso = doorsBox.getAttribute("data-end-time") || "2026-09-27T23:59:59-07:00";
+
+  const doorsTime = new Date(doorsIso).getTime();
+  const endTime = new Date(endIso).getTime();
+
+  function updateDoorsClock() {
+    const now = new Date().getTime();
+    let effectiveNow = now;
+
+    if (simulationState === "open") {
+      effectiveNow = doorsTime + 7200000;
+    } else if (simulationState === "closed") {
+      effectiveNow = endTime + 7200000;
+    } else if (simulationState === "prevoting") {
+      effectiveNow = doorsTime - 86400000;
+    }
+
+    const badgeEl = doorsBox.querySelector(".countdown-status-badge");
+    const subtextEl = doorsBox.querySelector(".countdown-subtext");
+    const daysEl = doorsBox.querySelector(".count-days");
+    const hoursEl = doorsBox.querySelector(".count-hours");
+    const minsEl = doorsBox.querySelector(".count-mins");
+    const secsEl = doorsBox.querySelector(".count-secs");
+
+    doorsBox.classList.remove("state-cyan", "state-open", "state-closed");
+
+    if (effectiveNow < doorsTime) {
+      doorsBox.classList.add("state-cyan");
+      if (badgeEl) badgeEl.innerHTML = "🎪 KREMFEST 2026 DOORS OPEN IN";
+      if (subtextEl) {
+        subtextEl.innerHTML = "Festival begins <strong>Friday, Sept 25, 2026</strong> at the Kremwerk Complex. XR Showcase open <strong>10:00 PM – 1:00 AM nightly</strong>.";
+      }
+      setDigits(doorsTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
+    } else if (effectiveNow >= doorsTime && effectiveNow <= endTime) {
+      doorsBox.classList.add("state-open");
+      if (badgeEl) badgeEl.innerHTML = "⚡ FESTIVAL LIVE IN PROGRESS • FINALE IN";
+      if (subtextEl) {
+        subtextEl.innerHTML = "Kremfest 2026 is LIVE! Experience electronic music & virtual reality across all rooms tonight!";
+      }
+      setDigits(endTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
+    } else {
+      doorsBox.classList.add("state-closed");
+      if (badgeEl) badgeEl.innerHTML = "✨ KREMFEST 2026 CONCLUDED";
+      if (subtextEl) {
+        subtextEl.innerHTML = "Thank you Seattle! See you for the 10th Annual Edition in 2027.";
+      }
+      setDigits(0, daysEl, hoursEl, minsEl, secsEl);
+    }
+  }
+
+  updateDoorsClock();
+  setInterval(updateDoorsClock, 1000);
+}
+
+/* --------------------------------------------------------------------------
+   FilmFreeway Submissions & Show Start Countdown Engine
+   -------------------------------------------------------------------------- */
+function initSubmissionsCountdown() {
+  const subBox = document.getElementById("submissions-countdown-box");
+  if (!subBox) return;
+
+  const deadlineIso = subBox.getAttribute("data-deadline-time") || "2026-09-21T23:59:59-07:00";
+  const showStartIso = subBox.getAttribute("data-show-start") || "2026-09-25T22:00:00-07:00";
+
+  const deadlineTime = new Date(deadlineIso).getTime();
+  const showStartTime = new Date(showStartIso).getTime();
+
+  function updateSubClock() {
+    const now = new Date().getTime();
+    let effectiveNow = now;
+
+    if (simulationState === "open") {
+      effectiveNow = showStartTime + 3600000;
+    } else if (simulationState === "closed") {
+      effectiveNow = showStartTime + 86400000 * 4;
+    } else if (simulationState === "prevoting") {
+      effectiveNow = deadlineTime - 86400000 * 3;
+    }
+
+    const badgeEl = subBox.querySelector(".countdown-status-badge");
+    const subtextEl = subBox.querySelector(".countdown-subtext");
+    const daysEl = subBox.querySelector(".count-days");
+    const hoursEl = subBox.querySelector(".count-hours");
+    const minsEl = subBox.querySelector(".count-mins");
+    const secsEl = subBox.querySelector(".count-secs");
+
+    subBox.classList.remove("state-prevoting", "state-purple", "state-open");
+
+    if (effectiveNow < deadlineTime) {
+      // Phase A: Submissions Open (Yellow)
+      subBox.classList.add("state-prevoting");
+      if (badgeEl) badgeEl.innerHTML = "⏳ SUBMISSIONS CLOSE IN";
+      if (subtextEl) {
+        subtextEl.innerHTML = "Earlybird: Aug 31 • Final Deadline: Sept 21. Submit your project on FilmFreeway!";
+      }
+      setDigits(deadlineTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
+    } else if (effectiveNow >= deadlineTime && effectiveNow < showStartTime) {
+      // Phase B: Submissions Closed -> Show Start Countdown (Purple)
+      subBox.classList.add("state-purple");
+      if (badgeEl) badgeEl.innerHTML = "🥽 XR SHOWCASE PREMIERE IN";
+      if (subtextEl) {
+        subtextEl.innerHTML = "Submissions closed — Jury adjudication in progress! Lineup premieres <strong>Friday, Sept 25 at 10:00 PM</strong>!";
+      }
+      setDigits(showStartTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
+    } else {
+      // Phase C: Showcase Live (Green)
+      subBox.classList.add("state-open");
+      if (badgeEl) badgeEl.innerHTML = "🟢 XR SHOWCASE LIVE ON-SITE";
+      if (subtextEl) {
+        subtextEl.innerHTML = "Showcase floor open <strong>10:00 PM – 1:00 AM nightly</strong> in the Timbre Room & Multimedia Lounge!";
+      }
+      setDigits(0, daysEl, hoursEl, minsEl, secsEl);
+    }
+  }
+
+  updateSubClock();
+  setInterval(updateSubClock, 1000);
+}
+
+/* --------------------------------------------------------------------------
    Audience Choice Live Countdown & Schedule Engine
    -------------------------------------------------------------------------- */
 let simulationState = null; // null = real time, 'prevoting', 'open', 'closed'
@@ -224,10 +353,7 @@ function initVotingCountdown() {
         subtextEl.innerHTML = "Audience Choice voting has officially closed for KremFest 2026. Thank you for participating!";
       }
 
-      if (daysEl) daysEl.innerText = "00";
-      if (hoursEl) hoursEl.innerText = "00";
-      if (minsEl) minsEl.innerText = "00";
-      if (secsEl) secsEl.innerText = "00";
+      setDigits(0, daysEl, hoursEl, minsEl, secsEl);
 
       // Lock ballot submission
       if (submitBtn) {
@@ -243,28 +369,28 @@ function initVotingCountdown() {
     }
   }
 
-  function setDigits(diffMs, daysEl, hoursEl, minsEl, secsEl) {
-    if (diffMs <= 0) {
-      if (daysEl) daysEl.innerText = "00";
-      if (hoursEl) hoursEl.innerText = "00";
-      if (minsEl) minsEl.innerText = "00";
-      if (secsEl) secsEl.innerText = "00";
-      return;
-    }
-
-    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const mins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-    const secs = Math.floor((diffMs % (1000 * 60)) / 1000);
-
-    if (daysEl) daysEl.innerText = String(days).padStart(2, "0");
-    if (hoursEl) hoursEl.innerText = String(hours).padStart(2, "0");
-    if (minsEl) minsEl.innerText = String(mins).padStart(2, "0");
-    if (secsEl) secsEl.innerText = String(secs).padStart(2, "0");
-  }
-
   updateClock();
   setInterval(updateClock, 1000);
+}
+
+function setDigits(diffMs, daysEl, hoursEl, minsEl, secsEl) {
+  if (diffMs <= 0) {
+    if (daysEl) daysEl.innerText = "00";
+    if (hoursEl) hoursEl.innerText = "00";
+    if (minsEl) minsEl.innerText = "00";
+    if (secsEl) secsEl.innerText = "00";
+    return;
+  }
+
+  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+  if (daysEl) daysEl.innerText = String(days).padStart(2, "0");
+  if (hoursEl) hoursEl.innerText = String(hours).padStart(2, "0");
+  if (minsEl) minsEl.innerText = String(mins).padStart(2, "0");
+  if (secsEl) secsEl.innerText = String(secs).padStart(2, "0");
 }
 
 // Helper to switch simulation states in dev console or test bar
@@ -272,6 +398,7 @@ window.setVotingSimulation = function(state) {
   simulationState = state;
   console.log("Simulating voting state:", state);
 };
+
 
 /* --------------------------------------------------------------------------
    Audience Choice Voting Ballot Engine

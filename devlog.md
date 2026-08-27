@@ -4,6 +4,21 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 14:52] - v0.1.11: Doors Open & Submissions Deadline Live Countdowns 🚀🎪⏳📡✨**
+
+📝 **Summary**
+1. **Doors Open Live Countdown Engine:**
+   - Deployed live ticking countdown widget (`#doors-countdown-box`) on `index.html` and `2026/index.html` ticking down to Friday, September 25, 2026 opening with neon cyan and green live styling.
+2. **Submissions Deadline & Showcase Premiere Countdown:**
+   - Embedded compact dual-phase countdown (`#submissions-countdown-box`) directly inside the FilmFreeway Callout block:
+     - **Phase 1 (Now – Sept 21):** Counts down to the final submissions deadline (Sept 21 11:59:59 PM PDT).
+     - **Phase 2 (Sept 21 – Sept 25):** Automatically transitions to count down to the XR Showcase Premiere (Friday, Sept 25 at 10:00 PM PDT).
+     - **Phase 3 (Showcase Active):** Displays live on-site status indicator.
+3. **Dashboards Recompiled:**
+   - Recompiled standalone and ecosystem telemetry. 🚀 🎪 ⏳ 📡 🎬 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 14:48] - v0.1.10: Verified Ticket Routes & UTM Referral Conversion Strategy 🚀🎟️📈✨**
 
 📝 **Summary**

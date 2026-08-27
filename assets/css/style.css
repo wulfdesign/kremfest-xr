@@ -755,6 +755,59 @@ a:hover {
   text-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
 }
 
+/* State: Cyan (Doors Open / Festival Launch) */
+.countdown-box.state-cyan {
+  background: rgba(0, 240, 255, 0.06);
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.25), inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.countdown-box.state-cyan .countdown-status-badge {
+  background: rgba(0, 240, 255, 0.2);
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+}
+
+.countdown-box.state-cyan .countdown-digits {
+  color: #00f0ff;
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+}
+
+/* State: Purple / Magenta (Submissions / Jury Phase) */
+.countdown-box.state-purple {
+  background: rgba(255, 0, 127, 0.06);
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 25px rgba(255, 0, 127, 0.25), inset 0 0 15px rgba(255, 0, 127, 0.05);
+}
+
+.countdown-box.state-purple .countdown-status-badge {
+  background: rgba(255, 0, 127, 0.2);
+  color: var(--neon-pink);
+  border: 1px solid var(--neon-pink);
+}
+
+.countdown-box.state-purple .countdown-digits {
+  color: #ff007f;
+  text-shadow: 0 0 15px rgba(255, 0, 127, 0.6);
+}
+
+/* Compact modifier for callout cards */
+.countdown-box.compact {
+  padding: 16px 14px;
+  margin: 16px auto;
+  max-width: 540px;
+}
+
+.countdown-box.compact .countdown-unit {
+  min-width: 60px;
+  padding: 6px 10px;
+}
+
+.countdown-box.compact .countdown-digits {
+  font-size: 1.6rem;
+}
+
+
 .countdown-status-badge {
   display: inline-flex;
   align-items: center;
