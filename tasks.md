@@ -23,7 +23,10 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Versioning, 2017 Kinetoscope VR Lineage & Identity Alignment (v0.1.5):** Synchronized `README.md` to `v0.1.5`, credited Kinetoscope VR (#neoK) & 4Culture for the 2017 inaugural edition, standardized attribution strictly to Larry James, and recompiled both the standalone and ecosystem dashboards. 🧪 🛡️ 📑 🐈
+
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Official 2026 Kremfest Poster Integration (v0.1.4):** Fetched official 2026 Kremfest flyer asset directly from Kremwerk's server (`kremfest_09-25_26-26_lineup_kremwerk.jpg`) and integrated into `assets/images/2026/kremfest_2026_poster.jpg`, `lineups.json`, `index.html`, and `2026/index.html`. 🧪 🥽 🖼️ 🐈
+
 * [ ] 🧪 🏗️ 🔥🔥🔥 **2026 "More Submissions Coming Soon" Callout Block (v0.1.4):** Positioned dedicated callout block directly after headliners on `2026/index.html` and master `index.html` with FilmFreeway direct link, fee tiers ($5 Earlybird / $10 Regular), and key deadlines (Aug 31 Earlybird, Sept 21 Regular, Sept 25–27 Festival). 🧪 📡 🎟️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Uncropped Image Scaling Fix (v0.1.4):** Eliminated `object-fit: cover` and fixed pixel height caps across `style.css`, ensuring all banners, posters, and key art scale with natural aspect ratios across desktop and mobile. 🧪 📱 💻 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **PDF Screenshot Layout Calibration (v0.1.4):** Calibrated all static pages to match the 16 screenshots from `private/import/screenshots_of_2025/` (bold centered section titles, italic centered bylines, indented bold loglines, italic press quotes with attribution, bulleted tech specs, and centered inline action links with middle dots `•`). 🧪 📑 🥽 🐈

@@ -4,7 +4,7 @@
 > **Presented & Curated by:** VRMakerDome & UpLiftVR Studios (`Larry James & Julia Jackson`)  
 > **Festival Partner:** Kremwerk Complex & Julia Camp (Seattle, WA)  
 > **Public URL:** `https://wulfdesign.github.io/kremfest-xr/`  
-> **Current Version:** `v0.1.0`  
+> **Current Version:** `v0.1.5`  
 > **Ecosystem Node:** `projects/kremfest-xr`  
 
 ---
@@ -19,11 +19,13 @@ Described by *The Stranger* as the undisputed monarch of Seattle electronic nigh
 
 ## 🗺️ Portal Navigation & Historical Archives
 
-* **[2026 Active Edition (`/2026/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2026/index.html):** 9th Annual Edition (Sept 25–27, 2026). FilmFreeway submissions portal, ticketing links, headliner announcements, and schedule.
+* **[2026 Active Edition (`/2026/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2026/index.html):** 9th Annual Edition • 5th XR Edition (Sept 25–27, 2026). FilmFreeway submissions portal, ticketing links, headliner announcements, and schedule.
 * **[2026 Live Voting (`/2026/vote/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2026/vote/index.html):** On-premise Viewer's Choice voting and feedback ballot for festival attendees.
 * **[2025 Retrospective (`/2025/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2025/index.html):** Post-pandemic grand return featuring *Max Q* (6DoF Cockpit Sci-Fi), *Noises* (Multi-perspective Narrative Winner), *The Encounter*, *Meridian Transmissions*, and headliners *Maiden Flight* & *High Desert Eclipse*.
-* **[2019 Program Guide (`/2019/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2019/index.html):** 2nd Annual Showcase lineup including *7 Lives* (France), *Blood Sisters*, *All Around You*, *Space Chase with Spot!*, and *Ready Hunty One*.
-* **[2018 Inaugural Archive (`/2018/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2018/index.html):** The historic launch featuring *Bloodthirsty* (Symbion Project), *Lionhearted* (Athens Refugee Doc), *Walter*, *RocketMan 360*, and *Crackle*.
+* **[2019 Program Guide (`/2019/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2019/index.html):** 2nd Annual VR Showcase lineup including *7 Lives* (France), *Blood Sisters*, *All Around You*, *Space Chase with Spot!*, and *Ready Hunty One*.
+* **[2018 Showcase Archive (`/2018/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2018/index.html):** The landmark curation by VRMakerDome & UpLiftVR featuring *Bloodthirsty* (Symbion Project), *Lionhearted* (Athens Refugee Doc), *Walter*, *RocketMan 360*, and *Crackle*.
+* **[2017 Inaugural Genesis Archive (`/2017/`)](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/2017/index.html):** The first inaugural introduction of VR to KremFest (September 21–24, 2017), powered by **Kinetoscope VR (#neoK)** and sponsored by **4Culture**, curating trippy, experiential VR directly alongside live electronic sets.
+
 
 ---
 
@@ -70,6 +72,7 @@ Immersive creators, 360° filmmakers, and WebXR artists can submit works to the 
 
 ## 📜 Authors & Acknowledgments
 
-* **Showcase Director & Technical Lead:** Larry James Dobson ([Wulf Design](https://wulfdesign.github.io) / [VRMakerDome](https://facebook.com/vrmakerdome))
+* **Showcase Director & Technical Lead:** Larry James ([Wulf Design](https://wulfdesign.github.io) / [VRMakerDome](https://facebook.com/vrmakerdome))
 * **Co-Director & Media Producer:** Julia Jackson ([UpLiftVR Studios](https://upliftvr.itch.io))
 * **Festival Consultant & Organizer:** Julia Camp ([Kremwerk](https://www.kremwerk.com))
+
