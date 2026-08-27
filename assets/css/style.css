@@ -689,8 +689,156 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Footer
+   Audience Choice Live Countdown & Schedule Badges
    -------------------------------------------------------------------------- */
+.countdown-box {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  text-align: center;
+  margin: 0 auto 24px auto;
+  max-width: 680px;
+  transition: all 0.3s ease;
+}
+
+/* Phase 1: Pre-Voting (Yellow) */
+.countdown-box.state-prevoting {
+  background: rgba(255, 222, 89, 0.06);
+  border: 2px solid var(--neon-yellow);
+  box-shadow: 0 0 25px rgba(255, 222, 89, 0.25), inset 0 0 15px rgba(255, 222, 89, 0.05);
+}
+
+.countdown-box.state-prevoting .countdown-status-badge {
+  background: rgba(255, 222, 89, 0.2);
+  color: var(--neon-yellow);
+  border: 1px solid var(--neon-yellow);
+}
+
+.countdown-box.state-prevoting .countdown-digits {
+  color: #ffde59;
+  text-shadow: 0 0 15px rgba(255, 222, 89, 0.6);
+}
+
+/* Phase 2: Live Open (Green) */
+.countdown-box.state-open {
+  background: rgba(0, 255, 102, 0.06);
+  border: 2px solid #00ff66;
+  box-shadow: 0 0 25px rgba(0, 255, 102, 0.3), inset 0 0 15px rgba(0, 255, 102, 0.05);
+}
+
+.countdown-box.state-open .countdown-status-badge {
+  background: rgba(0, 255, 102, 0.2);
+  color: #00ff66;
+  border: 1px solid #00ff66;
+}
+
+.countdown-box.state-open .countdown-digits {
+  color: #00ff66;
+  text-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
+}
+
+/* Phase 3: Closed (Red) */
+.countdown-box.state-closed {
+  background: rgba(255, 0, 85, 0.06);
+  border: 2px solid #ff0055;
+  box-shadow: 0 0 25px rgba(255, 0, 85, 0.3), inset 0 0 15px rgba(255, 0, 85, 0.05);
+}
+
+.countdown-box.state-closed .countdown-status-badge {
+  background: rgba(255, 0, 85, 0.2);
+  color: #ff0055;
+  border: 1px solid #ff0055;
+}
+
+.countdown-box.state-closed .countdown-digits {
+  color: #ff0055;
+  text-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
+}
+
+.countdown-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  min-width: 75px;
+}
+
+.countdown-digits {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.countdown-subtext {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.showcase-schedule-badge {
+  background: rgba(0, 240, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  margin: 14px auto 24px auto;
+  max-width: 680px;
+  text-align: center;
+  font-size: 0.92rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ballot-locked-box {
+  background: rgba(255, 222, 89, 0.08);
+  border: 1px dashed var(--neon-yellow);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffde59;
+  font-size: 0.92rem;
+}
+
 footer {
   background: #040407;
   border-top: 1px solid var(--border-subtle);

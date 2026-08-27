@@ -4,6 +4,22 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 14:35] - v0.1.9: Live Audience Choice Countdown & Time-Gated Ballot Engine 🚀⏳🗳️🟢🔴✨**
+
+📝 **Summary**
+1. **Tri-Phase Chromatic Live Countdown Header:**
+   - **🟡 Pre-Voting State (Yellow):** Live digital countdown clock ticking down to Friday, September 25, 2026 (Festival opening). Ballot submissions are locked and marked with a pre-voting status notice.
+   - **🟢 Live Open State (Green):** Automatically unlocks during festival dates (Sept 25 – 27) with a live countdown ticking down to Sunday Midnight (Sept 27 11:59:59 PM PDT). Enables instant ballot submission with LocalStorage persistence.
+   - **🔴 Closed State (Red):** Displays a fixed red `00 : 00 : 00 : 00` countdown and locks the ballot once voting concludes.
+2. **Official XR Showcase Schedule Integration:**
+   - Displayed official showcase operating hours: **Friday, Sept 25 & Saturday, Sept 26 • 10:00 PM – 1:00 AM nightly** across `/2026/index.html`, `/index.html`, and `/2026/vote/index.html`.
+3. **Interactive QA Simulation Controls:**
+   - Added client-side dev clock preview buttons (`🟡 Pre-Voting`, `🟢 Live Open`, `🔴 Closed 000`, `🔄 Live`) for instant browser verification without system clock manipulation.
+4. **Dashboards Recompiled:**
+   - Recompiled standalone and ecosystem telemetry. 🚀 ⏳ 🗳️ 🟢 🔴 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 14:25] - v0.1.8: Media Links & 2-Row Hero Buttons Layout Calibration 🚀🎬🎟️✨**
 
 📝 **Summary**

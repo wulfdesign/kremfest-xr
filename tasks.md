@@ -24,7 +24,9 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Live Audience Choice Countdown & Time-Gated Ballot Engine (v0.1.9):** Deployed live digital countdown header with tri-phase chromatic state engine (🟡 Yellow Pre-Voting with countdown till Friday Sept 25 -> 🟢 Green Live Open with countdown till Sunday Sept 27 Midnight -> 🔴 Red Closed 00:00:00), locked ballot submission prior to festival opening, integrated QA preview clock controls, and showcased official XR hours (Friday & Saturday 10:00 PM – 1:00 AM nightly) across 2026 portal and voting ballots. 🧪 ⏳ 🗳️ 🟢 🔴 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Direct Media & Ticket Link Alignment (Maiden Flight, High Desert Eclipse & 2-Row Hero Buttons - v0.1.8):** Calibrated live YouTube 360 trailers for Maiden Flight (https://youtu.be/FHIc24WiViY) and High Desert Eclipse (https://youtu.be/fzcFw_33iC8), updated Meta Quest Store link, integrated the High Desert Eclipse webportal/story link (https://wulfdesign.github.io/high-desert-eclipse/) across all years, and split hero action buttons into 2 clean rows (Submit/Ballot on row 1; Friday/Saturday/Weekend passes on row 2). 🧪 🥽 🎟️ 🎬 🧙‍♂️ 🐈
+
 
 
 ---

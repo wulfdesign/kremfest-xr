@@ -29,6 +29,44 @@
       </p>
     </div>
 
+    <!-- Live Dynamic Countdown Header (Yellow Pre-Voting -> Green Live Open -> Red Closed) -->
+    <div id="vote-countdown-box" class="countdown-box state-prevoting" data-start-time="2026-09-25T00:00:00-07:00" data-end-time="2026-09-27T23:59:59-07:00">
+      <div id="countdown-badge" class="countdown-status-badge">⏳ VOTING OPENS IN</div>
+      <div class="countdown-grid">
+        <div class="countdown-unit">
+          <span id="count-days" class="countdown-digits">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dim);">:</div>
+        <div class="countdown-unit">
+          <span id="count-hours" class="countdown-digits">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dim);">:</div>
+        <div class="countdown-unit">
+          <span id="count-mins" class="countdown-digits">00</span>
+          <span class="countdown-label">Mins</span>
+        </div>
+        <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dim);">:</div>
+        <div class="countdown-unit">
+          <span id="count-secs" class="countdown-digits">00</span>
+          <span class="countdown-label">Secs</span>
+        </div>
+      </div>
+      <p id="countdown-subtext" class="countdown-subtext">
+        Voting opens <strong>Friday, September 25, 2026</strong>. Showcase floor open <strong>Friday & Saturday 10:00 PM – 1:00 AM</strong>.
+      </p>
+    </div>
+
+    <!-- XR Showcase Hours & Location Callout Badge -->
+    <div class="showcase-schedule-badge">
+      <span>🥽 <strong>Showcase Hours:</strong> Friday & Saturday • 10:00 PM – 1:00 AM nightly</span>
+      <span style="opacity: 0.4;">|</span>
+      <span>📍 <strong>Venue:</strong> Kremwerk Complex (1809 Minor Ave)</span>
+      <span style="opacity: 0.4;">|</span>
+      <span>🗳️ <strong>Voting Window:</strong> Fri Sept 25 – Sun Sept 27 Midnight</span>
+    </div>
+
     <div class="voting-container">
       <div id="vote-success-box" style="display:none; text-align:center; padding:30px 20px;">
         <div style="font-size:3rem; margin-bottom:12px;">🎉</div>
@@ -37,6 +75,10 @@
           Thank you for voting for <strong id="voted-choice-title" style="color:#fff;"></strong> in the KremFest XR 2026 Audience Choice Awards.
         </p>
         <button onclick="resetVote('2026')" class="btn btn-secondary" style="font-size:0.85rem;">Change My Vote</button>
+      </div>
+
+      <div id="ballot-locked-notice" class="ballot-locked-box" style="display:none;">
+        🔒 <strong>Ballot Pre-Voting Status:</strong> Voting opens on Friday, September 25, 2026 during KremFest!
       </div>
 
       <form id="kremfest-vote-form" data-vote-year="2026">
@@ -82,8 +124,18 @@
 
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;">🚀 Submit My Vote</button>
       </form>
+
+      <!-- QA Testing Simulation Controls -->
+      <div style="margin-top:24px; padding-top:16px; border-top:1px dashed var(--border-subtle); display:flex; justify-content:center; gap:8px; flex-wrap:wrap; font-size:0.75rem; color:var(--text-dim);">
+        <span style="display:flex; align-items:center;">🧪 <strong>Preview Clock:</strong></span>
+        <button type="button" onclick="setVotingSimulation('prevoting')" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px; border-color:var(--neon-yellow); color:var(--neon-yellow);">🟡 Pre-Voting (Yellow)</button>
+        <button type="button" onclick="setVotingSimulation('open')" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px; border-color:#00ff66; color:#00ff66;">🟢 Live Open (Green)</button>
+        <button type="button" onclick="setVotingSimulation('closed')" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px; border-color:#ff0055; color:#ff0055;">🔴 Closed 000 (Red)</button>
+        <button type="button" onclick="setVotingSimulation(null)" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px;">🔄 Live</button>
+      </div>
     </div>
   </main>
+
 
   
   <footer>
