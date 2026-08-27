@@ -24,7 +24,9 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Neon Square QR Code & Refined Studio Curation Strip (v0.1.15):** Streamlined the mobile QR code in footer column 1 to a vibrant, textless cyberpunk square vector badge (kremfest_xr_mobile_qr_color.svg) and relocated a refined, full-width Wulf Design Studios creative direction & spatial XR credit strip directly between the 4-column footer grid and the copyright baseline across all 8 multi-year static pages and ballots. 🧪 📱 🎨 💎 🌐 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Interactive Mobile Vector QR Code Card (v0.1.14):** Designed and deployed a standalone vector SVG QR code widget into the footer under the KremFest XR Showcase description across all 8 multi-year static pages and ballots, enabling attendees and laptop viewers to scan the screen with their phones to instantly open and share wulfdesign.github.io/kremfest-xr with 100% offline, pin-sharp rendering. 🧪 📱 🔲 ⚡ 🌐 🧙‍♂️ 🐈
+
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Wulf Design Studios Hallmark Banner & Creative Direction Growth Strategy (v0.1.13):** Designed and deployed a cyber-luxe glassmorphic hallmark banner across all 8 multi-year static pages and ballots driving visitors to wulfdesign.github.io for spatial XR, experiential design, and festival curation services, and authored an extensive festival curation & client acquisition strategy blueprint in private sanctuary. 🧪 🎨 🌐 💼 🚀 🧙‍♂️ 🐈
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Global Geographic Venue Formatting (Seattle, WA • USA - v0.1.12):** Updated all venue address callouts, schedule badges, and footers across static portals and documentation to explicitly state "Kremwerk Complex (1809 Minor Ave, Seattle, WA • USA)" for clear international and global audience readability. 🧪 📍 🗺️ 🌐 🧙‍♂️ 🐈

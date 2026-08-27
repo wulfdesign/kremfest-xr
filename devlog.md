@@ -4,6 +4,18 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 15:09] - v0.1.15: Footer Neon Square QR & Refined Studio Curation Strip 🚀📱🎨✨**
+
+📝 **Summary**
+1. **Clean Neon Square QR Code Integration:**
+   - Streamlined the mobile QR code in footer Column 1 under "Where forward-thinking electronic music meets boundary-pushing virtual reality and immersive cinema at the Kremwerk Complex." to a standalone, beautifully colored vector SVG badge (`kremfest_xr_mobile_qr_color.svg`) with glowing pink/cyan gradients, removing adjacent side text.
+2. **Refined Full-Length Studio Curation Strip:**
+   - Toned down and repositioned the Wulf Design Studios creative direction credit (`.footer-studio-strip`) as a sleek, full-width cyber-strip located directly between the 4-column footer grid and `.footer-bottom` across all 8 multi-year static pages and voting ballots.
+3. **Dashboards Recompiled:**
+   - Recompiled standalone and ecosystem telemetry. 🚀 📱 🎨 💎 🌐 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 15:05] - v0.1.14: Footer Interactive Mobile Vector QR Code Card 🚀📱🔲✨**
 
 📝 **Summary**
