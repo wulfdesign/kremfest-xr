@@ -4,6 +4,23 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 14:25] - v0.1.8: Media Links & 2-Row Hero Buttons Layout Calibration 🚀🎬🎟️✨**
+
+📝 **Summary**
+1. **Live YouTube 360 Media Links Calibration:**
+   - Updated **UpLiftVR ‘Maiden Flight’ Balloon Ride** 360 trailer link across all multi-year pages to `https://youtu.be/FHIc24WiViY`.
+   - Updated **High Desert Eclipse** 360 video link across all multi-year pages to `https://youtu.be/fzcFw_33iC8`.
+2. **Meta Quest Store & High Desert Eclipse Webportal Story Links:**
+   - Updated Meta Quest Store experience link to `https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/`.
+   - Integrated the direct link to the **High Desert Eclipse Webportal & Story** (`https://wulfdesign.github.io/high-desert-eclipse/`) at the bottom of the High Desert Eclipse section across all years (2026, 2025, 2019, 2018).
+3. **Hero Action Buttons Re-structuring (2 Rows):**
+   - **Row 1:** Main Call-to-Actions — `🚀 Submit on FilmFreeway` & `🗳️ Audience Choice Ballot`.
+   - **Row 2:** Ticket Passes — `🎟️ Friday Pass (Sept 25)`, `🎟️ Saturday Pass (Sept 26)`, and `🎟️ Weekend Passes (Sept 25–27)`.
+4. **Dashboards Recompiled:**
+   - Synchronized standalone and master ecosystem telemetry. 🚀 🎟️ 🎬 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 14:05] - v0.1.7: HITL Verification, Magus Wulf Attribution & Completed Ledger Migration 🏆🧙‍♂️🐈✨**
 
 📝 **Summary**

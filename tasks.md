@@ -24,7 +24,8 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
-*(All completed tasks verified by Magus Wulf. New tasks staged here will await testing.)*
+* [ ] 🧪 🏗️ 🔥🔥🔥 **Direct Media & Ticket Link Alignment (Maiden Flight, High Desert Eclipse & 2-Row Hero Buttons - v0.1.8):** Calibrated live YouTube 360 trailers for Maiden Flight (https://youtu.be/FHIc24WiViY) and High Desert Eclipse (https://youtu.be/fzcFw_33iC8), updated Meta Quest Store link, integrated the High Desert Eclipse webportal/story link (https://wulfdesign.github.io/high-desert-eclipse/) across all years, and split hero action buttons into 2 clean rows (Submit/Ballot on row 1; Friday/Saturday/Weekend passes on row 2). 🧪 🥽 🎟️ 🎬 🧙‍♂️ 🐈
+
 
 ---
 
