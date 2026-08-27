@@ -4,6 +4,25 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 15:35] - v0.1.20: 2019 & 2018 Visual Asset Alignment Calibration 🚀🖼️🎨✨**
+
+📝 **Summary**
+1. **2019 Image Calibration:**
+   - Resolved sequential off-by-one image mapping shifts and restored exact source imagery:
+     - `All Around You`: Space portal / cosmic vortex image.
+     - `Blood Sisters`: Gothic witch coven holding skull in forest.
+     - `Space Chase with Spot!`: Hand-drawn dog spaceship cockpit illustration.
+     - `Ready Hunty One`: Disco glitter drag queen poster.
+     - `7 Lives`: Official Jan Kounen VR festival poster.
+     - `High Desert Eclipse`: 360° documentary equirectangular panorama.
+     - `Maiden Flight`: SIFF 2018 official selection laurel banner.
+2. **2018 Image Calibration:**
+   - Calibrated and verified all 2018 retrospective film artwork (`Bloodthirsty`, `Lionhearted`, `Walter`, `RocketMan 360`, `Crackle`, `High Desert Eclipse`, `Maiden Flight`).
+3. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 🖼️ 🎨 📸 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 15:28] - v0.1.19: High Desert Eclipse & Maiden Flight Link Refinements 🚀🔗🎬✨**
 
 📝 **Summary**
