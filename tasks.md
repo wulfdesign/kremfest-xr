@@ -18,12 +18,14 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
+* [ ] 🛠️ 🎨 **2017 Genesis Archive Visuals Acquisition:** Source and integrate official artwork for Shameful Conquest (Dr. Sarah Jones & Steve Dawkins), Heart of Fartness: Toxie's Toxic Twin Trauma (Lloyd Kaufman / Troma), and the official Kremfest 2017 festival banner/poster into the 2017 Genesis retrospective. 🐈
 * [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage any additional historical promo photos provided by DJ Julia or past curators into the retrospective galleries. 🐈
 
 ---
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **2018 Presenters, Geodesic Dome Booth & Sponsor Showcase (v0.1.21):** Extracted and integrated the original 2018 geodesic dome booth installation photo (featuring Larry James / VR Maker Dome at Kremfest 2018), Infinity Quest production streaming banner, SIXR logo, Vuze by HumanEyes camera badge, and Immersive Square logo into the curated 2018 retrospective footer. 🧪 🎪 🖼️ 📸 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **2019 & 2018 Visual Asset Alignment & Image Placement Calibration (v0.1.20):** Resolved sequential off-by-one image mapping shifts across 2019 and 2018 archives by visually verifying each experience asset against raw archive documents (calibrating All Around You space swirl, Blood Sisters witch coven, Space Chase with Spot dog cockpit, Ready Hunty One disco glitter, 7 Lives poster, High Desert Eclipse 360 panorama, Maiden Flight SIFF laurel, Bloodthirsty red triangle, Lionhearted refugees, Walter palm trees, RocketMan astronaut, and Crackle horror). 🧪 🖼️ 🎨 📸 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **High Desert Eclipse & Maiden Flight FilmFreeway & Portal Link Refinement (v0.1.19):** Corrected High Desert Eclipse FilmFreeway URL to https://filmfreeway.com/HighDesertEclipse, streamlined profile link text to concise "FilmFreeway" across both headliners, and renamed all "Webportal & Eclipse Story" links to "Eclipse Story Portal" across all multi-year retrospective and active showcase archives. 🧪 🔗 🎬 🥽 🌐 🧙‍♂️ 🐈
 

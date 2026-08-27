@@ -4,6 +4,23 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 16:10] - v0.1.21: 2018 Presenters, Geodesic Dome Booth & Sponsor Integration 🚀🎪🖼️✨**
+
+📝 **Summary**
+1. **2018 Presenters & Sponsors Calibration:**
+   - Extracted and integrated the original 2018 geodesic dome booth installation photo (`vr_maker_dome_booth.png`) featuring Larry James / VR Maker Dome setup at Kremfest 2018.
+   - Restored and calibrated official presenter and sponsor graphics:
+     - **Infinity Quest** live streaming video production banner (`infinity_quest_banner.jpg`)
+     - **SIXR** partner logo (`sixr_logo.jpg`)
+     - **Vuze Camera by HumanEyes** hardware sponsor badge (`vuze_logo.png`)
+     - **Immersive Square** production partner logo (`immersive_square_logo.png`)
+2. **2017 Archive Assets Added to Active Roadmap:**
+   - Staged visual asset acquisition tasks for *Shameful Conquest*, *Heart of Fartness*, and the 2017 festival poster.
+3. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 🎪 🖼️ 🎨 📸 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 15:35] - v0.1.20: 2019 & 2018 Visual Asset Alignment Calibration 🚀🖼️🎨✨**
 
 📝 **Summary**
