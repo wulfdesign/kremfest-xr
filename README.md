@@ -4,8 +4,9 @@
 > **Presented & Curated by:** VRMakerDome & UpLiftVR Studios (`Larry James & Julia Jackson`)  
 > **Festival Partner:** Kremwerk Complex & Julia Camp (Seattle, WA)  
 > **Public URL:** `https://wulfdesign.github.io/kremfest-xr/`  
-> **Current Version:** `v0.1.11`  
+> **Current Version:** `v0.1.12`  
 > **Ecosystem Node:** `projects/kremfest-xr`  
+
 
 
 
@@ -69,7 +70,8 @@ To preserve total privacy regarding sensitive history, planning notes, and inter
 
 Immersive creators, 360° filmmakers, and WebXR artists can submit works to the upcoming festival:
 * **FilmFreeway Portal:** [https://filmfreeway.com/KremFest](https://filmfreeway.com/KremFest)
-* **Venue:** Kremwerk / Timbre Room / Cherry Complex (1809 Minor Ave, Seattle, WA 98101)
+* **Venue:** Kremwerk / Timbre Room / Cherry Complex (1809 Minor Ave, Seattle, WA 98101 • USA)
+
 * **Categories:** Kremfest VR Experience (Experiential, Ambient, Narrative, Interactive, 360° Video)
 * **Festival Dates:** September 25 – 27, 2026
 
