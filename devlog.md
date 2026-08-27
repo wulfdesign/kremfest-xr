@@ -4,6 +4,18 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 13:45] - v0.1.6: 2017 Genesis Lineage Deep Lore (David Ayala, Kinetoscope VR, PSVR & 4Culture) 🚀🏛️🥽✨**
+
+📝 **Summary**
+1. **2017 Historical Curation & Lineage Integration:**
+   - Enriched `2017/index.html`, `publish_to_public.py`, and `lineups.json` with the complete 2017 festival lineage: curated and organized by **David Ayala** under *VR Experiences Powered by Kinetoscope VR (#neoK)*, sponsored by **4Culture Tech Specific**, utilizing **PlayStation VR (PSVR)** hardware.
+2. **Official 2017 Selections Cataloged:**
+   - Cataloged *Shameful Conquest* (practice-based immersive VR by Dr. Sarah Jones & Steve Dawkins) and *Heart of Fartness: Troma's First VR Experience* (Lloyd Kaufman / Troma Entertainment).
+3. **Media & Promotional Links:**
+   - Linked to the official 2017 festival trailers and highlight reels on the **Julia PlanetDisco YouTube Channel**. 🚀 🏛️ 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 13:25] - v0.1.5: Versioning Protocol, 2017 Kinetoscope VR Lineage & Identity Alignment 🚀🛡️📑✨**
 
 📝 **Summary**

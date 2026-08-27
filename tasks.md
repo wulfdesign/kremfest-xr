@@ -23,7 +23,9 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **2017 Genesis Lineage Integration (David Ayala / Kinetoscope VR / #neoK / 4Culture - v0.1.6):** Fully integrated historical 2017 genesis archive detailing David Ayala's curation, PSVR hardware setup, 4Culture Tech Specific sponsorship, Julia PlanetDisco trailer highlights, and featured selections (*Shameful Conquest* by Dr. Sarah Jones & Steve Dawkins and *Heart of Fartness* by Lloyd Kaufman/Troma). 🧪 🏛️ 🥽 📑 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Versioning, 2017 Kinetoscope VR Lineage & Identity Alignment (v0.1.5):** Synchronized `README.md` to `v0.1.5`, credited Kinetoscope VR (#neoK) & 4Culture for the 2017 inaugural edition, standardized attribution strictly to Larry James, and recompiled both the standalone and ecosystem dashboards. 🧪 🛡️ 📑 🐈
+
 
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Official 2026 Kremfest Poster Integration (v0.1.4):** Fetched official 2026 Kremfest flyer asset directly from Kremwerk's server (`kremfest_09-25_26-26_lineup_kremwerk.jpg`) and integrated into `assets/images/2026/kremfest_2026_poster.jpg`, `lineups.json`, `index.html`, and `2026/index.html`. 🧪 🥽 🖼️ 🐈
 
