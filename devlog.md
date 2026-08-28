@@ -4,7 +4,17 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
-### **[2026-08-28 15:29] - v0.1.37: Cross-Edition FilmFreeway Project Links Synchronization 🚀🎬🌐✨**
+### **[2026-08-28 15:53] - v0.1.38: Social Media Copy Calibration — Landing Portal & Multi-Year Archive 🚀📢🌐✨**
+
+📝 **Summary**
+1. **Landing Portal & Retrospective Archive Framing:**
+   - Calibrated all 15 campaign cards across Dev HUD (`http://localhost:3040/`), `build_social_hub.py`, and `social_media_campaign_launch_2026.md`.
+   - Updated copy to frame `https://wulfdesign.github.io/kremfest-xr/` as the primary **KremFest XR Landing Portal & Multi-Year Showcase Archive** (highlighting active 2026 festival guidelines, tickets, attendee voting, headliner showcases, and 5-edition retrospective catalogs).
+2. **Task Archival & Repository Synchronization:**
+   - Moved verified tasks `v0.1.35`, `v0.1.36`, `v0.1.37`, and `v0.1.38` to `COMPLETED.md`.
+   - Staged and prepared clean public and private Git commits for live push to GitHub `main`. 🚀 📢 🌐 🥽 🧙‍♂️ 🐈 ✨
+
+---
 
 📝 **Summary**
 1. **FilmFreeway Links Alignment Across Editions:**
