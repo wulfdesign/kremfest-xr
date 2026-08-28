@@ -1040,9 +1040,17 @@ footer {
 /* --------------------------------------------------------------------------
    Footer Interactive Mobile QR Code (Framed Colored Square)
    -------------------------------------------------------------------------- */
+.footer-col-showcase {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .footer-qr-wrap {
   margin-top: 14px;
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer-qr-color-img {
@@ -1191,5 +1199,14 @@ footer {
 
   .atmosphere-photo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-col-showcase {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer-col-showcase .footer-qr-wrap {
+    justify-content: flex-start;
   }
 }

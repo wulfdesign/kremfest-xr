@@ -4,6 +4,18 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 17:30] - v0.1.29: Footer Direction Reversal & Right-Aligned Mobile QR 🚀📱✨**
+
+📝 **Summary**
+1. **Reversed Footer Column Flow:**
+   - Reordered columns: Column 1 (Far Left) = Venue & Location, Column 2 = Festival Links, Column 3 = Historical Archives, Column 4 (Far Right) = KremFest XR Showcase & Mobile QR.
+2. **Right-Aligned Showcase Column:**
+   - Aligned description text and QR code to the right margin of the container on desktop viewports with responsive left-alignment fallback on mobile.
+3. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 📱 📍 🌐 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 17:25] - v0.1.28: 2018 Complete Presenters & 5-Sponsor Suite Integration 🚀🎪✨**
 
 📝 **Summary**
