@@ -4,6 +4,31 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-27 18:05] - v0.1.31: Experience Title Typography & Master Marketing / AI Frameworks 🚀📢🤖✨**
+
+📝 **Summary**
+1. **Experience Title Typography:**
+   - Bolded all featured experience titles in quotes across the 2018 and 2019 retrospective hero introductions for maximum visual scannability and emphasis.
+2. **Social Media Launch Campaign Grimoire:**
+   - Authored `private/strategy_and_marketing/social_media_campaign_launch_2026.md` covering LinkedIn, Facebook (Seattle VR, Seattle Fun Events, PNW Filmmakers), Reddit, Instagram, Bluesky, and film school outreach with full schedule, hashtags, and tagging strategy.
+3. **AI Transparency & Post-Submission Intake Framework:**
+   - Authored `private/strategy_and_marketing/ai_transparency_intake_framework.md` establishing the 0–5 "AI Heat Meter", domain categorization matrix, creator-friendly survey architecture, and follow-up email templates.
+4. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 📢 🤖 ✍️ 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
+### **[2026-08-27 17:32] - v0.1.30: 2019 Sponsor Alignment (Immersive Square Excluded) 🚀🏛️✨**
+
+📝 **Summary**
+1. **2019 Sponsor Scope Refinement:**
+   - Excluded Immersive Square logo from the 2019 retrospective sponsors row, retaining Vuze by HumanEyes, Infinity Quest, and SIXR.
+   - Preserved Immersive Square strictly in the 2018 retrospective archive.
+2. **Dashboards Recompiled:**
+   - Standalone and master ecosystem dashboards recompiled. 🚀 🏛️ 📸 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-27 17:30] - v0.1.29: Footer Direction Reversal & Right-Aligned Mobile QR 🚀📱✨**
 
 📝 **Summary**
