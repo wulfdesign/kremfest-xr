@@ -4,6 +4,29 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-28 15:21] - v0.1.36: 2019 Specs Sheet Links & Viewing Options Enrichment 🚀🌐🎬✨**
+
+📝 **Summary**
+1. **2019 Selection Links Extraction & Enrichment:**
+   - Parsed all project websites, viewing options, portfolios, YouTube channels, trailers, and social links from the raw `Cover Kremfest 2019 - Virtual Reality LineUp` specs sheet.
+   - Enriched *All Around You* (Artist Website, Facebook, Instagram, Twitter/X, YouTube Channel), *Blood Sisters* (Creator Portfolio at `createsiv.com`), *Space Chase with Spot!* (Director Website, YouTube Channel), *Ready Hunty One* (Project Website, Facebook Page), *7 Lives* (Official Project Site, Trailer), and *Maiden Flight* / *High Desert Eclipse* (Full suite of trailer, store, portal, and social links).
+2. **Compiler Regex & Label Calibration:**
+   - Added regex-based leading emoji stripping for all link labels in `publish_to_public.py` to ensure clean, consistent editorial rendering across all cards and static pages. 🚀 🌐 🎬 📺 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
+### **[2026-08-28 15:12] - v0.1.35: Master 15-Post Social Media & Outreach Launch Hub Deployed on Dev HUD 🚀📢📱✨**
+
+📝 **Summary**
+1. **Interactive Social Hub on Dev HUD (`http://localhost:3040/`):**
+   - Maintained original 2 launch posts (LinkedIn & Facebook) pre-checked as posted on Aug 28.
+   - Integrated full 15-post multi-platform launch suite from master grimoire (LinkedIn, Facebook Groups, Reddit, Instagram & Carousel outline, Bluesky, and University Outreach).
+2. **Persistent Tracking & Live Filters:**
+   - Added persistent `Posted` checkboxes and date pickers with dual `localStorage` and server disk persistence (`/api/social-status` -> `social_campaign_status.json`).
+   - Integrated live platform filtering chips, real-time keyword search, 1-click clipboard copy with toast feedback, and collapsible multi-week posting schedule cadence roadmap table. 🚀 📢 📱 ✍️ 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-28 14:42] - v0.1.34: Verified Sprints Pushed Live to GitHub & Tasks Archived to COMPLETED.md 🚀🐙🏆✨**
 
 📝 **Summary**
