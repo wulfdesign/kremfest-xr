@@ -18,13 +18,13 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
-* [ ] 🛠️ 🎨 **2017 Genesis Archive Visuals Acquisition:** Source and integrate official artwork for Shameful Conquest (Dr. Sarah Jones & Steve Dawkins), Heart of Fartness: Toxie's Toxic Twin Trauma (Lloyd Kaufman / Troma), and the official Kremfest 2017 festival banner/poster into the 2017 Genesis retrospective. 🐈
 * [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage any additional historical promo photos provided by DJ Julia or past curators into the retrospective galleries. 🐈
 
 ---
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **2017 Genesis Archive Visuals & Troma Official Selection Poster (v0.1.32):** Integrated the authentic 2017 Kremfest festival poster (`kremfest_2017_banner.webp`) into the 2017 guide hero, linked the authentic Troma *Heart of Fartness* poster with official KremFest VR 2017 laurel (`heart_of_fartness_2017.jpg`), and cleanly cleared placeholder imagery for *Shameful Conquest*. 🧪 🏛️ 🖼️ 🎬 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **2018 & 2019 Experience Title Highlighting & Master Marketing/AI Frameworks (v0.1.31):** Formatted all experience titles in bold quotes across 2018 and 2019 hero introduction texts, created comprehensive multi-platform social media campaign launch grimoire (LinkedIn, Facebook, Reddit, Instagram, Bluesky), and drafted the 0–5 Heat Meter AI Transparency and Post-Submission Intake Framework. 🧪 📢 🤖 ✍️ 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **2019 Sponsor Alignment (Immersive Square Excluded from 2019 - v0.1.30):** Removed Immersive Square logo from 2019 retrospective sponsors (preserving Vuze by HumanEyes, Infinity Quest, and SIXR) while retaining Immersive Square strictly in 2018 where they participated. 🧪 🏛️ 📸 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Navigation Direction Reversal & Right-Aligned Mobile QR (v0.1.29):** Reordered footer columns across all static portals so Venue & Location is on the far left, followed by Festival Links and Historical Archives, with KremFest XR Showcase and its color QR code anchored to the far right and aligned cleanly with the right boundary. 🧪 📱 📍 🌐 🧙‍♂️ 🐈
