@@ -25,6 +25,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **2018 Complete Presenters & 5-Sponsor Suite Integration (v0.1.28):** Integrated full 7-asset historical presenter and partner suite into the 2018 retrospective footer — displaying prominent side-by-side featured cards for VR Maker Dome Geodesic Dome and UpLiftVR Studios (SIFF 2018 Selection / Larry James) above the unified sponsors row (Infinity Quest, SIXR, Vuze by HumanEyes, Immersive Square, WonderTek Labs). 🧪 🎪 🖼️ 📸 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **2018 & 2019 Diamond Divider Balancing (v0.1.27):** Eliminated redundant duplicate diamond divider before the Curated & Presented showcase box and positioned a clean single diamond separator before the footer and studio strip. 🧪 💎 ✦ 🌐 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Authentic KremFest 2018 Festival Poster Banner Integration (v0.1.26):** Exported and integrated the official KremFest 2018 festival artwork poster (hot pink with yellow/blue circular globe lineup) directly to the header of the 2018 retrospective program guide. 🧪 🖼️ 🎨 🎪 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Attribution Alignment (Wulf Design Studios • Curated by Kremfest XR, VRMakerDome. & UpLiftVR Studios - v0.1.24):** Standardized primary copyright and curation attribution across all static portal pages and ballots to explicitly reflect `© 2017–2026 Wulf Design Studios • Curated by Kremfest XR, VRMakerDome. & UpLiftVR Studios`. 🧪 🏛️ ✍️ 🌐 🧙‍♂️ 🐈

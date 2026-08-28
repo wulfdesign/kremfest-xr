@@ -4,8 +4,9 @@
 > **Presented & Curated by:** VRMakerDome & UpLiftVR Studios (`Larry James & Julia Jackson`)  
 > **Festival Partner:** Kremwerk Complex & Julia Camp (Seattle, WA)  
 > **Public URL:** `https://wulfdesign.github.io/kremfest-xr/`  
-> **Current Version:** `v0.1.27`  
+> **Current Version:** `v0.1.28`  
 > **Ecosystem Node:** `projects/kremfest-xr`  
+
 
 
 
