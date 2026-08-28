@@ -25,6 +25,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🏗️ 🔥🔥🔥 **2018 & 2019 Diamond Divider Balancing (v0.1.27):** Eliminated redundant duplicate diamond divider before the Curated & Presented showcase box and positioned a clean single diamond separator before the footer and studio strip. 🧪 💎 ✦ 🌐 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Authentic KremFest 2018 Festival Poster Banner Integration (v0.1.26):** Exported and integrated the official KremFest 2018 festival artwork poster (hot pink with yellow/blue circular globe lineup) directly to the header of the 2018 retrospective program guide. 🧪 🖼️ 🎨 🎪 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **Footer Attribution Alignment (Wulf Design Studios • Curated by Kremfest XR, VRMakerDome. & UpLiftVR Studios - v0.1.24):** Standardized primary copyright and curation attribution across all static portal pages and ballots to explicitly reflect `© 2017–2026 Wulf Design Studios • Curated by Kremfest XR, VRMakerDome. & UpLiftVR Studios`. 🧪 🏛️ ✍️ 🌐 🧙‍♂️ 🐈
 * [ ] 🧪 🏗️ 🔥🔥🔥 **GitHub Remote Repositories Linkage (Public & Private - v0.1.23):** Configured upstream git remote origin tracking for public showcase repository (`https://github.com/wulfdesign/kremfest-xr.git`) and private sanctuary repository (`https://github.com/wulfdesign/kremfest-xr-private.git`), staging them for push authorization upon operator QA verification. 🧪 🐙 🛡️ 🔗 🌐 🧙‍♂️ 🐈
@@ -61,6 +62,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🔮 Future Expansion & Icebox (🧊)
 
+* [ ] 🧊 📸 **Historical Retrospective Photo Gallery Integration (2018 & 2017 Archives):** Curate and stage authentic crowd/floor/atmosphere retrospective photography from past festival runs into designated atmosphere gallery sections above the footer. 📸 🎪 🥽 🐈
 * [ ] 🧊 🎭 **WebXR In-Browser 360 Player:** Embed lightweight Three.js / WebXR 360° video panoramic viewer directly into the submission breakout modal cards so attendees on mobile/desktop can look around scenes without external video player redirects. 🐈
 * [ ] 🧊 🏗️ **Automated FilmFreeway Scraper / Webhook Integration:** Connect headless browser ingestion to pull live incoming submissions directly into `private/submission_pipeline/data/`. 🐈
 
