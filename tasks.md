@@ -24,8 +24,10 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **KremFest XR Cross-Edition FilmFreeway Links Synchronization (v0.1.37):** Synchronized and enriched all available FilmFreeway project links across 2026, 2025, 2019, and 2018 headliners (*UpLiftVR ‘Maiden Flight’ Balloon Ride* -> `https://filmfreeway.com/projects/1490200` & *High Desert Eclipse* -> `https://filmfreeway.com/HighDesertEclipse`), ensuring complete discovery options alongside trailers, store links, portals, and social channels. (See [kremfest-xr tasks](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/tasks.md)). 🧪 🌐 🎬 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🔥🔥🔥 **KremFest XR 2019 Specs Sheet Links & Viewing Options Enrichment (v0.1.36):** Extracted and integrated all missing project websites, viewing options, creator portfolios, YouTube channels, trailers, and social links from the raw `Cover Kremfest 2019 - Virtual Reality LineUp` specs sheet across all 2019 experiences (*All Around You* with website, FB, IG, Twitter & YouTube; *Blood Sisters* with creator portfolio; *Space Chase with Spot!* with director website & YouTube; *Ready Hunty One* with project website & FB; *7 Lives* with official project site & trailer; *Maiden Flight* and *High Desert Eclipse* with full suite of trailer, store, portal, and social links). (See [kremfest-xr tasks](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/tasks.md)). 🧪 🌐 🎬 📺 🥽 🧙‍♂️ 🐈
 * [ ] 🧪 🔥🔥🔥 **KremFest XR Master Social Media & Outreach Launch Hub (v0.1.35):** Built comprehensive 15-post interactive Social Media & Outreach Hub on the private Dev HUD (`http://localhost:3040/`). Preserved the two initial launch posts marked as posted (Aug 28), added persistent checkboxes and date pickers with dual localStorage and disk sync (`/api/social-status` -> `social_campaign_status.json`), implemented instant 1-click clipboard copy with toast feedback, real-time platform filters (`LinkedIn`, `Facebook`, `Reddit`, `Instagram`, `Bluesky`, `Outreach`, `Posted`, `Unposted`), live keyword search, and the full multi-week posting cadence roadmap table. 🧪 📢 📱 ✍️ 🥽 🧙‍♂️ 🐈
+
 
 
 
