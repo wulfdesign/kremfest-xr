@@ -4,6 +4,57 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-08-28 17:55] - v0.1.43: 2017 Genesis Archive Full 14-Selection Public Deployment 🚀🏛️🖼️🎬✨**
+
+📝 **Summary**
+1. **Public Deployment of Full 14-Selection 2017 Cohort:**
+   - Deployed complete 14-selection 2017 Genesis Archive (`2017/index.html`) live to public repository and GitHub Pages.
+   - Pushed 14 authentic high-resolution theatrical posters, project trailers, creator portfolios, IMDb links, and reformatted `x.com` handles.
+2. **Task Archival & Verification:**
+   - Formally archived sprints `v0.1.39`, `v0.1.40`, `v0.1.41`, and `v0.1.42` to `COMPLETED.md` with explicit Magus Wulf QA verification.
+   - Synchronized version manifest across public and private nodes to `v0.1.43`. 🚀 🏛️ 🖼️ 🎬 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
+### **[2026-08-28 17:52] - v0.1.42: 2017 Full Cohort 14 Theatrical Posters & Rich Links Completion 🚀🔒🏛️🎬✨**
+
+📝 **Summary**
+1. **Official Theatrical Poster Ingestion for *Nightmares*:**
+   - Ingested authentic high-resolution theatrical poster for *Nightmares* by Assem Kroma / Awesome Creative Productions (`nightmares_2017.jpg`).
+   - Updated project metadata with full theatrical billing.
+2. **100% Poster Coverage Across All 14 Selections:**
+   - Achieved complete authentic theatrical poster coverage for every single juried work in the 2017 inaugural genesis cohort. 🚀 🔒 🏛️ 🎬 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
+### **[2026-08-28 17:40] - v0.1.41: 2017 Full Cohort 14 Posters & Social/Portfolio Links Ingestion 🚀🔒🏛️🖼️✨**
+
+📝 **Summary**
+1. **Full Image Ingestion Across All 14 Selections:**
+   - Downloaded and staged authentic FilmFreeway press kit poster assets for *Beşik // The Cradle*, *Wind & Water*, *Shameful Conquest*, *Praying from Afar*, *Down To The Plastic Ocean*, *Neoptera*, *Mayhem*, *Secret Detours*, *ROUTE 360*, *The Human Circuit*, *STEAM HORSE*, and *E-Meal*.
+2. **Social, Portfolio & X/Twitter Link Integration:**
+   - Populated and normalized social links, portfolios, and direct trailers across all 14 project cards. 🚀 🔒 🏛️ 🖼️ 🎬 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
+### **[2026-08-28 17:00] - v0.1.40: 2017 Inaugural Genesis 14 Official Selections Discovery & Ingestion 🚀🔒🏛️✨**
+
+📝 **Summary**
+1. **2017 Cohort Ingestion (281 Submissions Dataset):**
+   - Unlocked and ingested the complete 14 official selection entries from the inaugural 2017 FilmFreeway submission pool (281 submissions, 1h 33m 36s runtime) into `lineups.json`. 🚀 🔒 🏛️ 🎬 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
+### **[2026-08-28 16:38] - v0.1.39: Memory Systems, Flying Monkey Firewall & Physical Dome Icebox Integration 🚀🔒🛡️✨**
+
+📝 **Summary**
+1. **Sanctuary Boundary & Flying Monkey Firewall:**
+   - Formalized strict boundary protocols in `collaborator_history_and_boundaries.md` and `hermes/instructions.md`.
+2. **VRMakerDome & Physical Dome Projection Icebox:**
+   - Formally documented in-headset showcase production; interior projection mapping frozen in icebox. 🚀 🔒 🛡️ 🥽 🧙‍♂️ 🐈 ✨
+
+---
+
 ### **[2026-08-28 15:53] - v0.1.38: Social Media Copy Calibration — Landing Portal & Multi-Year Archive 🚀📢🌐✨**
 
 📝 **Summary**
