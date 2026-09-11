@@ -25,6 +25,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **SLICE & PAX 2026 VIP Spotlight & VR Hardware Affiliate Funnel (v0.1.46):** Integrated invited VIP game showcase section featuring *Trip the Light: Let's Dance* (Patrick Ascolese / Dark Arts Software) and *CONNECTOME* & *CONSTELLATIONS* (Grant Hinkson / Parietal Lab) with partner attribution UTM tracking (`link-013`). Integrated VR hardware recommendation card for Meta Quest 3 on Amazon (`link-014`) and Meta Device Referral (`link-015`) with FTC disclosure across `index.html` and `2026/index.html`. Recompiled static site locally. 🧪 🎟️ 🥽 🛒 🐈
 * [ ] 🧪 🔥🔥🔥 **Sovereign Traffic Attribution & Experience Link Integration (v0.1.45):** Integrated canonical tracked campaign links (`link-010` for Meta Quest Store & `link-011` for WebXR Portal) into `index.html`, `2026/index.html`, and generated vector SVG QR codes for floor kiosks and programs. Tested locally on `http://localhost:3039/`. 🧪 🎪 🥽 🔗 🐈
 
 ---
