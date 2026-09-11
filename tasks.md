@@ -18,7 +18,6 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
-* [ ] 🛠️ 🔥🔥🔥 **Sovereign Traffic Attribution & Experience Link Integration:** Integrate tracked campaign links (`link-010` for Meta Quest Store & `link-011` for WebXR Portal) into the KremFest XR experience lineup pages and headliner breakout modals, and test locally before pushing to public GitHub repo. 🎪 🥽 🔗 🐈
 * [ ] 🛠️ 🔥🔥 **GitHub Pages Analytics vs. Dedicated Tracking Server:** Implement client-side privacy-first UTM parameter logging (Cloudflare Web Analytics / zero-dependency UTM logger script) for the public GitHub Pages portal, and evaluate dedicated reverse-proxy server for server-side redirect logging. 🌐 📊 🛡️ 🐈
 * [ ] 🛠️ 🕯️ **Archival Photo Integration:** Locate and stage any additional historical promo photos provided by DJ Julia or past curators into the retrospective galleries. 🐈
 
@@ -26,7 +25,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
-*(No items currently waiting for QA — all active sprints verified and archived!)*
+* [ ] 🧪 🔥🔥🔥 **Sovereign Traffic Attribution & Experience Link Integration (v0.1.45):** Integrated canonical tracked campaign links (`link-010` for Meta Quest Store & `link-011` for WebXR Portal) into `index.html`, `2026/index.html`, and generated vector SVG QR codes for floor kiosks and programs. Tested locally on `http://localhost:3039/`. 🧪 🎪 🥽 🔗 🐈
 
 ---
 
