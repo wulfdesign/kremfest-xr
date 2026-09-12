@@ -4,6 +4,20 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-11 23:00] - v0.1.54: Upgraded Grant Hinkson Dashboard Copy (Both Apps & Direct Showcase Links) 💬🎟️✨**
+
+📝 **Summary**
+1. **Grant Hinkson Follow-Up Copy Upgraded in Dev HUD:**
+   - Updated Option 2A (Full) and Option 2B (Quick Ping) in Tab 6 ("🎟️ SLICE & PAX VIP Invites") of the Dev HUD (`build_social_hub.py` & `dev_dashboard/index.html`).
+   - Copy now explicitly mentions dedicated spotlight cards staged for **both** *CONNECTOME* and *CONSTELLATIONS: Touch the Stars*, with his studio links and official key art.
+   - Includes direct inspection links (`https://wulfdesign.github.io/kremfest-xr/2026/` and main portal `https://wulfdesign.github.io/kremfest-xr/`).
+   - Explicitly asks for Quest App Keys (or release channel invites) for **both** experiences to enable pre-festival floor headset calibration and testing.
+2. **Recompiled Dev HUD & Public Portals:**
+   - Recompiled `dev_dashboard/index.html` via `build_social_hub.py` and synchronized static HTML portals via `publish_to_public.py`.
+   - Bumped version to `v0.1.54` across all manifests and documentation. 💬 🎟️ 🥽 🐈 ✨
+
+---
+
 ### **[2026-09-11 22:45] - v0.1.53: Dual-App Split for CONNECTOME & CONSTELLATIONS: Touch the Stars 🌌✨🎟️🥽**
 
 📝 **Summary**
