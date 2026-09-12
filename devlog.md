@@ -4,6 +4,28 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-11 21:55] - v0.1.50: FilmFreeway Ingestion Pipeline Overhaul, Operator Step-by-Step Guide & 2026 Selections Rendering 📥🚀🥽✨**
+
+📝 **Summary**
+1. **FilmFreeway Ingestion Parser Bug Resolution:**
+   - Diagnosed and resolved the root cause of the dual-ingest splitting failure: the legacy delimiter regex `\bProject:\s*` inadvertently matched `Student Project:No` in raw FilmFreeway specs copy-pastes, splitting a single project into two broken fragments (`https://filmfreeway.com/Lunar-Flyby-XR` and `No`).
+   - Re-engineered `ingest_filmfreeway_text.py` with intelligent FilmFreeway web page detection, multiline anchors, full spec cleanup, and automatic deduplication via `merge_or_append_selection()`.
+2. **Artemis: The Free Return Clean Ingestion & Artwork Optimization:**
+   - Extracted high-res render from `projects/lunar-flyby-xr/images/` and generated an optimized JPG (`assets/images/2026/artemis_lunar_flyby_2026.jpg`, 340 KB).
+   - Ingested *Artemis: The Free Return (WebXR Orbital Sandbox)* (KW2321) into `lineups.json` with complete metadata: title, directors, runtime, format, genre, logline, synopsis, director bio, director statement, quote, author attribution, and rich links.
+3. **Public Static Site Compiler Upgrade (`publish_to_public.py`):**
+   - Implemented dynamic rendering of `2026.selections` in both the Master Landing Portal (`index.html`) and 2026 Active Portal (`2026/index.html`) under `2026 Official Juried Selections`.
+   - Wired dynamic radio choices into the 2026 Audience Choice Ballot (`2026/vote/index.html`) so any confirmed selections automatically populate alongside headliners.
+4. **Dev HUD Operator Workflow & Ingest UI Upgrade (`build_social_hub.py`):**
+   - Designed and integrated a 5-step visual operator workflow card at the top of Tab 1 (`#tab-ingest`): Step 1 Copy Submission, Step 2 Configure Target, Step 3 Parse & Ingest, Step 4 Inspect & Artwork, Step 5 Recompile Site.
+   - Enhanced staged card previews with tracking number, origin, runtime, format, and instant "⚡ Recompile Now" button.
+5. **VIP Creator Support Pack Prepared (Patrick Ascolese / Dark Arts Software):**
+   - Prepared rich metadata pack for Patrick's launch-busy submission (*Trip the Light: Let's Dance*), ready to auto-populate upon ingestion or direct injection.
+6. **Ecology Cross-Pollination (VRMakerDome / Port 3016):**
+   - Connected VRMakerDome's sovereign B2B corporate event agency context with KremFest XR curation lineage across topology and documentation. 📥 🚀 🥽 🐈 ✨
+
+---
+
 ### **[2026-09-11 21:22] - v0.1.49: Hardware Recommendation Optimization & Verified Meta Referral Focus 🎁🥽🛒✨**
 
 📝 **Summary**
