@@ -4,6 +4,24 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-11 22:45] - v0.1.53: Dual-App Split for CONNECTOME & CONSTELLATIONS: Touch the Stars 🌌✨🎟️🥽**
+
+📝 **Summary**
+1. **Separation into Distinct Standalone Showcase Entries:**
+   - Identified that *CONSTELLATIONS: Touch the Stars* is a separate, dedicated standalone app on the Meta Quest Store (`constellations-touch-the-stars/24145606965110616/`).
+   - Split Grant Hinkson's showcase into two distinct entries in `publish_to_public.py`, `index.html`, and `2026/index.html`:
+     - **CONNECTOME:** Room-scale spatial meditation, neural network growth, and ambient acoustic soundscapes.
+     - **CONSTELLATIONS: Touch the Stars:** Hands-on celestial star-tracing across 88 IAU constellations with pinch gestures and heads-up display.
+2. **Official Meta Quest Store Key Art Scraped for CONSTELLATIONS:**
+   - Scraped official 2560×1440 master promotional key art directly from Meta’s CDN (`499618440_1959525797940964_6725219384130740694_n.webp`), resized and optimized to `assets/images/2026/constellations_2026.jpg` (1440×810, 89.6 KB).
+   - Embedded `constellations_2026.jpg` into its dedicated showcase card.
+3. **Dedicated Store Links & Architecture Wired:**
+   - Wired separate Meta Quest Store URLs with campaign tracking for both apps.
+   - Updated Dev HUD Tab 6 (`build_social_hub.py`) with quick links for `Meta: CONNECTOME ↗` and `Meta: CONSTELLATIONS ↗`.
+   - Bumped version to `v0.1.53` across `build_social_hub.py`, `README.md`, `devlog.md`, `tasks.md`, `private/tasks.md`, and `chatHandOff.md`. Recompiled all static portals and Dev HUD. 🌌 ✨ 🎟️ 🥽 🐈
+
+---
+
 ### **[2026-09-11 22:30] - v0.1.52: VIP Showcase Polish, Meta Store Connectome Key Art Scrape & Parietal Lab Verified Links 🎨✨🎟️🥽**
 
 📝 **Summary**
