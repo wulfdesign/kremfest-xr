@@ -4,6 +4,27 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-11 22:15] - v0.1.51: Trip the Light Official Selection Merge, Meta Store Key Art Scrape & Grant Follow-Up Studio 🎮🖼️🎟️✨**
+
+📝 **Summary**
+1. **Trip the Light: Let's Dance Merged into Official 2026 Lineup:**
+   - Appended *Trip the Light: Let's Dance* by Patrick Ascolese (Dark Arts Software) into `years.2026.selections` in `lineups.json` with rich metadata: variable runtime, room-scale Quest format, full synopsis, statements, quotes, and links.
+   - Dynamic 2026 selections compiler rendered the new selection onto `index.html` and `2026/index.html` under `2026 Official Juried Selections`.
+   - Automatically populated on the live 2026 Audience Choice Ballot (`2026/vote/index.html`).
+2. **Meta Quest Store High-Res Key Art Scraped & Optimized:**
+   - Scraped and extracted official 1440x810 promotional key art from the live Meta Quest Store CDN (`trip-the-light-lets-dance/8025476794223581/`).
+   - Saved optimized JPEG (`assets/images/2026/trip_the_light_2026.jpg`, 143 KB) featuring the signature neon pink title and dancing performers.
+3. **VIP Spotlight Statuses Calibrated (Confirmed vs. Pending):**
+   - Updated Patrick Ascolese's spotlight card in `publish_to_public.py` with `✅ CONFIRMED SELECTION (APP KEY RECEIVED)`.
+   - Updated Grant Hinkson's spotlight card with `⏳ INVITED SPOTLIGHT — PENDING CONFIRMATION` and explicit note on awaiting confirmation and app key setup.
+4. **Grant Hinkson Follow-Up Message & App Key Request Studio:**
+   - Drafted a friendly, low-pressure follow-up message requesting an app key / release channel invite for *CONNECTOME* or *CONSTELLATIONS* so Larry can pre-install and test it on the festival headsets ahead of time.
+   - Baked the follow-up copy into Tab 6 of the Dev HUD with 1-click clipboard copy (`text-invite-grant-followup`).
+5. **HUD & Static Site Version Synchronization:**
+   - Bumped version to `v0.1.51` across `build_social_hub.py`, `README.md`, `devlog.md`, `tasks.md`, and `chatHandOff.md`. Recompiled Dev HUD and public static pages. 🎮 🖼️ 🎟️ 🐈 ✨
+
+---
+
 ### **[2026-09-11 21:55] - v0.1.50: FilmFreeway Ingestion Pipeline Overhaul, Operator Step-by-Step Guide & 2026 Selections Rendering 📥🚀🥽✨**
 
 📝 **Summary**
