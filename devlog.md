@@ -4,7 +4,29 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
-### **[2026-09-11 22:15] - v0.1.51: Trip the Light Official Selection Merge, Meta Store Key Art Scrape & Grant Follow-Up Studio 🎮🖼️🎟️✨**
+### **[2026-09-11 22:30] - v0.1.52: VIP Showcase Polish, Meta Store Connectome Key Art Scrape & Parietal Lab Verified Links 🎨✨🎟️🥽**
+
+📝 **Summary**
+1. **Trip the Light: Let's Dance Presentation Polish:**
+   - Removed `(APP KEY RECEIVED)` and operational staging text from the VIP Industry Showcase card across `publish_to_public.py`, `index.html`, and `2026/index.html`.
+   - Updated badge to clean `✅ CONFIRMED OFFICIAL SELECTION` and status bullet to `Confirmed Official Selection`.
+   - Embedded scraped high-resolution key art (`assets/images/2026/trip_the_light_2026.jpg`) directly into the VIP card for visual symmetry.
+2. **Grant Hinkson / Parietal Lab Presentation Clean-up:**
+   - Removed internal pipeline text `(Awaiting Confirmation & App Key Setup)` and `(Awaiting App Key & Floor Verification)` from byline and bullets.
+   - Updated badge to `🎟️ INVITED VIP SPOTLIGHT` and status to clean `VIP Invitation Dispatched`.
+   - Byline polished to clean `By Grant Hinkson • Parietal Lab`.
+3. **Scraped Meta Quest Store Key Art for CONNECTOME & Parietal Lab:**
+   - Scraped official 2560x1440 CDN master key art from the live Meta Quest Store page (`connectome/25707920632186813/`), resized to crisp 1440x810, and optimized to `assets/images/2026/connectome_2026.jpg` (114 KB).
+   - Scraped high-res cover art from `parietallab.com` and generated `assets/images/2026/constellations_2026.jpg` (1440x810).
+   - Embedded `connectome_2026.jpg` into Grant's VIP showcase card across `index.html` and `2026/index.html`.
+4. **Discovered & Wired Verified Studio & Store Links:**
+   - Integrated full suite of verified outbound links with partner UTM tracking: Meta Quest Store, `ConnectomeGame.com`, `ParietalLab.com`, Grant Hinkson Portfolio (`granthinkson.com`), and Parietal Lab LinkedIn.
+   - Updated Tab 6 in Dev HUD (`build_social_hub.py`) with quick-action links for Meta Quest, game site, studio site, portfolio, and LinkedIn.
+5. **Follow-Up Message Studio & Version Increment:**
+   - Prepared quick, polite follow-up outreach copy for Grant requesting a Quest App Key to test on floor headsets, noting his live showcase card is already staged for him to review.
+   - Bumped version to `v0.1.52` across `build_social_hub.py`, `publish_to_public.py`, `README.md`, `devlog.md`, `tasks.md`, `private/tasks.md`, and `chatHandOff.md`. Recompiled all static portals and Dev HUD. 🎨 ✨ 🎟️ 🥽 🐈
+
+---
 
 📝 **Summary**
 1. **Trip the Light: Let's Dance Merged into Official 2026 Lineup:**
