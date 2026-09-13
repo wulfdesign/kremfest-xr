@@ -4,6 +4,26 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-12 20:05] - v0.1.57: Grant Hinkson VIP App Keys Received & 3-Experience Suite Integrated 🎟️🥽🌌🎨✨**
+
+📝 **Summary**
+1. **Grant Hinkson VIP App Keys Dispatched & Confirmed:**
+   - Grant Hinkson (Parietal Lab / *Fr0gg3r*) responded with enthusiasm to Larry's festival invitation and emailed Quest App Keys for *CONNECTOME* and *CONSTELLATIONS: Touch the Stars*.
+   - Officially offered and included a 3rd spatial experience: *Project Hydra: Iterations*, the virtual reality gallery companion to the monumental installation showcased at the Seattle Coliseum of Art (free on the Meta Horizon Store).
+2. **Master Key Art Scraping & Optimization:**
+   - Scraped master 2048×1152 promotional webp from Grant's server, resized and converted to high-res 1440×810 JPEG (`assets/images/2026/project_hydra_2026.jpg`, 137 KB) matching the festival standard 16:9 aesthetic.
+3. **Pure Hand-Tracking Alignment:**
+   - Documented that all three of Grant's experiences are optimized from the ground up for optical hand tracking. Larry confirmed hand-tracking is ideal for the festival floor, with gameplay/onboarding testing scheduled for next week. Grant is also actively updating his portfolio for Meta Connect!
+4. **Lineup & Audience Choice Ballot Dynamic Integration:**
+   - Merged all 3 Grant Hinkson experiences into `years.2026.selections` in `lineups.json` with rich metadata, director statements, and verified links.
+   - Recompiled all static HTML portals via `publish_to_public.py`. The 2026 lineup now features 5 official juried selections alongside the 2 UpLiftVR headliners.
+   - All 7 experiences dynamically populate on the live 2026 Audience Choice Ballot (`2026/vote/index.html`).
+5. **Dev HUD Operator Studio Upgrade (Tab 6):**
+   - Updated Tab 6 ("🎟️ SLICE & PAX VIP Invites") in `build_social_hub.py` and `dev_dashboard/index.html` with confirmed selection badges, an app keys received banner, direct links for all 3 apps, and YouTube trailer links.
+   - Synchronized version across all public and private manifests, tools, and servers to `v0.1.57`. 🎟️ 🥽 🌌 🎨 🐈 ✨
+
+---
+
 ### **[2026-09-11 23:58] - v0.1.56: Dev HUD Script Syntax Repair, Resilient Batch Launchers & Staging Vault Verification 🩹🛡️🎴✨**
 
 📝 **Summary**

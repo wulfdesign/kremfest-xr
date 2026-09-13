@@ -1,17 +1,27 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.56)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.57)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.56` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 11, 2026 | 23:59 PST  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `62f2347`)  
+> **Project Version:** `v0.1.57` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 12, 2026 | 20:10 PST  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local Sovereignty: `v0.1.57` Ready in Local Sanctuary; Pushed `main` at `62f2347`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Dev HUD Script Syntax Repair & Batch Resilience (v0.1.56):**
+1. **Grant Hinkson VIP App Keys Received & 3-Experience Suite Integrated (v0.1.57):**
+   - Grant Hinkson (Parietal Lab / *Fr0gg3r*) enthusiastically responded to Larry's festival invitation and emailed Quest App Keys for *CONNECTOME* and *CONSTELLATIONS: Touch the Stars*.
+   - Officially offered and included a 3rd spatial experience: *Project Hydra: Iterations*, the virtual reality gallery companion to the monumental installation showcased at the Seattle Coliseum of Art (free on the Meta Horizon Store: `https://vr.meta.me/s/21wPTxyxcIjwIBn`).
+   - Scraped master 2048×1152 promotional webp from Grant's server, resized and converted to high-res 1440×810 JPEG (`assets/images/2026/project_hydra_2026.jpg`, 137 KB) matching festival standard 16:9 aesthetic.
+   - Documented pure optical hand-tracking interaction scheme across all 3 experiences ("optimized for hands from the beginning"). Larry reassured Grant that pure hand-tracking is ideal for festival showcase floor, with onboarding testing scheduled for next week.
+   - Merged all 3 Grant Hinkson experiences into `years.2026.selections` in `lineups.json` with rich metadata, director statements, and verified links.
+   - Recompiled all static HTML portals via `publish_to_public.py`. The 2026 lineup now features 5 official juried selections alongside the 2 UpLiftVR headliners.
+   - All 7 experiences dynamically populate on the live 2026 Audience Choice Ballot (`2026/vote/index.html`).
+   - Updated Tab 6 ("🎟️ SLICE & PAX VIP Invites") in `build_social_hub.py` and `dev_dashboard/index.html` with confirmed selection badges, an app keys received banner, direct links for all 3 apps, and YouTube trailer links.
+   - Synchronized version across all public and private manifests, tools, and servers to `v0.1.57`.
+2. **Dev HUD Script Syntax Repair & Batch Resilience (v0.1.56):**
    - Diagnosed root cause of unresponsive Dev HUD navigation buttons (`📥 Ingest`, `🧪 Staging Vault`, `🎴 Lineup Editor`, etc.): multiline Python strings had generated unescaped physical newlines inside JavaScript string literals (`missingItems.join("\n")`), triggering a fatal browser `SyntaxError: Invalid or unexpected token` that halted script execution.
    - Escaped all JavaScript string newlines (`join('\\n')`) and verified full script syntax with Node.js `vm.Script` (100% clean).
    - Upgraded Windows batch scripts (`serve.bat` and `start_dev.bat`) with operator escaping (`^&`) and single-source browser launching via Python server script.
@@ -72,8 +82,7 @@
 
 ## 🎯 Top Priority Directives for Next Session
 
-1. **Empirical Local QA Sign-off:** Magus Wulf verifies `http://localhost:3040/` (Tab 1 Ingest HUD, Tab 6 VIP Invites) and `http://localhost:3039/2026/index.html` (Artemis & Trip the Light selections + ballot).
-2. **Dispatch Grant Follow-Up:** Send the quick follow-up message to Grant Hinkson via LinkedIn requesting the Quest App Key for *CONNECTOME* / *CONSTELLATIONS*.
-3. **Trip the Light Headset Sideload & App Key Test:** Redeem Patrick's app key and conduct pre-festival gameplay and audio latency testing on Meta Quest 3.
-4. **🔥🔥🔥 Amazon Associates Account Setup:** Finalize tax/payment onboarding for tag `wulfdesign-20`, re-enable Amazon button in `publish_to_public.py`, and recompile public pages.
-5. **Dispatch 10-Day Countdown Blasts:** Copy and post the 3 ready posts (LinkedIn, Facebook/Instagram, Reddit/Discord) for the Sept 21 deadline.
+1. **Empirical Local QA Sign-off:** Magus Wulf verifies `http://localhost:3040/` (Dev HUD Tabs 1-8, especially Tab 2 Staging Vault & Tab 6 VIP Invites) and `http://localhost:3039/2026/index.html` + `http://localhost:3039/2026/vote/index.html` (all 7 experiences & ballot).
+2. **Quest App Key Redemption & Headset Sideload Testing:** Redeem Quest App Keys on Meta Quest 3 for Patrick's *Trip the Light* and Grant's *CONNECTOME*, *CONSTELLATIONS: Touch the Stars*, and *Project Hydra: Iterations*. Conduct floor calibration and verify optical hand-tracking responsiveness.
+3. **🔥🔥🔥 Amazon Associates Account Setup:** Finalize tax/payment onboarding for tag `wulfdesign-20`, re-enable Amazon button in `publish_to_public.py`, and recompile public pages.
+4. **Dispatch 10-Day Countdown Blasts:** Copy and post the 3 ready posts (LinkedIn, Facebook/Instagram, Reddit/Discord) for the Sept 21 deadline.
