@@ -1,17 +1,22 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.57)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.58)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.57` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 12, 2026 | 20:10 PST  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local Sovereignty: `v0.1.57` Ready in Local Sanctuary; Pushed `main` at `62f2347`)  
+> **Project Version:** `v0.1.58` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 12, 2026 | 20:45 PST  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `95114ac`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Grant Hinkson VIP App Keys Received & 3-Experience Suite Integrated (v0.1.57):**
+1. **VIP Developer Meta Horizon Store Attribution Templates (v0.1.58):**
+   - Authored tailored post-confirmation and live verification correspondence for Grant Hinkson (Parietal Lab: *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*) and Patrick Ascolese (Dark Arts Software: *Trip the Light: Let's Dance*).
+   - Clarified inbound traffic analytics: all outbound store links pass `utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip`, rendering directly in guest developers' Meta Horizon Developer Consoles (under Analytics ➔ Acquisition & Referrers) and website telemetry.
+   - Upgraded Tab 6 ("🎟️ SLICE & PAX VIP Invites") in `build_social_hub.py` and `dev_dashboard/index.html` with Option 3 subcards featuring 1-click clipboard triggers (`text-grant-attribution-email` and `text-patrick-attribution-email`).
+   - Synchronized version across all public and private manifests, tools, and servers to `v0.1.58`.
+2. **Grant Hinkson VIP App Keys Received & 3-Experience Suite Integrated (v0.1.57):**
    - Grant Hinkson (Parietal Lab / *Fr0gg3r*) enthusiastically responded to Larry's festival invitation and emailed Quest App Keys for *CONNECTOME* and *CONSTELLATIONS: Touch the Stars*.
    - Officially offered and included a 3rd spatial experience: *Project Hydra: Iterations*, the virtual reality gallery companion to the monumental installation showcased at the Seattle Coliseum of Art (free on the Meta Horizon Store: canonical permalink `https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/`, shortlink `https://vr.meta.me/s/21wPTxyxcIjwIBn`).
    - Scraped master 2048×1152 promotional webp from Grant's server, resized and converted to high-res 1440×810 JPEG (`assets/images/2026/project_hydra_2026.jpg`, 137 KB) matching festival standard 16:9 aesthetic.
