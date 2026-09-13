@@ -27,6 +27,8 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **Dev HUD Script Syntax Repair, Resilient Batch Launchers & Staging Vault Verification (v0.1.56):** Diagnosed and resolved the root cause of unresponsive Dev HUD tab buttons (unescaped multiline JavaScript strings in `build_social_hub.py` causing fatal `SyntaxError: Invalid or unexpected token` in browser). Recompiled and verified JS syntax with Node `vm.Script`. Escaped Windows batch reserved operator (`^&`) in `serve.bat` and established single-source browser launching via Python server script. Clarified Winsock 10048 port reuse behavior and verified server active on port 3040. Synchronized versions, tasks, devlogs, and chat handoffs across public and private repositories to `v0.1.56`. 🧪 🩹 🛡️ 🎴 🥽 🐈 ✨
+
 * [ ] 🧪 🔥🔥🔥 **Air-Gapped Incomplete Staging Vault & Candidate Outreach Engine (v0.1.55):** Architected and deployed a dedicated, physically isolated candidate staging vault (`staging_vault.json`) that is air-gapped from `lineups.json` and `publish_to_public.py`. Built interactive 6-point deliverable readiness checklist (App Key, 16:9 Key Art, Synopsis, Bio, Runtime/Comfort, Waiver), real-time readiness scoring (0–100%), and dynamic missing materials correspondence generators with 1-click clipboard triggers (`Full Request` and `Quick Ping`). Upgraded Tab 1 ingestion with default destination routing into the Staging Vault. Added REST endpoints (`/api/staging`, `/api/staging/add`, `/api/staging/delete`, `/api/staging/promote`) in `server.py` allowing 1-click atomic graduation to `lineups.json` when complete. Pushed public portal to GitHub `main` (`5792707..62f2347`). Synchronized version across all files to `v0.1.55`. 🧪 📦 🛡️ 🚀 🐈 ✨
 
 * [ ] 🧪 🔥🔥🔥 **Grant Hinkson Follow-Up Copy Upgraded with Dual-App Requests & Links (v0.1.54):** Updated Option 2A (Full Context) and Option 2B (Quick Ping) in Tab 6 ("🎟️ SLICE & PAX VIP Invites") of the Dev HUD (`build_social_hub.py` & `dev_dashboard/index.html`). The copy now explicitly highlights that dedicated spotlight cards are staged for **both** *CONNECTOME* and *CONSTELLATIONS: Touch the Stars* with his links and artwork (`https://wulfdesign.github.io/kremfest-xr/2026/`), and explicitly requests Quest App Keys (or release channel invites) for **both** experiences for floor headset calibration. Synchronized version across all files to `v0.1.54`. 🧪 💬 🎟️ 🥽 🐈 ✨
@@ -53,7 +55,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 ### 🧠 Human-in-the-Loop (HITL) Operations
 
 * [ ] 🧠 🔥 **HITL: FilmFreeway Active Season Link:** Verify FilmFreeway 2026 submission deadlines and category pricing matches the online live portal. 🧙‍♂️ 🐈
-* [ ] 🧠 🔥 **HITL: GitHub Pages Deployment:** Configure repository remote and publish `projects/kremfest-xr` to `https://wulfdesign.github.io/kremfest-xr/`. 🧙‍♂️ 🐈
+* [x] 🧠 🔥 **HITL: GitHub Pages Deployment (Completed v0.1.55):** Pushed commit `62f2347` cleanly to `https://github.com/wulfdesign/kremfest-xr.git` on branch `main`. Live portals active at `https://wulfdesign.github.io/kremfest-xr/` and `https://wulfdesign.github.io/kremfest-xr/2026/`. 🧙‍♂️ 🐈 🚀
 * [ ] 🧠 🕯️ **HITL: 360 Video Archive Assets:** Review and select 360 footage clips filmed by J. Jackson during KremFest 2018 for private staging. 🧙‍♂️ 🐈
 
 ---

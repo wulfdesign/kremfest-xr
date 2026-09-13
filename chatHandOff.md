@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.55)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.56)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.55` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 11, 2026 | 23:45 PST  
+> **Project Version:** `v0.1.56` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 11, 2026 | 23:59 PST  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `62f2347`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,12 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Air-Gapped Incomplete Staging Vault & Candidate Outreach Engine (v0.1.55):**
+1. **Dev HUD Script Syntax Repair & Batch Resilience (v0.1.56):**
+   - Diagnosed root cause of unresponsive Dev HUD navigation buttons (`📥 Ingest`, `🧪 Staging Vault`, `🎴 Lineup Editor`, etc.): multiline Python strings had generated unescaped physical newlines inside JavaScript string literals (`missingItems.join("\n")`), triggering a fatal browser `SyntaxError: Invalid or unexpected token` that halted script execution.
+   - Escaped all JavaScript string newlines (`join('\\n')`) and verified full script syntax with Node.js `vm.Script` (100% clean).
+   - Upgraded Windows batch scripts (`serve.bat` and `start_dev.bat`) with operator escaping (`^&`) and single-source browser launching via Python server script.
+   - Enhanced Winsock 10048 port reuse logging in `server.py` to clarify active background status.
+2. **Air-Gapped Incomplete Staging Vault & Candidate Outreach Engine (v0.1.55):**
    - Engineered dedicated, physically isolated candidate vault (`staging_vault.json`) that is strictly excluded from public static compilation (`publish_to_public.py`).
    - Built interactive 6-point deliverable readiness checklist (Quest App Key, 16:9 Key Art, Synopsis, Creator Bio, Runtime/Comfort, Waiver), real-time readiness scoring (0–100%), and dynamic missing materials correspondence generators with 1-click clipboard triggers (`Full Request` and `Quick Ping`).
    - Upgraded Tab 1 ingestion with default destination routing into the Staging Vault.
