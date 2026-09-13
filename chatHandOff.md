@@ -13,7 +13,7 @@
 
 1. **Grant Hinkson VIP App Keys Received & 3-Experience Suite Integrated (v0.1.57):**
    - Grant Hinkson (Parietal Lab / *Fr0gg3r*) enthusiastically responded to Larry's festival invitation and emailed Quest App Keys for *CONNECTOME* and *CONSTELLATIONS: Touch the Stars*.
-   - Officially offered and included a 3rd spatial experience: *Project Hydra: Iterations*, the virtual reality gallery companion to the monumental installation showcased at the Seattle Coliseum of Art (free on the Meta Horizon Store: `https://vr.meta.me/s/21wPTxyxcIjwIBn`).
+   - Officially offered and included a 3rd spatial experience: *Project Hydra: Iterations*, the virtual reality gallery companion to the monumental installation showcased at the Seattle Coliseum of Art (free on the Meta Horizon Store: canonical permalink `https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/`, shortlink `https://vr.meta.me/s/21wPTxyxcIjwIBn`).
    - Scraped master 2048×1152 promotional webp from Grant's server, resized and converted to high-res 1440×810 JPEG (`assets/images/2026/project_hydra_2026.jpg`, 137 KB) matching festival standard 16:9 aesthetic.
    - Documented pure optical hand-tracking interaction scheme across all 3 experiences ("optimized for hands from the beginning"). Larry reassured Grant that pure hand-tracking is ideal for festival showcase floor, with onboarding testing scheduled for next week.
    - Merged all 3 Grant Hinkson experiences into `years.2026.selections` in `lineups.json` with rich metadata, director statements, and verified links.
