@@ -1,17 +1,25 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.58)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.59)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.58` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 12, 2026 | 20:45 PST  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `95114ac`)  
+> **Project Version:** `v0.1.59` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 15:45 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **VIP Developer Meta Horizon Store Attribution Templates (v0.1.58):**
+1. **Master Festival Operations Studio, Hardware Checklist & Real-Time Countdown (v0.1.59):**
+   - Codified comprehensive 13-day day-by-day countdown roadmap (Sept 15–27, 2026 leading up to KremFest XR at Kremwerk Complex on Sept 25–26; doors 10:00 PM PDT; submissions close Sept 21 at 23:59 PDT).
+   - Firmly isolated Saturday, September 19 as 100% blocked for Marina & Garden grounding (zero screen/tech time to protect nervous system vitality).
+   - Documented 6 categorized equipment checklists (Headsets, Display/Computing, Power/Batteries, Sanitation/Lens Armor, Network/Hotspot, Floor Logistics/Safety) including the mandatory lens protection rule warded against the 2019 Oculus Go lens damage incident (silicone lens rings + optical microfiber only; alcohol wipes ONLY for silicone and plastic).
+   - Codified the 3-Tier Spectator Pipeline: Quest 3 standalone primary + Laptop HDMI Out to venue TV as persistent anchor + iPad Air on tabletop stand as mobile queue spectator screen.
+   - Documented the GeekFest West 2025 panel hot-swap protocol: persistent HDMI anchor prevents TV "No Input" blue screens, browser/MQDH window `F11` fullscreen toggle, and `<3s` casting recovery via `Esc` ➔ `Ctrl + R`.
+   - Built Tab 9 (`🎒 Festival Ops & Countdown`) in `build_social_hub.py` and `render_festival_ops.py` featuring live dual countdown clocks, real-time progress bar, tab badge sync (`0/59 Complete`), 1-click Markdown report export, and `/api/ops-checklist` persistent REST endpoint in `server.py`.
+   - Synchronized version across all public and private manifests, tools, and servers to `v0.1.59`.
+2. **VIP Developer Meta Horizon Store Attribution Templates (v0.1.58):**
    - Authored tailored post-confirmation and live verification correspondence for Grant Hinkson (Parietal Lab: *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*) and Patrick Ascolese (Dark Arts Software: *Trip the Light: Let's Dance*).
    - Clarified inbound traffic analytics: all outbound store links pass `utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip`, rendering directly in guest developers' Meta Horizon Developer Consoles (under Analytics ➔ Acquisition & Referrers) and website telemetry.
    - Upgraded Tab 6 ("🎟️ SLICE & PAX VIP Invites") in `build_social_hub.py` and `dev_dashboard/index.html` with Option 3 subcards featuring 1-click clipboard triggers (`text-grant-attribution-email` and `text-patrick-attribution-email`).
