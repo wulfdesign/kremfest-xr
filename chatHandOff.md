@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.60)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.61)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.60` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 16:15 PDT  
+> **Project Version:** `v0.1.61` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 16:35 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,14 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Operations Logistics Upgrades, Compensation Memo & Seattle Event Calendar Guide (v0.1.60):**
+1. **DJ VR Curated SideQuest, VR Streamers/Press Studio & Amazon Associates Focus Allocation (v0.1.61):**
+   - Built modular `render_sidequest.py` rendering Tab 10 (`🎧 DJ VR SideQuest & Curated Outreach`) in the Dev HUD (Port 3040), establishing the Dual-Station DJ Blueprint for the Kremwerk dance floors (Station A: djay by Algoriddim MR crowd attraction vs. Station B: Tribe XR Pioneer CDJ-3000 producer sandbox).
+   - Formulated Auto-Income & Marketing Dept synergy: custom UTM tracking (`utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated`) and physical on-site QR codes for Meta Horizon Store attribution.
+   - Built ready-to-send outreach packages with 1-click clipboard triggers for Algoriddim (Karim Morsy) and Tribe XR (Tom Impallomeni) across Email, LinkedIn, and Social DMs.
+   - Built modular `render_streamers.py` rendering Tab 11 (`🎥 VR Streamers & Press Studio`) with curated directory of top XR YouTubers (SixTacos, SadlyItsBradley, Cas & Chary, GeekWire) and Creator VIP Pass protocol (2-night wristband, headset fast-track, clean HDMI/audio tap, pre-doors private demo, mandatory venue pre-approval rule).
+   - Allocated Sunday, September 20 (Day 6) as dedicated Amazon Associates Activation Day (`wulfdesign-20`) in operations roadmap and Tab 9.
+   - Recompiled Dev HUD HTML, verified JS syntax with Node `vm.Script`, and synchronized version across all manifests to `v0.1.61`.
+2. **Operations Logistics Upgrades, Compensation Memo & Seattle Event Calendar Guide (v0.1.60):**
    - Expanded Master Operations Grimoire (`private/operations/festival_countdown_and_hardware_checklist.md`) and Dev HUD Tab 9 (`🎒 Festival Ops & Countdown`) with Category F logistics (purple & red perimeter fairy lights from last year, backup Quest 2 headset retrieval, boat bench gear staging, wheeled luggage cart for load-in, printed hardcopy binder).
    - Authored comprehensive compensation memo (`private/operations/compensation_and_invoice_memo.md`) reconciling 2019/2025 financial history ($500–$600 honoraria) with 2026 expanded scope (7 titles, 2 nights 10 PM–4 AM, ~18 onsite hours, dual spectator screens, $75 supplies). Formulated Option A ($700 flat honorarium) and Option B ($500 baseline + passes) with ready-to-send correspondence for Nicole Stone & DJ Julia.
    - Created Seattle Event Listing Distribution Guide (`private/operations/seattle_event_listing_distribution_guide.md`) across 7 top platforms (The Stranger / EverOut, Do206, Resident Advisor, GeekWire, Seattle Times, CHS, Luma) with short, medium, and long copy blurbs.
