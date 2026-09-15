@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.59)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.60)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.59` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 15:45 PDT  
+> **Project Version:** `v0.1.60` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 16:15 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,14 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Master Festival Operations Studio, Hardware Checklist & Real-Time Countdown (v0.1.59):**
+1. **Operations Logistics Upgrades, Compensation Memo & Seattle Event Calendar Guide (v0.1.60):**
+   - Expanded Master Operations Grimoire (`private/operations/festival_countdown_and_hardware_checklist.md`) and Dev HUD Tab 9 (`🎒 Festival Ops & Countdown`) with Category F logistics (purple & red perimeter fairy lights from last year, backup Quest 2 headset retrieval, boat bench gear staging, wheeled luggage cart for load-in, printed hardcopy binder).
+   - Authored comprehensive compensation memo (`private/operations/compensation_and_invoice_memo.md`) reconciling 2019/2025 financial history ($500–$600 honoraria) with 2026 expanded scope (7 titles, 2 nights 10 PM–4 AM, ~18 onsite hours, dual spectator screens, $75 supplies). Formulated Option A ($700 flat honorarium) and Option B ($500 baseline + passes) with ready-to-send correspondence for Nicole Stone & DJ Julia.
+   - Created Seattle Event Listing Distribution Guide (`private/operations/seattle_event_listing_distribution_guide.md`) across 7 top platforms (The Stranger / EverOut, Do206, Resident Advisor, GeekWire, Seattle Times, CHS, Luma) with short, medium, and long copy blurbs.
+   - Mapped out 4 strategic social media campaign posts (Posts 19–22) in Tab 6 for pre-deadline, post-deadline, and festival eve dispatches.
+   - Air-gapped incomplete FilmFreeway submission Jon Stone / *Firedrake VR* (`KW2319`) into `staging_vault.json` with dedicated outreach options in Tab 7.
+   - Recompiled Dev HUD HTML and validated JS syntax with Node `vm.Script`. Synchronized version across all manifests to `v0.1.60`.
+2. **Master Festival Operations Studio, Hardware Checklist & Real-Time Countdown (v0.1.59):**
    - Codified comprehensive 13-day day-by-day countdown roadmap (Sept 15–27, 2026 leading up to KremFest XR at Kremwerk Complex on Sept 25–26; doors 10:00 PM PDT; submissions close Sept 21 at 23:59 PDT).
    - Firmly isolated Saturday, September 19 as 100% blocked for Marina & Garden grounding (zero screen/tech time to protect nervous system vitality).
    - Documented 6 categorized equipment checklists (Headsets, Display/Computing, Power/Batteries, Sanitation/Lens Armor, Network/Hotspot, Floor Logistics/Safety) including the mandatory lens protection rule warded against the 2019 Oculus Go lens damage incident (silicone lens rings + optical microfiber only; alcohol wipes ONLY for silicone and plastic).
