@@ -1,17 +1,22 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.69)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.70)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.69` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 16, 2026 | 16:40 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.69` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.70` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 16, 2026 | 16:50 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.70` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Seattle Event Calendar Listings & Announcements Hub Deployed (Tab 14 / v0.1.69):**
+1. **EverOut.com 1:1 Live Form Field Assistant & Promotional Asset Integration (v0.1.70):**
+   - Upgraded Tab 14 (`📅 Seattle Event Listings & Announcements`) in `render_event_listings.py` with an integrated 1:1 live form field companion matching `everout.com/seattle/events/submit/` line-for-line.
+   - Built 1-click clipboard triggers across all 10 EverOut form fields: Title, Location ("Kremwerk" / "1809 Minor Ave"), Category ("Nightlife" / "Performance"), Description (156 words, editorial-optimized, confirmed lineup only), Age ("21+"), Price ("Included with KremFest Pass ($25–$45)"), Event Date & Time across both nights (Friday Sept 25 & Saturday Sept 26, 10 PM to 1 AM nightly), Links (Ticket & Event website), Image Upload Spec Compliance (&ge;700x450px, &lt;3MB, featuring `trip_the_light_2026.jpg` 1440&times;810 px • 140 KB with direct download button and local path copy), Video Embed (`youtu.be` link), Contact Info (`wulfdesign@gmail.com` / Larry James), and Checkbox Safety Protocol (warning to leave paid advertising unchecked to prevent sales calls).
+   - Recompiled Dev HUD HTML and verified JavaScript syntax with Node `vm.Script` (100% clean).
+
+2. **Seattle Event Calendar Listings & Announcements Hub Deployed (Tab 14 / v0.1.69):**
    - Engineered modular generator `private/submission_pipeline/tools/render_event_listings.py` deploying Tab 14 (`📅 Seattle Event Listings & Announcements`) in the Dev HUD (Port 3040).
    - Targeted 7 open public event listing portals that accept submissions without requiring private press clearance: The Stranger / EverOut Seattle, Do206, Resident Advisor (RA.co), GeekWire Events, Capitol Hill Seattle (CHS Blog), Luma Seattle (lu.ma/seattle), and The Seattle Times (Evvnt portal).
    - Formulated Quick-Copy Master Event Metadata grid (Full/Short/Nightlife titles, dates, showcase hours 10 PM–1 AM, venue Kremwerk 1809 Minor Ave, age 21+, admission, categories/tags, official links) with 1-click clipboard triggers for rapid form filling.
