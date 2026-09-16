@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.64)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.65)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.64` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 17:50 PDT  
+> **Project Version:** `v0.1.65` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 18:25 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,22 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Tribe XR Communication Channel Audit & Contact Routing Engine (v0.1.64):**
+1. **Transport, Gear Segregation & Amazon Prime Supply Logistics Hub (v0.1.65):**
+   - Engineered modular generator `render_transport.py` deploying Tab 13 (`🛴 Transport & Gear Logistics`) in the Private Dev HUD (Port 3040).
+   - Codified Solo Operator 1-Headset Protection Doctrine: To eliminate equipment damage/theft liability (*"it'll break me if something happens to anything"*), Larry operates solo with 1 active floor headset (Meta Quest 3) with 1:1 supervision, supported by 1 immediate standby headset (Meta Quest 2) on the bench.
+   - Realigned floor operations to core 3-hour peak club energy window: **10:00 PM – 1:00 AM**, followed by a calm 30-minute strike (1:00 AM – 1:30 AM), eliminating sleep-deprived 4:00 AM exhaustion and enabling safe transit.
+   - Formulated Friday Overnight Gear Segregation Strategy Matrix:
+     - *Option Alpha (Backpack Mobile - Recommended):* High-value/recharge-critical items (Laptop + power supply, Meta Quest 3, 3x USB-C PD power banks) travel home in backpack to recharge at the boat. Medium wheeled luggage cart containing Quest 2 backup, fairy lights, cables, and wipes remains safely locked at Kremwerk (in locked office/closet).
+     - *Option Beta (Full Rollout):* Everything packs into wheeled cart + backpack and travels home via Uber if venue lockup is unavailable.
+     - *Sit-Down Lime Scooter Bungee Trial Run:* Formulated protocol for testing the luggage cart bungeed to the front footboard deck of a sit-down Lime scooter when moving gear between storage and the boat bench on Day 2 (Wed Sept 16).
+   - Built Interactive 2-Night Rideshare Surge Budget Calculator:
+     - Real-time calculator demonstrating that the upgraded **$750.00 Option A honorarium** ($375/night; `private/operations/compensation_and_invoice_memo.md`) cleanly absorbs all late-night rideshare surges ($80–$140 buffer) and $75 in supplies while delivering $565.00 net realized compensation.
+     - Added bank account liquidity reminder for upfront rideshare and Amazon card debiting ($200–$250 liquid buffer before Thursday Sept 24).
+   - Established Amazon Prime Urgent Supplies Checklist: Tracking 6 key items before Prime shipping cutoff (silicone interfaces, optical microfiber cloths for lenses only, anti-scratch lens rings, 20ft HDMI, gaffer tape, AA batteries/lanyards).
+   - Engineered interactive 10-item logistics checklist with `/api/transport` REST API persistence in `dev_dashboard/server.py`, LocalStorage sync, progress bar, and 1-click Markdown export.
+   - Updated Days 10–12 operations schedule in Tab 9 (`render_festival_ops.py`), recompiled all Dev HUD and public static pages to `v0.1.65`, and verified JS syntax with Node `vm.Script`.
+
+2. **Tribe XR Communication Channel Audit & Contact Routing Engine (v0.1.64):**
    - Audited verified outbound email channels for Tribe XR following delivery bounce on `partners@tribexr.com`.
    - Identified verified corporate and executive mailboxes from press releases and company disclosures: `info@tribexr.com`, `press@tribexr.com`, and `tom@tribexr.com` (alongside community Discord `discord.gg/tribexr` and LinkedIn `linkedin.com/in/timpallo/`).
    - Updated Tab 10 in `render_sidequest.py` and `dev_dashboard/index.html` with explicit bounce notice badge (`partners@ BOUNCED • USE info@, press@, or tom@`), corrected direct contact lines, and updated Option 2A email target.
