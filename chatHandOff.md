@@ -1,17 +1,28 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.68)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.69)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.68` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 19:20 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.68` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.69` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 16, 2026 | 16:40 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.69` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Wednesday & Thursday Execution Roadmap: Storage Swap, In-Headset APK Testing, Social Media Broadcast & Seattle Event Announcements Blitz (v0.1.68):**
+1. **Seattle Event Calendar Listings & Announcements Hub Deployed (Tab 14 / v0.1.69):**
+   - Engineered modular generator `private/submission_pipeline/tools/render_event_listings.py` deploying Tab 14 (`📅 Seattle Event Listings & Announcements`) in the Dev HUD (Port 3040).
+   - Targeted 7 open public event listing portals that accept submissions without requiring private press clearance: The Stranger / EverOut Seattle, Do206, Resident Advisor (RA.co), GeekWire Events, Capitol Hill Seattle (CHS Blog), Luma Seattle (lu.ma/seattle), and The Seattle Times (Evvnt portal).
+   - Formulated Quick-Copy Master Event Metadata grid (Full/Short/Nightlife titles, dates, showcase hours 10 PM–1 AM, venue Kremwerk 1809 Minor Ave, age 21+, admission, categories/tags, official links) with 1-click clipboard triggers for rapid form filling.
+   - Authored 4 tiers of promotional copy (Tier 1 Quick Hook ~35w, Tier 2 Short Calendar Blurb ~80w, Tier 3 Medium Description ~160w, Tier 4 Comprehensive Feature ~320w) strictly featuring confirmed official 2026 selections (*Trip the Light*, *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*, *High Desert Eclipse*, *Maiden Flight*, *Artemis Lunar Flyby* + live Audience Choice voting).
+   - Built 7 interactive portal tracking cards with checkbox, submission date, reference link/ref, internal notes, and direct external submit portal buttons (`Open Submit Portal ↗`).
+   - Integrated REST persistence via `/api/event-listings` (GET and POST) in `private/dev_dashboard/server.py` with LocalStorage fallback, real-time progress bar, and 1-click Markdown status report export.
+   - Logged Jon Stone's / *Firedrake VR* 24-hour delivery confirmation of a 6–10 min liminal exploration build in `staging_vault.json` (status: `"build_in_prep"`, air-gapped from public).
+   - Logged Larry's live LinkedIn lineup update (`https://lnkd.in/p/grAQV8sR`) in `social_campaign_status.json`.
+   - Recompiled `private/dev_dashboard/index.html`, validated JavaScript syntax with Node `vm.Script` (100% clean), and restarted server on Port 3040.
+
+2. **Wednesday & Thursday Execution Roadmap: Storage Swap, In-Headset APK Testing, Social Media Broadcast & Seattle Event Announcements Blitz (v0.1.68):**
    - Calibrated Day 2 (Wednesday, Sept 16) and Day 3 (Thursday, Sept 17) operations schedule in `render_festival_ops.py` (Tab 9: `🎒 Festival Ops & Countdown`).
    - Added dedicated action items for:
      1. **Storage Unit Retrieval & Boat Room Clearing Run:** Retrieve Meta Quest 2 backup headset, spare controllers, backup cables, and purple/red perimeter fairy lights; transfer non-essential boat belongings back to storage to clear workbench and living room space on the boat.
