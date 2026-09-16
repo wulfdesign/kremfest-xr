@@ -4,6 +4,31 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-15 18:50] - v0.1.66: Air-Gapped Candidate Staging: "We Are Dead Animals" & Staging Vault UI Upgrade 🥽📦🦌🦔🖼️🎬✨**
+
+📝 **Summary**
+1. **Air-Gapped Candidate Staging into `staging_vault.json`:**
+   - Ingested official FilmFreeway submission `KW2320`: *We Are Dead Animals* (directed by Dutch animation and XR artist Tote Tiere Maarten / Maarten Isaäk de Heer; Netherlands/Germany; world premiere in competition at IDFA DocLab 2025).
+   - Preserved 100% air-gap from public lineups (`lineups.json` and static HTML pages untouched) while Larry downloads the APK for local Quest 3 sideload testing.
+   - Initialized deliverable readiness score to **83% (5/6 deliverables completed)**:
+     - 🥽 `app_key`: false (standalone Quest APK downloaded; awaiting in-headset test)
+     - 🖼️ `key_art`: true (official high-res poster copied and staged)
+     - 📝 `synopsis`: true (full overview, logline, and variable 15–25 min eating survival mechanics)
+     - 👤 `creator_bio`: true (comprehensive artist bio and full creative credits)
+     - ⏱️ `runtime_comfort`: true (15:00–19:00 variable runtime, comfortable)
+     - 🎟️ `filmfreeway_waiver`: true (official KW2320 entry in Kremfest VR Experience category)
+2. **Official Key Art Poster Staged:**
+   - Copied user-provided key art from `private/import/2026/We-are-Dead-Animals_poster.jpg` into `assets/images/2026/we_are_dead_animals_2026.jpg` for clean Dev HUD and future catalog rendering.
+3. **Dev HUD Tab 2 UI Upgrade (`build_social_hub.py`):**
+   - Upgraded `renderStagedCards()` to dynamically render poster thumbnails (`imageHtml`), festival laurels/awards (`awardsHtml`), and 1-click external resource pill buttons (`linksHtml`) for the Vimeo trailer, gameplay video, Dropbox assets/build folder, website, and Instagram.
+4. **Cross-Manifest Versioning & Syntax Verification:**
+   - Recompiled `dev_dashboard/index.html` via `build_social_hub.py` and validated JavaScript syntax with Node.js `vm.Script` (100% clean).
+   - Bumped `dev_dashboard/server.py` and `build_social_hub.py` fallback and HUD versions to `v0.1.66`.
+   - Verified `/api/staging` endpoint returning 2 staged candidates (`KW2319` and `KW2320`).
+   - Bumped `kremfest-xr` and `kremfest-xr/private` to `v0.1.66`. 🥽 📦 🦌 🦔 🖼️ 🎬 🐈 ✨
+
+---
+
 ### **[2026-09-15 18:25] - v0.1.65: Transport, Gear Segregation & Amazon Prime Supply Logistics Hub 🛴🎒🚕📦💵🥽✨**
 
 📝 **Summary**

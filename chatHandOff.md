@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.65)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.66)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.65` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 18:25 PDT  
+> **Project Version:** `v0.1.66` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 18:50 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,20 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Transport, Gear Segregation & Amazon Prime Supply Logistics Hub (v0.1.65):**
+1. **Air-Gapped Candidate Staging: "We Are Dead Animals" & Staging Vault UI Upgrade (v0.1.66):**
+   - Ingested official FilmFreeway submission `KW2320`: *We Are Dead Animals* (directed by Dutch animation and XR artist Tote Tiere Maarten / Maarten Isaäk de Heer; Netherlands/Germany; world premiere in competition at IDFA DocLab 2025).
+   - Preserved 100% air-gap from public lineups (`lineups.json` and static HTML pages untouched) while Larry downloads the APK for local Quest 3 sideload testing.
+   - Initialized deliverable readiness score to **83% (5/6 deliverables completed)**:
+     - 🥽 `app_key`: false (standalone Quest APK downloaded; awaiting in-headset test)
+     - 🖼️ `key_art`: true (official high-res poster copied and staged into `assets/images/2026/we_are_dead_animals_2026.jpg`)
+     - 📝 `synopsis`: true (full overview, logline, and variable 15–25 min eating survival mechanics)
+     - 👤 `creator_bio`: true (comprehensive artist bio and full creative credits)
+     - ⏱️ `runtime_comfort`: true (15:00–19:00 variable runtime, comfortable)
+     - 🎟️ `filmfreeway_waiver`: true (official KW2320 entry in Kremfest VR Experience category)
+   - Enhanced Dev HUD Tab 2 (`🧪 Incomplete Staging Vault`) in `build_social_hub.py` to dynamically render poster thumbnails (`imageHtml`), festival laurels/awards (`awardsHtml`), and 1-click external resource pill buttons (`linksHtml`) for the Vimeo trailer, gameplay video, Dropbox assets/build folder, website, and Instagram.
+   - Recompiled `dev_dashboard/index.html`, validated syntax with Node `vm.Script` (100% clean), and verified `/api/staging` returning 2 staged candidates (`KW2319` and `KW2320`).
+
+2. **Transport, Gear Segregation & Amazon Prime Supply Logistics Hub (v0.1.65):**
    - Engineered modular generator `render_transport.py` deploying Tab 13 (`🛴 Transport & Gear Logistics`) in the Private Dev HUD (Port 3040).
    - Codified Solo Operator 1-Headset Protection Doctrine: To eliminate equipment damage/theft liability (*"it'll break me if something happens to anything"*), Larry operates solo with 1 active floor headset (Meta Quest 3) with 1:1 supervision, supported by 1 immediate standby headset (Meta Quest 2) on the bench.
    - Realigned floor operations to core 3-hour peak club energy window: **10:00 PM – 1:00 AM**, followed by a calm 30-minute strike (1:00 AM – 1:30 AM), eliminating sleep-deprived 4:00 AM exhaustion and enabling safe transit.
