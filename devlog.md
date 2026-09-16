@@ -4,6 +4,27 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-15 19:10] - v0.1.67: Firedrake VR Staged Poster Integration, Waiver-Free Correspondence & Quick Phone SMS Hub 🥽🖼️📱✉️🐉✨**
+
+📝 **Summary**
+1. **Firedrake VR Key Art Staged & Readiness Score Elevated to 83%:**
+   - Copied user-provided official poster from `private/import/2026/FireDrake-Wizards-Warren_poster.jpg` to `assets/images/2026/firedrake_wizards_warren_2026.jpg`.
+   - Updated `private/submission_pipeline/data/staging_vault.json` for `staged-kw2319-firedrake-vr`: set `image: "/assets/images/2026/firedrake_wizards_warren_2026.jpg"`, `key_art: true`, and verified `filmfreeway_waiver: true` (standard entry fee paid). Candidate readiness elevated to **83% (5/6 items verified)**.
+2. **Waiver Code Purged from Regular Submissions:**
+   - Polished correspondence logic in `build_social_hub.py` (`renderStagedCards()`): if candidate has a tracking number or standard submission verified (`alreadySubmitted`), all waiver code mentions (`KremFestSeaIndieVR2026`) are strictly omitted.
+   - Refocused email copy on acknowledging their FilmFreeway entry (`KW2319`) and directly requesting a Meta Quest App Key (or Release Channel invite) or APK download link before the Sept 21 deadline for floor headset testing.
+3. **Tab 2 Quick Phone SMS Ping Hub Activated:**
+   - Upgraded Dev HUD Tab 2 cards to detect phone numbers on file (`c.phone` / `208-627-3059`).
+   - Added high-visibility **Option 2: Quick Phone Text Message (SMS)** card with a dedicated 1-click `📋 Copy SMS Text` clipboard trigger directly under the email box.
+   - Pre-drafted concise, friendly SMS ping referencing their project title, tracking number, and requesting the app key/download link before Monday.
+4. **Dev HUD Compilation, Syntax Verification & Air-Gap Assurance:**
+   - Recompiled `dev_dashboard/index.html` via `build_social_hub.py`.
+   - Validated JavaScript syntax using Node.js `vm.Script` (0 errors).
+   - Confirmed public lineups (`lineups.json`, `index.html`, `2026/index.html`) remain 100% air-gapped from candidate materials.
+   - Bumped `staging_vault.json`, `server.py`, `README.md`, `tasks.md`, `chatHandOff.md` to `v0.1.67`. 🥽 🖼️ 📱 ✉️ 🐉 🐈 ✨
+
+---
+
 ### **[2026-09-15 18:50] - v0.1.66: Air-Gapped Candidate Staging: "We Are Dead Animals" & Staging Vault UI Upgrade 🥽📦🦌🦔🖼️🎬✨**
 
 📝 **Summary**

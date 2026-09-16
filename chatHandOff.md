@@ -1,17 +1,24 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.66)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.67)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.66` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 18:50 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
+> **Project Version:** `v0.1.67` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 19:10 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.67` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Air-Gapped Candidate Staging: "We Are Dead Animals" & Staging Vault UI Upgrade (v0.1.66):**
+1. **Firedrake VR Staged Poster Integration, Waiver-Free Correspondence & Quick Phone SMS Hub (v0.1.67):**
+   - Ingested official key art poster for Jon Stone / *Firedrake VR (Wizard's Warren)* from `private/import/2026/FireDrake-Wizards-Warren_poster.jpg` into `assets/images/2026/firedrake_wizards_warren_2026.jpg`.
+   - Updated `private/submission_pipeline/data/staging_vault.json`: linked image `/assets/images/2026/firedrake_wizards_warren_2026.jpg`, set `key_art: true`, and confirmed `filmfreeway_waiver: true` (standard entry fee paid). Elevated candidate readiness score to **83% (5/6 deliverables verified)**.
+   - Purged all waiver code mentions (`KremFestSeaIndieVR2026`) from Firedrake's correspondence across Tab 2 and Tab 7. Tailored email to acknowledge his FilmFreeway entry (`KW2319`) and directly request a Meta Quest App Key (or Release Channel invite) or APK download link before the Sept 21 deadline for floor headset testing.
+   - Upgraded Dev HUD Tab 2 (`renderStagedCards()`) to detect candidate phone numbers (`208-627-3059`) and render a prominent **Option 2: Quick Phone Text Message (SMS)** box with a 1-click `📋 Copy SMS Text` clipboard button directly on the candidate card.
+   - Recompiled `dev_dashboard/index.html`, validated syntax with Node.js `vm.Script` (100% clean), and confirmed both candidates (*Firedrake VR* and *We Are Dead Animals*) remain 100% air-gapped from public festival lineups.
+
+2. **Air-Gapped Candidate Staging: "We Are Dead Animals" & Staging Vault UI Upgrade (v0.1.66):**
    - Ingested official FilmFreeway submission `KW2320`: *We Are Dead Animals* (directed by Dutch animation and XR artist Tote Tiere Maarten / Maarten Isaäk de Heer; Netherlands/Germany; world premiere in competition at IDFA DocLab 2025).
    - Preserved 100% air-gap from public lineups (`lineups.json` and static HTML pages untouched) while Larry downloads the APK for local Quest 3 sideload testing.
    - Initialized deliverable readiness score to **83% (5/6 deliverables completed)**:
