@@ -4,6 +4,22 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-15 19:20] - v0.1.68: Wednesday/Thursday Roadmap Calibration: Storage Swap, In-Headset APK Testing, Social Broadcast & Seattle Event Calendar Blitz 🥽🛴📦📢📅✨**
+
+📝 **Summary**
+1. **Wednesday (Day 2) & Thursday (Day 3) Operations Schedule Calibrated (`render_festival_ops.py`):**
+   - **Storage Retrieval & Boat Room Clearing Run:** Added item to head to storage to retrieve the Meta Quest 2 backup headset, spare controllers, backup cables, and holiday perimeter fairy lights. Configured return transfer of non-essential boat gear to storage to clear living room space and establish a dedicated, clean staging workbench on the boat.
+   - **In-Headset Sideload & Testing Window (Wed & Thu):** Structured multi-day testing window for candidate builds: sideloading and testing *We Are Dead Animals* (`KW2320` standalone APK) and *Firedrake VR* (`KW2319`) on Quest 3 and Quest 2, equipped with a 1-click `🧪 Open Staging Vault (Tab 2)` trigger directly inside the checklist item.
+   - **Mid-Week Social Media Broadcast:** Added task to dispatch at least one campaign post from Tab 6 (e.g. Post 19: Mid-Week Countdown & Artist Spotlight) with an interactive `📢 Open Social Media Hub (Tab 6)` button.
+   - **Seattle Event Calendar Announcements Blitz:** Embedded ready-to-use direct submission links for The Stranger / EverOut, Do206, Resident Advisor, GeekWire, CHS Blog, and Luma Seattle to ensure listings are submitted before weekly editorial cutoffs.
+2. **Dev HUD Compilation & Syntax Validation:**
+   - Recompiled `dev_dashboard/index.html` via `build_social_hub.py` and validated JavaScript syntax with Node `vm.Script` (100% clean).
+   - Verified live server on Port 3040 serving updated Day 2 and Day 3 items with interactive tab-switching links.
+3. **Cross-Manifest Versioning:**
+   - Bumped `staging_vault.json`, `server.py`, `README.md`, `tasks.md`, and `chatHandOff.md` to `v0.1.68`. 🥽 🛴 📦 📢 📅 🐈 ✨
+
+---
+
 ### **[2026-09-15 19:10] - v0.1.67: Firedrake VR Staged Poster Integration, Waiver-Free Correspondence & Quick Phone SMS Hub 🥽🖼️📱✉️🐉✨**
 
 📝 **Summary**

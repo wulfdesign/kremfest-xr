@@ -1,17 +1,26 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.67)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.68)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.67` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 19:10 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.67` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.68` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 19:20 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.68` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Firedrake VR Staged Poster Integration, Waiver-Free Correspondence & Quick Phone SMS Hub (v0.1.67):**
+1. **Wednesday & Thursday Execution Roadmap: Storage Swap, In-Headset APK Testing, Social Media Broadcast & Seattle Event Announcements Blitz (v0.1.68):**
+   - Calibrated Day 2 (Wednesday, Sept 16) and Day 3 (Thursday, Sept 17) operations schedule in `render_festival_ops.py` (Tab 9: `🎒 Festival Ops & Countdown`).
+   - Added dedicated action items for:
+     1. **Storage Unit Retrieval & Boat Room Clearing Run:** Retrieve Meta Quest 2 backup headset, spare controllers, backup cables, and purple/red perimeter fairy lights; transfer non-essential boat belongings back to storage to clear workbench and living room space on the boat.
+     2. **In-Headset Sideload & Testing Window (Wed & Thu):** Multi-day testing window for candidate builds: sideloading and testing *We Are Dead Animals* (`KW2320` standalone APK) and *Firedrake VR* (`KW2319`) on Quest 3 and Quest 2, equipped with a 1-click `🧪 Open Staging Vault (Tab 2)` jump button.
+     3. **Mid-Week Social Media Broadcast:** Dispatch at least one campaign post from Tab 6 (e.g. Post 19: Mid-Week Countdown & Artist Spotlight) with an interactive `📢 Open Social Media Hub (Tab 6)` button.
+     4. **Seattle Event Calendar Announcements Blitz:** Embedded direct submission links for The Stranger / EverOut, Do206, Resident Advisor, GeekWire, CHS Blog, and Luma Seattle directly into the checklist item.
+   - Recompiled `dev_dashboard/index.html` via `build_social_hub.py`, verified syntax with Node `vm.Script` (100% clean), and confirmed live Port 3040 server rendering all items and interactive buttons.
+
+2. **Firedrake VR Staged Poster Integration, Waiver-Free Correspondence & Quick Phone SMS Hub (v0.1.67):**
    - Ingested official key art poster for Jon Stone / *Firedrake VR (Wizard's Warren)* from `private/import/2026/FireDrake-Wizards-Warren_poster.jpg` into `assets/images/2026/firedrake_wizards_warren_2026.jpg`.
    - Updated `private/submission_pipeline/data/staging_vault.json`: linked image `/assets/images/2026/firedrake_wizards_warren_2026.jpg`, set `key_art: true`, and confirmed `filmfreeway_waiver: true` (standard entry fee paid). Elevated candidate readiness score to **83% (5/6 deliverables verified)**.
    - Purged all waiver code mentions (`KremFestSeaIndieVR2026`) from Firedrake's correspondence across Tab 2 and Tab 7. Tailored email to acknowledge his FilmFreeway entry (`KW2319`) and directly request a Meta Quest App Key (or Release Channel invite) or APK download link before the Sept 21 deadline for floor headset testing.
