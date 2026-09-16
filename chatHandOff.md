@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.63)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.64)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.63` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 17:45 PDT  
+> **Project Version:** `v0.1.64` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 17:50 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,12 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Volunteers & Floor Crew Hub, REST Roster Engine & Solo Curator Correspondence Polish (v0.1.63):**
+1. **Tribe XR Communication Channel Audit & Contact Routing Engine (v0.1.64):**
+   - Audited verified outbound email channels for Tribe XR following delivery bounce on `partners@tribexr.com`.
+   - Identified verified corporate and executive mailboxes from press releases and company disclosures: `info@tribexr.com`, `press@tribexr.com`, and `tom@tribexr.com` (alongside community Discord `discord.gg/tribexr` and LinkedIn `linkedin.com/in/timpallo/`).
+   - Updated Tab 10 in `render_sidequest.py` and `dev_dashboard/index.html` with explicit bounce notice badge (`partners@ BOUNCED • USE info@, press@, or tom@`), corrected direct contact lines, and updated Option 2A email target.
+   - Recompiled Dev HUD HTML, verified syntax with Node `vm.Script`, restarted server on Port 3040, and synchronized version across all manifests to `v0.1.64`.
+2. **Volunteers & Floor Crew Hub, REST Roster Engine & Solo Curator Correspondence Polish (v0.1.63):**
    - Engineered modular `render_volunteers.py` generating Tab 12 (`🤝 XR Floor Crew & Volunteers`) in the Dev HUD (Port 3040).
    - Documented curator situation: Co-founder/partner Julia Jackson is immersed in her new works and might not be able to attend KremFest (open invitation warmly preserved); Lead Curator Larry James is recruiting 1–2 dedicated XR Floor Assistants ("Headset Guardians") to co-pilot the station across Friday Sept 25 and Saturday Sept 26 (approx 9:30 PM – 2:30 AM).
    - Codified 4 core floor duties: (1) Headset Onboarding & Strap Fitting, (2) Lens Armor & Facial Interface Sanitation (strict optical microfiber rule; no liquids on lenses), (3) Spectator TV Casting Watchdog (<3s refresh if disconnected), and (4) Queue Flow & Audience Choice Mobile Ballot QR guidance.
