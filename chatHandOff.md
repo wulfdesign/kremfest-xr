@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.62)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.63)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.62` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 15, 2026 | 17:25 PDT  
+> **Project Version:** `v0.1.63` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 15, 2026 | 17:45 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Pushed & Live on `main` at `948fa28`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
@@ -11,7 +11,16 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Algoriddim Dispatch Audit, Tribe XR Low-Pressure Realignment & 2027 Seed Engine (v0.1.62):**
+1. **Volunteers & Floor Crew Hub, REST Roster Engine & Solo Curator Correspondence Polish (v0.1.63):**
+   - Engineered modular `render_volunteers.py` generating Tab 12 (`🤝 XR Floor Crew & Volunteers`) in the Dev HUD (Port 3040).
+   - Documented curator situation: Co-founder/partner Julia Jackson is immersed in her new works and might not be able to attend KremFest (open invitation warmly preserved); Lead Curator Larry James is recruiting 1–2 dedicated XR Floor Assistants ("Headset Guardians") to co-pilot the station across Friday Sept 25 and Saturday Sept 26 (approx 9:30 PM – 2:30 AM).
+   - Codified 4 core floor duties: (1) Headset Onboarding & Strap Fitting, (2) Lens Armor & Facial Interface Sanitation (strict optical microfiber rule; no liquids on lenses), (3) Spectator TV Casting Watchdog (<3s refresh if disconnected), and (4) Queue Flow & Audience Choice Mobile Ballot QR guidance.
+   - Formalized compensation & perks package: Full 2-night VIP/Artist festival wristbands ($75–$100 value), $75–$100 nightly cash/Venmo stipend, free venue drinks/hospitality, rotating shift downtime to enjoy music sets, and official festival spatial production credit.
+   - Built 4 ready-to-dispatch templates with 1-click clipboard triggers: Direct Email / Personal Invitation, Seattle Indies & Game Dev Community Post (Discord/Slack), Social Media Broadcast (X.com, Instagram Stories, LinkedIn, Threads), and Quick SMS / DM Ping.
+   - Engineered interactive live-roster table with `/api/volunteers` GET and POST REST endpoints in `dev_dashboard/server.py` persisting to `volunteers_roster.json` with LocalStorage fallback and 1-click Markdown export.
+   - Polished correspondence templates across all tools (`render_sidequest.py`, `render_streamers.py`, `render_festival_ops.py`, and `build_social_hub.py`) signing Lead Curator Larry James solo, removing Julia Jackson from active correspondence while she is focused on her own projects.
+   - Recompiled Dev HUD HTML (368 KB), verified JavaScript syntax with Node `vm.Script`, restarted server on Port 3040, and synchronized version across all manifests to `v0.1.63`.
+2. **Algoriddim Dispatch Audit, Tribe XR Low-Pressure Realignment & 2027 Seed Engine (v0.1.62):**
    - Logged live Algoriddim outreach: Lead Curator Larry James dispatched partnership email to `pr@algoriddim.com` (noting `contact@algoriddim.com` bounced), sent direct outreach message via X.com, and BCC'd DJ Julia Camp (`dj.julia.camp@...`) to maintain seamless co-curation harmony.
    - Updated verified LinkedIn profile URL for Algoriddim CEO & Co-Founder Karim Morsy (`https://www.linkedin.com/in/karim-morsy-01356225/`) in Tab 10.
    - Realigned Tribe XR strategy and correspondence to strictly "underpromise and overdeliver": transitioned Station B from an overcommitted production suite to an informal, casual on-site demo where attendees and local DJs can try virtual CDJ-3000s in VR.
