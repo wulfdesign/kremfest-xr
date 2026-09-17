@@ -1,17 +1,26 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.71)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.72)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.71` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 16, 2026 | 19:40 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.71` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.72` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 17, 2026 | 13:15 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.72` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Day 2 Hardware Secured: Storage Swap, Quest 2 Backup, Luggage Cart & Fairy Lights (v0.1.71):**
+1. **Algoriddim djay Meta Quest Keys Granted (Ticket #259545), Staged Lineup Integration & Club Print Assets (v0.1.72):**
+   - **Keys Granted:** Richard (Rich @ Algoriddim Support) approved Larry James's official festival invitation and issued **TWO full Meta Quest app keys** for *djay* on Meta Quest 3 & Quest 2. Support coverage active directly via Ticket #259545.
+   - **Correspondence Logged:** Updated Dev HUD Tab 10 (`🎧 DJ VR SideQuest & Curated Outreach`) with an official resolution log card displaying the complete email thread, key statuses, and direct jump buttons to the Staging Vault and Print Studio.
+   - **Air-Gapped Candidate Staging:** Staged *djay by Algoriddim* into `staging_vault.json` (`staged-curated-djay-algoriddim`, 100% readiness score, 6/6 deliverables verified) with official 1440&times;810 hero key art (`assets/images/2026/djay_algoriddim_2026.jpg`). Formulated low-key floor deployment doctrine: runs as an active background hands-on app for attendees between curated film sessions. 100% air-gapped from public site pending Larry's review.
+   - **Printable Nightclub Flyer & Quick-Start Guide:** Authored [`private/print/djay_club_flyer_and_instructions.html`](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/private/print/djay_club_flyer_and_instructions.html):
+     - Page 1: 8.5x11 nightclub flyer highlighting Quest 3 passthrough, optical hand tracking, venue TV mirroring, and tracked QR code to Meta Quest Store.
+     - Page 2: 5-step intuitive attendee onboarding guide (Fit, Pinch to Scratch, Play/Cue, Crossfader, Spatial FX Pad) and operator hygiene rules (5–8 min limit, silicone interface disinfection only).
+   - **Server & Routes Refreshed:** Added `/private/print/` routing to `server.py` and recompiled Dev HUD HTML (Node `vm.Script` 100% clean).
+
+2. **Day 2 Hardware Secured: Storage Swap, Quest 2 Backup, Luggage Cart & Fairy Lights (v0.1.71):**
    - Successfully executed Day 2 physical logistics haul: returned non-essential belongings to storage to free up living room and establish an uncluttered staging bench on the boat.
    - Retrieved and secured essential festival floor hardware:
      - 🛒 **Wheeled Luggage Cart:** Verified and ready for ground transport on Friday load-in and Sunday strike.
