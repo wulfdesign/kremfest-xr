@@ -1,17 +1,26 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.72)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.73)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.72` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 17, 2026 | 13:15 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.72` ready for QA; do not push to public GitHub `main` until verified)  
-> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`)
+> **Project Version:** `v0.1.73` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 17, 2026 | 13:25 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.73` ready for QA; do not push to public GitHub `main` until verified)  
+> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Algoriddim djay Meta Quest Keys Granted (Ticket #259545), Staged Lineup Integration & Club Print Assets (v0.1.72):**
+1. **Air-Gapped Staging Sandbox Preview, Dynamic Public Site Simulator & Dev HUD Integration (v0.1.73):**
+   - **Zero-Modification Public Site Simulator:** Built `render_staging_preview.py` which takes the private candidates from `staging_vault.json` (*djay by Algoriddim*, *We Are Dead Animals*, *Firedrake VR: Wizard's Warren*) and merges them into the 2026 festival showcase page in-memory without altering a single byte of `lineups.json`, `index.html`, `2026/index.html`, or public voting ballots.
+   - **Dual-Mode Interactive Simulation HUD Bar:** Embedded a sticky cybernetic sandbox navigation bar at the top with jump anchors (`Headliners`, `VIP`, `Staged`, `Ballot`), refresh trigger, and Dev HUD shortcut. Features 1-click mode toggle between:
+     - **✨ Exact Public Look:** Removes all staging badges and dashed borders, displaying the exact pristine public page appearance as if all staged entries were live.
+     - **🧪 Highlight Staged Items:** Re-enables neon pink staging indicators, readiness scores, and direct Dev HUD edit jumps.
+   - **Integrated Staged Ballot & Lineup at a Glance:** Injected an interactive 2026 Audience Choice Ballot preview containing all 10 candidates (2 headliners, 5 confirmed selections, and 3 staged works) with live radio selection, and updated the Lineup at a Glance box.
+   - **Server Routing & Dev HUD Integration:** Wired `/preview/staging`, `/preview/2026`, and `/private/preview/` in `server.py` (Port 3040). Added `/api/staging/compile-preview` endpoint. Added 1-click buttons in Dev HUD header, Tab 2 header, and per-card `👁️ Preview in Sandbox ↗` jump links.
+   - **Verified Clean Asset Delivery:** Tested HTTP 200 on all HTML, stylesheets, scripts, and staged 1440&times;810 key art images.
+
+2. **Algoriddim djay Meta Quest Keys Granted (Ticket #259545), Staged Lineup Integration & Club Print Assets (v0.1.72):**
    - **Keys Granted:** Richard (Rich @ Algoriddim Support) approved Larry James's official festival invitation and issued **TWO full Meta Quest app keys** for *djay* on Meta Quest 3 & Quest 2. Support coverage active directly via Ticket #259545.
    - **Correspondence Logged:** Updated Dev HUD Tab 10 (`🎧 DJ VR SideQuest & Curated Outreach`) with an official resolution log card displaying the complete email thread, key statuses, and direct jump buttons to the Staging Vault and Print Studio.
    - **Air-Gapped Candidate Staging:** Staged *djay by Algoriddim* into `staging_vault.json` (`staged-curated-djay-algoriddim`, 100% readiness score, 6/6 deliverables verified) with official 1440&times;810 hero key art (`assets/images/2026/djay_algoriddim_2026.jpg`). Formulated low-key floor deployment doctrine: runs as an active background hands-on app for attendees between curated film sessions. 100% air-gapped from public site pending Larry's review.

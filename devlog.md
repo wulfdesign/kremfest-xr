@@ -4,6 +4,33 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-17 13:25] - v0.1.73: Air-Gapped Staging Sandbox Preview, Dynamic Public Site Simulator & Dev HUD Integration 🧪👁️🥽🎴🗳️🚀✨**
+
+📝 **Summary**
+1. **Zero-Modification Staging Sandbox Preview Deployed (`render_staging_preview.py`):**
+   - Engineered dedicated compiler tool `render_staging_preview.py` that merges private candidates from `staging_vault.json` into the confirmed 2026 lineup in-memory.
+   - Generates high-fidelity preview [`private/preview/2026_staging_preview.html`](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/private/preview/2026_staging_preview.html) without touching `lineups.json`, `index.html`, `2026/index.html`, or public voting ballots.
+   - Seamlessly renders all 3 staged projects (*djay by Algoriddim*, *We Are Dead Animals*, *Firedrake VR: Wizard's Warren*) with full hero key art, synopses, bios, statements, tech bullets, and tracked external links.
+2. **Dual-Mode Interactive Simulation HUD Bar:**
+   - Embedded a sticky cybernetic sandbox navigation bar at the top with jump anchors (`Headliners`, `VIP`, `Staged`, `Ballot`), refresh trigger, and Dev HUD shortcut.
+   - Features instant mode toggle between:
+     - **✨ Exact Public Look:** Removes all staging badges and dashed borders, displaying the exact pristine public page appearance as if all staged entries were live.
+     - **🧪 Highlight Staged Items:** Re-enables neon pink staging indicators, readiness scores, and direct Dev HUD edit jumps.
+3. **Integrated Staged Ballot & Lineup at a Glance Simulation:**
+   - Injected an interactive 2026 Audience Choice Ballot preview containing all 10 candidates (2 headliners, 5 confirmed selections, and 3 staged works) with live radio selection.
+   - Updated the "2026 Showcase Lineup at a Glance" summary box integrating staged works with custom indicator tags.
+4. **Server Routing & Dev HUD Integration (`server.py` & `build_social_hub.py`):**
+   - Wired dynamic endpoints `/preview/staging`, `/preview/2026`, and `/private/preview/` in `server.py`, auto-compiling on access or serving static preview files.
+   - Added `/api/staging/compile-preview` REST endpoint for instant compilation triggers.
+   - Upgraded Dev HUD (Port 3040) with:
+     - Header action button: `👁️ Staging Sandbox Preview ↗`
+     - Tab 2 Staging Vault banner button: `👁️ Preview Staged Lineup on Public Page (Sandbox) ↗`
+     - Individual card action button: `👁️ Preview in Sandbox ↗` linking directly to `#cand-id` on the sandbox preview.
+   - Validated HTTP 200 status across HTML, stylesheets, scripts, and staged key art images on Port 3040.
+   - Synchronized version across manifests to `v0.1.73`. 🧪 👁️ 🥽 🎴 🗳️ 🚀 🐈 ✨
+
+---
+
 ### **[2026-09-17 13:15] - v0.1.72: Algoriddim djay Meta Quest Keys Granted (Ticket #259545), Staged Lineup Integration & Club Print Assets 🎧🎛️🔑🥽🖨️📜✨**
 
 📝 **Summary**
