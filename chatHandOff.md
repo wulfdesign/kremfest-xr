@@ -1,17 +1,27 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.74)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.75)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.74` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 17, 2026 | 13:40 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.74` ready for QA; do not push to public GitHub `main` until verified)  
-> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging`
+> **Project Version:** `v0.1.75` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 17, 2026 | 14:05 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.75` ready for QA; do not push to public GitHub `main` until verified)  
+> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Festival Sizzle Reel & Floor Loop Studio (Tab 15), Algoriddim Correspondence Thread & Thank You Response Engine (v0.1.74):**
+1. **GeekFest-Architecture Styled QR Codes, Flanking Card Layout, Mobile Scan Modal & 16:9 Landscape Bookend Splash Studio (v0.1.75):**
+   - **42 Styled Colored-Block QR Codes Generated (`generate_lineup_qrs.py`):** Re-engineered the GeekFest West Python `StyledPilImage` + `RoundedModuleDrawer` + `RadialGradiantColorMask` engine (`qrcode[pil]` with `ERROR_CORRECT_H` 30% redundancy). Generated 42 high-resolution QR assets across all 10 experiences (*Maiden Flight*, *High Desert Eclipse*, *Trip the Light*, *djay by Algoriddim*, *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*, *Artemis*, *We Are Dead Animals*, *Firedrake VR*) and the main portal. Features two distinct colorways:
+     - **Cyberpunk Neon Dark Mode:** Obsidian background `(10, 10, 18)` with electric hot pink `(255, 0, 128)` center transitioning to cyber cyan `(0, 240, 255)` on edges.
+     - **Print-Ready Light Mode:** Pure white background with deep magenta-purple `(180, 0, 100)` center transitioning to sapphire blue `(0, 100, 180)` on edges.
+   - **Flanking Card Action Row Layout:** Upgraded `render_staging_preview.py` so each project card is flanked by scannable QR cards: Far Left (Website QR, 76px cyan neon glow) and Far Right (Quest Store / Trailer QR, 76px magenta neon glow) surrounding the center text buttons.
+   - **Interactive `[ 🎴 QR Badges: ON / OFF ]` Setting Toggle:** Integrated a real-time toggle into the Sandbox HUD bar with `localStorage` persistence, allowing instant switching between high-tech scannable cards and sleek text-only buttons.
+   - **On-Screen Mobile Scan-to-Phone Modal:** Added `[ 📱 Scan to Phone ]` button in the sandbox HUD and hero section, opening a cybernetic modal with a high-contrast glowing QR code so attendees looking at the table screen can scan and load the portal on their own phones.
+   - **16:9 Landscape Sizzle Reel Splash Card Studio Deployed:** Built `render_splash_cards.py` creating `private/preview/splash_cards.html` (served live at `/preview/splash_cards.html` on Port 3040). Features 1920×1080 landscape bookend cards with hero key art on the left and a high-contrast 200px glowing QR code on the right, toggleable between Intro Announcement Splash (2s) and Recap Bookend Splash (3s), with fullscreen F11 TV display mode.
+   - **Bookended Sizzle Manifest & Tab 15 Upgrade:** Upgraded `sizzle_reel_manifest.json` and Tab 15 in `render_sizzle_reel.py` to a 129s (~2:09) loop mapping the Intro Splash &rarr; Motion Clip &rarr; Recap Splash with QR architecture across all 10 experiences, with direct links to the Splash Studio.
+
+2. **Festival Sizzle Reel & Floor Loop Studio (Tab 15), Algoriddim Correspondence Thread & Thank You Response Engine (v0.1.74):**
    - **Algoriddim Full Correspondence Thread & Sent Email Sync:** Ingested the exact sent message from Larry James (Sept 16, 10:15 GMT+3) and Richard's confirmation responses (Ticket #259545) into `staging_vault.json` and Tab 10 (`render_sidequest.py`). Authored ready-to-send Message 4: official Thank You response confirming Quest 3 & Quest 2 calibration, sharing live lineup and staging sandbox links, and highlighting the 8.5×11 print flyer and tracked QR codes.
    - **Firedrake VR Correspondence Sync:** Logged Jon Stone's delivery timeline for a 6–10 min liminal exploration build with combat stripped for nightclub flow.
    - **Festival Sizzle Reel & Floor Monitor Attractor Loop Studio Deployed (Tab 15):** Built `render_sizzle_reel.py` adding Tab 15 (`🎬 Sizzle Reel & Floor Loop`) to Dev HUD (Port 3040). Created `sizzle_reel_manifest.json` with 12 sequenced cues across all 10 confirmed & staged experiences (~90s total duration) with direct timecode cuts, clip status badges, 1-click clipboard ffmpeg concatenation scripts, and `/api/sizzle-reel` REST GET/POST API in `server.py`.

@@ -4,6 +4,32 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-17 14:05] - v0.1.75: GeekFest-Architecture Styled QR Codes, Flanking Card Layout, Mobile Scan Modal & 16:9 Landscape Bookend Splash Studio 🎴📱🎬🥽📺✨**
+
+📝 **Summary**
+1. **Revived GeekFest West Styled QR Code Engine (`generate_lineup_qrs.py`):**
+   - Implemented `generate_lineup_qrs.py` reviving the Python `StyledPilImage` + `RoundedModuleDrawer` + `RadialGradiantColorMask` engine from GeekFest West (`projects/rpg-agentic-webapp/tools/generate_qr.py`).
+   - Generated 42 high-resolution QR codes across all 10 festival experiences (*Maiden Flight*, *High Desert Eclipse*, *Trip the Light*, *djay by Algoriddim*, *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*, *Artemis*, *We Are Dead Animals*, *Firedrake VR*) and the main portal.
+   - Dual aesthetic profiles: **Cyberpunk Neon Dark Mode** (Obsidian `#0a0a12` with Electric Pink `#ff0080` center radiating to Cyber Cyan `#00f0ff`) and **Print-Ready Light Mode** (White background with deep violet-magenta `#b40064` center radiating to deep sapphire `#0064b4`).
+   - Mirrored across both `assets/images/qr/` and `private/assets/images/qr/`.
+2. **Flanking Card Action Row Layout & QR Settings Toggle:**
+   - Upgraded `render_staging_preview.py` so all experience cards (Headliners, Selections, and Staged Candidates) feature scannable QR flanking cards: Far Left (Website QR, 76px with cyan glow) and Far Right (Meta Quest Store / Trailer QR, 76px with magenta glow).
+   - Added `[ 🎴 QR Badges: ON / OFF ]` toggle button to the sticky Staging Sandbox HUD bar with `localStorage` persistence (`kremfest_qr_display_mode`). Smoothly toggles between high-tech scannable cards and minimal text buttons.
+3. **On-Screen Mobile Scan-to-Phone Modal:**
+   - Added `[ 📱 Scan to Phone ]` button in sandbox HUD and hero section, opening a cybernetic modal displaying the glowing neon portal QR code (`https://wulfdesign.github.io/kremfest-xr/`). Attendees looking at the booth table screen can point their phone and load the mobile festival portal and voter ballot immediately.
+4. **16:9 Landscape Sizzle Reel Bookend Splash Studio Deployed:**
+   - Engineered `render_splash_cards.py` creating [`private/preview/splash_cards.html`](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/private/preview/splash_cards.html) (served at `/preview/splash_cards.html` on Port 3040).
+   - Features 1920×1080 landscape layout for the venue floor TV attractor loop:
+     - **Intro Announcement Splash (~2s):** "UP NEXT IN LINEUP", large title, director, category badge, hero key art, logline.
+     - **Recap Bookend Splash (~3s):** "NOW PLAYING • FEATURED SELECTION" with prominent 200×200px glowing scannable QR code on the right side so spectators who watched the clip can scan before the next title begins.
+     - Fullscreen F11 TV display mode, dropdown experience switcher, and auto-sequence looping.
+5. **Bookended Sizzle Manifest & Tab 15 Synchronization:**
+   - Upgraded `sizzle_reel_manifest.json` and Tab 15 in `render_sizzle_reel.py` to a 129s (~2:09) attractor loop mapping the Intro Splash &rarr; Motion Clip &rarr; Recap Splash with QR sequence across all 10 experiences.
+   - Recompiled Dev HUD HTML and validated JavaScript syntax with Node `vm.Script` (100% clean).
+   - Synchronized version across all manifests to `v0.1.75`. 🎴 📱 🎬 🥽 📺 🐈 ✨
+
+---
+
 ### **[2026-09-17 13:40] - v0.1.74: Festival Sizzle Reel Studio (Tab 15), Algoriddim Correspondence Thread & Thank You Response Engine 🎬🥽🎧✉️🎥✨**
 
 📝 **Summary**
