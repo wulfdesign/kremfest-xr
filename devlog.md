@@ -4,6 +4,32 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-17 19:45] - v0.1.85: QR Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge 🎴📱⚡🧹✨**
+
+📝 **Summary**
+1. **Total UTM Tracking Parameter Purge:**
+   - Diagnosed scan failure on phone cameras (iOS Camera & Google Lens) caused by bloated query strings (`?utm_source=...&utm_medium=...&utm_campaign=...`).
+   - Long URLs forced QR codes into Version 13 (69×69 grid = 4,761 cells), making individual module dots microscopic (~1.1px wide on screen at 76px display size).
+   - Completely stripped all extraneous tracking parameters across `QR_MANIFEST`, `EXPERIENCE_QR_MAP`, `lineups.json`, `qr_code_generator.py`, `publish_to_public.py`, and `render_staging_preview.py`.
+   - Result: Canonical URLs reduced QR matrix to Version 2–4 (25×25 to 33×33 grid = 625–1,089 cells), shrinking the grid by 77% and physically quadrupling the size of each module block.
+2. **Migration from Circular Modules to Crisp Solid Squares (`SquareModuleDrawer`):**
+   - Replaced `RoundedModuleDrawer` and `CircleModuleDrawer` with `SquareModuleDrawer()` in `generate_lineup_qrs.py`.
+   - Circular dots possess an optical fill factor of only $\approx 78.5\%$, leaving $\sim 21.5\%$ negative space at corners which blur into adjacent cells under camera auto-focus.
+   - Solid squares provide 100% fill factor with sharp right angles, delivering maximum contrast for phone camera edge-detection algorithms and instantaneous optical lock on timing/alignment patterns.
+3. **Error Correction Level Recalibration:**
+   - Calibrated error correction from `ERROR_CORRECT_H` (30% parity bloat) to `ERROR_CORRECT_M` (15% standard for mobile digital screens), cutting unnecessary Reed-Solomon codewords.
+   - Scaled module box size to `box_size=16` with a clean `border=3` quiet zone.
+4. **Complete Regenerate & Ecosystem Recompilation:**
+   - Regenerated all 48 high-resolution Neon and Print QR code assets in `assets/images/qr/` and `private/assets/images/qr/`.
+   - Re-compiled all 8 public static pages via `publish_to_public.py`, staging sandbox preview via `render_staging_preview.py`, and Dev HUD via `build_social_hub.py`.
+5. **Verification & Testing:**
+   - Verified 0 occurrences of `utm_` across all compiled HTML pages on Port 3039 (`/index.html`, `/2026/index.html`) and Port 3040 (`/preview/staging`).
+   - Verified zero `↗` unicode arrows across all pages.
+   - Inspected output images: `qr_hde_store_neon.png` is 624×624 (Version 4, 33×33 grid), `qr_ticket_friday_neon.png` is 688×688 (Version 4).
+   - Confirmed HTTP 200 on all endpoints.
+
+🏷️ **Version:** `v0.1.85` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-17 19:35] - v0.1.84: Public QR Sizing Fortification, Staging-to-Public Candidate Promotion Engine (Single & Batch) & Live Lineup Integration 🎴🚀📦🧪✨**
 
 📝 **Summary**

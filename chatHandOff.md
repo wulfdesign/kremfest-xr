@@ -1,17 +1,24 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.84)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.85)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.84` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 17, 2026 | 19:35 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.84` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.85` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 17, 2026 | 19:45 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.85` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Public QR Sizing Fortification & Staging-to-Public Promotion Engine (v0.1.84):**
+1. **QR Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge (v0.1.85):**
+   - **Full UTM Parameter Purge:** Purged all `utm_` parameters across `QR_MANIFEST`, `EXPERIENCE_QR_MAP`, `lineups.json`, `qr_code_generator.py`, `publish_to_public.py`, and `render_staging_preview.py`.
+   - **Density Reduction:** Dropped QR version from Version 13 (69×69 grid = 4,761 cells) down to Version 2–4 (25×25 to 33×33 grid = 625–1,089 cells). Individual module block dimensions increased by over 300% inside on-screen 76px and 130px display containers.
+   - **Solid Square Modules (`SquareModuleDrawer`):** Replaced circular/rounded dots with crisp square module blocks. Squares deliver 100% optical fill factor (eliminating the ~21.5% optical corner void of circles), sharp right angles, and instantaneous finder pattern lock for phone cameras.
+   - **Error Correction Calibration:** Lowered error correction from `ERROR_CORRECT_H` (30%) to `ERROR_CORRECT_M` (15%), eliminating unnecessary parity overhead.
+   - **Regeneration & Verification:** Regenerated all 48 QR assets (Neon + Print), recompiled all static pages, and verified 0 `utm_` and 0 `↗` occurrences across public and private HTTP endpoints.
+
+2. **Public QR Sizing Fortification & Staging-to-Public Promotion Engine (v0.1.84):**
    - **5-Layer QR Sizing Defense:** Completely eliminated oversized QR renderings on `http://localhost:3039/2026/index.html` by enforcing inline HTML dimensions (`width="76" height="76"`), explicit inline styles on container and image tags, head-injected `<style>` blocks, and CSS cache-busting.
    - **Candidate Promotion Engine (`promote_candidate.py`):** Standalone CLI tool and Python API for single (`<candidate_id>`) or batch (`--all`) candidate promotion from `staging_vault.json` into `lineups.json` with private links quarantine and auto-recompilation.
    - **Dual UI Controls:** Added `🚀 Promote All to Live Lineup (Batch)` buttons and per-candidate promote triggers in Dev HUD Tab 2 and the Staging Sandbox preview (`/preview/staging`).

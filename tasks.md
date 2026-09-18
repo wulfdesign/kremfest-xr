@@ -30,6 +30,13 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **QR Code Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge (v0.1.85):**
+  1. **Full UTM Parameter Purge:** Completely removed all bloated `utm_source`, `utm_medium`, `utm_campaign`, and `utm_content` query parameters across `QR_MANIFEST`, `EXPERIENCE_QR_MAP`, `lineups.json`, passes kiosks, and mobile portals. This dropped QR matrix density from Version 13 (69×69 = 4,761 cells) down to Version 2–4 (25×25 to 33×33 = 625–1,089 cells), increasing the visual size of individual module blocks by over 300%.
+  2. **Solid Square Module Migration (`SquareModuleDrawer`):** Converted from circular/rounded modules to `SquareModuleDrawer()`. Square modules provide 100% optical fill factor with crisp right angles and sharp corner finder eyes, eliminating blur across timing patterns and enabling instant camera optical lock.
+  3. **Calibrated Error Correction:** Lowered error correction from `ERROR_CORRECT_H` (30% parity bloat) to `ERROR_CORRECT_M` (15%), reducing redundant codewords for clean on-screen display.
+  4. **Full Asset Regeneration & Static Compilation:** Re-rendered all 48 Neon and Print QR code assets and recompiled all 8 public static pages, staging sandbox, and Dev HUD.
+  5. **Verification & Testing:** Verified 0 occurrences of `utm_` and 0 occurrences of `↗` across all compiled HTML pages on Port 3039 and Port 3040. Synchronized versions to `v0.1.85`. 🧪 🎴 📱 ⚡ 🧹 🥽 🐈 ✨
+
 * [ ] 🧪 🔥🔥🔥 **Public QR Sizing Fortification & Staging-to-Public Candidate Promotion Engine (Single & Batch) (v0.1.84):**
   1. **Public QR 5-Layer Sizing Fortification:** Resolved oversized QR rendering on Port 3039 (`2026/index.html`) by engineering a 5-layer sizing defense: explicit HTML attributes (`width="76" height="76"`), inline style constraints on `.card-qr-box` (76×76px) and `.card-qr-img` (100% / max 76px), direct-injected `<style>` block via `get_qr_style_block()` in `<head>`, stylesheet rules in `style.css`, and cache-buster `style.css?v=0.1.84`.
   2. **Standalone Promotion Engine (`promote_candidate.py`):** Engineered `private/submission_pipeline/tools/promote_candidate.py` supporting CLI flags `--list`, `<candidate_id>`, and `--all` with private links quarantine (strips jury/curator links before writing public selections) and auto-compilation of public static files, staging sandbox, and Dev HUD.
