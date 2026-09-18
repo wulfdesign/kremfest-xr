@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.91)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.92)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.91` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 18, 2026 | 14:28 PDT  
+> **Project Version:** `v0.1.92` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 18, 2026 | 14:36 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `ba4c188`; Private Sanctuary at `c7f8696`)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
@@ -11,11 +11,12 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **DJ Julia Camp Lineup Status Update & Technical Testing Check-In Suite (v0.1.91):**
+1. **Local Promo Integration & DJ Julia Camp Lineup Status Update Suite (v0.1.92):**
    - **Curatorial Status Report Email to DJ Julia Camp:** Authored warm, collaborative check-in to DJ Julia Camp (`djjulia@gmail.com` / `dj.julia.camp@...`) detailing active live lineup on `2026/index.html`, inclusion of *djay by Algoriddim* on Quest 3 with live spectator casting, and FilmFreeway regular deadline closing Monday Sept 21.
+   - **Local Calendar Promo Integration:** Wove strategic triage note regarding local calendar listings (The Stranger / EverOut, Do206) with potential Sunday submission, prioritizing headset calibration and offering a collaborative cross-link to Kremwerk's PR team.
    - **Technical Testing & Setup Window:** Scheduled Sunday & Monday testing window covering standalone Quest 3 floor calibration, Quest 2 backup readiness, and latency-free TV spectator projection.
    - **Staging Vault Candidate Adjudication:** Communicated holding pattern for *Firedrake VR* (awaiting Jon Stone's explore mode APK) and *We Are Dead Animals* (in-headset comfort/runtime evaluation) with goal of graduating both to lineup by Monday.
-   - **Private Sanctuary & 1-Click Dev HUD Integration:** Authored `private/operations/email_draft_dj_julia_lineup_update.md`, integrated dedicated correspondence card with 1-click clipboard copy buttons into Dev HUD Tab 8 (`render_festival_ops.py`), and recompiled `dev_dashboard/index.html`. Verified clean Node.js script execution and HTTP 200 on Port 3040.
+   - **Private Sanctuary & 1-Click Dev HUD Integration:** Updated `private/operations/email_draft_dj_julia_lineup_update.md`, integrated dedicated correspondence card with 1-click clipboard copy buttons into Dev HUD Tab 8 (`render_festival_ops.py`), and recompiled `dev_dashboard/index.html`. Verified clean Node.js script execution and HTTP 200 on Port 3040.
 
 2. **djay by Algoriddim Lineup Announcement Suite, Social Media Hub Integration & Executive Follow-Up Letter (v0.1.90):**
    - **Agency-Grade LinkedIn Campaign (Post 23):** Crafted professional announcement celebrating *djay by Algoriddim* joining KremFest XR 2026 as our Guest Experiential Spotlight on Meta Quest 3. Highlights tactile vinyl manipulation, full-color MR passthrough, TV spectator casting, and streaming via Beatport/Tidal. Linked to the live portal lineup with an urgency call for the FilmFreeway deadline (Monday, Sept 21 at 23:59 PDT) and full industry hashtags (`#djay`, `#djayPro`, `#Algoriddim`, `#SpatialComputing`, `#VRDJ`, `#MetaQuest3`).
