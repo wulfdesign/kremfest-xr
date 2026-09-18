@@ -31,6 +31,12 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **DJ Julia Camp Lineup Status Update & Technical Testing Check-In Suite (v0.1.91):**
+  1. **Curatorial Status Report Email to DJ Julia:** Authored warm, collaborative check-in to DJ Julia Camp (`djjulia@gmail.com` / `dj.julia.camp@...`) detailing active live lineup on `2026/index.html`, inclusion of *djay by Algoriddim* on Quest 3 with live spectator casting, and FilmFreeway regular deadline closing Monday Sept 21.
+  2. **Technical Testing & Setup Window:** Scheduled Sunday & Monday testing window covering standalone Quest 3 floor calibration, Quest 2 backup readiness, and latency-free TV spectator projection.
+  3. **Staging Vault Candidate Adjudication:** Communicated holding pattern for *Firedrake VR* (awaiting Jon Stone's explore mode APK) and *We Are Dead Animals* (in-headset comfort/runtime evaluation) with goal of graduating both to lineup by Monday.
+  4. **Private Sanctuary & 1-Click Dev HUD Integration:** Authored `private/operations/email_draft_dj_julia_lineup_update.md`, integrated dedicated correspondence card with 1-click clipboard copy buttons into Dev HUD Tab 8 (`render_festival_ops.py`), and recompiled `dev_dashboard/index.html`. 🧪 📧 🤝 🥽 ⚡ 🐈 ✨
+
 * [ ] 🧪 🔥🔥🔥 **djay by Algoriddim Lineup Announcement Suite, Social Posts & Executive Follow-Up Letter (v0.1.90):**
   1. **LinkedIn Campaign Pack (Post 23):** Formulated professional agency-grade announcement celebrating Algoriddim's addition to the KremFest XR 2026 lineup on Meta Quest 3, featuring optical hand tracking, MR passthrough, TV spectator casting, live lineup link, and urgency countdown for the FilmFreeway deadline closing Monday, Sept 21 at 23:59 PDT. Full hashtags included.
   2. **Facebook Nightlife Campaign (Post 24):** Crafted punchy, high-engagement community post tailored for Seattle nightlife, local DJs, and creative technologists with virtual turntable highlights, spectator screen setup, and final 72-hour call for immersive shorts.
