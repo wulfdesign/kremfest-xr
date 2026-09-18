@@ -1,17 +1,23 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.88)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.89)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.88` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 18, 2026 | 13:58 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.88` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.89` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 18, 2026 | 14:15 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.89` verified by Magus Wulf; authorized for remote push)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Submission QR Expansion (+30% to 100px) & Onsite Mobile Gateway Enlargement (+30% to 170px) (v0.1.88):**
+1. **Empirical QR Verification Sign-Off, Lunar Flyby Link Alignment & Memory Codification (v0.1.89):**
+   - **Empirical Optical QA Pass:** Magus Wulf personally verified that all on-screen QR codes rapidly acquire on phone camera scan.
+   - **Lunar Flyby XR Project Link Alignment:** Updated the right-flanked QR code for *Artemis: The Free Return* to point to the official project website (`https://github.com/wulfdesign/lunar-flyby-xr/`) instead of the FilmFreeway entry, with label `💻 PROJECT SITE`.
+   - **Repository Memory Codification:** Appended Section 5 to `AGENTS.md` specifying square module drawers, Error Correction Level `M`, 100px card QRs, 130px ticket passes, 170px gateway banners, and top-level JS variable declarations.
+   - **Task Ledger Pruning:** Archived all 37 completed and verified sprints into `COMPLETED.md` with complete historical lineage.
+
+2. **Submission QR Expansion (+30% to 100px) & Onsite Mobile Gateway Enlargement (+30% to 170px) (v0.1.88):**
    - **Submission Card QRs Enlarged to 100px:** Scaled all flanked experience QR cards from 76px to 100px (+31.5% size increase) across `.card-qr-box`, `.card-qr-img`, and inline template renders in both `publish_to_public.py` and `render_staging_preview.py`. Provides greater scanning acquisition range while preserving comfortable layout margins on desktop and cleanly collapsing to vertical stack on mobile screens (<=700px).
    - **Onsite Attendee & Voter Portal QR Enlarged to 170px:** Scaled the bottom on-premise mobile portal gateway banner QR code from 130px to 170px (+30.7% size increase) across `style.css`, inline styles, and staging sandbox, with upgraded `24px` cyan/pink neon glow.
    - **Interactive Modal Trigger on Onsite Gateway:** Wired `openPortalModal()` click trigger onto the onsite portal QR link in both public and staging previews.
