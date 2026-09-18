@@ -43,13 +43,13 @@
       gap: 5px;
     }
     .card-qr-box {
-      width: 76px !important;
-      height: 76px !important;
-      max-width: 76px !important;
-      max-height: 76px !important;
+      width: 100px !important;
+      height: 100px !important;
+      max-width: 100px !important;
+      max-height: 100px !important;
       background: #090a14;
       border-radius: 8px;
-      padding: 4px;
+      padding: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,8 +89,8 @@
     .card-qr-img {
       width: 100% !important;
       height: 100% !important;
-      max-width: 76px !important;
-      max-height: 76px !important;
+      max-width: 100px !important;
+      max-height: 100px !important;
       object-fit: contain;
       display: block;
       border-radius: 6px;
@@ -235,23 +235,28 @@
       gap: 8px;
     }
     .onsite-portal-qr-box {
-      width: 130px !important;
-      height: 130px !important;
-      max-width: 130px !important;
-      max-height: 130px !important;
+      width: 170px !important;
+      height: 170px !important;
+      max-width: 170px !important;
+      max-height: 170px !important;
       background: #080911;
       border: 2px solid var(--neon-cyan);
       border-radius: 12px;
-      padding: 6px;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+      padding: 8px;
+      box-shadow: 0 0 24px rgba(0, 240, 255, 0.35);
       display: block;
       box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .onsite-portal-qr-box:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.55);
     }
     .onsite-portal-qr-img {
       width: 100% !important;
       height: 100% !important;
-      max-width: 130px !important;
-      max-height: 130px !important;
+      max-width: 170px !important;
+      max-height: 170px !important;
       border-radius: 8px;
       display: block;
       object-fit: contain;
@@ -442,8 +447,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://UpLiftVR.itch.io" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_maiden_flight_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://UpLiftVR.itch.io', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_maiden_flight_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_maiden_flight_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
@@ -454,8 +459,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://youtu.be/FHIc24WiViY" target="_blank" class="card-qr-link" title="🎬 360 TRAILER (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_maiden_flight_video_neon.png', '🎬 360 TRAILER', 'Point your smartphone camera to scan or launch experience.', 'https://youtu.be/FHIc24WiViY', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_maiden_flight_video_neon.png" alt="🎬 360 TRAILER" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_maiden_flight_video_neon.png" alt="🎬 360 TRAILER" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🎬 360 TRAILER</span>
           </a>
@@ -486,8 +491,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://wulfdesign.github.io/high-desert-eclipse/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank" class="card-qr-link" title="🌐 WEBXR PORTAL (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_hde_web_neon.png', '🌐 WEBXR PORTAL', 'Point your smartphone camera to scan or launch experience.', 'https://wulfdesign.github.io/high-desert-eclipse/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_hde_web_neon.png" alt="🌐 WEBXR PORTAL" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_hde_web_neon.png" alt="🌐 WEBXR PORTAL" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBXR PORTAL</span>
           </a>
@@ -498,8 +503,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_hde_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_hde_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_hde_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
@@ -533,8 +538,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://www.algoriddim.com/djay-meta-quest" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_djay_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://www.algoriddim.com/djay-meta-quest', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_djay_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_djay_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
@@ -545,8 +550,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://www.meta.com/experiences/djay/5577676049000759/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_djay_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/djay/5577676049000759/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_djay_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_djay_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
@@ -570,8 +575,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://tripthelightgame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_trip_the_light_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://tripthelightgame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_trip_the_light_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_trip_the_light_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
@@ -582,8 +587,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_trip_the_light_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_trip_the_light_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_trip_the_light_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
@@ -607,8 +612,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://www.connectomegame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_connectome_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://www.connectomegame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_connectome_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_connectome_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
@@ -619,8 +624,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://www.meta.com/experiences/connectome/25707920632186813/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_connectome_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/connectome/25707920632186813/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_connectome_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_connectome_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
@@ -644,8 +649,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://parietallab.com/constellations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_constellations_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://parietallab.com/constellations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_constellations_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_constellations_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
@@ -656,8 +661,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_constellations_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_constellations_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_constellations_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
@@ -681,8 +686,8 @@
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://www.granthinkson.com/art/project-hydra-iterations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_project_hydra_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://www.granthinkson.com/art/project-hydra-iterations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_project_hydra_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_project_hydra_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
@@ -693,8 +698,8 @@
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 HORIZON STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_project_hydra_store_neon.png', '🥽 HORIZON STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_project_hydra_store_neon.png" alt="🥽 HORIZON STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_project_hydra_store_neon.png" alt="🥽 HORIZON STORE" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 HORIZON STORE</span>
           </a>
@@ -740,8 +745,8 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
           <a href="https://wulfdesign.github.io/lunar-flyby-xr" target="_blank" class="card-qr-link" title="🌐 WEBXR SIM (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_artemis_web_neon.png', '🌐 WEBXR SIM', 'Point your smartphone camera to scan or launch experience.', 'https://wulfdesign.github.io/lunar-flyby-xr', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_artemis_web_neon.png" alt="🌐 WEBXR SIM" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-cyan" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 14px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_artemis_web_neon.png" alt="🌐 WEBXR SIM" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBXR SIM</span>
           </a>
@@ -752,8 +757,8 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
           <a href="https://filmfreeway.com/Lunar-Flyby-XR" target="_blank" class="card-qr-link" title="🎬 FILMFREEWAY (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_artemis_filmfreeway_neon.png', '🎬 FILMFREEWAY', 'Point your smartphone camera to scan or launch experience.', 'https://filmfreeway.com/Lunar-Flyby-XR', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
-            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_artemis_filmfreeway_neon.png" alt="🎬 FILMFREEWAY" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            <div class="card-qr-box qr-box-pink" style="width:100px; height:100px; max-width:100px; max-height:100px; background:#090a14; border-radius:8px; padding:5px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 14px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_artemis_filmfreeway_neon.png" alt="🎬 FILMFREEWAY" class="card-qr-img" width="100" height="100" style="width:100%; height:100%; max-width:100px; max-height:100px; object-fit:contain; display:block; border-radius:6px;">
             </div>
             <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🎬 FILMFREEWAY</span>
           </a>
@@ -968,8 +973,8 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
     <div class="onsite-portal-gateway">
       <div class="onsite-portal-inner">
         <div class="onsite-portal-qr-col" style="flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:8px;">
-          <a href="index.html" class="onsite-portal-qr-box" title="Scan to open on smartphone" onclick="openPortalModal(); return false;" style="display:block; width:130px; height:130px; max-width:130px; max-height:130px; background:#080911; border:2px solid var(--neon-cyan); border-radius:12px; padding:6px; box-shadow:0 0 20px rgba(0,240,255,0.35); box-sizing:border-box; cursor:pointer;">
-            <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal Mobile QR" class="onsite-portal-qr-img" width="130" height="130" style="width:100%; height:100%; max-width:130px; max-height:130px; display:block; border-radius:8px; object-fit:contain;">
+          <a href="index.html" class="onsite-portal-qr-box" title="Scan to open on smartphone" onclick="openPortalModal(); return false;" style="display:block; width:170px; height:170px; max-width:170px; max-height:170px; background:#080911; border:2px solid var(--neon-cyan); border-radius:12px; padding:8px; box-shadow:0 0 24px rgba(0,240,255,0.35); box-sizing:border-box; cursor:pointer;">
+            <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal Mobile QR" class="onsite-portal-qr-img" width="170" height="170" style="width:100%; height:100%; max-width:170px; max-height:170px; display:block; border-radius:8px; object-fit:contain;">
           </a>
           <span class="onsite-portal-scan-label">📱 SCAN TO OPEN ON PHONE</span>
         </div>

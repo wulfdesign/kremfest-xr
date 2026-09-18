@@ -30,6 +30,12 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **Submission QR Expansion (+30% to 100px) & Onsite Mobile Gateway Enlargement (+30% to 170px) (v0.1.88):**
+  1. **Submission Card QR Expansion (+31.5% to 100px):** Scaled all experience flanked QR code containers and images from 76px to 100px across `.card-qr-box`, `.card-qr-img`, and inline template tags in both `publish_to_public.py` and `render_staging_preview.py` for effortless lens acquisition from screens.
+  2. **Onsite Mobile & Voter Gateway QR Enlargement (+30.7% to 170px):** Enlarged the bottom on-premise mobile portal gateway banner QR code from 130px to 170px in `assets/css/style.css`, head-injected stylesheets, and staging sandbox with 24px neon aura.
+  3. **Interactive Modal Trigger on Onsite Gateway:** Added `onclick="openPortalModal(); return false;"` to the onsite gateway link in both public and staging previews.
+  4. **Ecosystem Recompilation & Verification:** Recompiled all 8 public static pages, staging sandbox preview, and dev dashboard. Verified clean 200 responses across Port 3039 and Port 3040. 🎴 📱 🔍 ⚡ 🧪 🐈 ✨
+
 * [ ] 🧪 🔥🔥🔥 **Partner UTM Restoration, Hero Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion (v0.1.87):**
   1. **Comprehensive QR Code Audit & Partner UTM Restoration:** Restored full tracked URLs across all 48 QR codes and external links as promised in correspondence with Algoriddim, developers, and ticketing partners.
   2. **Hero "📱 Scan to Phone" Modal Unblocked:** Fixed TDZ `ReferenceError` on `simulationState` in `assets/js/main.js` and injected self-contained inline handlers for seamless mobile portal scanning.

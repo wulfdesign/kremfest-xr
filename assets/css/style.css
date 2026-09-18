@@ -1253,16 +1253,33 @@ body.show-qr-badges .card-qr-flank {
 }
 
 .card-qr-box {
-  width: 76px;
-  height: 76px;
+  width: 100px;
+  height: 100px;
   background: #090a14;
   border-radius: 8px;
-  padding: 4px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.ticket-pass-card .card-qr-box {
+  width: 130px !important;
+  height: 130px !important;
+  max-width: 130px !important;
+  max-height: 130px !important;
+  padding: 6px !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+
+.ticket-pass-card .card-qr-box:hover {
+  box-shadow: 0 0 20px rgba(255, 183, 0, 0.6) !important;
+  transform: scale(1.04);
 }
 
 .card-qr-box:hover {
@@ -1284,9 +1301,17 @@ body.show-qr-badges .card-qr-flank {
   box-shadow: 0 0 12px rgba(255, 183, 0, 0.35);
 }
 
+.ticket-pass-card .card-qr-img {
+  max-width: 130px !important;
+  max-height: 130px !important;
+}
+
 .card-qr-img {
   width: 100%;
   height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
   display: block;
   border-radius: 6px;
 }
@@ -1462,27 +1487,31 @@ body.show-qr-badges .ticket-qr-flank {
 }
 
 .onsite-portal-qr-box {
-  width: 130px;
-  height: 130px;
+  width: 170px;
+  height: 170px;
   background: #080911;
   border: 2px solid var(--neon-pink);
   border-radius: 12px;
-  padding: 6px;
+  padding: 8px;
   display: block;
-  box-shadow: 0 0 20px rgba(255, 0, 127, 0.35);
+  box-shadow: 0 0 24px rgba(255, 0, 127, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .onsite-portal-qr-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 28px rgba(255, 0, 127, 0.55);
+  transform: scale(1.04);
+  box-shadow: 0 0 30px rgba(255, 0, 127, 0.55);
 }
 
 .onsite-portal-qr-img {
   width: 100%;
   height: 100%;
+  max-width: 170px;
+  max-height: 170px;
   display: block;
   border-radius: 8px;
+  object-fit: contain;
 }
 
 .onsite-portal-scan-label {

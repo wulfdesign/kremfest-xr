@@ -4,6 +4,23 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-18 13:58] - v0.1.88: Submission QR Expansion (+30% to 100px) & Onsite Mobile Gateway Enlargement (+30% to 170px) 🎴📱🔍⚡✨**
+
+📝 **Summary**
+1. **Submission Experience Card QRs Enlarged (+31.5% to 100px):**
+   - Scaled all experience flanked QR code containers and images from 76px to 100px across `.card-qr-box`, `.card-qr-img`, and inline template tags in both `publish_to_public.py` and `render_staging_preview.py`.
+   - Significantly enhances mobile lens acquisition distance and optical capture reliability from laptop and computer displays without crowding card action buttons.
+   - Preserves clean responsive layout: on desktop screens (>=701px), cards display comfortably flanked; on mobile displays (<=700px), flanked action rows collapse gracefully into a centered vertical stack.
+2. **Onsite Attendee & Voter Portal Gateway QR Enlarged (+30.7% to 170px):**
+   - Enlarged the bottom on-premise mobile portal gateway banner QR code from 130px to 170px in `assets/css/style.css`, head-injected stylesheets, and staging sandbox.
+   - Upgraded container styling with 8px padding and expanded `24px` cyan/pink neon aura (`box-shadow: 0 0 24px rgba(0, 240, 255, 0.35)`).
+   - Added interactive `onclick="openPortalModal(); return false;"` trigger onto the gateway link in both public and staging preview compilers.
+3. **Ecosystem Recompilation & Verification:**
+   - Recompiled all 8 public static pages, staging sandbox preview, and dev dashboard.
+   - Verified HTTP 200 responses on Port 3039 and Port 3040. Verified clean rendering of 100px card QRs, 130px ticket pass QRs, and 170px onsite portal QR.
+
+🏷️ **Version:** `v0.1.88` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-18 13:45] - v0.1.87: Partner UTM Restoration, Hero Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion 🎴📱🎟️🔍⚡✨**
 
 📝 **Summary**

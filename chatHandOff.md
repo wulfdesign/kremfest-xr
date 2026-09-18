@@ -1,17 +1,23 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.87)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.88)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.87` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 18, 2026 | 13:45 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.87` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.88` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 18, 2026 | 13:58 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.88` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Partner UTM Tracking Restoration, Scan-to-Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion (v0.1.87):**
+1. **Submission QR Expansion (+30% to 100px) & Onsite Mobile Gateway Enlargement (+30% to 170px) (v0.1.88):**
+   - **Submission Card QRs Enlarged to 100px:** Scaled all flanked experience QR cards from 76px to 100px (+31.5% size increase) across `.card-qr-box`, `.card-qr-img`, and inline template renders in both `publish_to_public.py` and `render_staging_preview.py`. Provides greater scanning acquisition range while preserving comfortable layout margins on desktop and cleanly collapsing to vertical stack on mobile screens (<=700px).
+   - **Onsite Attendee & Voter Portal QR Enlarged to 170px:** Scaled the bottom on-premise mobile portal gateway banner QR code from 130px to 170px (+30.7% size increase) across `style.css`, inline styles, and staging sandbox, with upgraded `24px` cyan/pink neon glow.
+   - **Interactive Modal Trigger on Onsite Gateway:** Wired `openPortalModal()` click trigger onto the onsite portal QR link in both public and staging previews.
+   - **Recompiled & Verified:** Recompiled all 8 public static pages, staging preview, and dev dashboard. Tested with 0 errors across Port 3039 and Port 3040.
+
+2. **Partner UTM Tracking Restoration, Scan-to-Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion (v0.1.87):**
    - **Partner UTM Parameters Fully Restored:** Restored all exact promised `?utm_source=...` campaign tracking links across all festival experiences, ticketing links, and marketing correspondence (`lineups.json`, `generate_lineup_qrs.py`, `publish_to_public.py`, `render_staging_preview.py`).
    - **Hero "📱 Scan to Phone" Bug Resolution:** Diagnosed and fixed the unhandled `ReferenceError: Cannot access 'simulationState' before initialization` in `assets/js/main.js` (caused by a Temporal Dead Zone variable declaration). Also embedded self-contained inline modal controllers directly inside compiled pages to guarantee robust modal operation even across network blips.
    - **Ticket Pass QR Enlargement & Interactive Zoom Modal (`#qr-zoom-modal`):** Enlarged bottom kiosk ticket passes (Friday, Saturday, Weekend) from 76px to 130px with amber neon frames and hover lift. Added click-to-zoom modal expansion displaying a crisp 240px QR code with direct checkout action button, backdrop dismissal, and `Escape` keyboard shortcuts.
