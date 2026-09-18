@@ -1,17 +1,24 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.86)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.87)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.86` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 17, 2026 | 19:55 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.86` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.87` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 18, 2026 | 13:45 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.87` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation (v0.1.86):**
+1. **Partner UTM Tracking Restoration, Scan-to-Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion (v0.1.87):**
+   - **Partner UTM Parameters Fully Restored:** Restored all exact promised `?utm_source=...` campaign tracking links across all festival experiences, ticketing links, and marketing correspondence (`lineups.json`, `generate_lineup_qrs.py`, `publish_to_public.py`, `render_staging_preview.py`).
+   - **Hero "📱 Scan to Phone" Bug Resolution:** Diagnosed and fixed the unhandled `ReferenceError: Cannot access 'simulationState' before initialization` in `assets/js/main.js` (caused by a Temporal Dead Zone variable declaration). Also embedded self-contained inline modal controllers directly inside compiled pages to guarantee robust modal operation even across network blips.
+   - **Ticket Pass QR Enlargement & Interactive Zoom Modal (`#qr-zoom-modal`):** Enlarged bottom kiosk ticket passes (Friday, Saturday, Weekend) from 76px to 130px with amber neon frames and hover lift. Added click-to-zoom modal expansion displaying a crisp 240px QR code with direct checkout action button, backdrop dismissal, and `Escape` keyboard shortcuts.
+   - **48 Crisp Square-Module QR Codes Re-Rendered:** Regenerated all 48 styled QR code images (24 Neon Dark Mode + 24 Print Light Mode) using `SquareModuleDrawer` and Error Correction `M` into both public and private asset trees.
+   - **Curatorial Air-Gap Preserved:** Confirmed *Firedrake VR* and *We Are Dead Animals* safely remain in `staging_vault.json` pending in-headset APK evaluation.
+
+2. **Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation (v0.1.86):**
    - **Curatorial Pullback Execution:** Safely removed *Firedrake VR* and *We Are Dead Animals* from `lineups.json` (`years["2026"]["selections"]`), restoring the live public lineup to confirmed core selections (6 selections + 2 headliners).
    - **Pullback Engine & REST Endpoint:** Added `pullback_candidate()` function and `--pullback` CLI flag in `promote_candidate.py`, plus `/api/staging/pullback` route in `private/dev_dashboard/server.py`.
    - **Staging Vault Restoration:** Restored both works into `staging_vault.json` with `app_key: false`, retaining full correspondence logs and updating notes to reflect pending APK delivery and headset verification.

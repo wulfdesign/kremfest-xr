@@ -4,6 +4,28 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-18 13:45] - v0.1.87: Partner UTM Restoration, Hero Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion 🎴📱🎟️🔍⚡✨**
+
+📝 **Summary**
+1. **Partner UTM Tracking Parameters Fully Restored:**
+   - Restored exact partner UTM tracking parameters across all experience links, ticketing links, and marketing correspondence (`lineups.json`, `generate_lineup_qrs.py`, `publish_to_public.py`, `render_staging_preview.py`).
+   - Restored tracking for Algoriddim, Dark Arts Software (*Trip the Light*), Parietal Lab / Grant Hinkson (*CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*), UpLiftVR (*High Desert Eclipse*), and official Kremwerk ticket passes.
+2. **Hero "📱 Scan to Phone" Modal Unblocked & Self-Contained:**
+   - Diagnosed root cause of the unresponsive hero modal button: a Temporal Dead Zone `ReferenceError: Cannot access 'simulationState' before initialization` in `assets/js/main.js` which threw during `DOMContentLoaded` and halted subsequent script execution.
+   - Relocated declaration of `simulationState` to line 1 of `assets/js/main.js`. Validated execution with Node.js VM.
+   - Embedded self-contained inline modal handling functions (`openPortalModal`, `closePortalModal`, `openQrZoomModal`, `closeQrZoomModal`) directly inside the compiled HTML so modal behavior is 100% resilient.
+3. **Ticket Pass QR Enlargement & Interactive Zoom Modal (`#qr-zoom-modal`):**
+   - Enlarged bottom kiosk ticket pass QR containers from 76px to 130px with 2px amber neon borders and hover glow.
+   - Added `#qr-zoom-modal` displaying a high-contrast 240px QR code with event metadata, direct checkout link button, backdrop click dismiss, and keyboard `Escape` handler.
+   - Wired click-to-zoom onto both bottom ticket pass cards and flanked experience action cards.
+4. **48 Crisp Square-Module QR Codes Re-Rendered:**
+   - Regenerated all 48 styled QR code images (24 Neon Dark Mode + 24 Print Light Mode) using `SquareModuleDrawer` and Error Correction `M`.
+5. **Air-Gap & Safety Verification:**
+   - Maintained *Firedrake VR* and *We Are Dead Animals* safely in `staging_vault.json` (0 occurrences on Port 3039 public showcase or ballot).
+   - Recompiled all static pages on Port 3039 and Port 3040. Verified 54 UTM tracking links in output.
+
+🏷️ **Version:** `v0.1.87` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-17 19:55] - v0.1.86: Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation 🛡️📦🧪✨**
 
 📝 **Summary**

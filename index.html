@@ -56,6 +56,20 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       box-sizing: border-box;
+      cursor: pointer;
+    }
+    .ticket-pass-card .card-qr-box {
+      width: 130px !important;
+      height: 130px !important;
+      max-width: 130px !important;
+      max-height: 130px !important;
+      padding: 6px !important;
+      border-radius: 10px !important;
+      cursor: pointer;
+    }
+    .ticket-pass-card .card-qr-box:hover {
+      box-shadow: 0 0 20px rgba(255, 183, 0, 0.6) !important;
+      transform: scale(1.04);
     }
     .card-qr-box:hover {
       transform: scale(1.06);
@@ -80,6 +94,10 @@
       object-fit: contain;
       display: block;
       border-radius: 6px;
+    }
+    .ticket-pass-card .card-qr-img {
+      max-width: 130px !important;
+      max-height: 130px !important;
     }
     .card-qr-label {
       font-family: 'Rajdhani', sans-serif;
@@ -384,9 +402,9 @@
         <button onclick="openPortalModal()" class="btn btn-secondary" style="border-color:var(--neon-pink); color:#fff; cursor:pointer;">📱 Scan to Phone</button>
       </div>
       <div style="display:flex; justify-content:center; gap:10px; margin:0 0 20px 0; flex-wrap:wrap;">
-        <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday" target="_blank" class="btn btn-secondary" style="font-size:0.85rem; padding:8px 16px;">🎟️ Friday Pass (Sept 25)</a>
-        <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday" target="_blank" class="btn btn-secondary" style="font-size:0.85rem; padding:8px 16px;">🎟️ Saturday Pass (Sept 26)</a>
-        <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass" target="_blank" class="btn btn-secondary" style="font-size:0.85rem; padding:8px 16px;">🎟️ Weekend Passes (Sept 25–27)</a>
+        <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass" target="_blank" class="btn btn-secondary" style="font-size:0.85rem; padding:8px 16px;">🎟️ Friday Pass (Sept 25)</a>
+        <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass" target="_blank" class="btn btn-secondary" style="font-size:0.85rem; padding:8px 16px;">🎟️ Saturday Pass (Sept 26)</a>
+        <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=weekend_pass" target="_blank" class="btn btn-secondary" style="font-size:0.85rem; padding:8px 16px;">🎟️ Weekend Passes (Sept 25–27)</a>
       </div>
 
       <div class="showcase-schedule-badge" style="margin: 0 auto;">
@@ -423,7 +441,7 @@
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://UpLiftVR.itch.io" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://UpLiftVR.itch.io" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_maiden_flight_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://UpLiftVR.itch.io', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_maiden_flight_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -435,7 +453,7 @@
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://youtu.be/FHIc24WiViY" target="_blank" class="card-qr-link" title="🎬 360 TRAILER" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://youtu.be/FHIc24WiViY" target="_blank" class="card-qr-link" title="🎬 360 TRAILER (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_maiden_flight_video_neon.png', '🎬 360 TRAILER', 'Point your smartphone camera to scan or launch experience.', 'https://youtu.be/FHIc24WiViY', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_maiden_flight_video_neon.png" alt="🎬 360 TRAILER" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -467,7 +485,7 @@
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://wulfdesign.github.io/high-desert-eclipse/" target="_blank" class="card-qr-link" title="🌐 WEBXR PORTAL" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://wulfdesign.github.io/high-desert-eclipse/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank" class="card-qr-link" title="🌐 WEBXR PORTAL (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_hde_web_neon.png', '🌐 WEBXR PORTAL', 'Point your smartphone camera to scan or launch experience.', 'https://wulfdesign.github.io/high-desert-eclipse/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_hde_web_neon.png" alt="🌐 WEBXR PORTAL" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -475,11 +493,11 @@
           </a>
         </div>
       <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
-        <div class="project-links-row"><a href="https://youtu.be/fzcFw_33iC8" target="_blank">Watch 360 Eclipse Video</a> <span class="link-dot">•</span> <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://wulfdesign.github.io/high-desert-eclipse/" target="_blank">Eclipse Story Portal</a> <span class="link-dot">•</span> <a href="https://filmfreeway.com/HighDesertEclipse" target="_blank">FilmFreeway</a></div>
+        <div class="project-links-row"><a href="https://youtu.be/fzcFw_33iC8" target="_blank">Watch 360 Eclipse Video</a> <span class="link-dot">•</span> <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://wulfdesign.github.io/high-desert-eclipse/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank">Eclipse Story Portal</a> <span class="link-dot">•</span> <a href="https://filmfreeway.com/HighDesertEclipse" target="_blank">FilmFreeway</a></div>
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://www.meta.com/experiences/5486799141392429/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_hde_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_hde_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -504,19 +522,17 @@
           <span class="tag" style="background:rgba(192, 132, 252, 0.18); border:1px solid #c084fc; color:#c084fc; font-size:0.75rem; font-weight:bold;">✨ CURATED OFFICIAL SELECTION</span>
         </div>
         <h3 class="project-title">djay</h3>
-        <div class="project-byline">By Algoriddim • Mixed Reality DJ Experience</div>
+        <div class="project-byline">By Algoriddim • Direct Curatorial Partnership</div>
         <p class="project-logline" style="color:#a5b4fc; font-weight:500; margin:10px 0;">Mix music on stunning 3D turntables with intuitive hand gestures and real-time audio visualizers floating inside the nightclub.</p>
-        <p class="project-synopsis">Experience DJing like never before with the award-winning djay app for Meta Quest. Mix music on hyper-realistic 3D turntables, control audio effects and loops with intuitive optical hand gestures, and immerse yourself in dynamic environments that react to your mix in real time — all while keeping full visibility of Kremwerk's dancing crowd and laser lights through high-fidelity passthrough.
-
-Featuring seamless integration with streaming services and a rich library of music, djay turns anyone into an instant vinyl selector on the festival floor.</p>
+        <p class="project-synopsis">Experience DJing like never before with the award-winning djay app for Meta Quest. Mix music on hyper-realistic 3D turntables, control audio effects and loops with intuitive optical hand gestures, and immerse yourself in dynamic environments that react to your mix in real time — all while keeping full visibility of Kremwerk's dancing crowd and laser lights through high-fidelity passthrough.</p>
         <ul class="project-bullets">
-          <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> Mixed Reality / Music Performance / Spatial Audio</li><li><strong>Format:</strong> Interactive Mixed Reality (Meta Quest 3 / Quest 2 Passthrough)</li><li><strong>Control Scheme:</strong> Intuitive Optical Hand-Tracking (Scratch, Loop & FX Gestures)</li><li><strong>Origin:</strong> Germany (Munich) / Global</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection (Keys Secured — Algoriddim Ticket #259545)</span></li><li><strong>Conference Lineage:</strong> Direct Curatorial Partnership Invitation</li>
+          <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> Mixed Reality / Music Performance / Spatial Audio</li><li><strong>Format:</strong> Interactive Mixed Reality (Meta Quest 3 / Quest 2 Passthrough)</li><li><strong>Control Scheme:</strong> Pure Optical Hand-Tracking (Direct Turntable Manipulation)</li><li><strong>Origin:</strong> Munich, Germany / Global</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection (Keys Secured — Algoriddim Ticket #259545)</span></li><li><strong>Conference Lineage:</strong> Direct Curatorial Partnership Invitation</li>
         </ul>
         
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://www.algoriddim.com/djay-meta-quest" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.algoriddim.com/djay-meta-quest" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_djay_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://www.algoriddim.com/djay-meta-quest', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_djay_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -524,11 +540,11 @@ Featuring seamless integration with streaming services and a rich library of mus
           </a>
         </div>
       <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
-        <div class="project-links-row"><a href="https://www.algoriddim.com/djay-meta-quest" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.meta.com/experiences/djay/5577676049000759/" target="_blank">Meta Horizon Store</a></div>
+        <div class="project-links-row"><a href="https://www.algoriddim.com/djay-meta-quest" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.meta.com/experiences/djay/5577676049000759/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated" target="_blank">Meta Horizon Store</a></div>
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://www.meta.com/experiences/5577676049000759/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.meta.com/experiences/djay/5577676049000759/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_djay_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/djay/5577676049000759/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_djay_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -553,7 +569,7 @@ Featuring seamless integration with streaming services and a rich library of mus
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://tripthelightgame.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://tripthelightgame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_trip_the_light_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://tripthelightgame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_trip_the_light_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -561,11 +577,11 @@ Featuring seamless integration with streaming services and a rich library of mus
           </a>
         </div>
       <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
-        <div class="project-links-row"><a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://tripthelightgame.com/" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.facebook.com/darkartssoftware" target="_blank">Dark Arts Software</a></div>
+        <div class="project-links-row"><a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://tripthelightgame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.facebook.com/darkartssoftware" target="_blank">Dark Arts Software</a></div>
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://www.meta.com/experiences/8025476794223581/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_trip_the_light_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_trip_the_light_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -590,7 +606,7 @@ Featuring seamless integration with streaming services and a rich library of mus
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://www.connectomegame.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.connectomegame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_connectome_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://www.connectomegame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_connectome_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -598,11 +614,11 @@ Featuring seamless integration with streaming services and a rich library of mus
           </a>
         </div>
       <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
-        <div class="project-links-row"><a href="https://www.meta.com/experiences/connectome/25707920632186813/" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://www.connectomegame.com/" target="_blank">ConnectomeGame.com</a> <span class="link-dot">•</span> <a href="https://parietallab.com/" target="_blank">ParietalLab.com</a> <span class="link-dot">•</span> <a href="https://granthinkson.com/" target="_blank">Grant Hinkson Portfolio</a> <span class="link-dot">•</span> <a href="https://www.linkedin.com/company/parietal-lab/" target="_blank">Parietal Lab LinkedIn</a></div>
+        <div class="project-links-row"><a href="https://www.meta.com/experiences/connectome/25707920632186813/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://www.connectomegame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ConnectomeGame.com</a> <span class="link-dot">•</span> <a href="https://parietallab.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ParietalLab.com</a> <span class="link-dot">•</span> <a href="https://granthinkson.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Grant Hinkson Portfolio</a> <span class="link-dot">•</span> <a href="https://www.linkedin.com/company/parietal-lab/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Parietal Lab LinkedIn</a></div>
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://www.meta.com/experiences/25707920632186813/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.meta.com/experiences/connectome/25707920632186813/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_connectome_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/connectome/25707920632186813/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_connectome_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -627,7 +643,7 @@ Featuring seamless integration with streaming services and a rich library of mus
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://parietallab.com/constellations/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://parietallab.com/constellations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_constellations_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://parietallab.com/constellations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_constellations_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -635,11 +651,11 @@ Featuring seamless integration with streaming services and a rich library of mus
           </a>
         </div>
       <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
-        <div class="project-links-row"><a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://parietallab.com/constellations/" target="_blank">Constellations Overview</a> <span class="link-dot">•</span> <a href="https://parietallab.com/" target="_blank">ParietalLab.com</a> <span class="link-dot">•</span> <a href="https://granthinkson.com/" target="_blank">Grant Hinkson Portfolio</a> <span class="link-dot">•</span> <a href="https://www.linkedin.com/company/parietal-lab/" target="_blank">Parietal Lab LinkedIn</a></div>
+        <div class="project-links-row"><a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://parietallab.com/constellations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Constellations Overview</a> <span class="link-dot">•</span> <a href="https://parietallab.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ParietalLab.com</a> <span class="link-dot">•</span> <a href="https://granthinkson.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Grant Hinkson Portfolio</a> <span class="link-dot">•</span> <a href="https://www.linkedin.com/company/parietal-lab/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Parietal Lab LinkedIn</a></div>
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://www.meta.com/experiences/24145606965110616/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 QUEST STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_constellations_store_neon.png', '🥽 QUEST STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_constellations_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -664,7 +680,7 @@ Featuring seamless integration with streaming services and a rich library of mus
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://www.granthinkson.com/art/project-hydra-iterations/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.granthinkson.com/art/project-hydra-iterations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🌐 WEBSITE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_project_hydra_web_neon.png', '🌐 WEBSITE', 'Point your smartphone camera to scan or launch experience.', 'https://www.granthinkson.com/art/project-hydra-iterations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_project_hydra_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -672,11 +688,11 @@ Featuring seamless integration with streaming services and a rich library of mus
           </a>
         </div>
       <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
-        <div class="project-links-row"><a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/" target="_blank">Meta Horizon Store (Free)</a> <span class="link-dot">•</span> <a href="https://www.granthinkson.com/art/project-hydra-iterations/" target="_blank">Portfolio Project Page</a> <span class="link-dot">•</span> <a href="https://www.youtube.com/watch?v=lZ9uTjdihoA" target="_blank">YouTube Trailer</a> <span class="link-dot">•</span> <a href="https://parietallab.com/" target="_blank">ParietalLab.com</a></div>
+        <div class="project-links-row"><a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Horizon Store (Free)</a> <span class="link-dot">•</span> <a href="https://www.granthinkson.com/art/project-hydra-iterations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Portfolio Project Page</a> <span class="link-dot">•</span> <a href="https://www.youtube.com/watch?v=lZ9uTjdihoA" target="_blank">YouTube Trailer</a> <span class="link-dot">•</span> <a href="https://parietallab.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ParietalLab.com</a></div>
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://www.meta.com/experiences/26371440209190143/" target="_blank" class="card-qr-link" title="🥽 HORIZON STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank" class="card-qr-link" title="🥽 HORIZON STORE (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_project_hydra_store_neon.png', '🥽 HORIZON STORE', 'Point your smartphone camera to scan or launch experience.', 'https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_project_hydra_store_neon.png" alt="🥽 HORIZON STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -723,7 +739,7 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
     <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
         <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
-          <a href="https://wulfdesign.github.io/lunar-flyby-xr" target="_blank" class="card-qr-link" title="🌐 WEBXR SIM" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://wulfdesign.github.io/lunar-flyby-xr" target="_blank" class="card-qr-link" title="🌐 WEBXR SIM (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_artemis_web_neon.png', '🌐 WEBXR SIM', 'Point your smartphone camera to scan or launch experience.', 'https://wulfdesign.github.io/lunar-flyby-xr', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_artemis_web_neon.png" alt="🌐 WEBXR SIM" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -735,7 +751,7 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       </div>
       
         <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
-          <a href="https://filmfreeway.com/Lunar-Flyby-XR" target="_blank" class="card-qr-link" title="🎬 FILMFREEWAY" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+          <a href="https://filmfreeway.com/Lunar-Flyby-XR" target="_blank" class="card-qr-link" title="🎬 FILMFREEWAY (Click to Enlarge)" onclick="openQrZoomModal('assets/images/qr/qr_artemis_filmfreeway_neon.png', '🎬 FILMFREEWAY', 'Point your smartphone camera to scan or launch experience.', 'https://filmfreeway.com/Lunar-Flyby-XR', 'Open Directly'); return false;" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
             <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
               <img src="assets/images/qr/qr_artemis_filmfreeway_neon.png" alt="🎬 FILMFREEWAY" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
@@ -880,7 +896,7 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       </p>
       <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
         <!-- Amazon Associates link temporarily paused until account setup is completed -->
-        <a href="https://www.meta.com/referrals/link/wulfdesign/" target="_blank" class="btn btn-primary" style="font-size: 0.95rem; padding: 12px 24px;">
+        <a href="https://www.meta.com/referrals/link/wulfdesign/?utm_source=kremfest_xr&utm_medium=meta_referral&utm_campaign=headset_activation" target="_blank" class="btn btn-primary" style="font-size: 0.95rem; padding: 12px 24px;">
           🎁 Activate Meta Quest 3 &amp; Get $30–$60 Meta Store Credit
         </a>
       </div>
@@ -896,53 +912,53 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       </div>
       <div class="ticket-passes-grid">
         
-      <div class="ticket-pass-card" style="max-width:280px; flex:1 1 240px; box-sizing:border-box;">
+      <div class="ticket-pass-card" style="max-width:300px; flex:1 1 260px; box-sizing:border-box;">
         <div class="ticket-pass-header">
           <span class="ticket-pass-tier">🎟️ FRIDAY PASS</span>
           <span class="ticket-pass-date">Friday, Sept 25, 2026</span>
         </div>
-        <div class="ticket-qr-flank" style="display:block; margin:10px auto 12px auto; text-align:center;">
-          <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday" target="_blank" class="ticket-qr-link" title="FRIDAY PASS Tickets" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:4px;">
-            <div class="card-qr-box qr-box-amber" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid #ffb700; box-shadow:0 0 12px rgba(255,183,0,0.35); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_ticket_friday_neon.png" alt="FRIDAY PASS QR" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+        <div class="ticket-qr-flank" style="display:block; margin:12px auto 14px auto; text-align:center;">
+          <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass" target="_blank" class="ticket-qr-link" title="FRIDAY PASS Tickets — Click to Enlarge" onclick="openQrZoomModal('assets/images/qr/qr_ticket_friday_neon.png', '🎟️ FRIDAY PASS', 'Friday, Sept 25, 2026 • Doors 10:00 PM – Late', 'https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass', '🎟️ Get Pass Online'); return false;" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:6px;">
+            <div class="card-qr-box qr-box-amber" style="width:130px; height:130px; max-width:130px; max-height:130px; background:#090a14; border-radius:10px; padding:6px; display:flex; align-items:center; justify-content:center; border:2px solid #ffb700; box-shadow:0 0 16px rgba(255,183,0,0.4); box-sizing:border-box; cursor:pointer;" title="Click to zoom / enlarge QR code">
+              <img src="assets/images/qr/qr_ticket_friday_neon.png" alt="FRIDAY PASS QR" class="card-qr-img" width="130" height="130" style="width:100%; height:100%; max-width:130px; max-height:130px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.7rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">SCAN FOR PASS</span>
+            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">🔍 CLICK TO ENLARGE • SCAN</span>
           </a>
         </div>
         <p class="ticket-pass-desc">Access to Friday Night Club Sets & Complete KremFest XR Showcase</p>
-        <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
+        <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
       </div>
-      <div class="ticket-pass-card" style="max-width:280px; flex:1 1 240px; box-sizing:border-box;">
+      <div class="ticket-pass-card" style="max-width:300px; flex:1 1 260px; box-sizing:border-box;">
         <div class="ticket-pass-header">
           <span class="ticket-pass-tier">🎟️ SATURDAY PASS</span>
           <span class="ticket-pass-date">Saturday, Sept 26, 2026</span>
         </div>
-        <div class="ticket-qr-flank" style="display:block; margin:10px auto 12px auto; text-align:center;">
-          <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday" target="_blank" class="ticket-qr-link" title="SATURDAY PASS Tickets" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:4px;">
-            <div class="card-qr-box qr-box-amber" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid #ffb700; box-shadow:0 0 12px rgba(255,183,0,0.35); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_ticket_saturday_neon.png" alt="SATURDAY PASS QR" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+        <div class="ticket-qr-flank" style="display:block; margin:12px auto 14px auto; text-align:center;">
+          <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass" target="_blank" class="ticket-qr-link" title="SATURDAY PASS Tickets — Click to Enlarge" onclick="openQrZoomModal('assets/images/qr/qr_ticket_saturday_neon.png', '🎟️ SATURDAY PASS', 'Saturday, Sept 26, 2026 • Doors 10:00 PM – Late', 'https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass', '🎟️ Get Pass Online'); return false;" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:6px;">
+            <div class="card-qr-box qr-box-amber" style="width:130px; height:130px; max-width:130px; max-height:130px; background:#090a14; border-radius:10px; padding:6px; display:flex; align-items:center; justify-content:center; border:2px solid #ffb700; box-shadow:0 0 16px rgba(255,183,0,0.4); box-sizing:border-box; cursor:pointer;" title="Click to zoom / enlarge QR code">
+              <img src="assets/images/qr/qr_ticket_saturday_neon.png" alt="SATURDAY PASS QR" class="card-qr-img" width="130" height="130" style="width:100%; height:100%; max-width:130px; max-height:130px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.7rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">SCAN FOR PASS</span>
+            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">🔍 CLICK TO ENLARGE • SCAN</span>
           </a>
         </div>
         <p class="ticket-pass-desc">Access to Saturday Headliners, Complex Stages & Full XR Showcase</p>
-        <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
+        <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
       </div>
-      <div class="ticket-pass-card" style="max-width:280px; flex:1 1 240px; box-sizing:border-box;">
+      <div class="ticket-pass-card" style="max-width:300px; flex:1 1 260px; box-sizing:border-box;">
         <div class="ticket-pass-header">
           <span class="ticket-pass-tier">🎟️ WEEKEND PASSES</span>
           <span class="ticket-pass-date">Sept 25–27, 2026</span>
         </div>
-        <div class="ticket-qr-flank" style="display:block; margin:10px auto 12px auto; text-align:center;">
-          <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass" target="_blank" class="ticket-qr-link" title="WEEKEND PASSES Tickets" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:4px;">
-            <div class="card-qr-box qr-box-amber" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid #ffb700; box-shadow:0 0 12px rgba(255,183,0,0.35); box-sizing:border-box;">
-              <img src="assets/images/qr/qr_ticket_weekend_neon.png" alt="WEEKEND PASSES QR" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+        <div class="ticket-qr-flank" style="display:block; margin:12px auto 14px auto; text-align:center;">
+          <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=weekend_pass" target="_blank" class="ticket-qr-link" title="WEEKEND PASSES Tickets — Click to Enlarge" onclick="openQrZoomModal('assets/images/qr/qr_ticket_weekend_neon.png', '🎟️ WEEKEND PASSES', 'Sept 25–27, 2026 • Full 3-Day Festival Access', 'https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=weekend_pass', '🎟️ Get Pass Online'); return false;" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:6px;">
+            <div class="card-qr-box qr-box-amber" style="width:130px; height:130px; max-width:130px; max-height:130px; background:#090a14; border-radius:10px; padding:6px; display:flex; align-items:center; justify-content:center; border:2px solid #ffb700; box-shadow:0 0 16px rgba(255,183,0,0.4); box-sizing:border-box; cursor:pointer;" title="Click to zoom / enlarge QR code">
+              <img src="assets/images/qr/qr_ticket_weekend_neon.png" alt="WEEKEND PASSES QR" class="card-qr-img" width="130" height="130" style="width:100%; height:100%; max-width:130px; max-height:130px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.7rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">SCAN FOR PASS</span>
+            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">🔍 CLICK TO ENLARGE • SCAN</span>
           </a>
         </div>
         <p class="ticket-pass-desc">All Stages across Kremwerk, Timbre Room & Cherry + All XR Showcases</p>
-        <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
+        <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=weekend_pass" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
       </div>
       </div>
     </div>
@@ -952,7 +968,7 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
     <div class="onsite-portal-gateway">
       <div class="onsite-portal-inner">
         <div class="onsite-portal-qr-col" style="flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:8px;">
-          <a href="index.html" class="onsite-portal-qr-box" title="Scan to open on smartphone" style="display:block; width:130px; height:130px; max-width:130px; max-height:130px; background:#080911; border:2px solid var(--neon-cyan); border-radius:12px; padding:6px; box-shadow:0 0 20px rgba(0,240,255,0.35); box-sizing:border-box;">
+          <a href="index.html" class="onsite-portal-qr-box" title="Scan to open on smartphone" onclick="openPortalModal(); return false;" style="display:block; width:130px; height:130px; max-width:130px; max-height:130px; background:#080911; border:2px solid var(--neon-cyan); border-radius:12px; padding:6px; box-shadow:0 0 20px rgba(0,240,255,0.35); box-sizing:border-box; cursor:pointer;">
             <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal Mobile QR" class="onsite-portal-qr-img" width="130" height="130" style="width:100%; height:100%; max-width:130px; max-height:130px; display:block; border-radius:8px; object-fit:contain;">
           </a>
           <span class="onsite-portal-scan-label">📱 SCAN TO OPEN ON PHONE</span>
@@ -993,7 +1009,7 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
         <ul>
           <li><a href="https://filmfreeway.com/KremFest" target="_blank">FilmFreeway Submissions</a></li>
           <li><a href="https://www.kremwerk.com" target="_blank">Kremwerk Official Website</a></li>
-          <li><a href="https://wulfdesign.github.io" target="_blank">Wulf Design / Larry James</a></li>
+          <li><a href="https://wulfdesign.github.io?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=footer_studio" target="_blank">Wulf Design / Larry James</a></li>
           <li><a href="https://upliftvr.itch.io" target="_blank">UpLiftVR Studios</a></li>
         </ul>
       </div>
@@ -1053,8 +1069,8 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5; margin-bottom:18px;">
         Point your smartphone camera at this screen to load the full KremFest XR portal, lineup guide, and voter ballot on your phone.
       </p>
-      <div style="width:200px; height:200px; margin:0 auto 16px auto; background:#080911; border:2px solid var(--neon-pink); border-radius:12px; padding:8px; box-shadow:0 0 25px rgba(255,0,127,0.35);">
-        <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal QR" style="width:100%; height:100%; border-radius:8px; display:block;">
+      <div style="width:220px; height:220px; margin:0 auto 16px auto; background:#080911; border:2px solid var(--neon-pink); border-radius:12px; padding:8px; box-shadow:0 0 25px rgba(255,0,127,0.35);">
+        <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal QR" style="width:100%; height:100%; border-radius:8px; display:block; object-fit:contain;">
       </div>
       <div style="font-family:monospace; font-size:0.85rem; color:#cbd5e1; background:rgba(255,255,255,0.06); padding:6px 14px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); margin-bottom:12px; display:inline-block;">
         wulfdesign.github.io/kremfest-xr/
@@ -1064,6 +1080,70 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       </div>
     </div>
   </div>
+
+  <!-- Interactive QR Zoom Modal for Tickets & Experiences -->
+  <div id="qr-zoom-modal" class="portal-modal-backdrop" style="display:none;" onclick="closeQrZoomModal(event)">
+    <div class="portal-modal-card" onclick="event.stopPropagation()">
+      <button class="portal-modal-close" onclick="closeQrZoomModal()">&times;</button>
+      <div id="qr-zoom-icon" style="font-size:2.2rem; margin-bottom:6px;">🎟️</div>
+      <h3 id="qr-zoom-title" style="font-family:'Rajdhani',sans-serif; font-size:1.4rem; color:#ffc800; letter-spacing:1px; margin-bottom:4px; text-transform:uppercase;">
+        ENLARGED PASS
+      </h3>
+      <p id="qr-zoom-subtitle" style="color:var(--text-muted); font-size:0.85rem; line-height:1.5; margin-bottom:16px;">
+        Point your smartphone camera at this enlarged QR code to purchase or view directly.
+      </p>
+      <div style="width:240px; height:240px; margin:0 auto 16px auto; background:#080911; border:2px solid #ffb700; border-radius:12px; padding:10px; box-shadow:0 0 30px rgba(255,183,0,0.4);">
+        <img id="qr-zoom-img" src="" alt="Enlarged QR Code" style="width:100%; height:100%; border-radius:8px; display:block; object-fit:contain;">
+      </div>
+      <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:8px;">
+        <a id="qr-zoom-btn" href="#" target="_blank" class="btn btn-primary" style="font-size:0.9rem; padding:10px 20px;">Open Link Directly</a>
+        <button onclick="closeQrZoomModal()" class="btn btn-secondary" style="font-size:0.9rem; padding:10px 18px; cursor:pointer;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPortalModal() {
+      var m = document.getElementById('mobile-portal-modal');
+      if (m) m.style.display = 'flex';
+    }
+    function closePortalModal(e) {
+      if (!e || e.target === document.getElementById('mobile-portal-modal') || (e.target && e.target.classList && e.target.classList.contains('portal-modal-close'))) {
+        var m = document.getElementById('mobile-portal-modal');
+        if (m) m.style.display = 'none';
+      }
+    }
+    function openQrZoomModal(imgSrc, title, subtitle, targetUrl, btnLabel) {
+      var m = document.getElementById('qr-zoom-modal');
+      if (!m) return;
+      var img = document.getElementById('qr-zoom-img');
+      var t = document.getElementById('qr-zoom-title');
+      var s = document.getElementById('qr-zoom-subtitle');
+      var b = document.getElementById('qr-zoom-btn');
+      if (img) img.src = imgSrc;
+      if (t) t.textContent = title;
+      if (s) s.innerHTML = subtitle || 'Point your smartphone camera at this screen to scan.';
+      if (b) {
+        b.href = targetUrl;
+        b.textContent = btnLabel || 'Open Link Directly';
+      }
+      m.style.display = 'flex';
+    }
+    function closeQrZoomModal(e) {
+      if (!e || e.target === document.getElementById('qr-zoom-modal') || (e.target && e.target.classList && e.target.classList.contains('portal-modal-close')) || (e.target && e.target.tagName === 'BUTTON' && e.target.textContent.trim() === 'Close')) {
+        var m = document.getElementById('qr-zoom-modal');
+        if (m) m.style.display = 'none';
+      }
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var m1 = document.getElementById('mobile-portal-modal');
+        if (m1) m1.style.display = 'none';
+        var m2 = document.getElementById('qr-zoom-modal');
+        if (m2) m2.style.display = 'none';
+      }
+    });
+  </script>
   <script src="assets/js/main.js"></script>
 
 </body>

@@ -1,3 +1,5 @@
+let simulationState = null; // Global simulation state: null = real time, 'prevoting', 'open', 'closed'
+
 document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initVoting();
@@ -270,7 +272,6 @@ function initSubmissionsCountdown() {
 /* --------------------------------------------------------------------------
    Audience Choice Live Countdown & Schedule Engine
    -------------------------------------------------------------------------- */
-let simulationState = null; // null = real time, 'prevoting', 'open', 'closed'
 
 function initVotingCountdown() {
   const countdownBox = document.getElementById("vote-countdown-box");

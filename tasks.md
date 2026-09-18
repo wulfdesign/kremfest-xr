@@ -18,11 +18,6 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🛠️ Active Roadmap & Tasks (🛠️)
 
-* [ ] 🛠️ 🔥🔥🔥 **QR Code Full Audit, Bottom Kiosk Verification, Public Display Toggle & Large Ticket Modal Expansion:**
-  1. **Comprehensive QR Code Audit:** Check and empirically test-scan every QR code across the published showcase, specifically including the bottom kiosk passes (`ticket_friday`, `ticket_saturday`, `ticket_weekend`), on-premise mobile portal gateway (`qr_portal_main_neon.png`), and hardware guide links to verify destination URLs, optical resolution, and mobile lens acquisition.
-  2. **Public QR Code Display Toggle (`[ 🎴 QR Badges: ON / OFF ]`):** Implement a client-side toggle (or compiler setting / URL parameter) on the published showcase allowing attendees or curators to turn off the flanking QR codes and badges if the page layout feels too dense or busy on certain display screens (`body.show-qr-badges` toggle persisted in `localStorage`).
-  3. **Enlarged Ticket Passes Modal / Click-to-Zoom:** Address ticket link usability by allowing attendees to click on ticket pass QR codes/links to open an enlarged, high-contrast modal preview (mirroring the clean, high-visibility layout of the top `#mobile-portal-modal` that leads to the mobile site) for effortless phone scanning and checkout. 🎴 🎟️ 🔍 📱 🛠️ 🐈
-
 * [ ] 🛠️ 🔥🔥🔥 **Festival Sizzle Reel Video Ingestion & Concatenation (v0.1.74 / Day 3–4):** Gather and cut 1080p clips into `private/video_staging/clips/` following `sizzle_reel_manifest.json` (90s target duration across 10 experiences), render animated title/outro cards, and encode H.264/AAC master attractor loop for the venue TV. 🎬 🥽 📺 🛠️ 🐈
 * [ ] 🛠️ 🔥🔥🔥 **Lunar Flyby XR: Auto-Ramp ("Film Mode"), Splashdown Flight Guidance & Dynamic Reticle:** Implement cinematic speed auto-ramp curve after mid-course correction burns, automated re-entry flight guidance for guaranteed splashdown corridor, and interactive trajectory alignment reticle (grey target vector, red-to-green alignment agency) in `projects/lunar-flyby-xr/` for festival floor comfort. (Scheduled Day 3: Thu Sep 17). 🚀 🌌 🥽 🛠️ 🐈
 * [ ] 🛠️ 🔥🔥🔥 **Maiden Flight: Responsive 360 Landing Page, SIFF Laurels & Early Access Spool-Up:** Initialize `projects/maiden-flight` workspace with Symbiotic Ecology architecture, modern responsive static landing page featuring SIFF 2018 laurels, KING 5/Seattle Times quotes, embedded responsive 360 YouTube trailer (`youtu.be/FHIc24WiViY`), early access email sign-up box, and tracked campaign links. (Scheduled Day 4: Fri Sep 18). 🎈 🎬 🎟️ 🛠️ 🐈
@@ -34,6 +29,11 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 ---
 
 ### 🧪 Waiting for QA (🧪)
+
+* [ ] 🧪 🔥🔥🔥 **Partner UTM Restoration, Hero Phone Modal Fix & Ticket Pass Click-to-Zoom Expansion (v0.1.87):**
+  1. **Comprehensive QR Code Audit & Partner UTM Restoration:** Restored full tracked URLs across all 48 QR codes and external links as promised in correspondence with Algoriddim, developers, and ticketing partners.
+  2. **Hero "📱 Scan to Phone" Modal Unblocked:** Fixed TDZ `ReferenceError` on `simulationState` in `assets/js/main.js` and injected self-contained inline handlers for seamless mobile portal scanning.
+  3. **Enlarged Ticket Passes & `#qr-zoom-modal` Click-to-Zoom:** Scaled bottom kiosk ticket QR containers from 76px to 130px with 2px amber neon frames, and built `#qr-zoom-modal` providing 240px click-to-zoom scanning with direct checkout links. 🎴 🎟️ 🔍 📱 🧪 🐈 ✨
 
 * [ ] 🧪 🔥🔥🔥 **Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation (v0.1.86):**
   1. **Curatorial Pullback Execution:** Safely pulled back *Firedrake VR (Wizard's Warren)* and *We Are Dead Animals* from the live public showcase (`http://localhost:3039/2026/index.html`) and voting ballot back into the air-gapped Staging Vault (`staging_vault.json`).
