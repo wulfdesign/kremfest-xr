@@ -480,3 +480,21 @@ function escapeHtml(str) {
     .replace(/'/g, "&#039;");
 }
 
+/* --------------------------------------------------------------------------
+   Mobile Scan-to-Phone Modal
+   -------------------------------------------------------------------------- */
+function openPortalModal() {
+  const m = document.getElementById("mobile-portal-modal");
+  if (m) m.style.display = "flex";
+}
+
+function closePortalModal(e) {
+  const m = document.getElementById("mobile-portal-modal");
+  if (m) m.style.display = "none";
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePortalModal();
+});
+
+

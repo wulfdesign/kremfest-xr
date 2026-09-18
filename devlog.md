@@ -4,6 +4,29 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-17 19:10] - v0.1.83: Public Site QR Architecture Porting, Total Outgoing Link Arrow (`↗`) Elimination & Full Synchronous Publish 🎴📱🧹🎟️✨**
+
+📝 **Summary**
+1. **Total Elimination of Outgoing Link Unicode Arrows (`↗` / ` ↗`):**
+   - Completely purged all `↗` / ` ↗` symbols across all public static pages, private staging preview generator (`render_staging_preview.py`), Dev HUD index (`private/dev_dashboard/index.html`), and all underlying generator tools (`build_social_hub.py`, `render_event_listings.py`, `render_festival_ops.py`, `render_sidequest.py`, `render_sizzle_reel.py`, `render_streamers.py`, `render_volunteers.py`).
+   - Cleaned venue schedule badges, Google Maps links, Meta Quest store referrals, Dev HUD jumps, and dynamic JavaScript link maps.
+   - Verified 0 occurrences across all compiled HTML files in both public and private repositories (`Total HTML hits for ↗: 0`).
+2. **Ported Full QR Code Architecture to Public Static Site (`publish_to_public.py`):**
+   - **Flanked Experience Card Action Rows (`render_flanked_links_row`):** Wired up cybernetic dual QR flanks for Headliners (*Maiden Flight*, *High Desert Eclipse*), Invited VIP Showcases (*djay by Algoriddim*, *Trip the Light: Let's Dance*, *CONNECTOME*, *CONSTELLATIONS: Touch the Stars*, *Project Hydra: Iterations*), and Juried Selections (*Artemis: The Free Return*).
+   - **3-Tier Amber Festival Passes Kiosk (`render_ticket_passes_bar`):** Added bottom passes kiosk with amber-bordered QR codes directly above the footer in `index.html` and `2026/index.html`.
+   - **On-Premise Mobile Portal Gateway (`render_onsite_mobile_portal_gateway`):** Integrated full-width cybernetic banner featuring `qr_portal_main_neon.png` pointing attendees directly to the mobile portal on the festival floor.
+   - **Hero Scan-to-Phone Modal (`#mobile-portal-modal`):** Added `📱 Scan to Phone` button in the hero action row with keyboard `Escape` and backdrop click dismissal.
+   - Added `<body class="show-qr-badges">` to enable responsive display.
+3. **VIP Showcase Top Order & DJ Placement Verification:**
+   - Confirmed `djay by Algoriddim` is anchored at item #1 at the very top of `Invited VIP Industry Showcases` on both public (`index.html`, `2026/index.html`) and staging (`/preview/staging`).
+   - Verified dual QR codes for djay render cleanly in both the VIP showcase section and the staged candidates block.
+4. **Clean Multi-Port Compilation & Verification:**
+   - Port 3039 (Public Static): `index.html` (200 OK, 60.2KB), `2026/index.html` (200 OK, 60.5KB), `2026/vote/index.html` (200 OK, 11.8KB).
+   - Port 3040 (Dev HUD): Hot-reloading `/preview/staging` (200 OK, 108.5KB).
+   - Zero `↗` arrows, complete QR components, clean responsive layouts.
+
+🏷️ **Version:** `v0.1.83` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-17 14:05] - v0.1.75: GeekFest-Architecture Styled QR Codes, Flanking Card Layout, Mobile Scan Modal & 16:9 Landscape Bookend Splash Studio 🎴📱🎬🥽📺✨**
 
 📝 **Summary**

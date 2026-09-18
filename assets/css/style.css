@@ -1210,3 +1210,383 @@ footer {
     justify-content: flex-start;
   }
 }
+
+/* ==========================================================================
+   Flanked Card Action Row & GeekFest QR Code Badge Architecture
+   ========================================================================== */
+.flanked-card-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.card-action-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-qr-flank {
+  display: none;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.show-qr-badges .card-qr-flank {
+  display: flex;
+}
+
+.card-qr-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 5px;
+}
+
+.card-qr-box {
+  width: 76px;
+  height: 76px;
+  background: #090a14;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-qr-box:hover {
+  transform: scale(1.06);
+}
+
+.qr-box-cyan {
+  border: 1.5px solid var(--neon-cyan);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+}
+
+.qr-box-pink {
+  border: 1.5px solid var(--neon-pink);
+  box-shadow: 0 0 12px rgba(255, 0, 127, 0.3);
+}
+
+.qr-box-amber {
+  border: 1.5px solid #ffb700;
+  box-shadow: 0 0 12px rgba(255, 183, 0, 0.35);
+}
+
+.card-qr-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.card-qr-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.label-cyan {
+  color: var(--neon-cyan);
+}
+
+.label-pink {
+  color: var(--neon-pink);
+}
+
+/* Ticket Passes Grid & Amber QR */
+.ticket-passes-container {
+  margin: 22px auto 26px auto;
+  max-width: 960px;
+}
+
+.ticket-passes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ticket-pass-card {
+  background: rgba(18, 15, 28, 0.85);
+  border: 1px solid rgba(255, 183, 0, 0.35);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 240px;
+  max-width: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+}
+
+.ticket-pass-card:hover {
+  border-color: rgba(255, 183, 0, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 183, 0, 0.25);
+}
+
+.ticket-pass-header {
+  margin-bottom: 6px;
+}
+
+.ticket-pass-tier {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffc800;
+  letter-spacing: 0.5px;
+}
+
+.ticket-pass-date {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.ticket-qr-flank {
+  display: none;
+  margin: 10px auto 12px auto;
+  text-align: center;
+}
+
+body.show-qr-badges .ticket-qr-flank {
+  display: block;
+}
+
+.ticket-qr-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 4px;
+}
+
+.ticket-qr-sublabel {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ffc800;
+  letter-spacing: 0.5px;
+}
+
+.ticket-pass-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+  margin: 0 0 14px 0;
+  flex: 1;
+}
+
+.ticket-btn {
+  font-size: 0.85rem !important;
+  padding: 8px 18px !important;
+  width: 100%;
+  border-color: rgba(255, 183, 0, 0.5) !important;
+  color: #ffc800 !important;
+}
+
+.ticket-btn:hover {
+  background: rgba(255, 183, 0, 0.15) !important;
+  border-color: #ffc800 !important;
+  color: #fff !important;
+}
+
+/* On-Premise Mobile Portal Gateway Block */
+.onsite-portal-gateway {
+  margin: 28px auto 8px auto;
+  max-width: 860px;
+  background: linear-gradient(135deg, rgba(25, 10, 36, 0.9) 0%, rgba(13, 15, 31, 0.95) 50%, rgba(6, 23, 38, 0.9) 100%);
+  border: 2px solid var(--neon-pink);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 0, 127, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.onsite-portal-gateway::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+}
+
+.onsite-portal-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+@media (max-width: 700px) {
+  .onsite-portal-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .onsite-portal-url-row {
+    justify-content: center;
+  }
+  .flanked-card-action-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.onsite-portal-qr-col {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.onsite-portal-qr-box {
+  width: 130px;
+  height: 130px;
+  background: #080911;
+  border: 2px solid var(--neon-pink);
+  border-radius: 12px;
+  padding: 6px;
+  display: block;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.onsite-portal-qr-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(255, 0, 127, 0.55);
+}
+
+.onsite-portal-qr-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.onsite-portal-scan-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--neon-pink);
+  letter-spacing: 0.5px;
+}
+
+.onsite-portal-text-col {
+  flex: 1;
+}
+
+.onsite-portal-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--neon-cyan);
+  margin-bottom: 6px;
+}
+
+.onsite-portal-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.onsite-portal-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 14px 0;
+}
+
+.onsite-portal-url-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.onsite-portal-url-pill {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.onsite-portal-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Mobile Scan-to-Phone Modal */
+.portal-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.portal-modal-card {
+  background: #0e101d;
+  border: 2px solid var(--neon-cyan);
+  border-radius: 16px;
+  padding: 32px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 35px rgba(0,240,255,0.3);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.portal-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.portal-modal-close:hover {
+  color: #fff;
+}
+
