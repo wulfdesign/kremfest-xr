@@ -4,6 +4,26 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-17 19:55] - v0.1.86: Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation 🛡️📦🧪✨**
+
+📝 **Summary**
+1. **Curatorial Pullback of Unverified Works from Public Live Showcase:**
+   - Per operator directive, pulled back *Firedrake VR (Wizard's Warren)* and *We Are Dead Animals* from the live public showcase (`http://localhost:3039/2026/index.html`) and voting ballot.
+   - Reason: Neither work has passed formal in-headset jury verification yet; Firedrake's festival-tailored liminal exploration APK has not yet been delivered by Jon Stone; Maarten's standalone Quest APK is pending full headset evaluation.
+2. **First-Class Pullback Architecture (`promote_candidate.py` & `server.py`):**
+   - Engineered `pullback_candidate(target_id, year="2026", reason=None, auto_compile=True)` in `promote_candidate.py` supporting CLI flag `--pullback` (`-p`) and `--reason` (`-r`).
+   - Added REST endpoint `/api/staging/pullback` in `private/dev_dashboard/server.py`.
+   - Safely removes target entries from `catalog["years"]["2026"]["selections"]` while restoring rich candidate records (correspondence threads, checklists, private links, testing notes) into `staging_vault.json` (`staged_candidates`).
+3. **Ecosystem Recompilation & Air-Gapped Sandbox Verification:**
+   - Recompiled all 8 public static pages via `publish_to_public.py`, Staging Sandbox preview via `render_staging_preview.py`, and Dev HUD via `build_social_hub.py`.
+   - **Public Site Verification (Port 3039):** Verified 0 occurrences of *Firedrake* and 0 occurrences of *Dead Animals* on `2026/index.html` and `2026/vote/index.html`. Lineup restored to confirmed core selections (6 selections + 2 headliners).
+   - **Staging Sandbox Verification (Port 3040):** Verified both candidates remain fully interactive and reviewable in the private Staging Sandbox preview (`/preview/staging`) and Dev HUD Tab 2.
+4. **Governance & State Synchronization:**
+   - Synchronized version across all project files to `v0.1.86`.
+   - Committed changes locally with zero remote push.
+
+🏷️ **Version:** `v0.1.86` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-17 19:45] - v0.1.85: QR Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge 🎴📱⚡🧹✨**
 
 📝 **Summary**

@@ -30,6 +30,13 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation (v0.1.86):**
+  1. **Curatorial Pullback Execution:** Safely pulled back *Firedrake VR (Wizard's Warren)* and *We Are Dead Animals* from the live public showcase (`http://localhost:3039/2026/index.html`) and voting ballot back into the air-gapped Staging Vault (`staging_vault.json`).
+  2. **First-Class Pullback Architecture:** Engineered `pullback_candidate(target_id, year="2026", reason=None, auto_compile=True)` in `promote_candidate.py` supporting CLI flag `--pullback` (`-p`) and `--reason` (`-r`), and wired REST endpoint `/api/staging/pullback` in `private/dev_dashboard/server.py`.
+  3. **Candidate Readiness Update:** Flagged both candidates with `app_key: false` and updated operational notes explaining the pullback awaiting APK delivery from Jon Stone and in-headset jury verification.
+  4. **Ecosystem Recompilation:** Recompiled all 8 public static pages, Staging Sandbox preview, and Dev HUD.
+  5. **Verification & Testing:** Verified 0 occurrences of *Firedrake* and 0 occurrences of *Dead Animals* on Port 3039 (`2026/index.html` and `2026/vote/index.html`). Verified both candidates remain fully interactive and reviewable in the private Staging Sandbox preview (`http://localhost:3040/preview/staging`). Synchronized version across all files to `v0.1.86`. 🧪 🛡️ 📦 🥽 🐈 ✨
+
 * [ ] 🧪 🔥🔥🔥 **QR Code Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge (v0.1.85):**
   1. **Full UTM Parameter Purge:** Completely removed all bloated `utm_source`, `utm_medium`, `utm_campaign`, and `utm_content` query parameters across `QR_MANIFEST`, `EXPERIENCE_QR_MAP`, `lineups.json`, passes kiosks, and mobile portals. This dropped QR matrix density from Version 13 (69×69 = 4,761 cells) down to Version 2–4 (25×25 to 33×33 = 625–1,089 cells), increasing the visual size of individual module blocks by over 300%.
   2. **Solid Square Module Migration (`SquareModuleDrawer`):** Converted from circular/rounded modules to `SquareModuleDrawer()`. Square modules provide 100% optical fill factor with crisp right angles and sharp corner finder eyes, eliminating blur across timing patterns and enabling instant camera optical lock.

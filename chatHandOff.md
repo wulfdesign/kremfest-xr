@@ -1,17 +1,23 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.85)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.86)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.85` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 17, 2026 | 19:45 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.85` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.86` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 17, 2026 | 19:55 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.86` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-1. **QR Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge (v0.1.85):**
+1. **Live Lineup Pullback (Firedrake & We Are Dead Animals) to Staging Vault & Recompilation (v0.1.86):**
+   - **Curatorial Pullback Execution:** Safely removed *Firedrake VR* and *We Are Dead Animals* from `lineups.json` (`years["2026"]["selections"]`), restoring the live public lineup to confirmed core selections (6 selections + 2 headliners).
+   - **Pullback Engine & REST Endpoint:** Added `pullback_candidate()` function and `--pullback` CLI flag in `promote_candidate.py`, plus `/api/staging/pullback` route in `private/dev_dashboard/server.py`.
+   - **Staging Vault Restoration:** Restored both works into `staging_vault.json` with `app_key: false`, retaining full correspondence logs and updating notes to reflect pending APK delivery and headset verification.
+   - **Verification:** Verified 0 occurrences of Firedrake/Dead Animals on Port 3039 (`2026/index.html` and ballot). Verified both candidates remain fully active in the Staging Sandbox (`/preview/staging`).
+
+2. **QR Density De-Cluttering, Square Module Drawer Conversion & Full UTM Tracking Purge (v0.1.85):**
    - **Full UTM Parameter Purge:** Purged all `utm_` parameters across `QR_MANIFEST`, `EXPERIENCE_QR_MAP`, `lineups.json`, `qr_code_generator.py`, `publish_to_public.py`, and `render_staging_preview.py`.
    - **Density Reduction:** Dropped QR version from Version 13 (69×69 grid = 4,761 cells) down to Version 2–4 (25×25 to 33×33 grid = 625–1,089 cells). Individual module block dimensions increased by over 300% inside on-screen 76px and 130px display containers.
    - **Solid Square Modules (`SquareModuleDrawer`):** Replaced circular/rounded dots with crisp square module blocks. Squares deliver 100% optical fill factor (eliminating the ~21.5% optical corner void of circles), sharp right angles, and instantaneous finder pattern lock for phone cameras.
