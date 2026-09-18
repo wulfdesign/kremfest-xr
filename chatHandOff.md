@@ -1,15 +1,22 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.75)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.84)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.75` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 17, 2026 | 14:05 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.75` ready for QA; do not push to public GitHub `main` until verified)  
+> **Project Version:** `v0.1.84` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 17, 2026 | 19:35 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Local repository `v0.1.84` ready for QA; do not push to public GitHub `main` until verified)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+1. **Public QR Sizing Fortification & Staging-to-Public Promotion Engine (v0.1.84):**
+   - **5-Layer QR Sizing Defense:** Completely eliminated oversized QR renderings on `http://localhost:3039/2026/index.html` by enforcing inline HTML dimensions (`width="76" height="76"`), explicit inline styles on container and image tags, head-injected `<style>` blocks, and CSS cache-busting.
+   - **Candidate Promotion Engine (`promote_candidate.py`):** Standalone CLI tool and Python API for single (`<candidate_id>`) or batch (`--all`) candidate promotion from `staging_vault.json` into `lineups.json` with private links quarantine and auto-recompilation.
+   - **Dual UI Controls:** Added `🚀 Promote All to Live Lineup (Batch)` buttons and per-candidate promote triggers in Dev HUD Tab 2 and the Staging Sandbox preview (`/preview/staging`).
+   - **Live Selections Promoted:** Promoted *Firedrake VR* and *We Are Dead Animals* into live selections (8 total selections live on Port 3039).
+
 
 1. **GeekFest-Architecture Styled QR Codes, Flanking Card Layout, Mobile Scan Modal & 16:9 Landscape Bookend Splash Studio (v0.1.75):**
    - **42 Styled Colored-Block QR Codes Generated (`generate_lineup_qrs.py`):** Re-engineered the GeekFest West Python `StyledPilImage` + `RoundedModuleDrawer` + `RadialGradiantColorMask` engine (`qrcode[pil]` with `ERROR_CORRECT_H` 30% redundancy). Generated 42 high-resolution QR assets across all 10 experiences (*Maiden Flight*, *High Desert Eclipse*, *Trip the Light*, *djay by Algoriddim*, *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*, *Artemis*, *We Are Dead Animals*, *Firedrake VR*) and the main portal. Features two distinct colorways:

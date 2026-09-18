@@ -5,7 +5,320 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KremFest XR — Virtual Reality & Immersive Art Showcase</title>
   <meta name="description" content="Official VR & Immersive Media Showcase for Kremfest at the Kremwerk Complex in Seattle, WA. Curated by VRMakerDome & UpLiftVR.">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=0.1.84">
+  
+  <style>
+    /* Flanked Card Action Row Styles (Direct Injection ensures correct rendering without CSS cache dependency) */
+    .flanked-card-action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+    .card-action-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .card-qr-flank {
+      display: none;
+      flex-shrink: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    body.show-qr-badges .card-qr-flank {
+      display: flex;
+    }
+    .card-qr-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      gap: 5px;
+    }
+    .card-qr-box {
+      width: 76px !important;
+      height: 76px !important;
+      max-width: 76px !important;
+      max-height: 76px !important;
+      background: #090a14;
+      border-radius: 8px;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+    }
+    .card-qr-box:hover {
+      transform: scale(1.06);
+    }
+    .qr-box-cyan {
+      border: 1.5px solid var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+    }
+    .qr-box-pink {
+      border: 1.5px solid var(--neon-pink);
+      box-shadow: 0 0 12px rgba(255, 0, 127, 0.3);
+    }
+    .qr-box-amber {
+      border: 1.5px solid #ffb700;
+      box-shadow: 0 0 12px rgba(255, 183, 0, 0.35);
+    }
+    .card-qr-img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 76px !important;
+      max-height: 76px !important;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+    .card-qr-label {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .label-cyan { color: var(--neon-cyan); }
+    .label-pink { color: var(--neon-pink); }
+    .ticket-passes-container {
+      margin: 22px auto 26px auto;
+      max-width: 960px;
+    }
+    .ticket-passes-grid {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .ticket-pass-card {
+      background: rgba(18, 15, 28, 0.85);
+      border: 1px solid rgba(255, 183, 0, 0.35);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1 1 240px;
+      max-width: 280px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s ease;
+      box-sizing: border-box;
+    }
+    .ticket-pass-card:hover {
+      border-color: rgba(255, 183, 0, 0.85);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 183, 0, 0.25);
+    }
+    .ticket-pass-header { margin-bottom: 6px; }
+    .ticket-pass-tier {
+      display: block;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffc800;
+      letter-spacing: 0.5px;
+    }
+    .ticket-pass-date {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .ticket-qr-flank {
+      display: none;
+      margin: 10px auto 12px auto;
+      text-align: center;
+    }
+    body.show-qr-badges .ticket-qr-flank {
+      display: block;
+    }
+    .ticket-qr-link {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      gap: 4px;
+    }
+    .ticket-qr-sublabel {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: #ffc800;
+      letter-spacing: 0.5px;
+    }
+    .ticket-pass-desc {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      line-height: 1.4;
+      margin: 0 0 14px 0;
+      flex: 1;
+    }
+    .ticket-btn {
+      font-size: 0.85rem !important;
+      padding: 8px 18px !important;
+      width: 100%;
+      border-color: rgba(255, 183, 0, 0.5) !important;
+      color: #ffc800 !important;
+    }
+    .ticket-btn:hover {
+      background: rgba(255, 183, 0, 0.15) !important;
+      border-color: #ffc800 !important;
+      color: #fff !important;
+    }
+    .onsite-portal-gateway {
+      margin: 28px auto 8px auto;
+      max-width: 860px;
+      background: linear-gradient(135deg, rgba(25, 10, 36, 0.9) 0%, rgba(13, 15, 31, 0.95) 50%, rgba(6, 23, 38, 0.9) 100%);
+      border: 2px solid var(--neon-pink);
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 0, 127, 0.2);
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+    }
+    .onsite-portal-gateway::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+    }
+    .onsite-portal-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    @media (max-width: 700px) {
+      .onsite-portal-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .onsite-portal-url-row {
+        justify-content: center;
+      }
+    }
+    .onsite-portal-qr-col {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .onsite-portal-qr-box {
+      width: 130px !important;
+      height: 130px !important;
+      max-width: 130px !important;
+      max-height: 130px !important;
+      background: #080911;
+      border: 2px solid var(--neon-cyan);
+      border-radius: 12px;
+      padding: 6px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+      display: block;
+      box-sizing: border-box;
+    }
+    .onsite-portal-qr-img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 130px !important;
+      max-height: 130px !important;
+      border-radius: 8px;
+      display: block;
+      object-fit: contain;
+    }
+    .onsite-portal-scan-label {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      letter-spacing: 0.5px;
+    }
+    .onsite-portal-text-col { flex: 1; }
+    .onsite-portal-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--neon-pink);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .onsite-portal-title {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+    .onsite-portal-desc {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .onsite-portal-url-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .onsite-portal-url-pill {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: var(--neon-cyan);
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .onsite-portal-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .portal-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 5, 10, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .portal-modal-card {
+      background: #0d0f1a;
+      border: 1.5px solid var(--neon-pink);
+      border-radius: 16px;
+      padding: 32px 28px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.8), 0 0 35px rgba(255,0,127,0.25);
+    }
+    .portal-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .portal-modal-close:hover { color: #fff; }
+  </style>
 </head>
 <body class="show-qr-badges">
   
@@ -107,26 +420,26 @@
         <li><strong>VR Comfort:</strong> Moderate (Simulated height and gentle movement)</li>
       </ul>
       
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://UpLiftVR.itch.io" target="_blank" class="card-qr-link" title="🌐 WEBSITE">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_maiden_flight_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://UpLiftVR.itch.io" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_maiden_flight_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBSITE</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://youtu.be/FHIc24WiViY" target="_blank">Watch 360 Trailer</a> <span class="link-dot">•</span> <a href="https://filmfreeway.com/projects/1490200" target="_blank">FilmFreeway</a> <span class="link-dot">•</span> <a href="https://UpLiftVR.itch.io" target="_blank">Request Early Access</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://youtu.be/FHIc24WiViY" target="_blank" class="card-qr-link" title="🎬 360 TRAILER">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_maiden_flight_video_neon.png" alt="🎬 360 TRAILER" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://youtu.be/FHIc24WiViY" target="_blank" class="card-qr-link" title="🎬 360 TRAILER" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_maiden_flight_video_neon.png" alt="🎬 360 TRAILER" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🎬 360 TRAILER</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🎬 360 TRAILER</span>
           </a>
         </div>
     </div>
@@ -151,26 +464,26 @@
         <li><strong>VR Comfort:</strong> Comfortable (Static camera position)</li>
       </ul>
       
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://wulfdesign.github.io/high-desert-eclipse/" target="_blank" class="card-qr-link" title="🌐 WEBXR PORTAL">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_hde_web_neon.png" alt="🌐 WEBXR PORTAL" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://wulfdesign.github.io/high-desert-eclipse/" target="_blank" class="card-qr-link" title="🌐 WEBXR PORTAL" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_hde_web_neon.png" alt="🌐 WEBXR PORTAL" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBXR PORTAL</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBXR PORTAL</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://youtu.be/fzcFw_33iC8" target="_blank">Watch 360 Eclipse Video</a> <span class="link-dot">•</span> <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://wulfdesign.github.io/high-desert-eclipse/?utm_source=kremfest_xr&utm_medium=festival_portal&utm_campaign=kremfest_2026" target="_blank">Eclipse Story Portal</a> <span class="link-dot">•</span> <a href="https://filmfreeway.com/HighDesertEclipse" target="_blank">FilmFreeway</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_hde_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://www.meta.com/experiences/high-desert-eclipse/5486799141392429/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_hde_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🥽 QUEST STORE</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
         </div>
     </div>
@@ -200,26 +513,26 @@ Featuring seamless integration with streaming services and a rich library of mus
           <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> Mixed Reality / Music Performance / Spatial Audio</li><li><strong>Format:</strong> Interactive Mixed Reality (Meta Quest 3 / Quest 2 Passthrough)</li><li><strong>Control Scheme:</strong> Intuitive Optical Hand-Tracking (Scratch, Loop & FX Gestures)</li><li><strong>Origin:</strong> Germany (Munich) / Global</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection (Keys Secured — Algoriddim Ticket #259545)</span></li><li><strong>Conference Lineage:</strong> Direct Curatorial Partnership Invitation</li>
         </ul>
         
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://www.algoriddim.com/djay-meta-quest" target="_blank" class="card-qr-link" title="🌐 WEBSITE">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_djay_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://www.algoriddim.com/djay-meta-quest" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_djay_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBSITE</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://www.algoriddim.com/djay-meta-quest" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.meta.com/experiences/djay/5577676049000759/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_curated" target="_blank">Meta Horizon Store</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://www.meta.com/experiences/djay/5577676049000759/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_djay_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://www.meta.com/experiences/djay/5577676049000759/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_djay_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🥽 QUEST STORE</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
         </div>
     </div>
@@ -237,26 +550,26 @@ Featuring seamless integration with streaming services and a rich library of mus
           <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> VR Rhythm, Music & Dance</li><li><strong>Format:</strong> Room-Scale VR (Meta Quest)</li><li><strong>Origin:</strong> Seattle, USA</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection</span></li><li><strong>Conference Lineage:</strong> SLICE & PAX West 2026 Showcase Invitation</li>
         </ul>
         
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://tripthelightgame.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_trip_the_light_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://tripthelightgame.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_trip_the_light_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBSITE</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://tripthelightgame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.facebook.com/darkartssoftware" target="_blank">Dark Arts Software</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_trip_the_light_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://www.meta.com/experiences/trip-the-light-lets-dance/8025476794223581/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_trip_the_light_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🥽 QUEST STORE</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
         </div>
     </div>
@@ -274,26 +587,26 @@ Featuring seamless integration with streaming services and a rich library of mus
           <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> Spatial Meditation & Interactive Art Puzzle</li><li><strong>Format:</strong> Hand-Tracking Spatial Computing (Meta Quest / Apple Vision Pro)</li><li><strong>Control Scheme:</strong> Pure Optical Hand-Tracking (Gesture Gestalt)</li><li><strong>Origin:</strong> Seattle, USA</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection (App Keys Received)</span></li><li><strong>Conference Lineage:</strong> SLICE 2026 Showcase Invitation</li>
         </ul>
         
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://www.connectomegame.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_connectome_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://www.connectomegame.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_connectome_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBSITE</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://www.meta.com/experiences/connectome/25707920632186813/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://www.connectomegame.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ConnectomeGame.com</a> <span class="link-dot">•</span> <a href="https://parietallab.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ParietalLab.com</a> <span class="link-dot">•</span> <a href="https://granthinkson.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Grant Hinkson Portfolio</a> <span class="link-dot">•</span> <a href="https://www.linkedin.com/company/parietal-lab/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Parietal Lab LinkedIn</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://www.meta.com/experiences/connectome/25707920632186813/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_connectome_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://www.meta.com/experiences/connectome/25707920632186813/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_connectome_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🥽 QUEST STORE</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
         </div>
     </div>
@@ -311,26 +624,26 @@ Featuring seamless integration with streaming services and a rich library of mus
           <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> Astronomy & Celestial Spatial Meditation</li><li><strong>Format:</strong> Hand-Tracking VR (Meta Quest)</li><li><strong>Control Scheme:</strong> Pure Optical Hand-Tracking (Pinch & Celestial Tracing)</li><li><strong>Origin:</strong> Seattle, USA</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection (App Keys Received)</span></li><li><strong>Conference Lineage:</strong> SLICE 2026 Showcase Invitation</li>
         </ul>
         
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://parietallab.com/constellations/" target="_blank" class="card-qr-link" title="🌐 WEBSITE">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_constellations_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://parietallab.com/constellations/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_constellations_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBSITE</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Quest Store</a> <span class="link-dot">•</span> <a href="https://parietallab.com/constellations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Constellations Overview</a> <span class="link-dot">•</span> <a href="https://parietallab.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ParietalLab.com</a> <span class="link-dot">•</span> <a href="https://granthinkson.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Grant Hinkson Portfolio</a> <span class="link-dot">•</span> <a href="https://www.linkedin.com/company/parietal-lab/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Parietal Lab LinkedIn</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_constellations_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://www.meta.com/experiences/constellations-touch-the-stars/24145606965110616/" target="_blank" class="card-qr-link" title="🥽 QUEST STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_constellations_store_neon.png" alt="🥽 QUEST STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🥽 QUEST STORE</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 QUEST STORE</span>
           </a>
         </div>
     </div>
@@ -348,26 +661,26 @@ Featuring seamless integration with streaming services and a rich library of mus
           <li><strong>Selection Track:</strong> <span style="color:#c084fc; font-weight:bold;">✨ Curated Official Selection (Invited VIP Showcase)</span></li><li><strong>Genre:</strong> Generative Algorithmic Art & Virtual Gallery Installation</li><li><strong>Format:</strong> Hand-Tracking VR / Virtual Gallery (Meta Quest)</li><li><strong>Control Scheme:</strong> Pure Optical Hand-Tracking / Hotspot Locomotion</li><li><strong>Origin:</strong> Seattle, USA</li><li><strong>Status:</strong> <span style="color:#c084fc; font-weight:bold;">Curated Official Selection (Free on Meta Horizon Store)</span></li><li><strong>Conference Lineage:</strong> Coliseum of Art & SLICE 2026 Showcase Invitation</li>
         </ul>
         
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://www.granthinkson.com/art/project-hydra-iterations/" target="_blank" class="card-qr-link" title="🌐 WEBSITE">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_project_hydra_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://www.granthinkson.com/art/project-hydra-iterations/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_project_hydra_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBSITE</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Meta Horizon Store (Free)</a> <span class="link-dot">•</span> <a href="https://www.granthinkson.com/art/project-hydra-iterations/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">Portfolio Project Page</a> <span class="link-dot">•</span> <a href="https://www.youtube.com/watch?v=lZ9uTjdihoA" target="_blank">YouTube Trailer</a> <span class="link-dot">•</span> <a href="https://parietallab.com/?utm_source=kremfest_xr&utm_medium=festival_showcase&utm_campaign=kremfest_2026_vip" target="_blank">ParietalLab.com</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/" target="_blank" class="card-qr-link" title="🥽 HORIZON STORE">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_project_hydra_store_neon.png" alt="🥽 HORIZON STORE" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://www.meta.com/experiences/project-hydra-iterations/26371440209190143/" target="_blank" class="card-qr-link" title="🥽 HORIZON STORE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_project_hydra_store_neon.png" alt="🥽 HORIZON STORE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🥽 HORIZON STORE</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🥽 HORIZON STORE</span>
           </a>
         </div>
     </div>
@@ -407,26 +720,122 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
         <li><strong>VR Comfort:</strong> Comfortable</li>
       </ul>
       
-    <div class="flanked-card-action-row">
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
       
-        <div class="card-qr-flank card-qr-left">
-          <a href="https://wulfdesign.github.io/lunar-flyby-xr" target="_blank" class="card-qr-link" title="🌐 WEBXR SIM">
-            <div class="card-qr-box qr-box-cyan">
-              <img src="assets/images/qr/qr_artemis_web_neon.png" alt="🌐 WEBXR SIM" class="card-qr-img">
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://wulfdesign.github.io/lunar-flyby-xr" target="_blank" class="card-qr-link" title="🌐 WEBXR SIM" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_artemis_web_neon.png" alt="🌐 WEBXR SIM" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-cyan">🌐 WEBXR SIM</span>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBXR SIM</span>
           </a>
         </div>
-      <div class="card-action-center">
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
         <div class="project-links-row"><a href="https://wulfdesign.github.io/lunar-flyby-xr" target="_blank">Live WebXR Simulation</a> <span class="link-dot">•</span> <a href="https://filmfreeway.com/Lunar-Flyby-XR" target="_blank">FilmFreeway Page</a> <span class="link-dot">•</span> <a href="https://github.com/wulfdesign/lunar-flyby-xr/" target="_blank">Project Website</a> <span class="link-dot">•</span> <a href="https://facebook.com/WulfDesignStudios" target="_blank">Facebook</a> <span class="link-dot">•</span> <a href="https://x.com/wulfdesign" target="_blank">X</a> <span class="link-dot">•</span> <a href="https://www.instagram.com/wulfdesignstudios/" target="_blank">Instagram</a> <span class="link-dot">•</span> <a href="https://bsky.app/profile/wulfdesign.bsky.social" target="_blank">Bluesky</a></div>
       </div>
       
-        <div class="card-qr-flank card-qr-right">
-          <a href="https://filmfreeway.com/Lunar-Flyby-XR" target="_blank" class="card-qr-link" title="🎬 FILMFREEWAY">
-            <div class="card-qr-box qr-box-pink">
-              <img src="assets/images/qr/qr_artemis_filmfreeway_neon.png" alt="🎬 FILMFREEWAY" class="card-qr-img">
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://filmfreeway.com/Lunar-Flyby-XR" target="_blank" class="card-qr-link" title="🎬 FILMFREEWAY" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_artemis_filmfreeway_neon.png" alt="🎬 FILMFREEWAY" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="card-qr-label label-pink">🎬 FILMFREEWAY</span>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🎬 FILMFREEWAY</span>
+          </a>
+        </div>
+    </div>
+    </article>
+    <div class="diamond-divider"><span class="diamond-pill">✦</span></div>
+    <article class="project-entry" id="2026-sel-firedrake-vr">
+      <img class="project-image" src="assets/images/2026/firedrake_wizards_warren_2026.jpg" alt="Firedrake VR" loading="lazy">
+      <h3 class="project-title">Firedrake VR</h3>
+      <div class="project-byline">By Jon Stone</div>
+      <p class="project-logline">An immersive VR fantasy dungeon holonovel filled with ancient magic, necromancy, and forgotten horrors.</p>
+      
+      <p class="project-synopsis">Firedrake: Wizard’s Warren is the third chapter of an interactive holonovel, an immersive VR fantasy that places the audience inside a living, breathing dungeon filled with ancient magic, necromancy, and forgotten horrors. As you explore the wizard’s warren, the boundary between story and reality disappears—you are not watching the adventure, you are physically inside it.</p>
+      <div class="project-statement"><strong>Director Statement:</strong> With Firedrake, as the solo developer, I wanted to create a world that feels less like a game level and more like a place that actually exists, an old, forgotten space that continues to live and change even when no one is there. VR gives me the ability to make that space physical, turning the audience from an observer into a visitor moving through the unknown. My goal is to create a living liminal space: familiar enough to invite you in, but strange enough to make you wonder what was here before you arrived and what might still be watching.</div><div class="project-statement"><strong>Director Biography:</strong> Long time indie film animation and VR creator. Solo developer behind Firedrake 1–3.</div>
+      <ul class="project-bullets">
+        <li><strong>Genre:</strong> Fantasy / Dungeon / Horror / Holonovel</li>
+        <li><strong>Runtime:</strong> 8:00</li>
+        <li><strong>Format:</strong> Interactive Room-Scale VR (Meta Quest 2 & 3)</li>
+        <li><strong>VR Comfort:</strong> Moderate</li>
+      </ul>
+      
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
+      
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="https://firedrakevr.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_firedrake_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            </div>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
+          </a>
+        </div>
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+        <div class="project-links-row"><a href="https://firedrakevr.com/" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://x.com/FiredrakeVr" target="_blank">X / Twitter</a> <span class="link-dot">•</span> <a href="http://huesgfx.com/jsp/" target="_blank">Portfolio</a> <span class="link-dot">•</span> <a href="http://huesgfx.com/port_film.html" target="_blank">Film Portfolio</a></div>
+      </div>
+      
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://x.com/FiredrakeVr" target="_blank" class="card-qr-link" title="✖️ SOCIAL / X" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_firedrake_social_neon.png" alt="✖️ SOCIAL / X" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            </div>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">✖️ SOCIAL / X</span>
+          </a>
+        </div>
+    </div>
+    </article>
+    <div class="diamond-divider"><span class="diamond-pill">✦</span></div>
+    <article class="project-entry" id="2026-sel-we-are-dead-animals">
+      <img class="project-image" src="assets/images/2026/we_are_dead_animals_2026.jpg" alt="We Are Dead Animals" loading="lazy">
+      <h3 class="project-title">We Are Dead Animals</h3>
+      <div class="project-byline">By Tote Tiere Maarten (Maarten Isaäk de Heer)</div>
+      <p class="project-logline">A casually transcendental VR game where you bring 3D-scanned animals back to life in a virtual paradise created from the director's everyday surroundings — and don't forget to eat, or you will die!</p>
+      
+      <p class="project-synopsis">We Are Dead Animals is a casually transcendental VR game.
+
+Bring animals back to life in the virtual paradise created by Tote Tiere Maarten. He collected all the animals he found in his direct surroundings and placed their corpses in paradise — from a deer shot by hunters to a hedgehog run over by a car — for you to explore, collect and create new animals.
+…
+and don’t forget to eat, or you will die!
+
+EXPLORE! COLLECT! CREATE!
+
+Variable Runtime Details: If you don't eat in the game, your lifespan will be 15 minutes. By eating, you can prolong your life up to 25 minutes. Like in real life. And in the end you will die.</p>
+      <div class="project-statement"><strong>Director Statement:</strong> Together, de Heer’s projects form a unique artistic practice that combines animation, technology, and ecological awareness — using digital tools to make us look more closely at the lives and deaths around us.</div><div class="project-statement"><strong>Director Biography:</strong> Tote Tiere Maarten (Maarten Isaäk de Heer) is a Dutch animation artist living in Berlin. His work moves from traditional drawn animation to installation art and, more recently, to immersive XR experiences. Throughout his career, he has explored themes of nature, death, and the overlooked lives of the small animals that surround us.
+
+After beginning with hand-drawn films, de Heer shifted toward experimental installations and fulldome works, gradually expanding his animation practice into three-dimensional and immersive forms. His artistic turning point came with the creation of his “Dead Animals” series, in which he collects animals that have died in his everyday environment, 3D-scans them, and reanimates them digitally. This resulted in the 2022 project Dancing with Dead Animals, a surreal animation and installation piece where scanned animals “dance” in a poetic afterlife-like landscape made of twigs, moss, and forest debris.
+
+Building on this direction, de Heer moved into XR with We Are Dead Animals (2025), an immersive VR experience that allows viewers to enter a desolate virtual world, encounter digitally preserved animals, and interact with them in reflective, meditative ways.
+
+Alongside these works, he created Influenza, an ongoing Instagram animation series featuring a digitally reconstructed dead cormorant who acts as a strange, humorous “influencer.” The project blends satire with his ongoing interest in giving new narrative life to dead creatures.
+
+Together, de Heer’s projects form a unique artistic practice that combines animation, technology, and ecological awareness — using digital tools to make us look more closely at the lives and deaths around us.</div>
+      <ul class="project-bullets">
+        <li><strong>Genre:</strong> Transcendental VR / Ecological Animation / Speculative Biology</li>
+        <li><strong>Runtime:</strong> 17:00 (15:00–19:00 Variable)</li>
+        <li><strong>Format:</strong> Interactive Room-Scale VR (Meta Quest Standalone APK) / Installation / Game</li>
+        <li><strong>VR Comfort:</strong> Comfortable</li>
+      </ul>
+      
+    <div class="flanked-card-action-row" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.08);">
+      
+        <div class="card-qr-flank card-qr-left" style="display:flex; flex-shrink:0;">
+          <a href="http://www.wearedeadanimals.com/" target="_blank" class="card-qr-link" title="🌐 WEBSITE" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-cyan" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-cyan); box-shadow:0 0 12px rgba(0,240,255,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_dead_animals_web_neon.png" alt="🌐 WEBSITE" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            </div>
+            <span class="card-qr-label label-cyan" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-cyan);">🌐 WEBSITE</span>
+          </a>
+        </div>
+      <div class="card-action-center" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+        <div class="project-links-row"><a href="http://www.wearedeadanimals.com/" target="_blank">Official Website</a> <span class="link-dot">•</span> <a href="https://www.instagram.com/wearedeadanimals" target="_blank">Instagram</a> <span class="link-dot">•</span> <a href="https://vimeo.com/1098422201/14dd79f689?fl=ip&fe=ec" target="_blank">Vimeo Trailer</a></div>
+      </div>
+      
+        <div class="card-qr-flank card-qr-right" style="display:flex; flex-shrink:0;">
+          <a href="https://vimeo.com/1098422201/14dd79f689" target="_blank" class="card-qr-link" title="🎬 VIMEO TRAILER" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; gap:5px;">
+            <div class="card-qr-box qr-box-pink" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--neon-pink); box-shadow:0 0 12px rgba(255,0,127,0.3); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_dead_animals_video_neon.png" alt="🎬 VIMEO TRAILER" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
+            </div>
+            <span class="card-qr-label label-pink" style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--neon-pink);">🎬 VIMEO TRAILER</span>
           </a>
         </div>
     </div>
@@ -583,49 +992,49 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
       </div>
       <div class="ticket-passes-grid">
         
-      <div class="ticket-pass-card">
+      <div class="ticket-pass-card" style="max-width:280px; flex:1 1 240px; box-sizing:border-box;">
         <div class="ticket-pass-header">
           <span class="ticket-pass-tier">🎟️ FRIDAY PASS</span>
           <span class="ticket-pass-date">Friday, Sept 25, 2026</span>
         </div>
-        <div class="ticket-qr-flank">
-          <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass" target="_blank" class="ticket-qr-link" title="FRIDAY PASS Tickets">
-            <div class="card-qr-box qr-box-amber">
-              <img src="assets/images/qr/qr_ticket_friday_neon.png" alt="FRIDAY PASS QR" class="card-qr-img">
+        <div class="ticket-qr-flank" style="display:block; margin:10px auto 12px auto; text-align:center;">
+          <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass" target="_blank" class="ticket-qr-link" title="FRIDAY PASS Tickets" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:4px;">
+            <div class="card-qr-box qr-box-amber" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid #ffb700; box-shadow:0 0 12px rgba(255,183,0,0.35); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_ticket_friday_neon.png" alt="FRIDAY PASS QR" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="ticket-qr-sublabel">SCAN FOR PASS</span>
+            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.7rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">SCAN FOR PASS</span>
           </a>
         </div>
         <p class="ticket-pass-desc">Access to Friday Night Club Sets & Complete KremFest XR Showcase</p>
         <a href="https://www.kremwerk.com/upcoming/2026/09/25/kremfest-2026-friday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=friday_pass" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
       </div>
-      <div class="ticket-pass-card">
+      <div class="ticket-pass-card" style="max-width:280px; flex:1 1 240px; box-sizing:border-box;">
         <div class="ticket-pass-header">
           <span class="ticket-pass-tier">🎟️ SATURDAY PASS</span>
           <span class="ticket-pass-date">Saturday, Sept 26, 2026</span>
         </div>
-        <div class="ticket-qr-flank">
-          <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass" target="_blank" class="ticket-qr-link" title="SATURDAY PASS Tickets">
-            <div class="card-qr-box qr-box-amber">
-              <img src="assets/images/qr/qr_ticket_saturday_neon.png" alt="SATURDAY PASS QR" class="card-qr-img">
+        <div class="ticket-qr-flank" style="display:block; margin:10px auto 12px auto; text-align:center;">
+          <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass" target="_blank" class="ticket-qr-link" title="SATURDAY PASS Tickets" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:4px;">
+            <div class="card-qr-box qr-box-amber" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid #ffb700; box-shadow:0 0 12px rgba(255,183,0,0.35); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_ticket_saturday_neon.png" alt="SATURDAY PASS QR" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="ticket-qr-sublabel">SCAN FOR PASS</span>
+            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.7rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">SCAN FOR PASS</span>
           </a>
         </div>
         <p class="ticket-pass-desc">Access to Saturday Headliners, Complex Stages & Full XR Showcase</p>
         <a href="https://www.kremwerk.com/upcoming/2026/09/26/kremfest-2026-saturday?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=saturday_pass" target="_blank" class="btn btn-secondary ticket-btn">Get Pass</a>
       </div>
-      <div class="ticket-pass-card">
+      <div class="ticket-pass-card" style="max-width:280px; flex:1 1 240px; box-sizing:border-box;">
         <div class="ticket-pass-header">
           <span class="ticket-pass-tier">🎟️ WEEKEND PASSES</span>
           <span class="ticket-pass-date">Sept 25–27, 2026</span>
         </div>
-        <div class="ticket-qr-flank">
-          <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=weekend_pass" target="_blank" class="ticket-qr-link" title="WEEKEND PASSES Tickets">
-            <div class="card-qr-box qr-box-amber">
-              <img src="assets/images/qr/qr_ticket_weekend_neon.png" alt="WEEKEND PASSES QR" class="card-qr-img">
+        <div class="ticket-qr-flank" style="display:block; margin:10px auto 12px auto; text-align:center;">
+          <a href="https://www.kremwerk.com/upcoming/2026/09/25-27/kremfest-2026-weekend-pass?utm_source=kremfest-xr&utm_medium=referral&utm_campaign=kremfest2026&utm_content=weekend_pass" target="_blank" class="ticket-qr-link" title="WEEKEND PASSES Tickets" style="display:inline-flex; flex-direction:column; align-items:center; text-decoration:none; gap:4px;">
+            <div class="card-qr-box qr-box-amber" style="width:76px; height:76px; max-width:76px; max-height:76px; background:#090a14; border-radius:8px; padding:4px; display:flex; align-items:center; justify-content:center; border:1.5px solid #ffb700; box-shadow:0 0 12px rgba(255,183,0,0.35); box-sizing:border-box;">
+              <img src="assets/images/qr/qr_ticket_weekend_neon.png" alt="WEEKEND PASSES QR" class="card-qr-img" width="76" height="76" style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;">
             </div>
-            <span class="ticket-qr-sublabel">SCAN FOR PASS</span>
+            <span class="ticket-qr-sublabel" style="font-family:'Rajdhani',sans-serif; font-size:0.7rem; font-weight:800; color:#ffc800; letter-spacing:0.5px;">SCAN FOR PASS</span>
           </a>
         </div>
         <p class="ticket-pass-desc">All Stages across Kremwerk, Timbre Room & Cherry + All XR Showcases</p>
@@ -638,13 +1047,13 @@ Inspired by the historic NASA Artemis missions and a lifelong passion for space 
     <!-- On-Premise Mobile Portal Gateway Banner -->
     <div class="onsite-portal-gateway">
       <div class="onsite-portal-inner">
-        <div class="onsite-portal-qr-col">
-          <a href="index.html" class="onsite-portal-qr-box" title="Scan to open on smartphone">
-            <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal Mobile QR" class="onsite-portal-qr-img">
+        <div class="onsite-portal-qr-col" style="flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <a href="index.html" class="onsite-portal-qr-box" title="Scan to open on smartphone" style="display:block; width:130px; height:130px; max-width:130px; max-height:130px; background:#080911; border:2px solid var(--neon-cyan); border-radius:12px; padding:6px; box-shadow:0 0 20px rgba(0,240,255,0.35); box-sizing:border-box;">
+            <img src="assets/images/qr/qr_portal_main_neon.png" alt="KremFest XR Portal Mobile QR" class="onsite-portal-qr-img" width="130" height="130" style="width:100%; height:100%; max-width:130px; max-height:130px; display:block; border-radius:8px; object-fit:contain;">
           </a>
           <span class="onsite-portal-scan-label">📱 SCAN TO OPEN ON PHONE</span>
         </div>
-        <div class="onsite-portal-text-col">
+        <div class="onsite-portal-text-col" style="flex:1;">
           <div class="onsite-portal-badge">⚡ ONSITE ATTENDEE &amp; VOTER PORTAL</div>
           <h3 class="onsite-portal-title">Take the XR Showcase With You on the Dance Floor</h3>
           <p class="onsite-portal-desc">

@@ -30,6 +30,13 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **Public QR Sizing Fortification & Staging-to-Public Candidate Promotion Engine (Single & Batch) (v0.1.84):**
+  1. **Public QR 5-Layer Sizing Fortification:** Resolved oversized QR rendering on Port 3039 (`2026/index.html`) by engineering a 5-layer sizing defense: explicit HTML attributes (`width="76" height="76"`), inline style constraints on `.card-qr-box` (76×76px) and `.card-qr-img` (100% / max 76px), direct-injected `<style>` block via `get_qr_style_block()` in `<head>`, stylesheet rules in `style.css`, and cache-buster `style.css?v=0.1.84`.
+  2. **Standalone Promotion Engine (`promote_candidate.py`):** Engineered `private/submission_pipeline/tools/promote_candidate.py` supporting CLI flags `--list`, `<candidate_id>`, and `--all` with private links quarantine (strips jury/curator links before writing public selections) and auto-compilation of public static files, staging sandbox, and Dev HUD.
+  3. **REST API & Dual UI Promotion Controls:** Added `/api/staging/promote-all` endpoint and wired `/api/staging/promote` in `private/dev_dashboard/server.py`. Added batch promotion button `🚀 Promote All to Live Lineup (Batch)` and per-candidate promotion buttons in Dev HUD Tab 2 (`build_social_hub.py`) and Staging Sandbox preview (`render_staging_preview.py`).
+  4. **Live Promotion of Staged Candidates:** Successfully promoted *Firedrake VR (Wizard's Warren)* and *We Are Dead Animals* into official 2026 selections in `lineups.json` (now 8 live selections), with neon QR codes flanked and rendered on `http://localhost:3039/2026/index.html`.
+  5. **Verification & Dual Local Server Testing:** Validated HTTP 200 on Port 3039 (`2026/index.html`) and Port 3040 (`/preview/staging`). All QR codes strictly constrained to 76px. Synchronized version across manifests to `v0.1.84`. 🧪 🎴 🚀 📦 🥽 🐈 ✨
+
 * [ ] 🧪 🔥🔥🔥 **Public Site QR Architecture Porting & Total Outgoing Link Arrow (`↗`) Elimination (v0.1.83):**
   1. **Total Arrow (`↗`) Purge:** Removed every unicode arrow `↗` / ` ↗` across all outgoing links, venue schedule badges, Google Maps links, Meta referrals, Dev HUD jumps, and dynamic link generators. Verified zero `↗` occurrences across all generated HTML files in both public and staging environments (`Total HTML hits: 0`).
   2. **Public QR Badges & Flanking Action Rows:** Ported the full high-contrast QR flanking card architecture (`render_flanked_links_row`) to the public site compiler (`publish_to_public.py`) for Headliners, VIPs, and Juried Selections with left cyan QR (Website/App) and right pink QR (Quest Store/Trailer).

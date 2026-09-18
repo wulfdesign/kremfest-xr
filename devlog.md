@@ -4,6 +4,40 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-17 19:35] - v0.1.84: Public QR Sizing Fortification, Staging-to-Public Candidate Promotion Engine (Single & Batch) & Live Lineup Integration 🎴🚀📦🧪✨**
+
+📝 **Summary**
+1. **Fortified Public QR Code Sizing & 5-Layer Defense (`publish_to_public.py`):**
+   - Diagnosed root cause of oversized QR codes on Port 3039 (`2026/index.html`): missing inline dimension constraints and missing embedded `<style>` block, causing raw 1000px PNGs to render unconstrained when browsers held cached CSS.
+   - Built an immutable 5-layer sizing defense:
+     - **Layer 1:** Explicit HTML attributes `width="76" height="76"` directly on each `<img>`.
+     - **Layer 2:** Inline style `style="width:76px; height:76px; max-width:76px; max-height:76px; ..."` on container `.card-qr-box`.
+     - **Layer 3:** Inline style `style="width:100%; height:100%; max-width:76px; max-height:76px; object-fit:contain; display:block; border-radius:6px;"` on `.card-qr-img`.
+     - **Layer 4:** Direct `<style>` block injection via `get_qr_style_block()` inside `<head>` on `index.html` and `2026/index.html`.
+     - **Layer 5:** Cache-busting query parameter `style.css?v=0.1.84` across public pages.
+   - Added `2026-sel-we-are-dead-animals` and `2026-sel-firedrake-vr` to `EXPERIENCE_QR_MAP`.
+2. **Staging-to-Public Candidate Promotion Engine (`promote_candidate.py`):**
+   - Engineered standalone CLI and Python engine `private/submission_pipeline/tools/promote_candidate.py` supporting:
+     - `--list` (`-l`): Instant overview of all staged candidates, tracking numbers, status, and checklist scores.
+     - `<candidate_id>`: Promotes an individual candidate from `staging_vault.json` to `lineups.json` (`years["2026"]["selections"]`).
+     - `--all` (`-a`): Batch promotes all staged candidates in a single transaction.
+   - **Private Links Quarantine:** Automatically strips out `private_links` (Dropbox folders, jury APKs, testing notes) before merging into `lineups.json`, preventing leak of private assets.
+   - **Automatic Ecosystem Recompilation:** Automatically recompiles public static site (`publish_to_public.compile_all()`), staging preview (`render_staging_preview.render_and_save_staging_preview()`), and Dev HUD (`build_social_hub.generate_dev_dashboard_html()`).
+3. **REST API & Dual UI Promotion Controls (Dev HUD & Staging Sandbox):**
+   - Updated `private/dev_dashboard/server.py` to route `/api/staging/promote` through `promote_candidate.promote_single()` with automatic recompilation.
+   - Added `/api/staging/promote-all` endpoint for batch promotion.
+   - **Dev HUD Tab 2 (`build_social_hub.py`):** Added a `🚀 Promote All to Live Lineup (Batch)` header button alongside per-candidate promotion buttons, wired to `promoteAllCandidates()`.
+   - **Staging Sandbox Preview (`render_staging_preview.py`):** Added individual `🚀 Promote to Live Lineup` buttons on every staged candidate card, plus a `🚀 Promote All to Live Lineup (Batch)` header button in `#staged-candidates-section`.
+4. **Live Promotion of Staged Candidates to Official Lineup:**
+   - Promoted *Firedrake VR (Wizard's Warren)* (`2026-sel-firedrake-vr`) and *We Are Dead Animals* (`2026-sel-we-are-dead-animals`) into the official 2026 lineup in `lineups.json` (now 8 official selections live on `http://localhost:3039/2026/index.html`).
+   - Cleaned `djay` record in `staging_vault.json` while maintaining its top-billing spot in `lineups.json`.
+5. **Port & Governance Verification:**
+   - Port 3039 (Public Static): `2026/index.html` returning HTTP 200 with constrained 76px QR codes, flanking action rows, and all 8 selections.
+   - Port 3040 (Dev HUD): Server running cleanly on task-9922, serving `/preview/staging` and interactive Dev HUD.
+   - HITL Status: Marked 🧪 Ready for QA. No remote git push performed.
+
+🏷️ **Version:** `v0.1.84` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-17 19:10] - v0.1.83: Public Site QR Architecture Porting, Total Outgoing Link Arrow (`↗`) Elimination & Full Synchronous Publish 🎴📱🧹🎟️✨**
 
 📝 **Summary**
