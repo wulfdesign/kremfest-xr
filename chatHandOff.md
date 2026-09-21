@@ -11,6 +11,11 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
+0. **Lunar Flyby XR v2.1.19 Production Release & Hands-Free Festival Announcement Suite (Sept 21, 2026):**
+   - **Curatorial Promotion:** Promoted and verified turnkey hands-free autopilot mode for festival floor visitors, compressing the 800,000 km cislunar voyage into a calibrated 16-minute WebXR experience.
+   - **Festival Announcement Authored:** Staged community and social spotlight in `private/strategy_and_marketing/lunar_flyby_xr_festival_announcement.md`.
+   - **Tasks Ledger Updated:** Moved Lunar Flyby XR task to `🧪 Waiting for QA` in `tasks.md` and added festival announcement task to Active Roadmap.
+
 1. **Local Promo Integration & DJ Julia Camp Lineup Status Update Suite (v0.1.92):**
    - **Curatorial Status Report Email to DJ Julia Camp:** Authored warm, collaborative check-in to DJ Julia Camp (`djjulia@gmail.com` / `dj.julia.camp@...`) detailing active live lineup on `2026/index.html`, inclusion of *djay by Algoriddim* on Quest 3 with live spectator casting, and FilmFreeway regular deadline closing Monday Sept 21.
    - **Local Calendar Promo Integration:** Wove strategic triage note regarding local calendar listings (The Stranger / EverOut, Do206) with potential Sunday submission, prioritizing headset calibration and offering a collaborative cross-link to Kremwerk's PR team.
