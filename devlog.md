@@ -4,6 +4,25 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-22 16:45] - v0.1.94: Submissions Closed Callout Modernization & Festival Premiere Countdown Alignment 🎬⏳🎟️✨**
+
+📝 **Summary**
+1. **Submissions Closed Status Alignment:**
+   - Transmuted the "More Selections Coming Soon" callout block into a streamlined, high-contrast **"Submissions Closed — Festival Premiere Ahead!"** callout across `publish_to_public.py` (homepage and 2026 subpage) and `render_staging_preview.py`.
+   - Updated copy to celebrate the completion of curatorial jurying with the full 10-experience lineup locked for this coming weekend (September 25–27, 2026).
+2. **Dynamic Live Countdown & Subtext Synchrony:**
+   - Preserved active live countdown (`#submissions-countdown-box` in `state-purple`) ticking down to opening night: **Friday, Sept 25 at 10:00 PM PDT**.
+   - Updated client-side engine in `assets/js/main.js` (`updateSubClock`) and static fallback markup to display: *"Submissions closed — Lineup locked! Showcase floor opens Friday, Sept 25 at 10:00 PM PDT!"*.
+3. **Deadlines Grid & Action CTA Modernization:**
+   - Formatted past deadlines (Earlybird Aug 31 and Regular Sept 21) with clean strikethrough styling and neon pink `[CLOSED]` badges.
+   - Highlighted Showcase Premiere in neon cyan.
+   - Replaced old "Submit Your Project" CTA with dual buttons: direct pass to official festival passes (`🎟️ Official Festival Passes ➔`) and an archive link to FilmFreeway (`🔒 FilmFreeway Listing (Closed) ➔`).
+4. **DRY Architecture & Full Recompile:**
+   - Consolidated callout markup into modular `render_submissions_callout(base_path)` helper function.
+   - Recompiled all 8 public static pages, the staging preview sandbox, and Dev HUD. Validated 100% clean Node.js script execution.
+
+🏷️ **Version:** `v0.1.94` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-22 16:30] - v0.1.93: Firedrake Exploration Alpha & We Are Dead Animals Live Lineup Promotion, Official Selection Laurels Suite & Creator Notification Engine 🐉🐾🏆🎟️✨**
 
 📝 **Summary**

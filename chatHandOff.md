@@ -1,9 +1,9 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.93)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.94)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.93` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 22, 2026 | 16:30 PDT  
+> **Project Version:** `v0.1.94` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 22, 2026 | 16:45 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Staged locally pending HITL QA; do NOT push to remote main without explicit user confirmation)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
@@ -11,7 +11,13 @@
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-0. **Firedrake Exploration Alpha & We Are Dead Animals Live Lineup Promotion, Official Selection Laurels Suite & Creator Notification Engine (v0.1.93 - Sept 22, 2026):**
+0. **Submissions Closed Callout Modernization & Festival Premiere Countdown Alignment (v0.1.94 - Sept 22, 2026):**
+   - **Callout Modernization:** Transmuted the obsolete "More Selections Coming Soon" block into "Submissions Closed — Festival Premiere Ahead!" across homepage and 2026 subpage. Copy celebrates the locked 10-experience lineup for this coming weekend (September 25–27, 2026).
+   - **Active Showtime Countdown Maintained:** Preserved the live purple countdown ticking down to Friday, Sept 25 at 10:00 PM PDT. Updated `main.js` clock engine subtext to confirm lineup locked and floor opening hours.
+   - **Strikethrough Deadlines & Action CTAs:** Past deadlines (Aug 31 and Sept 21) styled with strikethrough and pink `[CLOSED]` badges. Added dual CTAs: direct link to official festival passes and an archive link to FilmFreeway.
+   - **Full Recompilation:** Recompiled all 8 public static pages, staging sandbox, and Dev HUD. Validated 100% clean Node.js script execution.
+
+1. **Firedrake Exploration Alpha & We Are Dead Animals Live Lineup Promotion, Official Selection Laurels Suite & Creator Notification Engine (v0.1.93 - Sept 22, 2026):**
    - **In-Headset Verification & Promotion:** Magus Wulf empirically tested *Firedrake VR: The Wizard's Warren Demo* and *We Are Dead Animals* in Meta Quest 3. Both passed in-headset QA and were promoted from `staging_vault.json` to the live public catalog (`lineups.json`). Total live selections: 10 (8 curated selections + 2 headliners).
    - **Exploration Alpha Lore:** Updated Firedrake synopsis with author's custom text emphasizing hands-on dungeon exploration, mysterious rooms, and ancient magic pacing.
    - **Official Selection Laurels Suite:** Generated high-resolution transparent PNGs (1200×640) and vector SVG across Gold, White, Neon Cyan, and Obsidian Black in `assets/images/2026/laurels/`. Hosted via GitHub Pages CDN for instant creator download.

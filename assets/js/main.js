@@ -251,7 +251,7 @@ function initSubmissionsCountdown() {
       subBox.classList.add("state-purple");
       if (badgeEl) badgeEl.innerHTML = "🥽 XR SHOWCASE PREMIERE IN";
       if (subtextEl) {
-        subtextEl.innerHTML = "Submissions closed — Jury adjudication in progress! Lineup premieres <strong>Friday, Sept 25 at 10:00 PM</strong>!";
+        subtextEl.innerHTML = "Submissions closed — Lineup locked! Showcase floor opens <strong>Friday, Sept 25 at 10:00 PM PDT</strong>!";
       }
       setDigits(showStartTime - effectiveNow, daysEl, hoursEl, minsEl, secsEl);
     } else {
