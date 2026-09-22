@@ -1,17 +1,25 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.92)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.93)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.92` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 18, 2026 | 14:36 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `ba4c188`; Private Sanctuary at `c7f8696`)  
+> **Project Version:** `v0.1.93` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 22, 2026 | 16:30 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Staged locally pending HITL QA; do NOT push to remote main without explicit user confirmation)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-0. **Lunar Flyby XR v2.1.19 Production Release & Hands-Free Festival Announcement Suite (Sept 21, 2026):**
+0. **Firedrake Exploration Alpha & We Are Dead Animals Live Lineup Promotion, Official Selection Laurels Suite & Creator Notification Engine (v0.1.93 - Sept 22, 2026):**
+   - **In-Headset Verification & Promotion:** Magus Wulf empirically tested *Firedrake VR: The Wizard's Warren Demo* and *We Are Dead Animals* in Meta Quest 3. Both passed in-headset QA and were promoted from `staging_vault.json` to the live public catalog (`lineups.json`). Total live selections: 10 (8 curated selections + 2 headliners).
+   - **Exploration Alpha Lore:** Updated Firedrake synopsis with author's custom text emphasizing hands-on dungeon exploration, mysterious rooms, and ancient magic pacing.
+   - **Official Selection Laurels Suite:** Generated high-resolution transparent PNGs (1200×640) and vector SVG across Gold, White, Neon Cyan, and Obsidian Black in `assets/images/2026/laurels/`. Hosted via GitHub Pages CDN for instant creator download.
+   - **Creator Notification Suite:** Authored FilmFreeway acceptance notification, formal laurels follow-up email, and respectful non-selection template in `private/operations/filmfreeway_acceptance_and_laurels_notification.md`.
+   - **1-Click Dev HUD Integration:** Embedded notification cards with 1-click clipboard triggers (`copyToClipboard`) and laurel download links in Tab 1 (`tab-ingest`) on Port 3040.
+   - **Full Static Recompile:** Recompiled all 8 public static pages, Audience Choice ballot, and staging previews. Validated 100% clean Node.js script execution.
+
+1. **Lunar Flyby XR v2.1.19 Production Release & Hands-Free Festival Announcement Suite (Sept 21, 2026):**
    - **Curatorial Promotion:** Promoted and verified turnkey hands-free autopilot mode for festival floor visitors, compressing the 800,000 km cislunar voyage into a calibrated 16-minute WebXR experience.
    - **Festival Announcement Authored:** Staged community and social spotlight in `private/strategy_and_marketing/lunar_flyby_xr_festival_announcement.md`.
    - **Tasks Ledger Updated:** Moved Lunar Flyby XR task to `🧪 Waiting for QA` in `tasks.md` and added festival announcement task to Active Roadmap.

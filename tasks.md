@@ -31,6 +31,7 @@ DO NOT mark any task as done (🏆 or [x]) until the Human-in-the-Loop (Magus Wu
 
 ### 🧪 Waiting for QA (🧪)
 
+* [ ] 🧪 🔥🔥🔥 **KremFest XR Live Lineup Promotion, Official Selection Laurels Suite & Creator Notification Engine (v0.1.93):** Promoted *Firedrake VR: The Wizard's Warren Demo* and *We Are Dead Animals* to live catalog (`lineups.json`) following in-headset Quest 3 verification. Updated Firedrake with exploration alpha demo text. Recompiled all 8 public pages, Audience Choice ballot, staging preview, and Dev HUD. Generated 2026 Official Selection Laurels Suite (PNG/SVG in Gold, White, Cyan, Black) and embedded 1-click FilmFreeway notification cards into Dev HUD Tab 1 on Port 3040. Staged for local empirical inspection prior to remote push. 🐉🐾🏆🎟️ 🧪 🐈
 * [ ] 🧪 🔥🔥🔥 **Lunar Flyby XR: KremFest XR 2026 Autopilot & Auto-Warp Experience (v2.1.19):** Promoted and verified turnkey passive-first cinematic autopilot mode for festival attendees. Features intelligent Auto-Warp with 1.0s Hermite cubic smoothstep rate gliding, compressing the ~800,000 km cislunar round trip into a calibrated ~16–17 minute flight (empirically confirmed in `Artemis_FlightLog_2026-09-21T22-34-08.json` at 16:45.2). Includes 60x perilune sizzle shot flyby within 5,500 km, automated 12.3G re-entry keyhole guidance, 10x parachute descent auto-ramp, and full manual override (`AUTO WARP: OFF`) for pilot speedrunners. Cleaned LaTeX delimiters across public docs and published to GitHub (`https://github.com/wulfdesign/lunar-flyby-xr.git`). 🚀 🌕 🎪 🥽 🧪 🐈
 
 ---
