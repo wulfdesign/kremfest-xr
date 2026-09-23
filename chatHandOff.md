@@ -1,17 +1,26 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.96)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.97)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.96` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 15:45 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; new local assets and dev sandbox mirror staged locally pending operator review)  
-> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Social Card Studio: `http://localhost:3040/preview/social-card`
+> **Project Version:** `v0.1.97` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 16:30 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; local 2x Retina assets, dev sandbox mirror, and floor loop staged locally pending operator review)  
+> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-0. **Dev Sandbox Mirror on Port 3040, Numbered Navigation Hierarchy, Lineup at a Glance Layout Synchrony & Social Media One-Sheet Studio (v0.1.96 - Sept 23, 2026):**
+0. **2x Retina Social One-Sheet Rerender, Uncropped Poster Framing & 12-Slide Floor Loop Slideshow Engine (v0.1.97 - Sept 23, 2026):**
+   - **2x Retina Resolution Lineup One-Sheet Rerender (2400 × 1840 px):** Re-rasterized `assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png` and `private/preview/lineup_social_card_clean.png` at 2x Device Pixel Ratio (`--force-device-scale-factor=2`) using Chromium headless rendering at 1200×920 viewport. Yielded a crystal-clear 1.34 MB PNG with razor-sharp typography, crisp gold laurels, and high-fidelity poster thumbnails, eliminating all pixelation for social posts.
+   - **Floor Loop & Sizzle Reel Slideshow Upgrades (`splash_cards.html` & `render_splash_cards.py`):**
+     • *Uncropped Poster Framing (Zero Bottom Cutoff):* Replaced fixed `max-height: 240px` and `object-fit: cover` with an aspect-fit container (`.hero-thumb-box`, `360px` height) using `object-fit: contain` and an ambient blurred backdrop (`.hero-thumb-bg`). Vertical 2:3 posters (*We Are Dead Animals*, *Firedrake VR*, *KremFest 2026 Poster*) and wide banners are now 100% visible from top to bottom edge without any clipping.
+     • *Slide 1 — Welcome & Festival Intro Slide:* Integrated official KremFest 2026 festival poster (`kremfest_2026_poster.jpg`), 5th edition welcome copy, dates (Sept 25–26, 2026), Kremwerk complex info, and Festival Guide & Map QR code (`qr_portal_main_neon.png`).
+     • *Slide 2 — 2026 Lineup at a Glance Slide:* Displayed the high-resolution 2x Retina one-sheet artwork showcasing all 10 selections paired with the Audience Choice Award Ballot QR code (`kremfest_2026_vote_color.svg`) linking to `wulfdesign.github.io/kremfest-xr/2026/vote/`.
+     • *Slides 3–12 — 10 Individual Experience Showcase Cards:* Comprehensive cards for Headliners (*Maiden Flight*, *High Desert Eclipse*), Guest Spotlight (*djay by Algoriddim*), and 7 Juried Selections (*Trip the Light*, *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*, *Artemis*, *We Are Dead Animals*, *Firedrake VR*) with genre-coded neon borders, creator bylines, loglines, curator quotes, and scannable QR HUDs.
+     • *10-Second Default Slide Rotation & Active Real-Time Countdown Ticker:* Replaced static `(2s)` badge. Slides rotate at 10-second default intervals with an active ticking countdown badge (`10s... 1s`) and a sleek animated cyan-to-magenta progress bar along the top of each card.
+     • *Interactive Duration Settings & Navigation HUD:* Built sticky controls bar featuring duration presets (`5s`, `8s`, `10s` [default], `15s`, `20s`), loop playback controls (`Prev`, `Pause / Resume`, `Next`), slide select dropdown (12 slides), query parameter deep-linking (`?slide=...`, `?duration=...`, `?loop=0`), and keyboard hotkeys (Space to toggle pause, Arrows to skip, F/F11 for fullscreen TV display).
+   - **Dev Dashboard Tab 14 & Version Bump to `v0.1.97`:** Synchronized Dev HUD Tab 14 (`🎬 Sizzle Reel & Floor Loop`) header with the 12-slide sequence architecture and direct launcher button. Bumped Operator HUD badge to `v0.1.97`.
    - **Isolated Dev Sandbox Mirror on Port 3040 (`/dev/`):** Established a dedicated, air-gapped dev environment (`private/dev_site/`) served directly on Port 3040 under `/dev/`, `/dev/2026/`, `/dev/2025/`, `/dev/2019/`, `/dev/2018/`, `/dev/2017/`, and `/dev/vote/`. Guarantees 100% isolation of the live public preview on Port 3039. Added sticky top Dev Sandbox Banner on Port 3040 dev pages with 1-click navigation between Dev Home, Dev 2026, Dev 2025, Social Card, and Back to Dev HUD.
    - **Explicit Integer Numbering on All 15 Dev HUD Tabs:** Numbered all navigation tab buttons sequentially from `1. 📥 Ingest FilmFreeway Text` through `15. 🔒 Confidential History` across `build_social_hub.py` and `dev_dashboard/index.html`.
    - **"Lineup at a Glance" Block Realignment (2025 & 2026):** Repositioned the "Lineup at a Glance" section in both retrospective 2025 and live 2026 showcase pages (`publish_to_public.py` and `render_staging_preview.py`) to appear towards the top immediately after the intro text and first diamond divider, directly preceding `<h2 class="group-heading">Headline Experiences from UpLiftVR Studios</h2>`. Matches the proven, elegant hierarchy from 2018 and 2019.

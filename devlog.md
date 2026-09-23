@@ -4,6 +4,25 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 16:30] - v0.1.97: 2x Retina Social One-Sheet Rerender, Uncropped Poster Framing & 12-Slide Floor Loop Slideshow Engine 🧪🎬🎴⏱️✨**
+
+📝 **Summary**
+1. **2x Retina Lineup One-Sheet Rerender (2400 × 1840 px):**
+   - Re-rasterized `assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png` and `private/preview/lineup_social_card_clean.png` at 2x Device Pixel Ratio (`--force-device-scale-factor=2`) using Chromium headless rendering at 1200×920 viewport.
+   - Promoted master 1.34 MB Retina PNG with razor-sharp typography, crisp gold laurels, and high-fidelity poster thumbnails, eliminating all pixelation for social posts.
+2. **Venue Floor Loop & Sizzle Reel Slideshow Upgrades (`splash_cards.html` & `render_splash_cards.py`):**
+   - **Uncropped Poster Framing (Zero Bottom Cutoff):** Replaced fixed `max-height: 240px` and `object-fit: cover` with an aspect-fit container (`.hero-thumb-box`, `360px` height) using `object-fit: contain` and an ambient blurred backdrop (`.hero-thumb-bg`). Vertical 2:3 posters (*We Are Dead Animals*, *Firedrake VR*, *KremFest 2026 Poster*) and wide banners are now 100% visible from top to bottom edge without any clipping.
+   - **Slide 1 — Welcome & Festival Intro Slide:** Integrated official KremFest 2026 festival poster (`kremfest_2026_poster.jpg`), 5th edition welcome copy, dates (Sept 25–26, 2026), Kremwerk complex info, and Festival Guide & Map QR code (`qr_portal_main_neon.png`).
+   - **Slide 2 — 2026 Lineup at a Glance Slide:** Displayed the high-resolution 2x Retina one-sheet artwork showcasing all 10 selections paired with the Audience Choice Award Ballot QR code (`kremfest_2026_vote_color.svg`) linking to `wulfdesign.github.io/kremfest-xr/2026/vote/`.
+   - **Slides 3–12 — 10 Individual Experience Showcase Cards:** Comprehensive cards for Headliners (*Maiden Flight*, *High Desert Eclipse*), Guest Spotlight (*djay by Algoriddim*), and 7 Juried Selections (*Trip the Light*, *CONNECTOME*, *CONSTELLATIONS*, *Project Hydra*, *Artemis*, *We Are Dead Animals*, *Firedrake VR*) with genre-coded neon borders, creator bylines, loglines, curator quotes, and scannable QR HUDs.
+   - **10-Second Default Slide Rotation & Active Real-Time Countdown Ticker:** Fixed static `(2s)` badge. Slides now rotate at 10-second default intervals with an active ticking countdown badge (`10s... 1s`) and a sleek animated cyan-to-magenta progress bar along the top of each card.
+   - **Interactive Duration Settings & Navigation HUD:** Built sticky controls bar featuring duration presets (`5s`, `8s`, `10s` [default], `15s`, `20s`), loop playback controls (`Prev`, `Pause / Resume`, `Next`), slide select dropdown (12 slides), query parameter deep-linking (`?slide=...`, `?duration=...`, `?loop=0`), and keyboard hotkeys (Space to toggle pause, Arrows to skip, F/F11 for fullscreen TV display).
+3. **Dev Dashboard Tab 14 & Version Bump to `v0.1.97`:**
+   - Synchronized Dev HUD Tab 14 (`🎬 Sizzle Reel & Floor Loop`) header with the 12-slide sequence architecture and direct launcher button.
+   - Bumped Operator HUD badge to `v0.1.97`.
+
+🏷️ **Version:** `v0.1.97` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-23 15:45] - v0.1.96: Dev Sandbox Mirror on Port 3040, Numbered Navigation Hierarchy, Lineup at a Glance Layout Synchrony & Social Media One-Sheet Studio 🧪🎴📸🎨✨**
 
 📝 **Summary**
