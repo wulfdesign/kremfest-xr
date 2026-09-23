@@ -17,6 +17,9 @@
    - **Dimitri Vallein Response (The Last Star VR):** Formulated a courteous, encouraging response explaining closed submissions and standalone Quest 3 hardware constraints 48 hours prior to doors; invited early submission for 2027. Staged in `private/operations/email_draft_dimitri_the_last_star_vr.md`.
    - **Final Official Selections Social Media Campaign & Group Strategy:** Authored high-impact LinkedIn campaign celebrating the locked 10-experience lineup, and high-energy Facebook post with recommended Seattle cross-posting groups (Seattle Fun Events, SEMP, Seattle VR, Capitol Hill, Emerald City EDM). Staged in `private/operations/social_media_final_lineup_announcement.md`.
    - **Pre-Festival 48-Hour Hardware/Web Roadmap:** Codified prioritized action schedule for Wednesday Sept 23 & Thursday Sept 24 (iPad/laptop casting link rehearsal, Maiden Flight landing portal & wishlist, Amazon Associates reactivation, and travel pack-out).
+   - **Floor Hardware Operational Contingencies (CONSTELLATIONS & Maiden Flight):**
+     • *CONSTELLATIONS: Touch the Stars:* Previous app key expired; operator pinged Grant Hinkson for replacement. Pragmatic contingency: if Grant cannot respond by Thursday evening, purchase directly for ~$7 on Meta Horizon Store (gifting Grant's key later) to ensure zero friction on opening night.
+     • *Maiden Flight:* Realistic triage confirmed: forgo complex rebuilds/overhauls before the festival and focus strictly on verifying smooth standalone and tethered in-headset playback.
 
 1. **Submissions Closed Callout Modernization & Festival Premiere Countdown Alignment (v0.1.94 - Sept 22, 2026):**
    - **Callout Modernization:** Transmuted the obsolete "More Selections Coming Soon" block into "Submissions Closed — Festival Premiere Ahead!" across homepage and 2026 subpage. Copy celebrates the locked 10-experience lineup for this coming weekend (September 25–27, 2026).
