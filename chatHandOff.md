@@ -1,17 +1,24 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.94)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.95)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.94` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 22, 2026 | 16:45 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Staged locally pending HITL QA; do NOT push to remote main without explicit user confirmation)  
+> **Project Version:** `v0.1.95` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 22, 2026 | 23:15 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; new local correspondence and operations staged locally pending operator morning review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-0. **Submissions Closed Callout Modernization & Festival Premiere Countdown Alignment (v0.1.94 - Sept 22, 2026):**
+0. **2026 Laurels Vector Calibration, Algoriddim djay Executive Delivery, Dimitri Vallein Response & Final Lineup Social Launch Suite (v0.1.95 - Sept 22, 2026):**
+   - **Inkscape 2026 Laurels Master Synchrony:** Magus Wulf updated and refined master Inkscape vector laurels from 2025 to 2026, saved source SVGs in `private/import/`, exported transparent PNGs (Gold, White, Cyan, Black), and pushed to public GitHub main. Synchronized all assets into `private/assets/images/2026/laurels/`.
+   - **Algoriddim djay Executive Spotlight & Laurels Delivery:** Authored formal executive correspondence to Karim Morsy & Richard delivering official laurels, VIP artist pass reservations at Kremwerk Will-Call, and commitment to share post-festival attendee MR media. Staged in `private/operations/email_draft_algoriddim_djay_laurels.md`.
+   - **Dimitri Vallein Response (The Last Star VR):** Formulated a courteous, encouraging response explaining closed submissions and standalone Quest 3 hardware constraints 48 hours prior to doors; invited early submission for 2027. Staged in `private/operations/email_draft_dimitri_the_last_star_vr.md`.
+   - **Final Official Selections Social Media Campaign & Group Strategy:** Authored high-impact LinkedIn campaign celebrating the locked 10-experience lineup, and high-energy Facebook post with recommended Seattle cross-posting groups (Seattle Fun Events, SEMP, Seattle VR, Capitol Hill, Emerald City EDM). Staged in `private/operations/social_media_final_lineup_announcement.md`.
+   - **Pre-Festival 48-Hour Hardware/Web Roadmap:** Codified prioritized action schedule for Wednesday Sept 23 & Thursday Sept 24 (iPad/laptop casting link rehearsal, Maiden Flight landing portal & wishlist, Amazon Associates reactivation, and travel pack-out).
+
+1. **Submissions Closed Callout Modernization & Festival Premiere Countdown Alignment (v0.1.94 - Sept 22, 2026):**
    - **Callout Modernization:** Transmuted the obsolete "More Selections Coming Soon" block into "Submissions Closed — Festival Premiere Ahead!" across homepage and 2026 subpage. Copy celebrates the locked 10-experience lineup for this coming weekend (September 25–27, 2026).
    - **Active Showtime Countdown Maintained:** Preserved the live purple countdown ticking down to Friday, Sept 25 at 10:00 PM PDT. Updated `main.js` clock engine subtext to confirm lineup locked and floor opening hours.
    - **Strikethrough Deadlines & Action CTAs:** Past deadlines (Aug 31 and Sept 21) styled with strikethrough and pink `[CLOSED]` badges. Added dual CTAs: direct link to official festival passes and an archive link to FilmFreeway.
