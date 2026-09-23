@@ -1,17 +1,24 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.95)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.96)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.95` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 22, 2026 | 23:15 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; new local correspondence and operations staged locally pending operator morning review)  
-> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Sandbox Preview: `http://localhost:3040/preview/staging` | Splash Studio: `http://localhost:3040/preview/splash_cards.html`
+> **Project Version:** `v0.1.96` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 15:45 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; new local assets and dev sandbox mirror staged locally pending operator review)  
+> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Social Card Studio: `http://localhost:3040/preview/social-card`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
 
-0. **2026 Laurels Vector Calibration, Algoriddim djay Executive Delivery, Dimitri Vallein Response & Final Lineup Social Launch Suite (v0.1.95 - Sept 22, 2026):**
+0. **Dev Sandbox Mirror on Port 3040, Numbered Navigation Hierarchy, Lineup at a Glance Layout Synchrony & Social Media One-Sheet Studio (v0.1.96 - Sept 23, 2026):**
+   - **Isolated Dev Sandbox Mirror on Port 3040 (`/dev/`):** Established a dedicated, air-gapped dev environment (`private/dev_site/`) served directly on Port 3040 under `/dev/`, `/dev/2026/`, `/dev/2025/`, `/dev/2019/`, `/dev/2018/`, `/dev/2017/`, and `/dev/vote/`. Guarantees 100% isolation of the live public preview on Port 3039. Added sticky top Dev Sandbox Banner on Port 3040 dev pages with 1-click navigation between Dev Home, Dev 2026, Dev 2025, Social Card, and Back to Dev HUD.
+   - **Explicit Integer Numbering on All 15 Dev HUD Tabs:** Numbered all navigation tab buttons sequentially from `1. 📥 Ingest FilmFreeway Text` through `15. 🔒 Confidential History` across `build_social_hub.py` and `dev_dashboard/index.html`.
+   - **"Lineup at a Glance" Block Realignment (2025 & 2026):** Repositioned the "Lineup at a Glance" section in both retrospective 2025 and live 2026 showcase pages (`publish_to_public.py` and `render_staging_preview.py`) to appear towards the top immediately after the intro text and first diamond divider, directly preceding `<h2 class="group-heading">Headline Experiences from UpLiftVR Studios</h2>`. Matches the proven, elegant hierarchy from 2018 and 2019.
+   - **1-Page "At a Glance" Social Media Card & HTML-to-Image Studio:** Designed a high-contrast 1200px visual lineup card (`private/preview/social_lineup_card.html`) featuring the 2026 Gold Laurels, glowing title banner, venue/hours metadata, optical scan QR code, and 10 mini cards with shrunk poster artwork, creator bylines, runtimes, formats, and origins. Embedded local offline `html2canvas.min.js` with 1-click **"📸 Download High-Res PNG"** (2x Retina 2400px output), **"📋 Copy Image to Clipboard"** (direct `Ctrl + V` into LinkedIn/Facebook), and Print / Save PDF. Captured and verified master clean asset on disk: `assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png` (413 KB).
+   - **Dev Dashboard Tab 6 Integration:** Embedded interactive visual card preview, 1-click PNG download, and direct studio launcher into **Tab 6 (📢 Social Media & Press Copy)** directly above the LinkedIn and Facebook copy.
+
+1. **2026 Laurels Vector Calibration, Algoriddim djay Executive Delivery, Dimitri Vallein Response & Final Lineup Social Launch Suite (v0.1.95 - Sept 22, 2026):**
    - **Inkscape 2026 Laurels Master Synchrony:** Magus Wulf updated and refined master Inkscape vector laurels from 2025 to 2026, saved source SVGs in `private/import/`, exported transparent PNGs (Gold, White, Cyan, Black), and pushed to public GitHub main. Synchronized all assets into `private/assets/images/2026/laurels/`.
    - **Algoriddim djay Executive Spotlight & Laurels Delivery:** Authored formal executive correspondence to Karim Morsy & Richard delivering official laurels, VIP artist pass reservations at Kremwerk Will-Call, and commitment to share post-festival attendee MR media. Staged in `private/operations/email_draft_algoriddim_djay_laurels.md`.
    - **Dimitri Vallein Response (The Last Star VR):** Formulated a courteous, encouraging response explaining closed submissions and standalone Quest 3 hardware constraints 48 hours prior to doors; invited early submission for 2027. Staged in `private/operations/email_draft_dimitri_the_last_star_vr.md`.

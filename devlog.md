@@ -4,6 +4,28 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 15:45] - v0.1.96: Dev Sandbox Mirror on Port 3040, Numbered Navigation Hierarchy, Lineup at a Glance Layout Synchrony & Social Media One-Sheet Studio 🧪🎴📸🎨✨**
+
+📝 **Summary**
+1. **Isolated Dev Sandbox Mirror on Port 3040 (`/dev/`):**
+   - Established a dedicated, air-gapped dev environment (`private/dev_site/`) served directly on Port 3040 under `/dev/`, `/dev/2026/`, `/dev/2025/`, `/dev/2019/`, `/dev/2018/`, `/dev/2017/`, and `/dev/vote/`.
+   - Guaranteed 100% isolation of the live public preview on Port 3039: layout and markup experimentation is now compiled into `private/dev_site/` first without touching public files until explicitly pushed.
+   - Added sticky top Dev Sandbox Banner on Port 3040 dev pages with 1-click navigation between Dev Home, Dev 2026, Dev 2025, Social Card, and Back to Dev HUD.
+   - Wired `/api/compile-dev` and updated `/api/publish` with operator confirmation dialog before pushing dev to public.
+2. **Explicit Integer Numbering on All 15 Dev HUD Tabs:**
+   - Numbered all navigation tab buttons sequentially from `1. 📥 Ingest FilmFreeway Text` through `15. 🔒 Confidential History` across `build_social_hub.py` and `dev_dashboard/index.html`.
+3. **"Lineup at a Glance" Block Realignment (2025 & 2026):**
+   - Repositioned the "Lineup at a Glance" section in both retrospective 2025 and live 2026 showcase pages (`publish_to_public.py` and `render_staging_preview.py`) to appear towards the top immediately after the intro text and first diamond divider, directly preceding `<h2 class="group-heading">Headline Experiences from UpLiftVR Studios</h2>`.
+   - Matches the proven, elegant hierarchy from 2018 and 2019.
+   - Sorted 2026 entries harmoniously: Headliners (Maiden Flight, High Desert Eclipse), Guest Spotlight (djay by Algoriddim), followed by the 7 official juried selections (Trip the Light, CONNECTOME, CONSTELLATIONS, Project Hydra, Artemis, Firedrake VR, We Are Dead Animals).
+4. **1-Page "At a Glance" Social Media Card & HTML-to-Image Studio:**
+   - Designed a high-contrast 1200px visual lineup card (`private/preview/social_lineup_card.html`) featuring the 2026 Gold Laurels, glowing title banner, venue/hours metadata, optical scan QR code, and 10 mini cards with shrunk poster artwork, creator bylines, runtimes, formats, and origins.
+   - Embedded local offline `html2canvas.min.js` with 1-click **"📸 Download High-Res PNG"** (2x Retina 2400px output), **"📋 Copy Image to Clipboard"** (direct `Ctrl + V` into LinkedIn/Facebook), and Print / Save PDF.
+   - Captured and verified master clean asset on disk: `assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png` (413 KB).
+   - Integrated full card preview, download actions, and direct studio launcher into **Tab 6 (📢 Social Media & Press Copy)** of the Dev Dashboard directly above the LinkedIn and Facebook drafts.
+
+🏷️ **Version:** `v0.1.96` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-22 23:15] - v0.1.95: 2026 Laurels Vector Calibration, Algoriddim djay Executive Delivery, Dimitri Vallein Response & Final Lineup Social Launch Suite 🏆🎧✉️📢✨**
 
 📝 **Summary**
