@@ -4,6 +4,24 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 16:45] - v0.1.98: Center-Aligned Multi-Year "Showcase at a Glance" & 2018 1-Line Selections Calibration 🧪📐📜✨**
+
+📝 **Summary**
+1. **Universal Center Alignment for "Showcase at a Glance":**
+   - Transmuted `.glance-section`, `.glance-title`, and `.glance-bullets` in [`assets/css/style.css`](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/assets/css/style.css) to a symmetrical, center-aligned layout.
+   - Removed awkward bullet discs (`list-style: none; padding: 0; margin: 0 auto; text-align: center;`) so lines center cleanly without indentation artifacts.
+   - Applies universally across **all festival years** on Port 3040 Dev Sandbox ([`http://localhost:3040/dev/2026/`](http://localhost:3040/dev/2026/), `2025`, `2019`, `2018`, `2017`) and the public preview on Port 3039.
+2. **2018 Selections 1-Line Formatting (Zero Spill-Overs):**
+   - Defined `GLANCE_ENTRIES_2018` in [`private/submission_pipeline/tools/publish_to_public.py`](file:///C:/Agents/a0-symbiot-ai/projects/kremfest-xr/private/submission_pipeline/tools/publish_to_public.py) to eliminate multi-line wrap on desktop/laptop viewports.
+   - Trimmed redundant parenthetical production notes from the glance lines (*Symbion Project*, *Lionhearted*, *RocketMan 360*), preserving full credits in the detailed project cards below.
+   - Empirically verified with headless browser screenshots: all 7 entries for 2018 render on exactly ONE clean line.
+3. **CSS Cache Invalidation & Recompilation:**
+   - Updated stylesheet query parameters to `style.css?v=0.1.98`.
+   - Recompiled all 8 pages in `private/dev_site/` via `compile_dev.py`.
+   - Bumped Operator HUD and manifests to `v0.1.98`.
+
+🏷️ **Version:** `v0.1.98` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-23 16:30] - v0.1.97: 2x Retina Social One-Sheet Rerender, Uncropped Poster Framing & 12-Slide Floor Loop Slideshow Engine 🧪🎬🎴⏱️✨**
 
 📝 **Summary**

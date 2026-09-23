@@ -1,15 +1,20 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.97)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.98)
 
 > **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.97` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 16:30 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; local 2x Retina assets, dev sandbox mirror, and floor loop staged locally pending operator review)  
-> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop: `http://localhost:3040/preview/splash_cards.html`
+> **Project Version:** `v0.1.98` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 16:45 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; local 2x Retina assets, dev sandbox mirror, floor loop, and centered glance layout staged locally pending operator review)  
+> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Center-Aligned Multi-Year "Showcase at a Glance" & 2018 1-Line Selections Calibration (v0.1.98 - Sept 23, 2026):**
+   - **Universal Center Alignment:** Transmuted `.glance-section`, `.glance-title`, and `.glance-bullets` in `assets/css/style.css` to a symmetrical, center-aligned layout without left-side bullet discs. Applies universally across all festival years on Port 3040 Dev Sandbox (`/dev/2026/`, `2025`, `2019`, `2018`, `2017`).
+   - **2018 1-Line Formatting:** Defined `GLANCE_ENTRIES_2018` in `publish_to_public.py` to eliminate multi-line wrap on desktop/laptop displays. Trimmed redundant parenthetical production notes (*Symbion Project*, *Lionhearted*, *RocketMan 360*), preserving full credits in the detailed project cards below. All 7 entries for 2018 render on exactly ONE clean line.
+   - **Cache Busting & Static Compilation:** Updated stylesheet query parameters to `style.css?v=0.1.98` and recompiled all 8 pages in `private/dev_site/` via `compile_dev.py`. Bumped Operator HUD badge to `v0.1.98`.
 
 0. **2x Retina Social One-Sheet Rerender, Uncropped Poster Framing & 12-Slide Floor Loop Slideshow Engine (v0.1.97 - Sept 23, 2026):**
    - **2x Retina Resolution Lineup One-Sheet Rerender (2400 × 1840 px):** Re-rasterized `assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png` and `private/preview/lineup_social_card_clean.png` at 2x Device Pixel Ratio (`--force-device-scale-factor=2`) using Chromium headless rendering at 1200×920 viewport. Yielded a crystal-clear 1.34 MB PNG with razor-sharp typography, crisp gold laurels, and high-fidelity poster thumbnails, eliminating all pixelation for social posts.
