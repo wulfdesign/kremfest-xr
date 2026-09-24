@@ -1,15 +1,22 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.8)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.9)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.8` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 20:30 PDT  
+> **Project Version:** `v0.2.9` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 21:05 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Sizzle Reel Fluid Auto-Resizing, Outfit Default Font & Single-Row Controls Bar (v0.2.9 - Sept 23, 2026):**
+   - **Fluid Left-Hand Image Auto-Resizing (Dead Space Eradication):** Eliminated all rigid pixel height constraints (`485px`, `420px`, `460px`, `590px`) from `.hero-thumb-box` and `.hero-thumb-img`. Converted `.col-left-media` and `.hero-thumb-box` to true responsive flex containers (`flex: 1 1 0; min-height: 0; min-width: 0; width: 100%; height: 100%; padding: 6px 10px; box-sizing: border-box;`). `.hero-thumb-img` uses `max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;`, automatically maximizing image display across any screen resolution with gentle breathing padding.
+   - **Empirical Fullscreen Scale Explosion (+286% Surface Area on 1440p):** On operator's 2560×1440 display (referenced in `private/debug/Screenshot 2026-09-23 204200.png`), the Lineup One-Sheet artwork expanded from `590px × 770px` to **`983px × 1446px`** (+66% taller, +88% wider, nearly 4× larger surface area), rendering every project card, laurel, and date effortlessly legible from across the room.
+   - **Default Heading Font Shift to `Outfit` & Portal Sans Option:** Switched default title font across CSS and dynamic JS to clean geometric sans **`Outfit`**. Removed `Orbitron (Cyber)` from options and replaced with **`Portal Sans (Landing Page)`** (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif`) to match the primary festival landing portal. Handled local storage migration (`kremfest_sizzle_font`) so existing stored `'Orbitron'` values gracefully resolve to `'Outfit'`.
+   - **Single-Row Controls Bar Pinning:** Applied `flex-wrap: nowrap; overflow-x: auto;` on `.controls-bar` and `flex-shrink: 0;` on `.controls-right`, guaranteeing that `📺 FULLSCREEN TV DISPLAY (F11)` stays strictly pinned to the single top line across all viewports (empirically tested across 1920×1080, 1440×900, and 1280×800 at bar height 51px, `y: 9`).
+   - **Debug Directory Gitignore Guard:** Added `debug/` to `private/.gitignore` to prevent operator screenshot dumps from being tracked in git.
 
 0. **Sizzle Reel Single-Line Typography, Orbitron Font Upgrade & Lineup One-Sheet Stage Expansion (v0.2.8 - Sept 23, 2026):**
    - **Harvested Operator Out-of-Band `/btw` Note [15]:** Successfully recovered directive from `get_btw.py`: *"2026 Showcase Lineup at a Glance should be on one line on the splash cards... and i don't like the fonts for that... that img in particul needs to be bigger"*.

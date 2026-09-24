@@ -4,6 +4,28 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 21:05] - v0.2.9: Sizzle Reel Fluid Auto-Resizing, Outfit Default Font & Single-Row Controls Bar 🖼️🔤📺✨**
+
+📝 **Summary**
+1. **Fluid Left-Hand Image Auto-Resizing (Dead Space Eradication):**
+   - Eliminated all rigid pixel height constraints (`485px`, `420px`, `460px`, `590px`) from `.hero-thumb-box` and `.hero-thumb-img`.
+   - Converted `.col-left-media` and `.hero-thumb-box` to true responsive flex containers (`flex: 1 1 0; min-height: 0; min-width: 0; width: 100%; height: 100%; padding: 6px 10px; box-sizing: border-box;`).
+   - `.hero-thumb-img` uses `max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;`, automatically maximizing image display across any screen resolution with gentle breathing padding.
+2. **Empirical Fullscreen Scale Explosion (+286% Surface Area on 1440p):**
+   - On operator's 2560×1440 display (referenced in `private/debug/Screenshot 2026-09-23 204200.png`), the Lineup One-Sheet artwork expanded from `590px × 770px` to **`983px × 1446px`** (+66% taller, +88% wider, nearly 4× larger surface area), rendering every project card, laurel, and date effortlessly legible from across the room.
+3. **Default Heading Font Shift to `Outfit` & Portal Sans Option:**
+   - Switched default title font across CSS and dynamic JS to clean geometric sans **`Outfit`**.
+   - Removed `Orbitron (Cyber)` from options and replaced with **`Portal Sans (Landing Page)`** (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif`) to match the primary festival landing portal.
+   - Handled local storage migration (`kremfest_sizzle_font`) so existing stored `'Orbitron'` values gracefully resolve to `'Outfit'`.
+4. **Single-Row Controls Bar Pinning:**
+   - Applied `flex-wrap: nowrap; overflow-x: auto;` on `.controls-bar` and `flex-shrink: 0;` on `.controls-right`, guaranteeing that `📺 FULLSCREEN TV DISPLAY (F11)` stays strictly pinned to the single top line across all viewports (empirically tested across 1920×1080, 1440×900, and 1280×800 at bar height 51px, `y: 9`).
+5. **Debug Directory Gitignore Guard:**
+   - Added `debug/` to `private/.gitignore` to prevent operator screenshot dumps from being tracked in git.
+
+🏷️ **Version:** `v0.2.9` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-23 20:30] - v0.2.8: Sizzle Reel Single-Line Typography, Orbitron Font Upgrade & Lineup One-Sheet Stage Expansion 🔤🖼️📺**
 
 📝 **Summary**
