@@ -4,6 +4,27 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 18:50] - v0.2.5: Sizzle Reel `splash_cards.html` Layout & Border Overhaul & AI-UI Optimization 🎬📺🖼️✨**
+
+📝 **Summary**
+1. **Double Border & Extra Padding Elimination:**
+   - Completely eradicated the redundant double border and nested padding around hero artwork in `render_splash_cards.py` and `private/preview/splash_cards.html`.
+   - Stripped inner `<img>` borders and box padding, establishing a single clean glowing neon border on `.hero-thumb-box` matching each selection's curatorial badge.
+2. **Edge-to-Edge Flush Landscape Mode Layout:**
+   - For all landscape images (Slides 1–9, 11), configured `.hero-thumb-box.mode-landscape` to extend 100% flush from left to right edge of the card's media column with zero blank space or letterbox margins (`width: 100%; height: 330px; object-fit: cover; border-radius: 12px`).
+3. **Height-Constrained Portrait Mode Exception:**
+   - For portrait posters (Slide 0: *KremFest 2026 Poster*, Slide 10: *We Are Dead Animals*), constrained height to 290px (`object-fit: contain; margin: 0 auto`) with single neon glowing border, preventing tall artwork from pushing title, logline, quote, or footer off the bottom of the screen.
+4. **AI-UI Typography & Layout Hardening:**
+   - Restored `cardTitle` and `cardByline` into the HTML template and synchronized dynamic curation accent colors across image borders, glows, and blockquote left borders.
+   - Added explicit line-heights and padding-bottom (2px) to prevent font descender clipping (`g`, `j`, `p`, `q`, `y`).
+   - Added calibrated fullscreen CSS rules (`:fullscreen .card-16-9`) supporting 1080p kiosk TV display mode (`height: 430px` landscape, `380px` portrait).
+5. **Empirical Verification & Testing:**
+   - Recompiled `splash_cards.html` and rendered all 12 slides via headless Chrome, visually auditing screenshots of Slides 0, 1, 2, 4, 5, 10, and 11 for pixel-perfect edge-to-edge alignment and zero text clipping.
+6. **Version Bump to v0.2.5:**
+   - Synchronized Operator HUD header, Tab 14 sizzle studio, and devlogs to `v0.2.5`.
+
+🏷️ **Version:** `v0.2.5` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-23 18:30] - v0.2.4: Universal Centered Glance Box Alignment Across All Years & Public GitHub Push 🚀🎯✨**
 
 📝 **Summary**
