@@ -1,15 +1,20 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.12)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.13)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.12` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 23:05 PDT  
+> **Project Version:** `v0.2.13` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 24, 2026 | 00:15 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Thursday Rehearsal, Dry-Run Test Pack, Errand Ops & Dev HUD Checklist Calibration (v0.2.13 - Sept 24, 2026):**
+   - **Master Operations Checklist (Tab 8) Expansion:** Transmuted operator directives into explicit, actionable checklist checkpoints across `render_festival_ops.py` and `dev_dashboard/index.html`: Quest 2 backup recharge & Horizon OS update check (`ops-d10-q2-update`); Meta Horizon mobile app install & headset pairing (`ops-d10-horizon-app`); Laptop spectator casting rehearsal via MQDH & web casting (`ops-d10-laptop-mirror`); Desktop Meta (Oculus) Link software update check (`ops-d10-oculus-link-update`); Maiden Flight PC VR laptop build Link cable testing (`ops-d10-maiden-flight-link`); Mobile travel router configuration on 5GHz Wi-Fi 'A' band (`ops-d10-router-wifi-a`); 2x 20,000 mAh PD power banks recharge + long right-angle headset charging cables (`ops-d10-powerbanks-charge`); Hands-free operator headlamp battery test (`ops-d10-headlamp-batteries`); Thursday dry-run test pack into luggage cart/pelican case (`ops-d10-pack-test`); FedEx lineup printing + presentation folder purchase (`ops-d10-fedex-folder`); Julia partner coordination for extra 70% alcohol wipes & bank cash deposit (`ops-d10-julia-wipes-cash`); Life & errand ops: Pause Netflix subscription (`ops-d10-netflix-pause`) & PCC gummy run (`ops-d10-pcc-gummies`); Friday iPad Air extra charging cord (`ops-d11-ipad-cord`).
+   - **Dedicated Errand Category G Deployment:** Added Category G ("Errand Runs, Partner Coordination & Life Ops") to `EQUIPMENT_CATEGORIES` for focused tracking.
+   - **Ecosystem Compilation & Verification:** Recompiled `private/dev_dashboard/index.html` via `build_social_hub.py`. Verified HTTP 200 on Port 3040 with all new checkboxes dynamically wired and persisted.
 
 0. **LinkedIn Character Budget Calibration & Dev HUD Social Media Hub Update (v0.2.12 - Sept 23, 2026):**
    - **Character Budget Optimization (< 3,000 Chars):** Diagnosed root cause of LinkedIn post rejection: previous draft was 3,245 characters (and user draft was 3,050 characters), surpassing LinkedIn's strict 3,000-character ceiling. Streamlined copy into two calibrated options preserving 100% of all 10 official experiences, headliners, guest spots, links, and credits:

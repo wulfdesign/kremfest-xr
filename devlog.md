@@ -4,6 +4,33 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-24 00:15] - v0.2.13: Thursday Rehearsal, Dry-Run Test Pack, Errand Ops & Dev HUD Checklist Calibration 🎒🥽📺🔋✨**
+
+📝 **Summary**
+1. **Master Operations Checklist (Tab 8) Expansion:**
+   - Transmuted operator directives into explicit, actionable checklist checkpoints across `render_festival_ops.py` and `dev_dashboard/index.html`:
+     - **Quest 2 Recharge & OS Update:** Fully recharge backup headset to 100% and update Horizon OS (`ops-d10-q2-update`).
+     - **Meta Horizon Mobile App:** Install and pair phone/iPad with Quest 3 and Quest 2 for floor management & casting (`ops-d10-horizon-app`).
+     - **Laptop Mirror Rehearsal:** Test video casting from Quest 3 & 2 to laptop via MQDH & web casting (`ops-d10-laptop-mirror`).
+     - **Oculus Link Desktop Check:** Ensure desktop Meta Quest Link PC software is updated to eliminate Friday driver prompts (`ops-d10-oculus-link-update`).
+     - **Maiden Flight PC VR Link Cable Test:** Connect Quest 3 to laptop via 16ft Link cable and test tethered PC VR build as emergency backup (`ops-d10-maiden-flight-link`).
+     - **5GHz Wi-Fi 'A' Mobile Router Band:** Configure travel router to high-bandwidth 5GHz channel ('Wi-Fi A', avoiding congested 2.4GHz G band) (`ops-d10-router-wifi-a`).
+     - **Power Banks & Long Cords:** Fully charge 2x 20,000 mAh PD power banks and pack long right-angle USB-C cables to wear while in-headset (`ops-d10-powerbanks-charge`).
+     - **Hands-Free Headlamp:** Locate operator headlamp and verify fresh batteries for dark club inspection (`ops-d10-headlamp-batteries`).
+     - **Thursday Dry-Run Test Pack:** Full rehearsal pack of all gear into luggage cart, backpack, and cases (`ops-d10-pack-test`).
+     - **FedEx Lineup Print & Presentation Folder:** Print copies of lineup sheets and purchase clean presentation folder at FedEx down the street (`ops-d10-fedex-folder`).
+     - **Julia Errand Coordination:** Coordinate with Julia for extra 70% alcohol wipes on the way home and bank cash deposit grab (`ops-d10-julia-wipes-cash`).
+     - **Life & Errand Ops:** Pause Netflix subscription (`ops-d10-netflix-pause`) and grab gummies at PCC (`ops-d10-pcc-gummies`).
+     - **Friday iPad Extra Charging Cord:** Pack dedicated extra USB-C charging cord for iPad Air queue display (`ops-d11-ipad-cord`).
+2. **Dedicated Errand Category G Deployment:**
+   - Deployed Category G ("Errand Runs, Partner Coordination & Life Ops") to `EQUIPMENT_CATEGORIES` for clean, isolated tracking in the Dev HUD.
+3. **Ecosystem Compilation & Verification:**
+   - Recompiled `private/dev_dashboard/index.html` via `build_social_hub.py`. Verified HTTP 200 on Port 3040 with all new checkboxes dynamically wired and persisted.
+
+🏷️ **Version:** `v0.2.13` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-23 23:05] - v0.2.12: LinkedIn Character Budget Calibration & Dev HUD Social Media Hub Update 💼📢🥽✨**
 
 📝 **Summary**
