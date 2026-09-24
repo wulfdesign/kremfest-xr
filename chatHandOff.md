@@ -1,15 +1,28 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.13)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.14)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.13` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 24, 2026 | 00:15 PDT  
+> **Project Version:** `v0.2.14` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 24, 2026 | 16:30 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Dual-Mode Casting Setup Manual, Partner Communications & Solo Operator Alignment (v0.2.14 - Sept 24, 2026):**
+   - **Dual-Mode Step-by-Step Casting Manual in Dev HUD (Tab 8):** Deployed rich interactive operational manual into `render_festival_ops.py` with dynamic mode buttons `switchCastingGuide(mode)`:
+     - **Mode 1 (At-Home Rehearsal on Laptop Only):** 6 granular steps (5GHz Wi-Fi "A", laptop web casting via `oculus.com/casting` or MQDH, Quest 3 share/cast trigger, **critical audio muting** to eliminate destructive feedback screeches, 16:9 fullscreen `F11`, 15-min stability & thermal test).
+     - **Mode 2 (On-Site Showtime on Venue Big TV via HDMI):** 7 venue steps (permanent physical HDMI anchor & gaffer tape, `Win + P` Duplicate/Extend, club floor audio routing, 5GHz travel router, `F11` fullscreen, **GeekFest West <3-second recovery protocol**, and between-rider Sizzle Reel attractor mode).
+   - **Dispatched Partner Communications Status Synchronization:**
+     - Algoriddim djay: Marked `✅ DISPATCHED / SENT (Sept 24)` on laurels & VIP artist pass delivery card.
+     - Dimitri Vallein: Marked `✅ DISPATCHED / SENT (Sept 24)` on The Last Star VR courteous decline card.
+     - Production Honorarium & Accounting Hub: Updated draft email to Nicole Stone & DJ Julia Camp to reflect locked 10-experience lineup and clean spectator setup without iPad Air.
+   - **Solo Operator Hardware Scope Hardening:**
+     - Officially de-scoped iPad Air (passcode lockout requires factory reset, deferred post-weekend) and Quest 2 (broken/taped headstrap, held in reserve on boat).
+     - Standardized operations on **100% focus on one pristine Meta Quest 3 station** mirrored live to venue spectator TV.
+   - **Ecosystem Compilation & Verification:** Recompiled `private/dev_dashboard/index.html` via `build_social_hub.py`. Verified HTTP 200 on Port 3040.
 
 0. **Thursday Rehearsal, Dry-Run Test Pack, Errand Ops & Dev HUD Checklist Calibration (v0.2.13 - Sept 24, 2026):**
    - **Master Operations Checklist (Tab 8) Expansion:** Transmuted operator directives into explicit, actionable checklist checkpoints across `render_festival_ops.py` and `dev_dashboard/index.html`: Quest 2 backup recharge & Horizon OS update check (`ops-d10-q2-update`); Meta Horizon mobile app install & headset pairing (`ops-d10-horizon-app`); Laptop spectator casting rehearsal via MQDH & web casting (`ops-d10-laptop-mirror`); Desktop Meta (Oculus) Link software update check (`ops-d10-oculus-link-update`); Maiden Flight PC VR laptop build Link cable testing (`ops-d10-maiden-flight-link`); Mobile travel router configuration on 5GHz Wi-Fi 'A' band (`ops-d10-router-wifi-a`); 2x 20,000 mAh PD power banks recharge + long right-angle headset charging cables (`ops-d10-powerbanks-charge`); Hands-free operator headlamp battery test (`ops-d10-headlamp-batteries`); Thursday dry-run test pack into luggage cart/pelican case (`ops-d10-pack-test`); FedEx lineup printing + presentation folder purchase (`ops-d10-fedex-folder`); Julia partner coordination for extra 70% alcohol wipes & bank cash deposit (`ops-d10-julia-wipes-cash`); Life & errand ops: Pause Netflix subscription (`ops-d10-netflix-pause`) & PCC gummy run (`ops-d10-pcc-gummies`); Friday iPad Air extra charging cord (`ops-d11-ipad-cord`).

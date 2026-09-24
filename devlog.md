@@ -4,6 +4,28 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-24 16:30] - v0.2.14: Dual-Mode Casting Manual, Partner Communications & Solo Operator Alignment 📺🎪📧🎒✨**
+
+📝 **Summary**
+1. **Interactive Step-by-Step Casting & Spectator Display Manual (Tab 8):**
+   - Deployed comprehensive dual-mode operational manual directly into Dev HUD Master Operations (Tab 8) via `render_festival_ops.py` with dynamic JS switcher `switchCastingGuide(mode)`:
+     - **Mode 1 (At-Home Rehearsal on Laptop Only):** 6 granular steps (5GHz Wi-Fi "A" band calibration, laptop browser receiver via `oculus.com/casting` or MQDH, Quest 3 share/cast trigger, **critical audio muting** to prevent destructive microphone-speaker feedback screeches, 16:9 fullscreen `F11`, 15-minute stability & thermal test).
+     - **Mode 2 (On-Site Showtime on Venue Big TV via HDMI):** 7 venue steps (permanent physical HDMI cable anchor & 2-inch gaffer floor tape, `Win + P` Duplicate/Extend, club floor audio routing, 5GHz travel router lock, `F11` borderless fullscreen, **GeekFest West <3-second recovery protocol** for sleep/wake restoration without unplugging HDMI, and between-rider Sizzle Reel attractor mode).
+2. **Dispatched Partner Communications Status Synchronization:**
+   - Ingested Magus Wulf's status updates into Dev HUD Tab 8:
+     - Marked **Algoriddim djay** laurels & VIP artist pass delivery card with `✅ DISPATCHED / SENT (Sept 24)`.
+     - Marked **Dimitri Vallein** (The Last Star VR courteous decline) card with `✅ DISPATCHED / SENT (Sept 24)`.
+     - Updated **Production Honorarium & Accounting Hub** email draft to Nicole Stone & DJ Julia Camp to reflect the finalized 10-experience lineup and clean spectator setup without the iPad Air.
+3. **Solo Operator Hardware Scope Hardening:**
+   - Formally de-scoped the locked iPad Air (passcode lockout requires factory reset, deferred post-festival) and Quest 2 (taped headstrap, held in reserve on boat).
+   - Standardized operations on **100% focus on one pristine Meta Quest 3 station** mirrored live to venue spectator TV.
+4. **Ecosystem Compilation & Server Verification:**
+   - Recompiled `private/dev_dashboard/index.html` via `build_social_hub.py`. Verified HTTP 200 on Port 3040 with dynamic mode toggle and updated partner cards.
+
+🏷️ **Version:** `v0.2.14` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-24 00:15] - v0.2.13: Thursday Rehearsal, Dry-Run Test Pack, Errand Ops & Dev HUD Checklist Calibration 🎒🥽📺🔋✨**
 
 📝 **Summary**
