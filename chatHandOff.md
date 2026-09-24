@@ -1,15 +1,21 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.9)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.10)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.9` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 21:05 PDT  
+> **Project Version:** `v0.2.10` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 21:40 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Sizzle Reel Duration Controls Compaction & Ballot QR Double Border Purge (v0.2.10 - Sept 23, 2026):**
+   - **Duration Presets Compaction (`6s`, `10s`, `15s`, `20s`):** Replaced the 5-button sequence with 4 clean, tightly spaced presets: **`6s`**, **`10s`**, **`15s`**, **`20s`** labeled `DUR:`. Reduced button gaps to 2px and padding to 2px 6px, bringing all presets close together and reducing toolbar width by ~120px.
+   - **Single-Row Controls Bar Hardening:** Compacted spacing across all toolbar controls (`.select-card`, `.btn-nav`, `.ticker-pill`, `#fontSelect`, `.btn-fullscreen`). Hardened `.controls-bar`, `.controls-left`, and `.controls-right` with `flex-wrap: nowrap; white-space: nowrap; overflow-x: auto;` and `flex-shrink: 0;` on `.btn-fullscreen`. Empirically verified across 1920×1080, 1440×900, and 1280×800 that the toolbar measures strictly 45px tall (1 single row) with `📺 FULLSCREEN TV DISPLAY (F11)` anchored on the top line (`y: 7`).
+   - **Ballot QR Double Border Eradication (Slide 1):** Diagnosed root cause: `kremfest_2026_vote_color.svg` line 15 had an explicit glowing cyberpunk border `<rect stroke="url(#neonSquareGrad)" ... />` that nested inside `.qr-stage-box`'s outer glowing cyan border, creating an unsightly double border. Added `"vote_ballot"` to `QR_MANIFEST` in `generate_lineup_qrs.py` and regenerated high-contrast styled QR codes (`qr_vote_ballot_neon.png` and `qr_vote_ballot_print.png`) using `SquareModuleDrawer` and obsidian background. Removed the nested glowing stroke from `kremfest_2026_vote_color.svg`. Updated Slide 1 (`lineup-glance`) in `render_splash_cards.py` to point to `assets/images/qr/qr_vote_ballot_neon.png`, leaving exactly one clean glowing cyan container border matching all other 11 slides.
+   - **Empirical Verification:** Headless Chrome tests verified bar height is strictly 45px across viewports. Captured element screenshot (`private/debug/verified_slide1_ballot_qr.png`) and full-page screenshot (`private/debug/verified_splash_cards_slide1.png`) empirically confirming zero double borders and seamless 1-row layout.
 
 0. **Sizzle Reel Fluid Auto-Resizing, Outfit Default Font & Single-Row Controls Bar (v0.2.9 - Sept 23, 2026):**
    - **Fluid Left-Hand Image Auto-Resizing (Dead Space Eradication):** Eliminated all rigid pixel height constraints (`485px`, `420px`, `460px`, `590px`) from `.hero-thumb-box` and `.hero-thumb-img`. Converted `.col-left-media` and `.hero-thumb-box` to true responsive flex containers (`flex: 1 1 0; min-height: 0; min-width: 0; width: 100%; height: 100%; padding: 6px 10px; box-sizing: border-box;`). `.hero-thumb-img` uses `max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;`, automatically maximizing image display across any screen resolution with gentle breathing padding.

@@ -11,8 +11,8 @@
     </filter>
   </defs>
 
-  <!-- Glowing Cyberpunk Border -->
-  <rect x="2" y="2" width="196" height="196" rx="10" fill="#070710" stroke="url(#neonSquareGrad)" stroke-width="2" filter="url(#neonSquareGlow)"/>
+  <!-- High Contrast Obsidian Background -->
+  <rect x="2" y="2" width="196" height="196" rx="10" fill="#070710"/>
 
   <!-- High Contrast White Inner Plate for Flawless Camera Scanning -->
   <rect x="10" y="10" width="180" height="180" rx="6" fill="#ffffff"/>

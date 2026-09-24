@@ -4,6 +4,29 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 21:40] - v0.2.10: Sizzle Reel Duration Controls Compaction & Ballot QR Double Border Purge ⏱️🎴📺✨**
+
+📝 **Summary**
+1. **Duration Presets Compaction (`6s`, `10s`, `15s`, `20s`):**
+   - Replaced the 5-button sequence (`5s`, `8s`, `10s`, `15s`, `20s`) with 4 clean, tightly spaced presets: **`6s`**, **`10s`**, **`15s`**, **`20s`** labeled `DUR:`.
+   - Reduced button gaps to 2px and padding to 2px 6px, bringing all presets close together and reducing toolbar width by ~120px.
+2. **Single-Row Controls Bar Hardening:**
+   - Compacted spacing across all toolbar controls (`.select-card`, `.btn-nav`, `.ticker-pill`, `#fontSelect`, `.btn-fullscreen`).
+   - Hardened `.controls-bar`, `.controls-left`, and `.controls-right` with `flex-wrap: nowrap; white-space: nowrap; overflow-x: auto;` and `flex-shrink: 0;` on `.btn-fullscreen`.
+   - Empirically verified across 1920×1080, 1440×900, and 1280×800 that the toolbar measures strictly 45px tall (1 single row) with `📺 FULLSCREEN TV DISPLAY (F11)` anchored on the top line (`y: 7`).
+3. **Ballot QR Double Border Eradication (Slide 1):**
+   - Diagnosed root cause: `kremfest_2026_vote_color.svg` line 15 had an explicit glowing cyberpunk border `<rect stroke="url(#neonSquareGrad)" ... />` that nested inside `.qr-stage-box`'s outer glowing cyan border, creating an unsightly double border.
+   - Added `"vote_ballot"` to `QR_MANIFEST` in `generate_lineup_qrs.py` and regenerated high-contrast styled QR codes (`qr_vote_ballot_neon.png` and `qr_vote_ballot_print.png`) using `SquareModuleDrawer` and obsidian background.
+   - Removed the nested glowing stroke from `kremfest_2026_vote_color.svg`.
+   - Updated Slide 1 (`lineup-glance`) in `render_splash_cards.py` to point to `assets/images/qr/qr_vote_ballot_neon.png`, leaving exactly one clean glowing cyan container border matching all other 11 slides.
+4. **Empirical Verification:**
+   - Headless Chrome tests verified bar height is strictly 45px across viewports.
+   - Captured element screenshot (`private/debug/verified_slide1_ballot_qr.png`) and full-page screenshot (`private/debug/verified_splash_cards_slide1.png`) empirically confirming zero double borders and seamless 1-row layout.
+
+🏷️ **Version:** `v0.2.10` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-23 21:05] - v0.2.9: Sizzle Reel Fluid Auto-Resizing, Outfit Default Font & Single-Row Controls Bar 🖼️🔤📺✨**
 
 📝 **Summary**
