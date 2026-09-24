@@ -4,7 +4,58 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
-### **[2026-09-23 16:45] - v0.1.98: Center-Aligned Multi-Year "Showcase at a Glance" & 2018 1-Line Selections Calibration 🧪📐📜✨**
+### **[2026-09-23 17:55] - v0.2.1: Automated Anti-Leak Security Firewall & Public Status Sanitizer Implementation 🛡️🔒🛑✨**
+
+📝 **Summary**
+1. **Permanent Compile-Time Anti-Leak Security Firewall:**
+   - Implemented `write_verified_file()` and `PROHIBITED_LEAK_PATTERNS` regex validator in `private/submission_pipeline/tools/publish_to_public.py`.
+   - Halts static site compilation and raises a `ValueError` if operational strings (e.g. `keys secured`, `app keys received`, `ticket #\d+`, `voucher code`, `license key`, `nda signed`, `internal note`, `confidential`, `dropbox transfer`) are ever found in any compiled public HTML file.
+   - Tested firewall trigger empirically: verified instant halt on forbidden test strings.
+2. **Automated Public Status Sanitizer:**
+   - Integrated `sanitize_public_status()` across `publish_to_public.py` and `render_staging_preview.py` to ensure VIP and candidate entries can only ever output clean public statuses (e.g. `Curated Official Selection` or `Official Selection`).
+3. **Live Endpoint Verification & Centered Glance Box Confirmation:**
+   - Audited live Port 3039 (`http://localhost:3039/index.html` & `http://localhost:3039/2026/index.html`) and Port 3040 (`http://localhost:3040/dev/index.html` & `http://localhost:3040/dev/2026/index.html`): 100% clean (0 leaks), verified presence of the centered *2026 Showcase Lineup at a Glance* on both homepage and 2026 portal.
+4. **Version Bump to v0.2.1:**
+   - Incremented version across Developer HUD header, Tab 14 sizzle studio, and CSS query parameters.
+
+🏷️ **Version:** `v0.2.1` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
+### **[2026-09-23 17:45] - v0.2.0: Emergency Sanitization of Public Lineup Status Strings on Port 3039 🛡️🚨🧹✨**
+
+📝 **Summary**
+1. **Emergency Sanitization of Leaked Operational Metadata:**
+   - Eradicated all leaked internal logistics, developer support tickets, and app key reception notes from `private/submission_pipeline/tools/publish_to_public.py` and `render_staging_preview.py`.
+   - Specifically replaced `Curated Official Selection (Keys Secured — Algoriddim Ticket #259545)`, `Curated Official Selection (App Keys Received)`, and `Curated Official Selection (Free on Meta Horizon Store)` with clean, professional `Curated Official Selection`.
+2. **Full Recompilation & Empirical Port 3039 Audit:**
+   - Recompiled all static HTML files (`index.html`, `2026/index.html`, `2025/index.html`, etc.) for the public site served on Port 3039 and the Dev mirror on Port 3040.
+   - Tested live HTTP 200 response on `http://localhost:3039/index.html` and `http://localhost:3039/2026/index.html`: exactly 0 occurrences of "Keys Secured", "App Keys Received", or "Ticket #259545".
+   - Confirmed all 5 Invited VIP Industry Showcases display clean public status: `Status: Curated Official Selection`.
+3. **Version Bump to v0.2.0:**
+   - Synchronized Operator HUD badges, Sizzle Reel studio, and manifests across both repositories to `v0.2.0`.
+
+🏷️ **Version:** `v0.2.0` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
+
+### **[2026-09-23 17:00] - v0.1.99: Social One-Sheet Card Edge-to-Edge Overhaul & Universal 2026 Headliner Artwork Across All Years 🎨🖼️🎴🧪✨**
+
+📝 **Summary**
+1. **Universal 2026 Headliner Key Art Deployment Across All Historical & Active Years:**
+   - Per operator directive, eliminated obsolete 2018/2019 festival laurel artwork for *UpLiftVR ‘Maiden Flight’ Balloon Ride* and *High Desert Eclipse*.
+   - Promoted the official 2026 banner images (`assets/images/headliners/maiden_flight_banner.jpg` and `high_desert_eclipse_banner.jpg`) as the authoritative artwork across all years: `2026`, `2025`, `2019`, and `2018` across both public and dev mirror sites.
+   - Updated `private/submission_pipeline/data/lineups.json` for 2018 and 2019 headliners and recompiled all static pages via `publish_to_public.py`.
+   - Staged dedicated high-resolution copies into `assets/images/2026/maiden_flight_2026.jpg` and `assets/images/2026/high_desert_eclipse_2026.jpg`.
+2. **Social One-Sheet Card Mini-Card Layout & Typography Overhaul:**
+   - Overhauled `.mini-experience-card` in `private/preview/social_lineup_card.html`: stripped outer card padding (`padding: 0`), eliminated nested `.card-thumb-wrap` borders and margins.
+   - Made thumbnail images extend edge-to-edge flush with the top, bottom, and left outer border of each submission card (`width: 148px; height: 100%; object-fit: cover`).
+   - Expanded visible thumbnail surface area by over 2.5× (from constrained 105×72px to 148×94px).
+   - Realigned text container `.card-info-wrap` to the right with balanced internal padding (`9px 14px`), refined line heights (`1.25`), and added bottom padding (`2px`) to eliminate font descender clipping (`y`, `g`, `p`, `j`).
+3. **Calibrated 2x Retina PNG Rasterization:**
+   - Re-rendered master 2x Retina one-sheet PNG via headless Edge with exact bounding box (`1200×816` at 2x scale = `2400×1632` px, 1.49 MB) saved to `assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png` and `private/preview/lineup_social_card_clean.png`.
+   - Verified that Slide 2 in the Sizzle Reel (`splash_cards.html`, Tab 14) and Dev HUD Tab 6 automatically display the crisp updated 2x one-sheet card.
+4. **Dev HUD & Versioning Synchronization:**
+   - Updated download button in Dev HUD Tab 6 to `📸 Download 2x Retina PNG (1.49 MB)`.
+   - Bumped system version across all manifests, Dev HUD badges, and Sizzle Reel to `v0.1.99`.
+
+🏷️ **Version:** `v0.1.99` | **Attribution:** 🐈 Hermes & 🧙‍♂️ Magus Wulf | **Status:** 🧪 Ready for QA
 
 📝 **Summary**
 1. **Universal Center Alignment for "Showcase at a Glance":**
