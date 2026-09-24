@@ -4,6 +4,30 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 20:00] - v0.2.7: Sizzle Reel Left-Hand Image Expansion & KremFest Poster Asset Calibration (Lossless De-Letterbox Crop) 🖼️🎬✨**
+
+📝 **Summary**
+1. **Lossless Poster De-Letterboxing:**
+   - Diagnosed root cause of the residual border sensation on Slide 0: `assets/images/2026/kremfest_2026_poster.jpg` contained 80px baked-in black letterbox bars on the left (x: 0–79) and right (x: 721–799).
+   - Performed lossless crop extracting the 640×800 content (4:5 ratio) with 0 black padding, completely eliminating any artificial border feeling.
+2. **Portrait Poster Display Expansion (+40.3% Width / +97% Surface Area):**
+   - Scaled `.hero-thumb-box.mode-portrait` height to 460px (max-height 475px; 590px in fullscreen) with 100% contained fit.
+   - Result: KremFest 2026 poster now renders at 368px wide by 460px tall with zero borders and deep filmic drop shadow (`box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95)`).
+3. **Landscape Artwork Stage Height Expansion (+30% Visual Surface Area):**
+   - Scaled `.hero-thumb-box.mode-landscape` height from 375px to 420px (max-height 435px; 540px in fullscreen) with `max-height: 420px; box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9)`.
+   - Dramatically increases visual presence across all 10 experience cards (*Maiden Flight*, *High Desert Eclipse*, *Lineup One-Sheet*, *djay*, *Trip the Light*, *CONNECTOME*, etc.) with zero cropping.
+4. **Border Glow Perimeter Purge in Dynamic JavaScript:**
+   - Refined `updateCard()` to assign pure organic filmic drop shadows without colored perimeter halos (`${glowColor}25`) that could be mistaken for an outline.
+5. **Headroom & Margins Optimization:**
+   - Calibrated `.card-16-9` padding to `24px 32px; gap: 26px;` and `.col-left-media` margin to `4px 0 8px 0`.
+   - Verified that all bottom copy (logline, quote with pink border, festival metadata, and venue footer) remains cleanly anchored within the card bounds.
+6. **Empirical Screenshot Verification:**
+   - Captured and audited headless Chrome card element screenshots of Slide 0, Slide 1, Slide 2, and Slide 10, confirming zero cropping, zero borders, and razor-sharp typography.
+
+🏷️ **Version:** `v0.2.7` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-23 19:15] - v0.2.6: DaVinci & Pixel Visual Design Guild Overhaul — Typographic Identity, Zero-Border & Spatial Re-balancing 🎨✨📐🎬**
 
 📝 **Summary**

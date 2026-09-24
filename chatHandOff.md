@@ -1,15 +1,24 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.6)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.7)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.6` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 19:42 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits `a0d8dab` & `6298965` [v0.2.6] staged locally pending operator review)  
+> **Project Version:** `v0.2.7` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 20:05 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Sizzle Reel Left-Hand Image Expansion & KremFest Poster Asset Calibration (Lossless De-Letterbox Crop) (v0.2.7 - Sept 23, 2026):**
+   - **Lossless Poster De-Letterboxing:** Extracted and cropped out the 80px baked-in black letterbox padding bars from `assets/images/2026/kremfest_2026_poster.jpg` (retaining full 640×800 content with 4:5 aspect ratio), permanently eradicating all artificial border appearance.
+   - **Portrait Poster Display Expansion (+40.3% Width / +97% Surface Area):** Scaled `.hero-thumb-box.mode-portrait` height to 460px (max-height 475px; 590px in fullscreen) with 100% contained fit. The KremFest 2026 poster now renders at 368px wide by 460px tall with zero borders and deep filmic drop shadow (`box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95)`).
+   - **Landscape Artwork Stage Height Expansion (+30% Visual Surface Area):** Scaled `.hero-thumb-box.mode-landscape` height from 375px to 420px (max-height 435px; 540px in fullscreen) with `max-height: 420px; box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9)`, dramatically increasing visual presence across all 10 experience cards with zero cropping.
+   - **Border Glow Perimeter Purge in Dynamic JavaScript:** Refined `updateCard()` to assign pure organic filmic drop shadows without colored perimeter halos (`${glowColor}25`) that could be mistaken for an outline.
+   - **Headroom & Margins Optimization:** Calibrated `.card-16-9` padding to `24px 32px; gap: 26px;` and `.col-left-media` margin to `4px 0 8px 0`, guaranteeing all bottom copy, loglines, quotes, and footers remain cleanly anchored with zero descender clipping.
+   - **Empirical Screenshot Verification:** Captured and audited headless Chrome card element screenshots of Slide 0, Slide 1, Slide 2, and Slide 10, confirming zero cropping, zero borders, and razor-sharp typography.
+   - **System Versioning Synchronization:** Synchronized version to `v0.2.7` across Operator HUD, Tab 14, and devlogs.
 
 0. **DaVinci & Pixel Visual Design Guild Overhaul — Typographic Identity, Zero-Border & Spatial Re-balancing (v0.2.6 - Sept 23, 2026):**
    - **Typographic Identity Upgrade (`Syne`):** Per operator directive and Design Guild verdict (`🎨 DaVinci` & `✨ Pixel`), upgraded slide titles to `Syne` (Weight 800) with `-0.02em` tracking and dual-tone text shadows, imbuing the presentation with authentic European underground electronic music festival energy. Imported `Syne`, `Unbounded`, and `Orbitron` alongside `Inter` and `Rajdhani` via Google Fonts.
@@ -367,12 +376,9 @@
 
 ## 🎯 Top Priority Directives for Next Session
 
-1. **Sizzle Reel Image Expansion & KremFest Poster Asset Calibration (Post-v0.2.6 Polish):**
-   - Expand left-hand hero image container surface area even further in `render_splash_cards.py` / `splash_cards.html` to maximize visual impact.
-   - Perform a lossless crop of the baked-in black letterbox bars on the left/right of `assets/images/2026/kremfest_2026_poster.jpg` so the festival poster scales wider without any artificial border feeling.
-2. **Empirical Local QA Sign-off:**
-   - Magus Wulf verifies `http://localhost:3040/preview/splash_cards.html` (Sizzle Reel floor loop with `Syne 800` typography and unbordered imagery) and `http://localhost:3039/index.html` (Centered glance sections, public showcase).
-3. **Pre-Festival 48-Hour Headset & Hardware Rehearsal:**
+1. **Empirical Local QA Sign-off:**
+   - Magus Wulf verifies `http://localhost:3040/preview/splash_cards.html` (Sizzle Reel floor loop with `Syne 800` typography, unbordered de-letterboxed 460px KremFest poster, 420px landscape experiences, and sleek 290px QR column) and `http://localhost:3039/index.html` (Centered glance sections, clean public showcase).
+2. **Pre-Festival 48-Hour Headset & Hardware Rehearsal:**
    - Doors open Friday, September 25 at 10:00 PM PDT! Standalone Meta Quest 3 floor calibration, TV HDMI mirroring, and iPad queue screen standby.
-4. **Public GitHub Remote Synchronization Gate:**
-   - When Magus Wulf confirms local empirical QA pass, synchronize local commits (`a0d8dab` & `6298965`) through `v0.2.6` to GitHub `origin/main`. (Strictly local-only until confirmed).
+3. **Public GitHub Remote Synchronization Gate:**
+   - When Magus Wulf confirms local empirical QA pass, synchronize local commits through `v0.2.7` to GitHub `origin/main`. (Strictly local-only until confirmed).
