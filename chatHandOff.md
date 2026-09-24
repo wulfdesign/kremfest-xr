@@ -1,15 +1,45 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.1.98)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.6)
 
-> **Familiar Anchor:** Hermes (`🐈`) & Magus Wulf (`🧙‍♂️🐺✨`)  
+> **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.1.98` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 16:45 PDT  
-> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `76ee373`; local 2x Retina assets, dev sandbox mirror, floor loop, and centered glance layout staged locally pending operator review)  
-> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/2026/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop: `http://localhost:3040/preview/splash_cards.html`
+> **Project Version:** `v0.2.6` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 19:42 PDT  
+> **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits `a0d8dab` & `6298965` [v0.2.6] staged locally pending operator review)  
+> **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **DaVinci & Pixel Visual Design Guild Overhaul — Typographic Identity, Zero-Border & Spatial Re-balancing (v0.2.6 - Sept 23, 2026):**
+   - **Typographic Identity Upgrade (`Syne`):** Per operator directive and Design Guild verdict (`🎨 DaVinci` & `✨ Pixel`), upgraded slide titles to `Syne` (Weight 800) with `-0.02em` tracking and dual-tone text shadows, imbuing the presentation with authentic European underground electronic music festival energy. Imported `Syne`, `Unbounded`, and `Orbitron` alongside `Inter` and `Rajdhani` via Google Fonts.
+   - **Total Border Purge Around Hero Artwork:** Completely eradicated all stroke borders from `.hero-thumb-box` and `.hero-thumb-img` across CSS and dynamic JS (`thumbBox.style.border = 'none'`). Replaced strokes with deep organic filmic drop shadows (`box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85)`).
+   - **Zero Top/Bottom Cropping on Landscape Art:** Converted media container to flexible `object-fit: contain` with `height: 375px; max-height: 395px; width: 100%`, preserving 100% of key art without cropping tops, bottoms, or laurels (*Maiden Flight*, *High Desert Eclipse*, *Lineup One-Sheet*, *Firedrake VR*).
+   - **Enlarged Portrait Poster Sizing:** Scaled portrait posters (Slide 0: *KremFest 2026 Poster*, Slide 10: *We Are Dead Animals*) up to 410px–420px (+110% visual surface area), unbordered and centered against ambient blurred backdrops.
+   - **16:9 Canvas Spatial Re-balancing (Slim QR Column):** Slimmed `.col-right` QR tower from 563px down to a razor-sharp 290px (`grid-template-columns: 1fr 290px`), expanding left media column width by +38% (from ~761px to ~1050px) while preserving large 210px QR codes with zero dead space.
+   - **Bottom Copy Anchoring:** Restructured `.col-left` into header, media, and bottom zones, anchoring loglines, quotes, and metadata flush to the bottom edge.
+   - **Version Bump to v0.2.6:** Synchronized Operator HUD header, Tab 14 sizzle studio, and devlogs to `v0.2.6`.
+
+0. **Sizzle Reel `splash_cards.html` Layout & Border Overhaul & AI-UI Optimization (v0.2.5 - Sept 23, 2026):**
+   - **Double Border & Extra Padding Elimination:** Eradicated redundant double borders and nested padding around hero artwork in `render_splash_cards.py` and `private/preview/splash_cards.html`. Stripped inner `<img>` borders and box padding.
+   - **Edge-to-Edge Flush Landscape Mode Layout:** For landscape images (Slides 1–9, 11), configured `.hero-thumb-box.mode-landscape` to extend 100% flush from left to right edge of the card's media column.
+   - **Height-Constrained Portrait Mode Exception:** Constrained portrait posters to 290px height with ambient blurred background.
+   - **AI-UI Typography & Layout Hardening:** Restored `cardTitle` and `cardByline`, added line-height and padding to prevent descender clipping, and calibrated fullscreen CSS rules (`:fullscreen .card-16-9`).
+   - **Empirical Verification:** Recompiled `splash_cards.html` and visually audited screenshots of Slides 0, 1, 2, 4, 5, 10, and 11 for pixel-perfect edge-to-edge alignment.
+
+0. **Universal Centered Glance Box Alignment Across All Years & Public GitHub Push (v0.2.4 - Sept 23, 2026):**
+   - **Public Remote Push:** Synchronized all verified commits through `v0.2.3` to GitHub `origin/main` following operator authorization.
+   - **Universal Centered Glance Box Calibration:** Hardened `render_glance_box()` in `publish_to_public.py` with inline center-alignment styles applied across the container (`text-align: center; margin: 36px auto; max-width: 1050px`), title, flex list (`align-items: center`), and individual `<li>` items.
+   - **Cache-Busted Stylesheet:** Linked all historical pages (2025, 2019, 2018, 2017) to cache-busted `style.css?v=0.2.4`.
+   - **Desktop 1-Line Typography:** Refined `.glance-bullets li` with fluid responsive font sizing (`clamp(0.85rem, 1.15vw, 0.98rem)`) guaranteeing strict 1-line presentation per entry on desktop across all years.
+
+0. **Universal Headliner Artwork & Public Dev Site Sync (v0.2.3 - Sept 23, 2026):**
+   - Updated Maiden Flight and High Desert Eclipse headliner artwork across all pages.
+   - Recompiled public site and synchronized with dev sandbox.
+
+0. **Removal of Internal Status Text & Track Standardization (v0.2.2 - Sept 23, 2026):**
+   - Stripped internal review notes (`Status: Curated Official Selection`) from all public-facing selection cards.
+   - Standardized selection track badges (`✨ Curated Official Selection (Invited VIP Showcase)`, `🏆 Juried Official Selection`, `🌟 Guest Spotlight Selection`).
 
 0. **Center-Aligned Multi-Year "Showcase at a Glance" & 2018 1-Line Selections Calibration (v0.1.98 - Sept 23, 2026):**
    - **Universal Center Alignment:** Transmuted `.glance-section`, `.glance-title`, and `.glance-bullets` in `assets/css/style.css` to a symmetrical, center-aligned layout without left-side bullet discs. Applies universally across all festival years on Port 3040 Dev Sandbox (`/dev/2026/`, `2025`, `2019`, `2018`, `2017`).
@@ -337,7 +367,12 @@
 
 ## 🎯 Top Priority Directives for Next Session
 
-1. **Empirical Local QA Sign-off:** Magus Wulf verifies `http://localhost:3040/` (Dev HUD Tabs 1-8, especially Tab 2 Staging Vault & Tab 6 VIP Invites) and `http://localhost:3039/2026/index.html` + `http://localhost:3039/2026/vote/index.html` (all 7 experiences & ballot).
-2. **Quest App Key Redemption & Headset Sideload Testing:** Redeem Quest App Keys on Meta Quest 3 for Patrick's *Trip the Light* and Grant's *CONNECTOME*, *CONSTELLATIONS: Touch the Stars*, and *Project Hydra: Iterations*. Conduct floor calibration and verify optical hand-tracking responsiveness.
-3. **🔥🔥🔥 Amazon Associates Account Setup:** Finalize tax/payment onboarding for tag `wulfdesign-20`, re-enable Amazon button in `publish_to_public.py`, and recompile public pages.
-4. **Dispatch 10-Day Countdown Blasts:** Copy and post the 3 ready posts (LinkedIn, Facebook/Instagram, Reddit/Discord) for the Sept 21 deadline.
+1. **Sizzle Reel Image Expansion & KremFest Poster Asset Calibration (Post-v0.2.6 Polish):**
+   - Expand left-hand hero image container surface area even further in `render_splash_cards.py` / `splash_cards.html` to maximize visual impact.
+   - Perform a lossless crop of the baked-in black letterbox bars on the left/right of `assets/images/2026/kremfest_2026_poster.jpg` so the festival poster scales wider without any artificial border feeling.
+2. **Empirical Local QA Sign-off:**
+   - Magus Wulf verifies `http://localhost:3040/preview/splash_cards.html` (Sizzle Reel floor loop with `Syne 800` typography and unbordered imagery) and `http://localhost:3039/index.html` (Centered glance sections, public showcase).
+3. **Pre-Festival 48-Hour Headset & Hardware Rehearsal:**
+   - Doors open Friday, September 25 at 10:00 PM PDT! Standalone Meta Quest 3 floor calibration, TV HDMI mirroring, and iPad queue screen standby.
+4. **Public GitHub Remote Synchronization Gate:**
+   - When Magus Wulf confirms local empirical QA pass, synchronize local commits (`a0d8dab` & `6298965`) through `v0.2.6` to GitHub `origin/main`. (Strictly local-only until confirmed).
