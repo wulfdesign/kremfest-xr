@@ -1,15 +1,23 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.11)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.12)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.11` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 22:10 PDT  
+> **Project Version:** `v0.2.12` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 23:05 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **LinkedIn Character Budget Calibration & Dev HUD Social Media Hub Update (v0.2.12 - Sept 23, 2026):**
+   - **Character Budget Optimization (< 3,000 Chars):** Diagnosed root cause of LinkedIn post rejection: previous draft was 3,245 characters (and user draft was 3,050 characters), surpassing LinkedIn's strict 3,000-character ceiling. Streamlined copy into two calibrated options preserving 100% of all 10 official experiences, headliners, guest spots, links, and credits:
+     - **Option 1A (Primary Calibrated Edition):** **2,699 characters** (301-character buffer under limit). Fully detailed loglines, complete credits, festival doors, links, and hashtags.
+     - **Option 1B (Compact Mobile Edition):** **2,367 characters** (633-character buffer under limit). Optimized for mobile clients and company page character limits.
+   - **Operations Documentation Synchronization:** Updated Section 1 of `projects/kremfest-xr/private/operations/social_media_final_lineup_announcement.md` with explicit character budget audits and both copy options.
+   - **Dev HUD Social Media Hub (Tab 6) Upgrade:** Overhauled Post 25 in `build_social_hub.py` and recompiled `private/dev_dashboard/index.html`. Added live character count badges (`2,699 / 3,000 Chars` and `✅ LinkedIn Safe: 2,699 Chars (301 Under 3k Limit)`). Added dedicated 1-click clipboard copy buttons for both Option 1A (`📋 Copy LinkedIn Post (2,699 Chars)`) and Option 1B (`📋 Copy Compact Post (2,367 Chars)`). Embedded expandable preview accordion for Option 1B. Bumped Dev HUD version badge to `v0.1.97`.
+   - **Empirical Server Verification:** Verified HTTP 200 on `http://localhost:3040/` serving the updated Dev HUD with exact character strings verified.
 
 0. **Sizzle Reel Portal Sans Default Font, Firedrake 2x High-Res Master & Headset QA Ingestion (v0.2.11 - Sept 23, 2026):**
    - **Default Heading Font Shift to `Portal Sans`:** Switched default title font across CSS and dynamic JS to the clean modern native system stack **`Portal Sans`** (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif`), directly matching the KremFest XR landing portal. Handled graceful `localStorage` migration so `Portal Sans` activates automatically on first load.

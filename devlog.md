@@ -4,6 +4,29 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 23:05] - v0.2.12: LinkedIn Character Budget Calibration & Dev HUD Social Media Hub Update 💼📢🥽✨**
+
+📝 **Summary**
+1. **LinkedIn Character Budget Optimization (< 3,000 Chars):**
+   - Diagnosed root cause of LinkedIn post rejection: previous draft was 3,245 characters (and user draft was 3,050 characters), surpassing LinkedIn's strict 3,000-character ceiling.
+   - Streamlined copy into two calibrated options preserving 100% of all 10 official experiences, headliners, guest spots, links, and credits:
+     - **Option 1A (Primary Calibrated Edition):** **2,699 characters** (301-character buffer under limit). Fully detailed loglines, complete credits, festival doors, links, and hashtags.
+     - **Option 1B (Compact Mobile Edition):** **2,367 characters** (633-character buffer under limit). Optimized for mobile clients and company page character limits.
+2. **Operations Documentation Synchronization:**
+   - Updated Section 1 of `projects/kremfest-xr/private/operations/social_media_final_lineup_announcement.md` with explicit character budget audits and both copy options.
+3. **Dev HUD Social Media Hub (Tab 6) Upgrade:**
+   - Overhauled Post 25 in `build_social_hub.py` and recompiled `private/dev_dashboard/index.html`.
+   - Added live character count badges (`2,699 / 3,000 Chars` and `✅ LinkedIn Safe: 2,699 Chars (301 Under 3k Limit)`).
+   - Added dedicated 1-click clipboard copy buttons for both Option 1A (`📋 Copy LinkedIn Post (2,699 Chars)`) and Option 1B (`📋 Copy Compact Post (2,367 Chars)`).
+   - Embedded expandable preview accordion for Option 1B.
+   - Bumped Dev HUD version badge to `v0.1.97`.
+4. **Empirical Verification:**
+   - Verified HTTP 200 on `http://localhost:3040/` serving the updated Dev HUD with exact character strings verified.
+
+🏷️ **Version:** `v0.2.12` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-23 22:10] - v0.2.11: Sizzle Reel Portal Sans Default Font, Firedrake 2x High-Res Master & Headset QA Ingestion 🔤🐉🌌🥽✨**
 
 📝 **Summary**
