@@ -4,6 +4,27 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 22:10] - v0.2.11: Sizzle Reel Portal Sans Default Font, Firedrake 2x High-Res Master & Headset QA Ingestion 🔤🐉🌌🥽✨**
+
+📝 **Summary**
+1. **Default Heading Font Shift to `Portal Sans`:**
+   - Switched default title font across CSS and dynamic JS to the clean modern native system stack **`Portal Sans`** (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif`), directly matching the KremFest XR landing portal.
+   - Handled graceful `localStorage` migration so `Portal Sans` activates automatically on first load.
+2. **Firedrake Key Art 2x High-Res Master Upscaling:**
+   - Diagnosed why Firedrake appeared smaller than other experiences: while all other landscape cards used master assets of 1440px to 2560px, Firedrake was constrained by an 800×431 raster, capping its intrinsic scaling.
+   - Generated a pristine 1600×862 2x master (`firedrake_wizards_warren_2026.jpg`) using PIL Lanczos resampling and gentle unsharp masking.
+   - Firedrake now fills the full vertical media height, expanding from 800×431 up to **878px × 473px** (on 1440×900) and **960px × 517px** (on 1080p, and up to 1400px in fullscreen, +44% to +205% surface area).
+3. **In-Headset Testing Ingestion & Operations Action Item:**
+   - Ingested Magus Wulf's hands-on headset testing notes across all 10 selections.
+   - Identified UX friction points for *CONSTELLATIONS: Touch the Stars* (Grant Hinkson / Parietal Lab): unresponsive level reset/tutorial reset buttons, difficulty triggering menu behind thumb/wrist gesture, and drawing stage prerequisite requiring precise reticle centering.
+   - Initialized operational task to source a 30-45s video tutorial demo clip and engineer a laminated floor quick-start guide card with visual 3-phase hand gesture diagrams for festival floor attendants.
+4. **Task Ledger Archival to `COMPLETED.md`:**
+   - Following Magus Wulf's QA verification pass (*"I love it !!! it looks GREAT! ... everything else looks FANTASTIC!"*), officially moved tasks `v0.2.5` through `v0.2.10` to `COMPLETED.md` with chalice `🏆`.
+
+🏷️ **Version:** `v0.2.11` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-23 21:40] - v0.2.10: Sizzle Reel Duration Controls Compaction & Ballot QR Double Border Purge ⏱️🎴📺✨**
 
 📝 **Summary**

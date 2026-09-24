@@ -1,15 +1,21 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.10)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.11)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.10` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 21:40 PDT  
+> **Project Version:** `v0.2.11` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 22:10 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Sizzle Reel Portal Sans Default Font, Firedrake 2x High-Res Master & Headset QA Ingestion (v0.2.11 - Sept 23, 2026):**
+   - **Default Heading Font Shift to `Portal Sans`:** Switched default title font across CSS and dynamic JS to the clean modern native system stack **`Portal Sans`** (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif`), directly matching the KremFest XR landing portal. Handled graceful `localStorage` migration so `Portal Sans` activates automatically on first load.
+   - **Firedrake Key Art 2x High-Res Master Upscaling:** Replaced the low-res 800×431 raster with a pristine 1600×862 2x master (`firedrake_wizards_warren_2026.jpg`) using PIL Lanczos resampling and gentle unsharp masking. Firedrake now fills the full vertical media height, expanding from 800×431 up to **878px × 473px** (on 1440×900) and **960px × 517px** (on 1080p, and up to 1400px in fullscreen, +44% to +205% surface area).
+   - **In-Headset Testing Ingestion & Operations Action Item:** Ingested Magus Wulf's hands-on headset testing notes across all 10 selections. Identified UX friction points for *CONSTELLATIONS: Touch the Stars* (Grant Hinkson / Parietal Lab): unresponsive level reset/tutorial reset buttons, difficulty triggering menu behind thumb/wrist gesture, and drawing stage prerequisite requiring precise reticle centering. Initialized operational task to source a 30-45s video tutorial demo clip and engineer a laminated floor quick-start guide card with visual 3-phase hand gesture diagrams for festival floor attendants.
+   - **Task Ledger Archival to `COMPLETED.md`:** Following Magus Wulf's QA verification pass (*"I love it !!! it looks GREAT! ... everything else looks FANTASTIC!"*), officially moved tasks `v0.2.5` through `v0.2.10` to `COMPLETED.md` with chalice `🏆`.
 
 0. **Sizzle Reel Duration Controls Compaction & Ballot QR Double Border Purge (v0.2.10 - Sept 23, 2026):**
    - **Duration Presets Compaction (`6s`, `10s`, `15s`, `20s`):** Replaced the 5-button sequence with 4 clean, tightly spaced presets: **`6s`**, **`10s`**, **`15s`**, **`20s`** labeled `DUR:`. Reduced button gaps to 2px and padding to 2px 6px, bringing all presets close together and reducing toolbar width by ~120px.
