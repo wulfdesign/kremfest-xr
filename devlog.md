@@ -4,6 +4,23 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-23 18:15] - v0.2.3: Universal Three-Tier 'Selection Track' & Origin Bullets Across All Historical & Active Showcase Cards 🌟✨🏆**
+
+📝 **Summary**
+1. **Universal 'Selection Track:' Deployment Across All Project Cards:**
+   - Standardized the curatorial taxonomy bullet across every experience card in `publish_to_public.py` and `render_staging_preview.py`:
+     - 🌟 **Headliners:** `Selection Track: 🌟 Official Headliner Selection` (Gold / `--neon-yellow`)
+     - ✨ **Invited VIPs:** `Selection Track: ✨ Curated Official Selection (Invited VIP Showcase)` (Neon Purple / `#c084fc`)
+     - 🏆 **Juried Selections:** `Selection Track: 🏆 Official Juried Selection` (Neon Green / `--neon-green`)
+   - Also integrated `Origin:` bullet points across all general entries for complete structural parity with the VIP showcase.
+2. **Multi-Year Full Recompilation & Empirical Live HTTP Verification:**
+   - Recompiled all static HTML files across the repository.
+   - Audited live Port 3039: confirmed all 10 selections in 2026, 7 in 2025, 7 in 2019, 7 in 2018, and 14 in 2017 have standardized track and origin bullets.
+3. **Version Bump to v0.2.3:**
+   - Synchronized Operator HUD header, Tab 14 sizzle studio, and CSS query cache-busters to `v0.2.3`.
+
+🏷️ **Version:** `v0.2.3` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
 ### **[2026-09-23 18:05] - v0.2.2: Complete Deprecation of Redundant 'Status:' Bullets from Public Showcase Pages 🛡️✨🧹**
 
 📝 **Summary**
