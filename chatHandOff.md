@@ -1,15 +1,23 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.7)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.8)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.7` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 23, 2026 | 20:05 PDT  
+> **Project Version:** `v0.2.8` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 23, 2026 | 20:30 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **Sizzle Reel Single-Line Typography, Orbitron Font Upgrade & Lineup One-Sheet Stage Expansion (v0.2.8 - Sept 23, 2026):**
+   - **Harvested Operator Out-of-Band `/btw` Note [15]:** Successfully recovered directive from `get_btw.py`: *"2026 Showcase Lineup at a Glance should be on one line on the splash cards... and i don't like the fonts for that... that img in particul needs to be bigger"*.
+   - **Strict Single-Line Title Presentation:** Calibrated `.card-title` with `white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: clamp(1.4rem, 2.0vw, 2.2rem);` ensuring "2026 Showcase Lineup at a Glance", "UpLiftVR 'Maiden Flight' Balloon Ride", and all 12 slide titles render strictly on **EXACTLY ONE LINE** across desktop/TV displays with zero awkward line wraps.
+   - **Elevated Heading Typeface (`Orbitron` Default):** Replaced wide `Syne` with **`Orbitron`** (futuristic cyberpunk/spatial computing display font, weight 800) as the primary title font, providing structured horizontal rhythm and clean right-angle aesthetic.
+   - **Live Dynamic Font Switcher Toolbar:** Added 1-click `<select id="fontSelect">` dropdown in `.controls-bar` allowing instant switching between `Orbitron`, `Rajdhani`, `Outfit`, `Space Grotesk`, and `Syne` with `localStorage` persistence (`kremfest_sizzle_font`).
+   - **Lineup One-Sheet Stage Expansion (`mode-glance`):** Implemented dedicated `.hero-thumb-box.mode-glance` stage for Slide 1 (`lineup-glance`), expanding container height to **485px** (max-height 500px; **580px** in Fullscreen). Lineup one-sheet now displays at **713px × 485px** (+31% surface area), making all 10 project cards, laurels, and dates legible directly from the floor display.
+   - **Empirical Selenium/Chrome Verification:** Captured and audited headless Chrome element screenshots confirming title height is exactly 42px (1 line) and one-sheet dimensions are 713px × 485px with zero border and unclipped bottom anchor copy.
 
 0. **Sizzle Reel Left-Hand Image Expansion & KremFest Poster Asset Calibration (Lossless De-Letterbox Crop) (v0.2.7 - Sept 23, 2026):**
    - **Lossless Poster De-Letterboxing:** Extracted and cropped out the 80px baked-in black letterbox padding bars from `assets/images/2026/kremfest_2026_poster.jpg` (retaining full 640×800 content with 4:5 aspect ratio), permanently eradicating all artificial border appearance.
