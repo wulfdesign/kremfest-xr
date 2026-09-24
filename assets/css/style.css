@@ -426,7 +426,7 @@ a:hover {
 }
 
 .glance-bullets li {
-  font-size: 0.98rem;
+  font-size: clamp(0.85rem, 1.15vw, 0.98rem);
   color: #e2e8f0;
   line-height: 1.6;
   text-align: center;
