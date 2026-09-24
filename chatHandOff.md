@@ -1,15 +1,23 @@
-# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.14)
+# 📌 Chat Hand-Off & Project State — KremFest XR (v0.2.15)
 
 > **Familiar Anchor:** Hermes (`🐈`), DaVinci (`🎨`), Pixel (`✨`) & Magus Wulf (`🧙‍♂️🐺✨`)  
 > **Workspace Root:** `C:/Agents/a0-symbiot-ai/projects/kremfest-xr`  
-> **Project Version:** `v0.2.14` (Public & Private Sanctuary Synchronized)  
-> **Date:** September 24, 2026 | 16:30 PDT  
+> **Project Version:** `v0.2.15` (Public & Private Sanctuary Synchronized)  
+> **Date:** September 24, 2026 | 16:40 PDT  
 > **GitHub Remote:** `https://github.com/wulfdesign/kremfest-xr.git` (Public pushed at commit `0a43034` [v0.2.4]; local commits staged locally pending operator review)  
 > **Local Servers:** Public Preview: Port 3039 (`http://localhost:3039/index.html`) | Private Dev HUD: Port 3040 (`http://localhost:3040/`) | Dev 3039 Mirror: `http://localhost:3040/dev/` | Dev 2026: `http://localhost:3040/dev/2026/` | Dev 2018: `http://localhost:3040/dev/2018/` | Social Card Studio: `http://localhost:3040/preview/social-card` | Floor Loop & Sizzle Reel: `http://localhost:3040/preview/splash_cards.html`
 
 ---
 
 ## 🏛️ Active Alchemical Victories & Current State
+
+0. **MQDH Offline Wi-Fi ('VRMakerDome' 5GHz) & Tethered Cable Fallback Engine (v0.2.15 - Sept 24, 2026):**
+   - **Three-Pathway Casting Architecture in Dev HUD (Tab 8):** Overhauled casting manual in `render_festival_ops.py` into 3 dedicated operational pathways with dynamic tab switcher `switchCastingGuide(mode)`:
+     - **Path A: MQDH Offline Wi-Fi (Basement Shield - Recommended for Showtime):** Complete step-by-step instructions for initial USB-C trust authorization, connecting both devices to local `VRMakerDome` (5GHz Wi-Fi A) travel router, flipping **"ADB over Wi-Fi"** toggle in MQDH, unplugging the USB cable, and launching local low-latency 60fps streaming with **zero internet / zero WAN dependency**.
+     - **Path B: MQDH Tethered Cable (Nuclear Zero-RF Fallback):** Direct 10ft–16ft USB-C wired connection instructions for emergency floor deployment if DJ wireless rigs and 300 attendee phones cause severe 5GHz radio frequency (RF) packet loss.
+     - **Path C: Horizon Web Casting (Internet Only):** Documented web casting (`horizon.meta.com/casting`) calibrated for home rehearsal or venues with strong internet.
+   - **Venue Big TV Protocol Integration:** Integrated permanent physical HDMI cable anchor & 2" gaffer floor tape, `Win + P` Duplicate, and the GeekFest West <3s recovery protocol directly beneath all three pathways.
+   - **Ecosystem Compilation & Verification:** Recompiled `private/dev_dashboard/index.html` via `build_social_hub.py`. Verified HTTP 200 on Port 3040.
 
 0. **Dual-Mode Casting Setup Manual, Partner Communications & Solo Operator Alignment (v0.2.14 - Sept 24, 2026):**
    - **Dual-Mode Step-by-Step Casting Manual in Dev HUD (Tab 8):** Deployed rich interactive operational manual into `render_festival_ops.py` with dynamic mode buttons `switchCastingGuide(mode)`:

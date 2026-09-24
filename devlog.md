@@ -4,6 +4,23 @@
 > 🚀 (Release/Major) | 🛠️ (Work Done) | 🧪 (Aligned/QA) | 🩹 (Fix) | 🧹 (Cleanup) | 📦 (Consolidation)  
 > 🐈 (Hermes) | 🦞 (MugWort) | 🌌 (Portal) | 🛡️ (Security)  
 
+### **[2026-09-24 16:40] - v0.2.15: MQDH Offline Wi-Fi ('VRMakerDome' 5GHz) & Tethered Cable Fallback Engine 📡🔌🌐📺✨**
+
+📝 **Summary**
+1. **Three-Pathway Casting Architecture in Dev HUD (Tab 8):**
+   - Transmuted operator requirements into a 3-tier casting architecture in `render_festival_ops.py` with dynamic switcher `switchCastingGuide(mode)`:
+     - **Path A: MQDH Offline Wi-Fi (Basement Shield - Recommended for Showtime):** Designed for the zero-internet reality of the Kremwerk basement club floor. Step-by-step guidance for USB-C trust authorization, connecting laptop and Quest 3 to local `VRMakerDome` (5GHz Wi-Fi A) mobile router, enabling **"ADB over Wi-Fi"** in MQDH, unplugging the physical cable, and casting directly over local LAN at 60fps with **zero internet / zero WAN dependency**.
+     - **Path B: MQDH Tethered USB-C Cable (Nuclear Zero-RF Fallback):** Emergency 1-click fallback if heavy club RF interference (DJ transmitters, stage arrays, 300 attendee phones) causes 5GHz wireless jitter. Direct physical cable casting with 0ms latency and 0 packet loss.
+     - **Path C: Horizon Web Casting (Internet Only):** Documented web casting (`horizon.meta.com/casting`) calibrated for home rehearsal or venues with strong internet.
+2. **Permanent Venue Big TV Protocol:**
+   - Displayed permanent physical HDMI cable anchor instructions, `Win + P` Duplicate, and the GeekFest West <3s recovery protocol directly beneath all three pathways.
+3. **Ecosystem Compilation & Verification:**
+   - Recompiled `private/dev_dashboard/index.html` via `build_social_hub.py`. Verified HTTP 200 on Port 3040.
+
+🏷️ **Version:** `v0.2.15` | **Attribution:** 🧙‍♂️ Magus Wulf & 🐈 Hermes | **Status:** 🧪 Ready for QA
+
+---
+
 ### **[2026-09-24 16:30] - v0.2.14: Dual-Mode Casting Manual, Partner Communications & Solo Operator Alignment 📺🎪📧🎒✨**
 
 📝 **Summary**
