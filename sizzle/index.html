@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KremFest XR 2026 — Sizzle Reel & Floor Loop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Rajdhani:wght@600;700;800&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070710;
+      --card-bg: rgba(12, 13, 24, 0.94);
+      --neon-cyan: #00f0ff;
+      --neon-pink: #ff007f;
+      --neon-purple: #a855f7;
+      --neon-green: #00ff88;
+      --text-main: #f8f9fa;
+      --text-dim: #94a3b8;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, sans-serif;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Control Toolbar */
+    .controls-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(10, 11, 20, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .controls-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .controls-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      flex-shrink: 1;
+      min-width: 0;
+    }
+    .controls-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.0rem;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      letter-spacing: 0.8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .select-card {
+      background: #141628;
+      color: #fff;
+      border: 1px solid rgba(0, 240, 255, 0.4);
+      padding: 4px 6px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      cursor: pointer;
+      max-width: 175px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex-shrink: 1;
+    }
+    .select-card:focus {
+      outline: none;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+    }
+    .btn-nav {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      background: #181b30;
+      color: #e2e8f0;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-nav:hover {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+    }
+    .btn-play-pause {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(168, 85, 247, 0.2));
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+    }
+    .btn-play-pause.paused {
+      background: rgba(255, 0, 127, 0.2);
+      border-color: var(--neon-pink);
+      color: var(--neon-pink);
+    }
+
+    /* Duration Settings Group */
+    .duration-group {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: rgba(20, 22, 40, 0.8);
+      padding: 2px 5px;
+      border-radius: 7px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .duration-label {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-right: 2px;
+    }
+    .btn-dur {
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.80rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #94a3b8;
+      transition: all 0.15s ease;
+    }
+    .btn-dur:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .btn-dur.active {
+      background: var(--neon-cyan);
+      color: #070710;
+      font-weight: 800;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    }
+
+    /* Countdown Pill in Toolbar */
+    .ticker-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 800;
+      font-size: 0.86rem;
+      color: var(--neon-cyan);
+      background: rgba(0, 240, 255, 0.12);
+      border: 1px solid var(--neon-cyan);
+      padding: 2px 7px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .controls-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .btn-fullscreen {
+      background: linear-gradient(135deg, #ff007f, #a855f7);
+      color: #fff;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.84rem;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: opacity 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-fullscreen:hover {
+      opacity: 0.9;
+    }
+
+    /* 16:9 Canvas Viewport */
+    .viewport-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 20px;
+      width: 100%;
+    }
+    .card-16-9 {
+      width: 100%;
+      max-width: 1440px;
+      aspect-ratio: 16 / 9;
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1.5px solid rgba(0, 240, 255, 0.35);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(0, 240, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 290px;
+      padding: 24px 32px;
+      gap: 26px;
+      transition: all 0.3s ease;
+    }
+
+    /* Real-time neon progress bar at the top of card */
+    .slide-progress-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      z-index: 10;
+    }
+    .slide-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+      box-shadow: 0 0 12px var(--neon-cyan);
+      transition: width 0.2s linear;
+    }
+
+    /* Background blurred art & scanlines */
+    .card-backdrop {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: blur(28px) brightness(0.2);
+      transform: scale(1.15);
+      z-index: 1;
+    }
+    .card-scanlines {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, rgba(0,0,0,0.12), rgba(0,0,0,0.12) 2px, transparent 2px, transparent 4px);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(7, 7, 16, 0.35) 0%, rgba(7, 7, 16, 0.94) 80%);
+      z-index: 2;
+    }
+
+    /* Content Columns */
+    .col-left {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      min-height: 0;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .col-left-header {
+      flex-shrink: 0;
+    }
+    .col-left-media {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+      margin: 4px 0 8px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .col-left-bottom {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .col-right {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 12, 22, 0.9);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      border-radius: 14px;
+      padding: 18px 14px;
+      backdrop-filter: blur(12px);
+      box-shadow: inset 0 0 25px rgba(0, 240, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.6);
+      min-width: 0;
+      width: 100%;
+    }
+
+    /* Header Cue Pill */
+    .cue-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 8px;
+      width: fit-content;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+    }
+    .cue-pill.welcome {
+      background: rgba(255, 0, 127, 0.15);
+      border: 1px solid var(--neon-pink);
+      color: var(--neon-pink);
+      box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+    }
+    .cue-pill.glance {
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+    .cue-pill.headliner {
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+    .cue-pill.spotlight {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid var(--neon-purple);
+      color: var(--neon-purple);
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+    }
+    .cue-pill.selection {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid #f59e0b;
+      color: #fbbf24;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+    }
+    .cue-countdown-badge {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+      font-size: clamp(1.4rem, 2.0vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 240, 255, 0.18);
+      margin-bottom: 4px;
+      padding-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-byline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+      color: var(--neon-cyan);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      margin-bottom: 6px;
+      padding-bottom: 2px;
+      line-height: 1.3;
+    }
+
+    /* HERO POSTER STAGE - UNBORDERED, FLEXIBLE, 100% AUTO-RESIZING CONSTRAINED ASPECT RATIO */
+    .hero-thumb-box {
+      width: 100%;
+      height: 100%;
+      flex: 1 1 0;
+      min-height: 0;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 6px 10px;
+      box-sizing: border-box;
+    }
+
+    .hero-thumb-box .hero-thumb-bg {
+      display: none;
+    }
+
+    .hero-thumb-box .hero-thumb-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border: none !important;
+      border-radius: 10px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .hero-thumb-box.mode-portrait .hero-thumb-img {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
+    }
+
+    .card-logline {
+      font-size: clamp(0.9rem, 1.05vw, 1rem);
+      line-height: 1.4;
+      color: #e2e8f0;
+      font-weight: 400;
+      margin: 0;
+      padding-bottom: 2px;
+    }
+    .card-quote {
+      font-style: italic;
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      line-height: 1.35;
+      border-left: 3px solid var(--neon-pink);
+      padding-left: 10px;
+      margin: 0;
+      padding-bottom: 2px;
+      transition: border-color 0.25s ease;
+    }
+    .card-quote-source {
+      font-style: normal;
+      color: var(--text-dim);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 2px;
+      padding-bottom: 2px;
+    }
+
+    /* Right Column: QR Code HUD */
+    .qr-hud-header {
+      text-align: center;
+      width: 100%;
+    }
+    .qr-hud-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: #ffffff;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .qr-hud-sub {
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      line-height: 1.2;
+    }
+
+    /* QR Code Display Container */
+    .qr-stage-box {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      aspect-ratio: 1;
+      background: #080914;
+      border-radius: 12px;
+      padding: 8px;
+      border: 2px solid var(--neon-cyan);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 8px 0;
+      transition: all 0.3s ease;
+    }
+    .qr-stage-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+
+    .qr-action-cta {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      letter-spacing: 0.8px;
+      text-align: center;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .qr-url-pill {
+      font-family: monospace;
+      font-size: 0.76rem;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 3px 10px;
+      border-radius: 20px;
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Footer Meta Watermark */
+    .card-footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 8px;
+      margin-top: 4px;
+    }
+    .watermark-logo {
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .watermark-logo span {
+      color: var(--neon-pink);
+    }
+
+    /* Fullscreen helper */
+    :fullscreen .controls-bar {
+      display: none;
+    }
+    :fullscreen .viewport-container {
+      padding: 0;
+      height: 100vh;
+      max-width: 100vw;
+    }
+    :fullscreen .card-16-9 {
+      width: 100vw;
+      height: 100vh;
+      max-width: 100vw;
+      max-height: 100vh;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      padding: 24px 36px;
+      gap: 28px;
+      grid-template-columns: 1fr 310px;
+    }
+    :fullscreen .hero-thumb-box {
+      padding: 8px 14px;
+    }
+    :fullscreen .card-title {
+      font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+    }
+    :fullscreen .card-byline {
+      font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+    }
+    :fullscreen .card-logline {
+      font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+    }
+    :fullscreen .card-quote {
+      font-size: 0.96rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls Bar -->
+  <header class="controls-bar" id="controlsBar">
+    <div class="controls-left">
+      <div class="controls-title">🎬 KREMFEST XR FLOOR LOOP</div>
+      
+      <select id="slideSelect" class="select-card" onchange="jumpToSlide(parseInt(this.value))">
+        <option value="0">1. KremFest XR 2026 — 5th Edition</option><option value="1">2. 2026 Showcase Lineup at a Glance</option><option value="2">3. UpLiftVR 'Maiden Flight' Balloon Ride</option><option value="3">4. High Desert Eclipse</option><option value="4">5. Trip the Light: Let's Dance!</option><option value="5">6. djay by Algoriddim</option><option value="6">7. CONNECTOME</option><option value="7">8. CONSTELLATIONS: Touch the Stars</option><option value="8">9. Project Hydra: Iterations</option><option value="9">10. Artemis: The Free Return</option><option value="10">11. We Are Dead Animals</option><option value="11">12. Firedrake VR: The Wizard's Warren Demo</option>
+      </select>
+
+      <button class="btn-nav" onclick="prevSlide()" title="Previous Slide (Left Arrow)">◀ PREV</button>
+      <button class="btn-nav btn-play-pause" id="btnPlayPause" onclick="togglePlay()" title="Play / Pause (Spacebar)">⏸️ PAUSE</button>
+      <button class="btn-nav" onclick="nextSlide()" title="Next Slide (Right Arrow)">NEXT ▶</button>
+
+      <!-- Duration Presets (Compact: 6s, 10s, 15s, 20s) -->
+      <div class="duration-group">
+        <span class="duration-label">DUR:</span>
+        <button class="btn-dur" onclick="setDuration(6)">6s</button>
+        <button class="btn-dur active" id="dur10" onclick="setDuration(10)">10s</button>
+        <button class="btn-dur" onclick="setDuration(15)">15s</button>
+        <button class="btn-dur" onclick="setDuration(20)">20s</button>
+      </div>
+
+      <div class="ticker-pill" id="controlsTicker">⏱️ 10s</div>
+
+      <!-- Live Title Font Switcher -->
+      <div class="duration-group">
+        <span class="duration-label">FONT:</span>
+        <select id="fontSelect" class="select-card" style="max-width:135px; padding:2px 6px; font-size:0.80rem; height:26px;" onchange="setTitleFont(this.value)" title="Choose heading typeface">
+          <option value="Portal Sans" selected>Portal Sans (Landing Page)</option>
+          <option value="Outfit">Outfit (Clean Sans)</option>
+          <option value="Rajdhani">Rajdhani (Tech)</option>
+          <option value="Space Grotesk">Space Grotesk</option>
+          <option value="Syne">Syne (Wide)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="controls-right">
+      <button class="btn-fullscreen" onclick="toggleFullscreen()">📺 FULLSCREEN TV DISPLAY (F11)</button>
+    </div>
+  </header>
+
+  <!-- 16:9 Canvas Viewport -->
+  <main class="viewport-container">
+    <div class="card-16-9" id="splashCard">
+      <!-- Progress Bar -->
+      <div class="slide-progress-track">
+        <div class="slide-progress-bar" id="slideProgressBar"></div>
+      </div>
+
+      <!-- Background Layers -->
+      <div class="card-backdrop" id="cardBackdrop"></div>
+      <div class="card-scanlines"></div>
+      <div class="card-overlay"></div>
+
+      <!-- Left Column: Media & Info -->
+      <div class="col-left">
+        <!-- Zone 1: Top Header -->
+        <div class="col-left-header">
+          <div class="cue-pill welcome" id="cuePill">
+            <span id="cueLabelText">✨ WELCOME TO KREMFEST XR 2026</span>
+            <span class="cue-countdown-badge" id="cueCountdownBadge">10s</span>
+          </div>
+
+          <h1 class="card-title" id="cardTitle">KremFest XR 2026 — 5th Edition</h1>
+          <div class="card-byline" id="cardByline">Underground Virtual &amp; Mixed Reality Lounge • Curated by Larry James &amp; KremFest Team</div>
+        </div>
+
+        <!-- Zone 2: Flexible Hero Media Stage -->
+        <div class="col-left-media">
+          <div class="hero-thumb-box mode-portrait" id="heroThumbBox">
+            <img class="hero-thumb-img is-portrait" id="heroThumbImg" src="../assets/images/2026/kremfest_2026_poster.jpg" alt="Poster Key Art">
+          </div>
+        </div>
+
+        <!-- Zone 3: Bottom Anchor Copy & Metadata -->
+        <div class="col-left-bottom">
+          <p class="card-logline" id="cardLogline">Step off the dance floor and straight into boundary-pushing spatial immersion.</p>
+          <div class="card-quote" id="cardQuote">
+            <span id="cardQuoteText">2 Nights • 3 Stages of Electronic Music • 10 Immersive XR Selections</span>
+            <div class="card-quote-source" id="cardQuoteSource">September 25–26, 2026 • Seattle, WA • 21+ Only</div>
+          </div>
+
+          <div class="card-footer">
+            <div class="watermark-logo">KREMFEST <span>XR</span> 2026</div>
+            <div id="footerVenue">KREMWERK COMPLEX • SEATTLE, WA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: High-Contrast Scannable QR HUD -->
+      <div class="col-right">
+        <div class="qr-hud-header">
+          <div class="qr-hud-title" id="qrHeader">FESTIVAL GUIDE & MAP</div>
+          <div class="qr-hud-sub" id="qrSub">Instant Mobile Gateway • Lineup & Timetable</div>
+        </div>
+
+        <div class="qr-stage-box" id="qrStageBox">
+          <img class="qr-stage-img" id="qrStageImg" src="../assets/images/qr/qr_portal_main_neon.png" alt="QR Code">
+        </div>
+
+        <div style="text-align:center; width:100%;">
+          <div class="qr-action-cta" id="qrActionCta">SCAN FOR FESTIVAL GUIDE & MAP</div>
+          <div class="qr-url-pill" id="qrUrlPill">wulfdesign.github.io/kremfest-xr/2026/</div>
+        </div>
+
+        <div class="card-footer" style="justify-content:center; border:none; padding:0; margin-top:8px;">
+          <div style="font-size:0.75rem; color:#64748b; letter-spacing:0.5px;">HIGH-CONTRAST DIGITAL SCANNING • META QUEST 3 LOUNGE</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const slides = [{"id": "intro", "type": "intro", "aspect": "portrait", "title": "KremFest XR 2026 \u2014 5th Edition", "subtitle": "Underground Virtual & Mixed Reality Lounge", "directors": "Curated by Larry James & KremFest Team", "category": "Festival Welcome", "badge_color": "#ff007f", "key_art": "assets/images/2026/kremfest_2026_poster.jpg", "cue_label": "\u2728 WELCOME TO KREMFEST XR 2026", "cue_type": "welcome", "logline": "Step off the dance floor and straight into boundary-pushing virtual reality, mixed reality vinyl DJ performance, and spatial computing directly inside the historic Kremwerk / Timbre Room complex.", "quote": "2 Nights \u2022 3 Stages of Electronic Music \u2022 10 Immersive XR Selections", "quote_source": "September 25\u201326, 2026 \u2022 Seattle, WA \u2022 21+ Only", "qr_image": "assets/images/qr/qr_portal_main_neon.png", "qr_header": "FESTIVAL GUIDE & MAP", "qr_sub": "Instant Mobile Gateway \u2022 Lineup & Timetable", "qr_label": "SCAN FOR FESTIVAL GUIDE & MAP", "qr_url": "wulfdesign.github.io/kremfest-xr/2026/"}, {"id": "lineup-glance", "type": "glance", "aspect": "landscape", "title": "2026 Showcase Lineup at a Glance", "subtitle": "10 Official Selections \u2022 Headliners, VIP Spotlights & Juried VR/MR", "directors": "International Indie Creators & Studios", "category": "Full Lineup", "badge_color": "#00f0ff", "key_art": "assets/images/2026/kremfest_xr_2026_lineup_one_sheet.png", "cue_label": "\ud83d\udccb 2026 OFFICIAL LINEUP AT A GLANCE", "cue_type": "glance", "logline": "All 10 official selections are live in the XR Lounge across both festival nights. Cast your vote on your smartphone for the 2026 Audience Choice Award!", "quote": "Vote online for your favorite experience throughout the weekend. Every attendee gets one vote!", "quote_source": "Audience Choice Ballot Open Friday 10 PM \u2013 Sunday 2 AM", "qr_image": "assets/images/qr/qr_vote_ballot_neon.png", "qr_header": "CAST YOUR BALLOT", "qr_sub": "2026 Audience Choice Award", "qr_label": "SCAN TO VOTE FOR AUDIENCE CHOICE", "qr_url": "wulfdesign.github.io/kremfest-xr/2026/vote/"}, {"id": "maiden-flight", "type": "experience", "aspect": "landscape", "title": "UpLiftVR 'Maiden Flight' Balloon Ride", "subtitle": "Interactive Room-Scale VR Installation", "directors": "Larry James & Julia Jackson", "category": "Headliner", "badge_color": "#00f0ff", "key_art": "assets/images/headliners/maiden_flight_banner.jpg", "cue_label": "\ud83c\udf88 HEADLINER SELECTION", "cue_type": "headliner", "logline": "Ascend into the heavens on a dreamy balloon ride overlooking a lucent surreal terrain.", "quote": "One of the most powerful experiences in the [SIFF] VR-Zone isn't a film but a piece of whimsical semi-interactive entertainment.", "quote_source": "The Seattle Times", "qr_image": "assets/images/qr/qr_maiden_flight_web_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Instant On-Premise Mobile Gateway", "qr_label": "SCAN FOR EARLY ACCESS & INFO", "qr_url": "upliftvr.itch.io"}, {"id": "high-desert-eclipse", "type": "experience", "aspect": "landscape", "title": "High Desert Eclipse", "subtitle": "4K 360\u00b0 Total Solar Eclipse Documentary", "directors": "Larry James & Julia Jackson", "category": "Headliner", "badge_color": "#00f0ff", "key_art": "assets/images/headliners/high_desert_eclipse_banner.jpg", "cue_label": "\ud83c\udf18 HEADLINER SELECTION", "cue_type": "headliner", "logline": "The shadow of the Moon sweeps across the Oregon high desert, turning day into twilight with a 360\u00b0 sunset horizon.", "quote": "Majestic but also chill! A once-in-a-lifetime experience that can be enjoyed by everyone.", "quote_source": "Meta Quest Community", "qr_image": "assets/images/qr/qr_hde_store_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Meta Quest Store Gateway", "qr_label": "SCAN FOR META QUEST STORE", "qr_url": "meta.com/experiences/high-desert-eclipse"}, {"id": "trip-the-light", "type": "experience", "aspect": "landscape", "title": "Trip the Light: Let's Dance!", "subtitle": "High-Energy Full-Body Rhythm & Dance Experience", "directors": "Patrick Ascolese (Dark Arts Software)", "category": "VIP Spotlight", "badge_color": "#ff007f", "key_art": "assets/images/2026/trip_the_light_2026.jpg", "cue_label": "\ud83d\udc83 VIP SPOTLIGHT", "cue_type": "spotlight", "logline": "Dance with flowing neon laser ribbons in a reactive nightclub arena built for electronic music.", "quote": "Electrifying VR music and movement in a reactive neon arena.", "quote_source": "Dark Arts Software", "qr_image": "assets/images/qr/qr_trip_the_light_store_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Meta Quest Store Gateway", "qr_label": "SCAN FOR META QUEST STORE", "qr_url": "tripthelightgame.com"}, {"id": "djay-algoriddim", "type": "experience", "aspect": "landscape", "title": "djay by Algoriddim", "subtitle": "Mixed Reality Spatial Vinyl Performance", "directors": "Algoriddim (Karim Morsy & Team)", "category": "Curated Guest Feature", "badge_color": "#00ff88", "key_art": "assets/images/2026/djay_algoriddim_2026.jpg", "cue_label": "\ud83c\udfa7 CURATED GUEST SPOTLIGHT", "cue_type": "spotlight", "logline": "Scratch hyper-realistic 3D vinyl with bare hands and floating spatial audio FX inside Kremwerk.", "quote": "The undisputed pinnacle of consumer Mixed Reality music performance.", "quote_source": "KremFest XR Curation", "qr_image": "assets/images/qr/qr_djay_store_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Mixed Reality On Meta Quest", "qr_label": "SCAN TO MIX ON META QUEST", "qr_url": "algoriddim.com/djay-meta-quest"}, {"id": "connectome", "type": "experience", "aspect": "landscape", "title": "CONNECTOME", "subtitle": "Contemplative Neural Journey & Spatial Puzzle", "directors": "Grant Hinkson (Parietal Lab)", "category": "VIP Spotlight", "badge_color": "#a855f7", "key_art": "assets/images/2026/connectome_2026.jpg", "cue_label": "\ud83e\udde0 VIP SPOTLIGHT", "cue_type": "spotlight", "logline": "Pure optical hand-tracking gestures bring ethereal neural structures to life set to ambient acoustic soundscapes.", "quote": "A space of discovery, wonder, and contemplative neural growth.", "quote_source": "Parietal Lab", "qr_image": "assets/images/qr/qr_connectome_store_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Meta Quest Store Gateway", "qr_label": "SCAN FOR META QUEST STORE", "qr_url": "connectomegame.com"}, {"id": "constellations", "type": "experience", "aspect": "landscape", "title": "CONSTELLATIONS: Touch the Stars", "subtitle": "Celestial Star-Tracing & Ambient Starfield", "directors": "Grant Hinkson (Parietal Lab)", "category": "VIP Spotlight", "badge_color": "#a855f7", "key_art": "assets/images/2026/constellations_2026.jpg", "cue_label": "\u2728 VIP SPOTLIGHT", "cue_type": "spotlight", "logline": "Physically reach out and connect stellar coordinates across all 88 official IAU astronomical constellations.", "quote": "Reach out and connect the stellar coordinates of the night sky.", "quote_source": "Parietal Lab", "qr_image": "assets/images/qr/qr_constellations_store_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Meta Quest Store Gateway", "qr_label": "SCAN FOR META QUEST STORE", "qr_url": "parietallab.com/constellations"}, {"id": "project-hydra", "type": "experience", "aspect": "landscape", "title": "Project Hydra: Iterations", "subtitle": "Generative B\u00e9zier Curves & Architectural Sound", "directors": "Grant Hinkson (Fr0gg3r)", "category": "VIP Spotlight", "badge_color": "#a855f7", "key_art": "assets/images/2026/project_hydra_2026.jpg", "cue_label": "\ud83d\udcd0 VIP SPOTLIGHT", "cue_type": "spotlight", "logline": "A monumental virtual gallery where generative pen-plotter mathematical curves explore impossible architectural scales.", "quote": "A generative system of B\u00e9zier curves at scales impossible in a physical gallery.", "quote_source": "Grant Hinkson", "qr_image": "assets/images/qr/qr_project_hydra_store_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Meta Horizon Store Gateway", "qr_label": "SCAN FOR META HORIZON STORE", "qr_url": "granthinkson.com/art"}, {"id": "artemis-lunar-flyby", "type": "experience", "aspect": "landscape", "title": "Artemis: The Free Return", "subtitle": "Interactive WebXR Orbital Sandbox & Slingshot", "directors": "Larry James (Wulf Design Studios)", "category": "Official Selection", "badge_color": "#38bdf8", "key_art": "assets/images/2026/artemis_lunar_flyby_2026.jpg", "cue_label": "\ud83d\ude80 JURIED OFFICIAL SELECTION", "cue_type": "selection", "logline": "Take the controls of Artemis II for an unscripted Newtonian slingshot around the Moon and 25,000 mph reentry.", "quote": "What does it truly feel like to leave Earth behind?", "quote_source": "Larry James, Director", "qr_image": "assets/images/qr/qr_artemis_web_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Instant WebXR In-Browser Launch", "qr_label": "SCAN TO LAUNCH WEBXR SIMULATION", "qr_url": "wulfdesign.github.io/lunar-flyby-xr"}, {"id": "we-are-dead-animals", "type": "experience", "aspect": "portrait", "title": "We Are Dead Animals", "subtitle": "IDFA DocLab Competition \u2022 Transcendental VR", "directors": "Tote Tiere Maarten (Maarten Isa\u00e4k de Heer)", "category": "Official Selection", "badge_color": "#ec4899", "key_art": "assets/images/2026/we_are_dead_animals_2026.jpg", "cue_label": "\ud83e\udd8a JURIED OFFICIAL SELECTION", "cue_type": "selection", "logline": "Bring 3D-scanned animals back to life in a surreal virtual afterlife landscape\u2014and don't forget to eat!", "quote": "A casually transcendental VR game exploring nature, death, and resurrection.", "quote_source": "IDFA DocLab 2025 World Premiere", "qr_image": "assets/images/qr/qr_dead_animals_web_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Official Film & Project Portal", "qr_label": "SCAN TO EXPLORE PROJECT & FILM", "qr_url": "wearedeadanimals.com"}, {"id": "firedrake-vr", "type": "experience", "aspect": "landscape", "title": "Firedrake VR: The Wizard's Warren Demo", "subtitle": "Interactive Liminal Dungeon Holonovel", "directors": "Jon Stone (Hues GFX)", "category": "Official Selection", "badge_color": "#f59e0b", "key_art": "assets/images/2026/firedrake_wizards_warren_2026.jpg", "cue_label": "\ud83d\udc09 JURIED OFFICIAL SELECTION", "cue_type": "selection", "logline": "Step inside a living, breathing fantasy dungeon filled with ancient magic, forgotten horrors, and atmospheric wonder.", "quote": "A living liminal space: familiar enough to invite you in, but strange enough to wonder what was here.", "quote_source": "Jon Stone, Creator", "qr_image": "assets/images/qr/qr_firedrake_web_neon.png", "qr_header": "POINT PHONE CAMERA", "qr_sub": "Official Firedrake VR Portal", "qr_label": "SCAN TO EXPLORE FIREDRAKE", "qr_url": "firedrakevr.com"}];
+    let currentIdx = 0;
+    let slideDuration = 10; // seconds (Default requested by user)
+    let timeRemaining = slideDuration;
+    let isPlaying = true;
+    let timerInterval = null;
+    const basePath = '../';
+
+    function updateCard() {
+      const slide = slides[currentIdx];
+
+      // Aspect Mode: Landscape (contain, uncropped) vs Portrait (enlarged, unbordered) vs Glance (expanded one-sheet)
+      const isGlance = slide.id === 'lineup-glance';
+      const isPortrait = slide.aspect === 'portrait' || slide.id === 'intro' || slide.id === 'we-are-dead-animals';
+      const thumbBox = document.getElementById('heroThumbBox');
+      const thumbImg = document.getElementById('heroThumbImg');
+
+      if (isGlance) {
+        thumbBox.className = 'hero-thumb-box mode-glance';
+        thumbImg.className = 'hero-thumb-img is-glance';
+      } else if (isPortrait) {
+        thumbBox.className = 'hero-thumb-box mode-portrait';
+        thumbImg.className = 'hero-thumb-img is-portrait';
+      } else {
+        thumbBox.className = 'hero-thumb-box mode-landscape';
+        thumbImg.className = 'hero-thumb-img is-landscape';
+      }
+
+      // Purge all stroke borders on artwork; clean organic filmic drop shadow
+      thumbBox.style.border = 'none';
+      thumbImg.style.border = 'none';
+      thumbImg.style.boxShadow = isGlance ? '0 18px 45px rgba(0, 0, 0, 0.9)' : (isPortrait ? '0 20px 50px rgba(0, 0, 0, 0.95)' : '0 18px 45px rgba(0, 0, 0, 0.9)');
+      thumbBox.style.boxShadow = 'none';
+
+      // Update Backgrounds
+      const keyArtUrl = slide.key_art ? `${basePath}${slide.key_art}` : '';
+      document.getElementById('cardBackdrop').style.backgroundImage = `url('${keyArtUrl}')`;
+      thumbImg.src = keyArtUrl;
+      thumbImg.alt = slide.title;
+
+      // Update Text
+      document.getElementById('cardTitle').textContent = slide.title;
+      document.getElementById('cardByline').textContent = `${slide.subtitle || ''} • ${slide.directors}`;
+      document.getElementById('cardLogline').textContent = slide.logline || '';
+      document.getElementById('cardQuoteText').textContent = slide.quote || '';
+      document.getElementById('cardQuoteSource').textContent = slide.quote_source || '';
+
+      // Update Quote border color
+      const cardQuote = document.getElementById('cardQuote');
+      if (slide.badge_color) {
+        cardQuote.style.borderLeftColor = slide.badge_color;
+      } else {
+        cardQuote.style.borderLeftColor = 'var(--neon-pink)';
+      }
+
+      // Update Cue Pill
+      const pill = document.getElementById('cuePill');
+      pill.className = `cue-pill ${slide.cue_type || 'welcome'}`;
+      document.getElementById('cueLabelText').textContent = slide.cue_label || '🎬 UP NEXT';
+
+      // Update QR Box
+      document.getElementById('qrHeader').textContent = slide.qr_header || 'POINT PHONE CAMERA';
+      document.getElementById('qrSub').textContent = slide.qr_sub || 'Instant On-Premise Mobile Gateway';
+      document.getElementById('qrStageImg').src = `${basePath}${slide.qr_image}`;
+      document.getElementById('qrActionCta').textContent = slide.qr_label || 'SCAN TO OPEN';
+      document.getElementById('qrUrlPill').textContent = slide.qr_url || '';
+
+      // QR Box Neon Border Color Matching
+      const qrStage = document.getElementById('qrStageBox');
+      if (slide.badge_color) {
+        qrStage.style.borderColor = slide.badge_color;
+        qrStage.style.boxShadow = `0 0 25px ${slide.badge_color}55`;
+      } else {
+        qrStage.style.borderColor = 'var(--neon-cyan)';
+        qrStage.style.boxShadow = '0 0 25px rgba(0, 240, 255, 0.35)';
+      }
+
+      // Synchronize Dropdown
+      document.getElementById('slideSelect').value = currentIdx;
+
+      // Reset progress bar
+      updateProgressVisuals();
+    }
+
+    function updateProgressVisuals() {
+      const timeStr = `${timeRemaining}s`;
+      document.getElementById('cueCountdownBadge').textContent = isPlaying ? timeStr : 'PAUSED';
+      document.getElementById('controlsTicker').textContent = isPlaying ? `⏱️ ${timeStr}` : '⏸️ PAUSED';
+
+      const pct = Math.max(0, Math.min(100, ((slideDuration - timeRemaining) / slideDuration) * 100));
+      document.getElementById('slideProgressBar').style.width = `${pct}%`;
+    }
+
+    function tick() {
+      if (!isPlaying) return;
+
+      timeRemaining--;
+      if (timeRemaining <= 0) {
+        currentIdx = (currentIdx + 1) % slides.length;
+        timeRemaining = slideDuration;
+        updateCard();
+      } else {
+        updateProgressVisuals();
+      }
+    }
+
+    function startTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(tick, 1000);
+    }
+
+    function nextSlide() {
+      currentIdx = (currentIdx + 1) % slides.length;
+      timeRemaining = slideDuration;
+      updateCard();
+    }
+
+    function prevSlide() {
+      currentIdx = (currentIdx - 1 + slides.length) % slides.length;
+      timeRemaining = slideDuration;
+      updateCard();
+    }
+
+    function jumpToSlide(idx) {
+      if (idx >= 0 && idx < slides.length) {
+        currentIdx = idx;
+        timeRemaining = slideDuration;
+        updateCard();
+      }
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      const btn = document.getElementById('btnPlayPause');
+      if (isPlaying) {
+        btn.textContent = '⏸️ PAUSE';
+        btn.classList.remove('paused');
+      } else {
+        btn.textContent = '▶ RESUME';
+        btn.classList.add('paused');
+      }
+      updateProgressVisuals();
+    }
+
+    function setDuration(sec) {
+      slideDuration = sec;
+      timeRemaining = sec;
+      
+      // Update buttons
+      document.querySelectorAll('.btn-dur').forEach(b => b.classList.remove('active'));
+      const activeBtn = Array.from(document.querySelectorAll('.btn-dur')).find(b => b.textContent === `${sec}s`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      updateProgressVisuals();
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => alert(err.message));
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    function setTitleFont(fontName) {
+      const titleEl = document.getElementById('cardTitle');
+      if (!titleEl) return;
+      
+      let fontStack = '';
+      if (fontName === 'Outfit') {
+        fontStack = "'Outfit', -apple-system, sans-serif";
+      } else if (fontName === 'Portal Sans') {
+        fontStack = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif";
+      } else if (fontName === 'Rajdhani') {
+        fontStack = "'Rajdhani', -apple-system, sans-serif";
+      } else if (fontName === 'Space Grotesk') {
+        fontStack = "'Space Grotesk', -apple-system, sans-serif";
+      } else if (fontName === 'Syne') {
+        fontStack = "'Syne', -apple-system, sans-serif";
+      } else {
+        fontStack = fontName;
+      }
+      
+      titleEl.style.fontFamily = fontStack;
+      try {
+        localStorage.setItem('kremfest_sizzle_font', fontName);
+      } catch (e) {}
+      
+      const select = document.getElementById('fontSelect');
+      if (select && select.value !== fontName) {
+        select.value = fontName;
+      }
+    }
+
+    function initFont() {
+      let savedFont = 'Portal Sans';
+      try {
+        const stored = localStorage.getItem('kremfest_sizzle_font');
+        if (stored && stored !== 'Orbitron' && stored !== 'Outfit') {
+          savedFont = stored;
+        } else {
+          savedFont = 'Portal Sans';
+          localStorage.setItem('kremfest_sizzle_font', 'Portal Sans');
+        }
+      } catch (e) {}
+      setTitleFont(savedFont);
+    }
+
+    // Keyboard Shortcuts (Space: Play/Pause, Arrows: Prev/Next, F: Fullscreen)
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePlay();
+      } else if (e.code === 'ArrowRight') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.code === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.code === 'KeyF') {
+        e.preventDefault();
+        toggleFullscreen();
+      }
+    });
+
+    // URL param support (?slide=0..11 or ?slide=id, ?duration=10, ?loop=0)
+    const urlParams = new URLSearchParams(window.location.search);
+    const slideParam = urlParams.get('slide');
+    if (slideParam !== null) {
+      const parsedNum = parseInt(slideParam);
+      if (!isNaN(parsedNum) && parsedNum >= 0 && parsedNum < slides.length) {
+        currentIdx = parsedNum;
+      } else {
+        const foundIdx = slides.findIndex(s => s.id === slideParam);
+        if (foundIdx !== -1) currentIdx = foundIdx;
+      }
+    }
+    const durParam = urlParams.get('duration');
+    if (durParam !== null) {
+      const parsedDur = parseInt(durParam);
+      if (!isNaN(parsedDur) && parsedDur > 0) {
+        slideDuration = parsedDur;
+        timeRemaining = parsedDur;
+      }
+    }
+    const autoloopParam = urlParams.get('loop');
+    if (autoloopParam === 'false' || autoloopParam === '0') {
+      isPlaying = false;
+      const btn = document.getElementById('btnPlayPause');
+      btn.textContent = '▶ RESUME';
+      btn.classList.add('paused');
+    }
+
+    // Initialize Card and Timer
+    initFont();
+    updateCard();
+    startTimer();
+  </script>
+</body>
+</html>
