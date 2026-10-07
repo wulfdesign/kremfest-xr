@@ -682,6 +682,25 @@ a:hover {
   height: 18px;
 }
 
+.standing-slide-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.42);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+  transition: all 0.25s ease;
+  flex-wrap: wrap;
+}
+
+.standing-slide-card:hover {
+  border-color: rgba(0, 240, 255, 0.45);
+  background: rgba(0, 240, 255, 0.04);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.18);
+}
+
 .feedback-textarea {
   width: 100%;
   background: var(--bg-surface);
