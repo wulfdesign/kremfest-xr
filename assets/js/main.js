@@ -1,3 +1,4 @@
+// KremFest XR - Client Engine v0.2.27
 let simulationState = null; // Global simulation state: null = real time, 'prevoting', 'open', 'closed'
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -358,14 +359,14 @@ function initVotingCountdown() {
 
       setDigits(0, daysEl, hoursEl, minsEl, secsEl);
 
-      // Lock ballot submission
-      if (submitBtn) {
+      // Lock ballot submission (unless bypass lock is enabled for Dev Sandbox inspection)
+      if (submitBtn && !window.kremfestBypassLock) {
         submitBtn.disabled = true;
         submitBtn.style.opacity = "0.5";
         submitBtn.style.cursor = "not-allowed";
         submitBtn.innerText = "🔴 Voting Concluded";
       }
-      if (lockNotice) {
+      if (lockNotice && !window.kremfestBypassLock) {
         lockNotice.style.display = "block";
         lockNotice.innerHTML = "🔴 <strong>Voting is closed.</strong> Final tallies are being tabulated for the Viewer's Choice Award!";
       }

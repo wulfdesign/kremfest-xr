@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KremFest XR 2026 — Audience Choice Voting Ballot</title>
+  <title>KremFest XR 2026 — Viewer's Request Ballot</title>
   <link rel="stylesheet" href="../../assets/css/style.css?v=0.2.4">
 </head>
 <body>
@@ -23,123 +23,151 @@
 
   <main class="container">
     <div class="guide-hero">
-      <div class="guide-pill">🗳️ ON-PREMISE AUDIENCE BALLOT • 2026</div>
-      <h1 class="guide-title">Viewer's Choice <span class="text-gradient-pink glow-pink">Awards</span></h1>
+      <div class="guide-pill">🗳️ VIEWER'S REQUEST BALLOT • 2026</div>
+      <h1 class="guide-title">Viewer's Request <span class="text-gradient-cyan glow-cyan">Ballot</span></h1>
       <p class="guide-intro-text" style="text-align:center;">
-        Cast your vote for the most mind-bending, transcendent virtual reality experience at KremFest 2026.
+        Request your favorite XR works for future festivals, touring exhibitions, and venue pop-ups.
       </p>
     </div>
 
-    <!-- Live Dynamic Countdown Header (Yellow Pre-Voting -> Green Live Open -> Red Closed) -->
-    <div id="vote-countdown-box" class="countdown-box state-prevoting" data-start-time="2026-09-25T00:00:00-07:00" data-end-time="2026-09-27T23:59:59-07:00">
-      <div id="countdown-badge" class="countdown-status-badge">⏳ VOTING OPENS IN</div>
-      <div class="countdown-grid">
-        <div class="countdown-unit">
-          <span id="count-days" class="countdown-digits">00</span>
-          <span class="countdown-label">Days</span>
-        </div>
-        <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dim);">:</div>
-        <div class="countdown-unit">
-          <span id="count-hours" class="countdown-digits">00</span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dim);">:</div>
-        <div class="countdown-unit">
-          <span id="count-mins" class="countdown-digits">00</span>
-          <span class="countdown-label">Mins</span>
-        </div>
-        <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dim);">:</div>
-        <div class="countdown-unit">
-          <span id="count-secs" class="countdown-digits">00</span>
-          <span class="countdown-label">Secs</span>
-        </div>
-      </div>
-      <p id="countdown-subtext" class="countdown-subtext">
-        Voting opens <strong>Friday, September 25, 2026</strong>. Showcase floor open <strong>Friday & Saturday 10:00 PM – 1:00 AM</strong>.
+    <!-- Official Notice: In-Person Festival Voting Closed & After-Session Requests Open -->
+    <div class="countdown-box state-closed" style="margin: 20px auto 28px auto; text-align:center; padding:24px 20px; border-color:#ff007f;">
+      <div class="countdown-status-badge" style="background:#ff007f; color:#fff;">🔴 FESTIVAL FLOOR VOTING CONCLUDED</div>
+      <h3 style="color:#fff; font-size:1.3rem; margin:14px 0 8px 0;">Official In-Person Festival Voting Session is Closed</h3>
+      <p style="color:var(--text-muted); font-size:0.92rem; max-width:700px; margin:0 auto 16px auto; line-height:1.6;">
+        Live Audience Choice voting for KremFest XR 2026 officially concluded on <strong>Sunday, September 27 at Midnight PDT</strong>.<br><br>
+        However, you are warmly welcome to cast an <strong>After-Session Viewer Request</strong> below! Your votes inform our curators which experiences to bring back for upcoming club showcases, touring gallery installations, and future editions of KremFest XR.
       </p>
+      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+        <a href="../results/index.html" class="btn btn-primary" style="padding:12px 26px; font-weight:800; font-size:0.92rem; background:linear-gradient(90deg, #ffd700 0%, #ff007f 100%); color:#000; border:none; box-shadow:0 0 16px rgba(255, 215, 0, 0.35); text-decoration:none;">
+          🏆 View Official 2026 Results &amp; Standings ➔
+        </a>
+        <a href="../index.html" class="btn btn-secondary" style="padding:12px 20px; font-size:0.92rem;">
+          🎴 Full 2026 Showcase Lineup
+        </a>
+      </div>
     </div>
 
     <!-- XR Showcase Hours & Location Callout Badge -->
     <div class="showcase-schedule-badge">
-      <span>🥽 <strong>Showcase Hours:</strong> Friday & Saturday • 10:00 PM – 1:00 AM nightly</span>
+      <span>🥽 <strong>XR Showcase:</strong> September 25–26, 2026 • Raven Lounge</span>
       <span style="opacity: 0.4;">|</span>
-      <span>📍 <strong>Venue:</strong> <a href="https://maps.google.com/?q=Kremwerk,+1809+Minor+Ave,+Seattle,+WA+98101" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-decoration-color:rgba(0,240,255,0.4);" title="Open Kremwerk Complex in Google Maps">Kremwerk Complex (1809 Minor Ave, Seattle, WA • USA)</a></span>
+      <span>📍 <strong>Venue:</strong> Kremwerk Complex (Seattle, WA)</span>
       <span style="opacity: 0.4;">|</span>
-      <span>🗳️ <strong>Voting Window:</strong> Fri Sept 25 – Sun Sept 27 Midnight</span>
+      <span>🏆 <strong>Honors:</strong> Viewer's Choice &bull; UpLiftVR &bull; KremFest</span>
     </div>
 
-
     <div class="voting-container">
-      <div id="vote-success-box" style="display:none; text-align:center; padding:30px 20px;">
-        <div style="font-size:3rem; margin-bottom:12px;">🎉</div>
-        <h2 class="text-gradient-cyan" style="margin-bottom:10px;">Ballot Confirmed!</h2>
-        <p style="color:var(--text-muted); margin-bottom:16px;">
-          Thank you for voting for <strong id="voted-choice-title" style="color:#fff;"></strong> in the KremFest XR 2026 Audience Choice Awards.
+      <!-- Confirmation Box after submission -->
+      <div id="vote-success-box" style="display:none; text-align:center; padding:32px 20px; background:rgba(0,255,136,0.08); border:1.5px solid var(--neon-green); border-radius:var(--radius-md); margin-bottom:24px;">
+        <div style="font-size:3rem; margin-bottom:10px;">🎉</div>
+        <h2 class="text-gradient-cyan" style="margin-bottom:8px;">Request Recorded!</h2>
+        <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.95rem; line-height:1.5;">
+          Thank you! Your after-session request for <strong id="voted-choice-title" style="color:#fff;"></strong> has been saved. We'll factor it into our future venue programming and invitations.
         </p>
-        <button onclick="resetVote('2026')" class="btn btn-secondary" style="font-size:0.85rem;">Change My Vote</button>
-      </div>
-
-      <div id="ballot-locked-notice" class="ballot-locked-box" style="display:none;">
-        🔒 <strong>Ballot Pre-Voting Status:</strong> Voting opens on Friday, September 25, 2026 during KremFest!
+        <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+          <a href="../results/index.html" class="btn btn-primary" style="font-size:0.88rem; padding:10px 20px;">🏆 View Complete 2026 Standings</a>
+          <button onclick="resetVote('2026')" class="btn btn-secondary" style="font-size:0.88rem; padding:10px 18px;">Submit Another Request</button>
+        </div>
       </div>
 
       <form id="kremfest-vote-form" data-vote-year="2026">
-        <h3 style="margin-bottom:8px; font-size:1.3rem;">1. Select Your Favorite Experience:</h3>
-        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">
-          Choose the project that moved you most or provided the best pairing with the festival atmosphere:
+        <h3 style="margin-bottom:8px; font-size:1.3rem; color:#fff;">1. Select an Experience to Request for Future Showcases:</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:18px;">
+          Which piece from the KremFest XR 2026 lineup would you most like to see brought back or presented at future venues?
         </p>
 
         
-        <label class="ballot-item">
-          <input type="radio" name="choice" value="UpLiftVR ‘Maiden Flight’ Balloon Ride" class="ballot-radio">
-          <div>
-            <strong>UpLiftVR ‘Maiden Flight’ Balloon Ride</strong>
-            <div style="font-size:0.8rem; color:var(--text-muted);">By Larry James & Julia Jackson (USA) • Headliner</div>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="Artemis: The Free Return (WebXR Orbital Sandbox)" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">Artemis: The Free Return (WebXR Orbital Sandbox)</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Larry James (Wulf Design Studios) &bull; <span style="color:var(--neon-cyan);">🚀 JURIED OFFICIAL SELECTION</span></div>
           </div>
         </label>
-        <label class="ballot-item">
-          <input type="radio" name="choice" value="High Desert Eclipse" class="ballot-radio">
-          <div>
-            <strong>High Desert Eclipse</strong>
-            <div style="font-size:0.8rem; color:var(--text-muted);">By Larry James & Julia Jackson (USA) • Headliner</div>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="High Desert Eclipse" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">High Desert Eclipse</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Larry James & Julia Jackson (UpLiftVR Studios) &bull; <span style="color:var(--neon-cyan);">🌌 HEADLINER</span></div>
           </div>
         </label>
-        <label class="ballot-item">
-          <input type="radio" name="choice" value="Artemis: The Free Return (WebXR Orbital Sandbox)" class="ballot-radio">
-          <div>
-            <strong>Artemis: The Free Return (WebXR Orbital Sandbox)</strong>
-            <div style="font-size:0.8rem; color:var(--text-muted);">By Larry James (United States) • Official Selection</div>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="UpLiftVR ‘Maiden Flight’ Balloon Ride" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">UpLiftVR ‘Maiden Flight’ Balloon Ride</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Larry James & Julia Jackson (UpLiftVR Studios) &bull; <span style="color:var(--neon-cyan);">🎈 HEADLINER</span></div>
           </div>
         </label>
-        <label class="ballot-item">
-          <input type="radio" name="choice" value="Firedrake VR" class="ballot-radio">
-          <div>
-            <strong>Firedrake VR</strong>
-            <div style="font-size:0.8rem; color:var(--text-muted);">By Jon Stone (United States) • Official Selection</div>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="djay: DJ in VR & Spatial Audio" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">djay: DJ in VR & Spatial Audio</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Algoriddim &bull; <span style="color:var(--neon-cyan);">🎧 VIP SHOWCASE</span></div>
           </div>
         </label>
-        <label class="ballot-item">
-          <input type="radio" name="choice" value="We Are Dead Animals" class="ballot-radio">
-          <div>
-            <strong>We Are Dead Animals</strong>
-            <div style="font-size:0.8rem; color:var(--text-muted);">By Tote Tiere Maarten (Maarten Isaäk de Heer) (Germany, Netherlands) • Official Selection</div>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="Firedrake VR: The Wizard's Warren Demo" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">Firedrake VR: The Wizard's Warren Demo</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Jon (Hues GFX) &bull; <span style="color:var(--neon-cyan);">🐉 JURIED OFFICIAL SELECTION</span></div>
+          </div>
+        </label>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="Trip the Light: Let's Dance!" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">Trip the Light: Let's Dance!</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Red Nexus Games &bull; <span style="color:var(--neon-cyan);">💃 VIP SHOWCASE</span></div>
+          </div>
+        </label>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="CONNECTOME" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">CONNECTOME</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Grant Hinkson (Parietal Lab) &bull; <span style="color:var(--neon-cyan);">🧠 JURIED OFFICIAL SELECTION</span></div>
+          </div>
+        </label>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="CONSTELLATIONS: Touch the Stars" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">CONSTELLATIONS: Touch the Stars</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Grant Hinkson (Parietal Lab) &bull; <span style="color:var(--neon-cyan);">✨ JURIED OFFICIAL SELECTION</span></div>
+          </div>
+        </label>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="Project Hydra: Iterations" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">Project Hydra: Iterations</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Grant Hinkson (Coliseum of Art) &bull; <span style="color:var(--neon-cyan);">🏛️ JURIED OFFICIAL SELECTION</span></div>
+          </div>
+        </label>
+        <label class="ballot-item" style="cursor:pointer; display:flex; align-items:flex-start; gap:12px; padding:12px 14px; background:rgba(0,0,0,0.3); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); margin-bottom:10px; transition:border-color 0.2s ease;">
+          <input type="radio" name="choice" value="We Are Dead Animals" class="ballot-radio" style="margin-top:4px;">
+          <div style="flex:1;">
+            <strong style="color:#fff; font-size:0.95rem;">We Are Dead Animals</strong>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">By Tote Tiere Maarten (Maarten Isaäk de Heer) &bull; <span style="color:var(--neon-cyan);">🦊 JURIED OFFICIAL SELECTION</span></div>
           </div>
         </label>
 
-        <h3 style="margin-top:28px; margin-bottom:6px; font-size:1.1rem;">2. Festival Feedback & Comments (Optional):</h3>
-        <textarea name="feedback" rows="4" class="feedback-textarea" placeholder="What was your experience like in the headset? What music set did it pair best with?"></textarea>
+        <h3 style="margin-top:28px; margin-bottom:8px; font-size:1.15rem; color:#fff;">2. Desired Venue / Showcase Type (Optional):</h3>
+        <select name="venue_preference" style="width:100%; padding:10px 14px; background:#0b0c16; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:#fff; font-size:0.9rem; margin-bottom:20px;">
+          <option value="kremwerk_future">Upcoming Kremwerk / Seattle Club Showcase</option>
+          <option value="uplift_gallery">Independent VRMakerDome / UpLiftVR Gallery Pop-Up</option>
+          <option value="webxr_online">WebXR Online Interactive Showcase</option>
+          <option value="museum_tour">Touring Festival / Museum Exhibition</option>
+        </select>
 
-        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;">🚀 Submit My Vote</button>
+        <h3 style="margin-top:14px; margin-bottom:6px; font-size:1.1rem; color:#fff;">3. Feedback &amp; Curator Notes (Optional):</h3>
+        <textarea name="feedback" rows="4" class="feedback-textarea" placeholder="Tell us what you loved about this piece, or why you'd like to see it at future events..."></textarea>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px; margin-top:16px; font-weight:800; font-size:0.95rem;">
+          🚀 Submit Future Venue Request
+        </button>
+
+        <div style="margin-top:18px; text-align:center; font-size:0.82rem; color:var(--text-muted);">
+          Prefer submitting via Google Forms? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWa0Zr6eXuItKPHbbksAFrqNaVKT6TOqjLbbV7w7LrQnx5tg/viewform" target="_blank" rel="noopener noreferrer" style="color:var(--neon-cyan); text-decoration:underline;">Submit on Google Forms ↗</a>
+        </div>
       </form>
-
-      <!-- QA Testing Simulation Controls -->
-      <div style="margin-top:24px; padding-top:16px; border-top:1px dashed var(--border-subtle); display:flex; justify-content:center; gap:8px; flex-wrap:wrap; font-size:0.75rem; color:var(--text-dim);">
-        <span style="display:flex; align-items:center;">🧪 <strong>Preview Clock:</strong></span>
-        <button type="button" onclick="setVotingSimulation('prevoting')" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px; border-color:var(--neon-yellow); color:var(--neon-yellow);">🟡 Pre-Voting (Yellow)</button>
-        <button type="button" onclick="setVotingSimulation('open')" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px; border-color:#00ff66; color:#00ff66;">🟢 Live Open (Green)</button>
-        <button type="button" onclick="setVotingSimulation('closed')" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px; border-color:#ff0055; color:#ff0055;">🔴 Closed 000 (Red)</button>
-        <button type="button" onclick="setVotingSimulation(null)" class="btn btn-secondary" style="font-size:0.7rem; padding:4px 8px;">🔄 Live</button>
-      </div>
     </div>
 
     
@@ -213,7 +241,6 @@
       </div>
     </div>
   </footer>
-  <script src="../../assets/js/main.js"></script>
-
+  <script src="../../assets/js/main.js?v=0.2.27"></script>
 </body>
 </html>
